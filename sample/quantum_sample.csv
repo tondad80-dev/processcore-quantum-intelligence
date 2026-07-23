@@ -1,0 +1,11 @@
+entity_id,name,classification,technologies,confidence,evidence,source_url
+q001,UC Investments,INVESTOR,"quantum computing;semiconductors",0.90,"Investment connected to quantum technology ecosystem",https://www.ucop.edu/investment-office/
+q002,Quantonation,INVESTOR,"quantum computing;quantum sensing",0.90,"Quantum technology investment fund",https://www.quantonation.com/
+q003,QDNL Participations,INVESTOR,"quantum computing;quantum security;AI",0.95,"Invests in quantum technology startups",https://www.qdnlparticipations.nl/
+q004,UK National Quantum Technologies Programme,GOVERNMENT,"quantum technology;quantum computing",0.90,"Program supporting commercial quantum technologies",https://uknqt.ukri.org/
+q005,QED-C,CONSORTIUM,"quantum computing;quantum sensing;quantum communication",0.85,"Industry consortium for quantum ecosystem",https://quantumconsortium.org/
+q006,Creative Destruction Lab,ACCELERATOR,"AI;quantum;robotics",0.90,"Science and technology startup accelerator",https://www.creativedestructionlab.com/
+q007,Synopsys,CORPORATE,"AI;quantum computing;semiconductors",0.85,"Technology infrastructure provider",https://www.synopsys.com/
+q008,HDFC Bank Group,INVESTOR,"quantum security;cybersecurity",0.90,"Investment activity in quantum-safe cybersecurity",https://www.hdfc.bank.in/
+q009,Amadeus Capital Partners,INVESTOR,"quantum computing;cryptography;AI",0.90,"Venture investment activity",https://www.amadeuscapital.com/
+q010,The Quantum Insider,MEDIA,"quantum computing;quantum networking",0.90,"Quantum technology intelligence source",https://thequantuminsider.com/
