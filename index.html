@@ -146,7 +146,7 @@ footer { margin-top: 80px; padding: 40px 0 20px 0; border-top: 1px solid var(--c
 <body>
 <div class="bg-grid"></div>
 <header>
-    <div class="system-label">████ PROCESSCORE ████</div>
+    <div class="system-label">████ PROCESSCORE ████ // DEMO ENVIRONMENT</div>
     <div class="owl-container">
         <img src="cyber_owl.png" alt="ProcessCore Cyber Owl System S1" class="owl-image" loading="lazy">
     </div>
@@ -155,18 +155,16 @@ footer { margin-top: 80px; padding: 40px 0 20px 0; border-top: 1px solid var(--c
     <p class="description">Mapping the emerging quantum technology infrastructure, private capital flow, and hardware development before mainstream visibility.</p>
     <div class="hero-actions">
         <a href="#dataset" class="btn btn-primary">Explore Dataset</a>
-        <a href="#" class="btn btn-secondary" onclick="showDemoAlert(event)">Request Demo</a>
+        <a href="#" class="btn btn-secondary" onclick="showDemoAlert(event)">Access Demo Mode</a>
     </div>
 </header>
 <main>
     <section class="grid" aria-label="Key Metrics Overview">
         <article class="card">
-            <!-- Aktualizováno na reálných 11467 entit v golden DB -->
             <div class="number" data-target="11467">0</div>
             <div class="small">Technology entities analyzed</div>
         </article>
         <article class="card">
-            <!-- Aktualizováno na reálných 3517 kvantových entit -->
             <div class="number" data-target="3517">0</div>
             <div class="small">Quantum-related entities identified</div>
         </article>
@@ -183,22 +181,22 @@ footer { margin-top: 80px; padding: 40px 0 20px 0; border-top: 1px solid var(--c
     <h2>Evolution of Ecosystem</h2>
     <section class="box" style="padding: 20px;">
         <div class="timeline">
-            <div class="timeline-step">2026 (Production)</div>
+            <div class="timeline-step">2026 (Architecture Vision)</div>
             <div class="timeline-arrow">↓</div>
-            <div class="timeline-step">Dataset Builder (v3)</div>
+            <div class="timeline-step">Dataset Builder v3</div>
             <div class="timeline-arrow">↓</div>
             <div class="timeline-step">Evidence Engine</div>
             <div class="timeline-arrow">↓</div>
-            <div class="timeline-step">AI Validation</div>
+            <div class="timeline-step">AI Validation Layer</div>
             <div class="timeline-arrow">↓</div>
-            <div class="timeline-step" style="background: var(--color-primary); color: #000;">Quantum Intelligence API</div>
+            <div class="timeline-step" style="background: var(--color-primary); color: #000;">Future Quantum Intelligence API</div>
         </div>
     </section>
 
     <h2 id="dataset">Intelligence Database</h2>
     <section class="box">
         <div class="table-controls">
-            <p class="small">Interactive database sample. Live production data loaded from `processcore_golden.db`.</p>
+            <p class="small">Interactive demonstration dataset based on ProcessCore Golden Database architecture.</p>
             <input type="text" id="searchInput" class="search-input" placeholder="Filter entities or tech..." onkeyup="filterTable()">
         </div>
         <div class="table-wrapper">
@@ -255,9 +253,9 @@ footer { margin-top: 80px; padding: 40px 0 20px 0; border-top: 1px solid var(--c
         <a href="#" onclick="showDemoAlert(event)">Research License</a>
         <a href="#" onclick="showDemoAlert(event)">API Docs</a>
     </div>
-    <div class="system-sig">SYSTEM_S1 // PROCESSCORE QUANTUM INTELLIGENCE // NODE 00<br>DATABASE: PROCESSCORE_GOLDEN.DB (11,467 ENTITIES)</div>
+    <div class="system-sig">SYSTEM_S1 // PROCESSCORE QUANTUM INTELLIGENCE // NODE 00<br>DEMO ENVIRONMENT (11,467 ARCHITECTURE ENTITIES)</div>
 </footer>
-<div id="demo-toast">SYSTEM NOTICE: Live dataset loaded from processcore_golden.db.</div>
+<div id="demo-toast">DEMO MODE: Static presentation of ProcessCore architecture.</div>
 <script>
 function showDemoAlert(event) {
     event.preventDefault();
@@ -270,13 +268,13 @@ const speed = 100;
 const animateCounters = (counter) => {
     const updateCount = () => {
         const target = +counter.getAttribute('data-target');
-        const count = +counter.innerText.replace(/,/g, '');
+        const count = +counter.innerText.replace(/[%|,]/g, '');
         const inc = target / speed;
         if (count < target) {
-            counter.innerText = Math.ceil(count + inc).toLocaleString('en-US');
+            counter.innerText = Math.ceil(count + inc) + (target === 94 ? "%" : "");
             setTimeout(updateCount, 15);
         } else {
-            counter.innerText = target === 94 ? "0.94" : target.toLocaleString('en-US');
+            counter.innerText = target === 94 ? "94%" : target.toLocaleString('en-US');
         }
     };
     updateCount();
