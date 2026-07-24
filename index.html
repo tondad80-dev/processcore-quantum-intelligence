@@ -3,11 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050508">
 <meta name="description" content="ProcessCore Quantum Intelligence Platform - Evidence-backed discovery engine for the emerging quantum ecosystem.">
 <!-- Open Graph Metadata -->
 <meta property="og:title" content="ProcessCore Quantum Intelligence">
 <meta property="og:description" content="Evidence-backed intelligence layer for quantum market discovery.">
-<meta property="og:image" content="https://tondad80-dev.github.io/cyber_owl.png">
+<meta property="og:image" content="https://tondad80-dev.github.io/processcore-quantum-intelligence/cyber_owl.png">
+<meta property="og:url" content="https://tondad80-dev.github.io/processcore-quantum-intelligence/">
+<meta property="og:site_name" content="ProcessCore Quantum Intelligence">
 <meta property="og:type" content="website">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <title>ProcessCore Quantum Intelligence</title>
@@ -43,6 +46,12 @@ body {
     line-height: 1.6;
     position: relative;
     overflow-x: hidden;
+}
+
+/* PŘÍSTUPNOST (ACCESSIBILITY) */
+a:focus-visible, button:focus-visible, input:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
 }
 
 /* ANIMOVANÉ POZADÍ (GRID SÍŤ) */
@@ -393,6 +402,7 @@ footer {
     justify-content: center;
     gap: 20px;
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 .footer-links a {
@@ -438,7 +448,7 @@ footer {
 
 #demo-toast.show {
     visibility: visible;
-    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 3.5s;
 }
 
 @keyframes fadein {
@@ -449,6 +459,30 @@ footer {
 @keyframes fadeout {
     from {bottom: 30px; opacity: 1;}
     to {bottom: 0; opacity: 0;}
+}
+
+/* RESPONZIVNÍ MATICE PRO MOBILNÍ TERMINÁLY */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 40px;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+        margin: 25px auto 0 auto;
+    }
+    
+    .table-controls {
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+    }
+    
+    .search-input {
+        max-width: 100%;
+    }
 }
 </style>
 </head>
@@ -605,8 +639,8 @@ footer {
     <div class="system-sig">SYSTEM_S1 // PROCESSCORE QUANTUM INTELLIGENCE // NODE 00<br>GITHUB: TONDAD80-DEV</div>
 </footer>
 
-<!-- Toast Container pro systémové notifikace -->
-<div id="demo-toast">RESTRICTED: Live endpoint connection required in Demo Mode.</div>
+<!-- Toast Container pro komerční notifikace -->
+<div id="demo-toast">DEMO MODE: Live dataset and API endpoints are available upon request.</div>
 
 <script>
 /* 0. DEMO ALERT SYSTEM */
@@ -614,7 +648,8 @@ function showDemoAlert(event) {
     event.preventDefault();
     var x = document.getElementById("demo-toast");
     x.className = "show";
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+    // Zobrazeno na 4 sekundy z důvodu delšího textu
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4000);
 }
 
 /* 1. ANIMACE ČÍSEL POMOCÍ OBSERVERU */
