@@ -238,6 +238,26 @@ a:hover {
     border-bottom: none;
 }
 
+/* TABLE LINKS OVERRIDE */
+.data-table a {
+    display: inline;
+    background-color: transparent;
+    color: var(--color-primary-light);
+    padding: 0;
+    margin: 0;
+    text-transform: none;
+    font-weight: 600;
+    border-radius: 0;
+    letter-spacing: normal;
+}
+
+.data-table a:hover {
+    background-color: transparent;
+    box-shadow: none;
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
 footer {
     margin-top: 80px;
     padding-top: 25px;
@@ -351,7 +371,7 @@ footer {
 
     <h2>Public Dataset Sample</h2>
     <section class="box">
-        <p class="small">An interactive subset demonstrating the structure of the ProcessCore Quantum Intelligence dataset. Click table headers to sort.</p>
+        <p class="small">An interactive subset demonstrating the structure of the ProcessCore Quantum Intelligence dataset. Click table headers to sort. Entity links navigate directly to the verified source.</p>
         <div class="table-wrapper">
             <table class="data-table" id="quantumTable" aria-label="Sample Quantum Dataset">
                 <thead>
@@ -364,31 +384,31 @@ footer {
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Q-Node Alpha</td>
+                        <td><a href="https://example.com/qnode-alpha" target="_blank" rel="noopener noreferrer">Q-Node Alpha</a></td>
                         <td>Superconducting Qubits</td>
                         <td>0.98</td>
                         <td>Validated</td>
                     </tr>
                     <tr>
-                        <td>Photon Dynamics</td>
+                        <td><a href="https://example.com/photon-dynamics" target="_blank" rel="noopener noreferrer">Photon Dynamics</a></td>
                         <td>Photonic Infrastructure</td>
                         <td>0.85</td>
                         <td>Active</td>
                     </tr>
                     <tr>
-                        <td>CryoCore Labs</td>
+                        <td><a href="https://example.com/cryocore" target="_blank" rel="noopener noreferrer">CryoCore Labs</a></td>
                         <td>Cryogenic Systems</td>
                         <td>0.92</td>
                         <td>Active</td>
                     </tr>
                     <tr>
-                        <td>SecureNet QKD</td>
+                        <td><a href="https://example.com/securenet" target="_blank" rel="noopener noreferrer">SecureNet QKD</a></td>
                         <td>Quantum Cryptography</td>
                         <td>0.89</td>
                         <td>Pending Review</td>
                     </tr>
                     <tr>
-                        <td>IonTrap Matrix</td>
+                        <td><a href="https://example.com/iontrap" target="_blank" rel="noopener noreferrer">IonTrap Matrix</a></td>
                         <td>Trapped Ion Hardware</td>
                         <td>0.96</td>
                         <td>Validated</td>
@@ -430,10 +450,13 @@ function sortTable(n) {
             x = rows[i].getElementsByTagName("TD")[n];
             y = rows[i + 1].getElementsByTagName("TD")[n];
             
-            let valX = x.innerHTML.toLowerCase();
-            let valY = y.innerHTML.toLowerCase();
+            // Extrahování textu s ohledem na možné vnořené <a> tagy
+            let valX = x.textContent || x.innerText;
+            let valY = y.textContent || y.innerText;
             
-            // Numeric parsing logic pro sloupce s čísly
+            valX = valX.toLowerCase().trim();
+            valY = valY.toLowerCase().trim();
+            
             if (!isNaN(parseFloat(valX)) && !isNaN(parseFloat(valY))) {
                 valX = parseFloat(valX);
                 valY = parseFloat(valY);
