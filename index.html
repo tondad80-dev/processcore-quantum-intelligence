@@ -3,8 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ProcessCore Quantum Intelligence - Evidence-backed intelligence layer for quantum market discovery.">
 <title>ProcessCore Quantum Intelligence</title>
 <style>
+:root {
+    --color-bg: #050508;
+    --color-text-main: #cbd5e1;
+    --color-text-muted: #94a3b8;
+    --color-primary: #38bdf8;
+    --color-primary-light: #7dd3fc;
+    --color-primary-dark: #bae6fd;
+    --color-glass-bg: rgba(10, 15, 30, 0.7);
+    --color-border: rgba(56, 189, 248, 0.15);
+    --color-border-hover: rgba(56, 189, 248, 0.4);
+    --shadow-glow: rgba(56, 189, 248, 0.5);
+    --shadow-subtle: rgba(56, 189, 248, 0.1);
+    --font-stack: "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,20 +28,20 @@
 }
 
 body {
-    font-family: "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    font-family: var(--font-stack);
     max-width: 1000px;
     margin: auto;
     padding: 20px;
-    background-color: #050508;
+    background-color: var(--color-bg);
     background-image: 
         radial-gradient(circle at 10% 20%, rgba(14, 165, 233, 0.08), transparent 50%),
         radial-gradient(circle at 90% 80%, rgba(168, 85, 247, 0.05), transparent 50%);
     background-attachment: fixed;
-    color: #cbd5e1;
+    color: var(--color-text-main);
     line-height: 1.6;
 }
 
-.hero-section {
+header {
     text-align: center;
     margin-bottom: 40px;
     margin-top: 20px;
@@ -48,8 +64,8 @@ body {
 h1 {
     font-size: 48px;
     margin-bottom: 15px;
-    color: #7dd3fc;
-    text-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+    color: var(--color-primary-light);
+    text-shadow: 0 0 20px var(--shadow-glow);
     font-weight: 800;
     line-height: 1.2;
 }
@@ -58,27 +74,27 @@ h2 {
     margin-top: 50px;
     color: #e0f2fe;
     font-size: 24px;
-    border-bottom: 1px solid rgba(56, 189, 248, 0.15);
+    border-bottom: 1px solid var(--color-border);
     padding-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 h3 {
-    color: #bae6fd;
+    color: var(--color-primary-dark);
     margin-bottom: 12px;
     font-size: 18px;
 }
 
 .subtitle {
     font-size: 20px;
-    color: #94a3b8;
+    color: var(--color-text-muted);
     margin-bottom: 15px;
 }
 
 .description {
     font-size: 16px;
-    color: #cbd5e1;
+    color: var(--color-text-main);
     max-width: 800px;
     margin: 0 auto;
 }
@@ -91,42 +107,42 @@ h3 {
 }
 
 .card {
-    background: rgba(10, 15, 30, 0.7);
+    background: var(--color-glass-bg);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding: 30px 25px;
     border-radius: 8px;
-    border: 1px solid rgba(56, 189, 248, 0.15);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(56, 189, 248, 0.05);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), inset 0 0 15px var(--shadow-subtle);
     transition: all 0.3s ease;
 }
 
 .card:hover {
-    border-color: rgba(56, 189, 248, 0.4);
-    box-shadow: 0 4px 25px rgba(56, 189, 248, 0.1), inset 0 0 20px rgba(56, 189, 248, 0.1);
+    border-color: var(--color-border-hover);
+    box-shadow: 0 4px 25px var(--shadow-subtle), inset 0 0 20px var(--shadow-subtle);
 }
 
 .number {
     font-size: 42px;
     font-weight: 800;
-    color: #38bdf8;
-    text-shadow: 0 0 15px rgba(56, 189, 248, 0.6);
+    color: var(--color-primary);
+    text-shadow: 0 0 15px var(--shadow-glow);
     margin-bottom: 5px;
 }
 
 .small {
-    color: #94a3b8;
+    color: var(--color-text-muted);
     font-size: 14px;
 }
 
-.box {
-    background: rgba(10, 15, 30, 0.7);
+section.box {
+    background: var(--color-glass-bg);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     padding: 30px;
     border-radius: 8px;
     margin-top: 25px;
-    border: 1px solid rgba(56, 189, 248, 0.1);
+    border: 1px solid var(--color-border);
 }
 
 ul {
@@ -138,12 +154,12 @@ ul li {
     position: relative;
     padding-left: 25px;
     margin-bottom: 10px;
-    color: #cbd5e1;
+    color: var(--color-text-main);
 }
 
 ul li::before {
     content: "/>";
-    color: #38bdf8;
+    color: var(--color-primary);
     font-family: monospace;
     font-weight: bold;
     position: absolute;
@@ -152,8 +168,8 @@ ul li::before {
 
 a {
     display: inline-block;
-    color: #050508;
-    background-color: #38bdf8;
+    color: var(--color-bg);
+    background-color: var(--color-primary);
     font-weight: 700;
     text-decoration: none;
     padding: 10px 20px;
@@ -166,14 +182,14 @@ a {
 }
 
 a:hover {
-    background-color: #7dd3fc;
-    box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+    background-color: var(--color-primary-light);
+    box-shadow: 0 0 15px var(--shadow-glow);
 }
 
 footer {
     margin-top: 80px;
     padding-top: 25px;
-    border-top: 1px solid rgba(56, 189, 248, 0.1);
+    border-top: 1px solid var(--color-border);
     color: #475569;
     font-size: 12px;
     text-transform: uppercase;
@@ -184,119 +200,119 @@ footer {
 </head>
 <body>
 
-<div class="hero-section">
-    <!-- NAHRAJ OBRÁZEK SOVY DO REPOZITÁŘE A UPRAV TUTO CESTU -->
+<header>
     <div class="owl-container">
-        <img src="cyber_owl.png" alt="Quantum Cyber Owl" class="owl-image">
+        <img src="35148.jpg" alt="ProcessCore Cyber Owl System S1" class="owl-image">
     </div>
 
     <h1>ProcessCore<br>Quantum<br>Intelligence</h1>
     <p class="subtitle">Mapping the emerging quantum technology ecosystem before mainstream visibility</p>
     <p class="description">Evidence-backed intelligence layer for quantum market discovery.</p>
-</div>
+</header>
 
-<div class="grid">
-    <div class="card">
-        <div class="number">11,148</div>
-        <div class="small">Technology entities analyzed</div>
-    </div>
-    <div class="card">
-        <div class="number">3,431</div>
-        <div class="small">Quantum-related entities identified</div>
-    </div>
-    <div class="card">
-        <div class="number">0.94</div>
-        <div class="small">Average confidence score</div>
-    </div>
-    <div class="card">
-        <div class="number">8,515</div>
-        <div class="small">Validated URLs</div>
-    </div>
-</div>
+<main>
+    <section class="grid" aria-label="Key Metrics Overview">
+        <article class="card">
+            <div class="number">11,148</div>
+            <div class="small">Technology entities analyzed</div>
+        </article>
+        <article class="card">
+            <div class="number">3,431</div>
+            <div class="small">Quantum-related entities identified</div>
+        </article>
+        <article class="card">
+            <div class="number">0.94</div>
+            <div class="small">Average confidence score</div>
+        </article>
+        <article class="card">
+            <div class="number">8,515</div>
+            <div class="small">Validated URLs</div>
+        </article>
+    </section>
 
-<h2>The Problem</h2>
-<div class="box">
-    Quantum technology markets are fragmented.
-    <br><br>
-    Critical signals are distributed across:
-    <ul style="margin-top: 15px;">
-        <li>Startups</li>
-        <li>Research laboratories</li>
-        <li>Universities</li>
-        <li>Investors</li>
-        <li>Government programs</li>
-        <li>Hardware ecosystems</li>
-    </ul>
-</div>
+    <h2>The Problem</h2>
+    <section class="box">
+        <p>Quantum technology markets are fragmented.</p>
+        <p style="margin-top: 10px;">Critical signals are distributed across:</p>
+        <ul style="margin-top: 15px;">
+            <li>Startups</li>
+            <li>Research laboratories</li>
+            <li>Universities</li>
+            <li>Investors</li>
+            <li>Government programs</li>
+            <li>Hardware ecosystems</li>
+        </ul>
+    </section>
 
-<h2>The Dataset</h2>
-<div class="grid">
-    <div class="card">
-        <h3>Companies</h3>
-        <span class="small">
-        Quantum computing startups<br>
-        Hardware developers<br>
-        Photonics companies<br>
-        Quantum security providers
-        </span>
-    </div>
-    <div class="card">
-        <h3>Research Infrastructure</h3>
-        <span class="small">
-        Universities<br>
-        Research laboratories<br>
-        Technology programs
-        </span>
-    </div>
-    <div class="card">
-        <h3>Capital Layer</h3>
-        <span class="small">
-        Venture funds<br>
-        Investors<br>
-        Accelerators<br>
-        Ecosystem builders
-        </span>
-    </div>
-</div>
+    <h2>The Dataset</h2>
+    <section class="grid" aria-label="Dataset Core Components">
+        <article class="card">
+            <h3>Companies</h3>
+            <span class="small">
+            Quantum computing startups<br>
+            Hardware developers<br>
+            Photonics companies<br>
+            Quantum security providers
+            </span>
+        </article>
+        <article class="card">
+            <h3>Research Infrastructure</h3>
+            <span class="small">
+            Universities<br>
+            Research laboratories<br>
+            Technology programs
+            </span>
+        </article>
+        <article class="card">
+            <h3>Capital Layer</h3>
+            <span class="small">
+            Venture funds<br>
+            Investors<br>
+            Accelerators<br>
+            Ecosystem builders
+            </span>
+        </article>
+    </section>
 
-<h2>Data Quality Layer</h2>
-<div class="box">
-    <span style="color: #38bdf8; font-weight: bold;">[OK]</span> Entity classification<br>
-    <span style="color: #38bdf8; font-weight: bold;">[OK]</span> Technology categories<br>
-    <span style="color: #38bdf8; font-weight: bold;">[OK]</span> Source references<br>
-    <span style="color: #38bdf8; font-weight: bold;">[OK]</span> Evidence quotes<br>
-    <span style="color: #38bdf8; font-weight: bold;">[OK]</span> Confidence scoring<br>
-    <span style="color: #38bdf8; font-weight: bold;">[OK]</span> Validation metadata
-</div>
+    <h2>Data Quality Layer</h2>
+    <section class="box">
+        <span style="color: var(--color-primary); font-weight: bold;">[OK]</span> Entity classification<br>
+        <span style="color: var(--color-primary); font-weight: bold;">[OK]</span> Technology categories<br>
+        <span style="color: var(--color-primary); font-weight: bold;">[OK]</span> Source references<br>
+        <span style="color: var(--color-primary); font-weight: bold;">[OK]</span> Evidence quotes<br>
+        <span style="color: var(--color-primary); font-weight: bold;">[OK]</span> Confidence scoring<br>
+        <span style="color: var(--color-primary); font-weight: bold;">[OK]</span> Validation metadata
+    </section>
 
-<h2>Example Intelligence Signal</h2>
-<div class="box">
-    <h3>Infrastructure Rotation</h3>
-    <p class="small" style="margin-bottom: 15px;">The dataset highlights increasing activity around:</p>
-    <ul>
-        <li>Quantum hardware</li>
-        <li>Photonic systems</li>
-        <li>Cryogenic technologies</li>
-        <li>Quantum security</li>
-        <li>Enabling infrastructure</li>
-    </ul>
-</div>
+    <h2>Example Intelligence Signal</h2>
+    <section class="box">
+        <h3>Infrastructure Rotation</h3>
+        <p class="small" style="margin-bottom: 15px;">The dataset highlights increasing activity around:</p>
+        <ul>
+            <li>Quantum hardware</li>
+            <li>Photonic systems</li>
+            <li>Cryogenic technologies</li>
+            <li>Quantum security</li>
+            <li>Enabling infrastructure</li>
+        </ul>
+    </section>
 
-<h2>Public Dataset Sample</h2>
-<div class="box">
-    <p class="small">A small public sample demonstrating the structure of the ProcessCore Quantum Intelligence dataset.</p>
-    <a href="sample/quantum_sample.csv">View sample dataset (CSV)</a>
-</div>
+    <h2>Public Dataset Sample</h2>
+    <section class="box">
+        <p class="small">A small public sample demonstrating the structure of the ProcessCore Quantum Intelligence dataset.</p>
+        <a href="sample/quantum_sample.csv" aria-label="Download sample dataset in CSV format">View sample dataset (CSV)</a>
+    </section>
 
-<h2>Research Access</h2>
-<div class="box">
-    <ul>
-        <li>Quantum ecosystem maps</li>
-        <li>Technology landscape analysis</li>
-        <li>Custom research</li>
-        <li>Data/API access</li>
-    </ul>
-</div>
+    <h2>Research Access</h2>
+    <section class="box">
+        <ul>
+            <li>Quantum ecosystem maps</li>
+            <li>Technology landscape analysis</li>
+            <li>Custom research</li>
+            <li>Data/API access</li>
+        </ul>
+    </section>
+</main>
 
 <footer>
 SYSTEM_S1 // PROCESSCORE QUANTUM INTELLIGENCE // NODE 00<br>
