@@ -372,6 +372,7 @@ ul li::before {
     color: var(--color-primary-light);
     font-weight: 600;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .data-table a:hover {
@@ -414,6 +415,41 @@ footer {
     letter-spacing: 2px;
     font-family: monospace;
 }
+
+/* TOAST ALERT SYSTEM */
+#demo-toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: rgba(10, 15, 30, 0.95);
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary-light);
+    text-align: center;
+    border-radius: 4px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    font-family: monospace;
+    font-size: 14px;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+}
+
+#demo-toast.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
 </style>
 </head>
 <body>
@@ -433,7 +469,7 @@ footer {
     
     <div class="hero-actions">
         <a href="#dataset" class="btn btn-primary">Explore Dataset</a>
-        <a href="#" class="btn btn-secondary">Request Demo</a>
+        <a href="#" class="btn btn-secondary" onclick="showDemoAlert(event)">Request Demo</a>
     </div>
 </header>
 
@@ -507,7 +543,7 @@ footer {
     <h2 id="dataset">Intelligence Database</h2>
     <section class="box">
         <div class="table-controls">
-            <p class="small">Interactive dataset sample. Links direct to verified sources.</p>
+            <p class="small">Interactive dataset sample. Entity routing is secured in demo mode.</p>
             <input type="text" id="searchInput" class="search-input" placeholder="Filter entities or tech..." onkeyup="filterTable()">
         </div>
         
@@ -523,31 +559,31 @@ footer {
                 </thead>
                 <tbody>
                     <tr>
-                        <td><a href="https://example.com/qnode-alpha" target="_blank" rel="noopener noreferrer">Q-Node Alpha</a></td>
+                        <td><a href="#" onclick="showDemoAlert(event)">Q-Node Alpha</a></td>
                         <td>Superconducting Qubits</td>
                         <td>0.98</td>
                         <td>Validated</td>
                     </tr>
                     <tr>
-                        <td><a href="https://example.com/photon-dynamics" target="_blank" rel="noopener noreferrer">Photon Dynamics</a></td>
+                        <td><a href="#" onclick="showDemoAlert(event)">Photon Dynamics</a></td>
                         <td>Photonic Infrastructure</td>
                         <td>0.85</td>
                         <td>Active</td>
                     </tr>
                     <tr>
-                        <td><a href="https://example.com/cryocore" target="_blank" rel="noopener noreferrer">CryoCore Labs</a></td>
+                        <td><a href="#" onclick="showDemoAlert(event)">CryoCore Labs</a></td>
                         <td>Cryogenic Systems</td>
                         <td>0.92</td>
                         <td>Active</td>
                     </tr>
                     <tr>
-                        <td><a href="https://example.com/securenet" target="_blank" rel="noopener noreferrer">SecureNet QKD</a></td>
+                        <td><a href="#" onclick="showDemoAlert(event)">SecureNet QKD</a></td>
                         <td>Quantum Cryptography</td>
                         <td>0.89</td>
                         <td>Pending Review</td>
                     </tr>
                     <tr>
-                        <td><a href="https://example.com/iontrap" target="_blank" rel="noopener noreferrer">IonTrap Matrix</a></td>
+                        <td><a href="#" onclick="showDemoAlert(event)">IonTrap Matrix</a></td>
                         <td>Trapped Ion Hardware</td>
                         <td>0.96</td>
                         <td>Validated</td>
@@ -560,19 +596,30 @@ footer {
 
 <footer>
     <div class="footer-links">
-        <a href="#">GitHub</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">Contact</a>
-        <a href="#">Research License</a>
-        <a href="#">API Docs</a>
+        <a href="#" onclick="showDemoAlert(event)">GitHub</a>
+        <a href="#" onclick="showDemoAlert(event)">LinkedIn</a>
+        <a href="#" onclick="showDemoAlert(event)">Contact</a>
+        <a href="#" onclick="showDemoAlert(event)">Research License</a>
+        <a href="#" onclick="showDemoAlert(event)">API Docs</a>
     </div>
     <div class="system-sig">SYSTEM_S1 // PROCESSCORE QUANTUM INTELLIGENCE // NODE 00<br>GITHUB: TONDAD80-DEV</div>
 </footer>
 
+<!-- Toast Container pro systémové notifikace -->
+<div id="demo-toast">RESTRICTED: Live endpoint connection required in Demo Mode.</div>
+
 <script>
+/* 0. DEMO ALERT SYSTEM */
+function showDemoAlert(event) {
+    event.preventDefault();
+    var x = document.getElementById("demo-toast");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+
 /* 1. ANIMACE ČÍSEL POMOCÍ OBSERVERU */
 const counters = document.querySelectorAll('.number');
-const speed = 100; // Rychlost načítání
+const speed = 100;
 
 const animateCounters = (counter) => {
     const updateCount = () => {
@@ -584,7 +631,6 @@ const animateCounters = (counter) => {
             counter.innerText = Math.ceil(count + inc).toLocaleString('en-US');
             setTimeout(updateCount, 15);
         } else {
-            // Finální fix formátu, pro případ desetinných míst u %
             counter.innerText = target === 94 ? "0.94" : target.toLocaleString('en-US');
         }
     };
