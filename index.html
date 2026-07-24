@@ -186,6 +186,58 @@ a:hover {
     box-shadow: 0 0 15px var(--shadow-glow);
 }
 
+/* DATA TABLE STYLING */
+.table-wrapper {
+    overflow-x: auto;
+    margin-top: 15px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.data-table th, .data-table td {
+    padding: 12px 20px;
+    border-bottom: 1px solid rgba(56, 189, 248, 0.1);
+}
+
+.data-table th {
+    background-color: rgba(10, 15, 30, 0.8);
+    color: var(--color-primary-light);
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    user-select: none;
+}
+
+.data-table th:hover {
+    background-color: rgba(56, 189, 248, 0.15);
+}
+
+.data-table th::after {
+    content: " \21C5"; /* Sort arrows */
+    font-size: 12px;
+    opacity: 0.5;
+}
+
+.data-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.data-table tbody tr:hover {
+    background-color: rgba(56, 189, 248, 0.05);
+}
+
+.data-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
 footer {
     margin-top: 80px;
     padding-top: 25px;
@@ -202,7 +254,7 @@ footer {
 
 <header>
     <div class="owl-container">
-        <img src="35148.jpg" alt="ProcessCore Cyber Owl System S1" class="owl-image">
+        <img src="cyber_owl.png" alt="ProcessCore Cyber Owl System S1" class="owl-image">
     </div>
 
     <h1>ProcessCore<br>Quantum<br>Intelligence</h1>
@@ -299,8 +351,51 @@ footer {
 
     <h2>Public Dataset Sample</h2>
     <section class="box">
-        <p class="small">A small public sample demonstrating the structure of the ProcessCore Quantum Intelligence dataset.</p>
-        <a href="sample/quantum_sample.csv" aria-label="Download sample dataset in CSV format">View sample dataset (CSV)</a>
+        <p class="small">An interactive subset demonstrating the structure of the ProcessCore Quantum Intelligence dataset. Click table headers to sort.</p>
+        <div class="table-wrapper">
+            <table class="data-table" id="quantumTable" aria-label="Sample Quantum Dataset">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable(0)">Entity ID</th>
+                        <th onclick="sortTable(1)">Technology Vector</th>
+                        <th onclick="sortTable(2)">Confidence Score</th>
+                        <th onclick="sortTable(3)">Status Validation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Q-Node Alpha</td>
+                        <td>Superconducting Qubits</td>
+                        <td>0.98</td>
+                        <td>Validated</td>
+                    </tr>
+                    <tr>
+                        <td>Photon Dynamics</td>
+                        <td>Photonic Infrastructure</td>
+                        <td>0.85</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>CryoCore Labs</td>
+                        <td>Cryogenic Systems</td>
+                        <td>0.92</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>SecureNet QKD</td>
+                        <td>Quantum Cryptography</td>
+                        <td>0.89</td>
+                        <td>Pending Review</td>
+                    </tr>
+                    <tr>
+                        <td>IonTrap Matrix</td>
+                        <td>Trapped Ion Hardware</td>
+                        <td>0.96</td>
+                        <td>Validated</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </section>
 
     <h2>Research Access</h2>
@@ -318,6 +413,58 @@ footer {
 SYSTEM_S1 // PROCESSCORE QUANTUM INTELLIGENCE // NODE 00<br>
 GITHUB: TODAD80-DEV
 </footer>
+
+<script>
+function sortTable(n) {
+    let table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+    table = document.getElementById("quantumTable");
+    switching = true;
+    dir = "asc";
+    
+    while (switching) {
+        switching = false;
+        rows = table.rows;
+        
+        for (i = 1; i < (rows.length - 1); i++) {
+            shouldSwitch = false;
+            x = rows[i].getElementsByTagName("TD")[n];
+            y = rows[i + 1].getElementsByTagName("TD")[n];
+            
+            let valX = x.innerHTML.toLowerCase();
+            let valY = y.innerHTML.toLowerCase();
+            
+            // Numeric parsing logic pro sloupce s čísly
+            if (!isNaN(parseFloat(valX)) && !isNaN(parseFloat(valY))) {
+                valX = parseFloat(valX);
+                valY = parseFloat(valY);
+            }
+            
+            if (dir === "asc") {
+                if (valX > valY) {
+                    shouldSwitch = true;
+                    break;
+                }
+            } else if (dir === "desc") {
+                if (valX < valY) {
+                    shouldSwitch = true;
+                    break;
+                }
+            }
+        }
+        
+        if (shouldSwitch) {
+            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+            switching = true;
+            switchcount++;
+        } else {
+            if (switchcount === 0 && dir === "asc") {
+                dir = "desc";
+                switching = true;
+            }
+        }
+    }
+}
+</script>
 
 </body>
 </html>
