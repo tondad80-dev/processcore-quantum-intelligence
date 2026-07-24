@@ -1,9 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior: smooth;">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="ProcessCore Quantum Intelligence - Evidence-backed intelligence layer for quantum market discovery.">
+<meta name="description" content="ProcessCore Quantum Intelligence Platform - Evidence-backed discovery engine for the emerging quantum ecosystem.">
+<!-- Open Graph Metadata -->
+<meta property="og:title" content="ProcessCore Quantum Intelligence">
+<meta property="og:description" content="Evidence-backed intelligence layer for quantum market discovery.">
+<meta property="og:image" content="https://tondad80-dev.github.io/cyber_owl.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
 <title>ProcessCore Quantum Intelligence</title>
 <style>
 :root {
@@ -33,22 +39,42 @@ body {
     margin: auto;
     padding: 20px;
     background-color: var(--color-bg);
-    background-image: 
-        radial-gradient(circle at 10% 20%, rgba(14, 165, 233, 0.08), transparent 50%),
-        radial-gradient(circle at 90% 80%, rgba(168, 85, 247, 0.05), transparent 50%);
-    background-attachment: fixed;
     color: var(--color-text-main);
     line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* ANIMOVANÉ POZADÍ (GRID SÍŤ) */
+.bg-grid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-size: 40px 40px;
+    background-image: 
+        linear-gradient(to right, rgba(56, 189, 248, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(56, 189, 248, 0.03) 1px, transparent 1px);
+    animation: grid-move 20s linear infinite;
+    mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+}
+
+@keyframes grid-move {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(40px); }
 }
 
 header {
     text-align: center;
-    margin-bottom: 40px;
-    margin-top: 20px;
+    margin-bottom: 60px;
+    margin-top: 30px;
 }
 
 .owl-container {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     display: flex;
     justify-content: center;
 }
@@ -59,25 +85,45 @@ header {
     max-height: 450px;
     object-fit: contain;
     filter: drop-shadow(0 0 25px rgba(56, 189, 248, 0.2));
+    /* LEVITACE */
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-12px); filter: drop-shadow(0 0 35px rgba(56, 189, 248, 0.4)); }
+    100% { transform: translateY(0); }
+}
+
+/* ENTERPRISE LOGO EFFECT */
+.system-label {
+    font-family: monospace;
+    color: var(--color-primary-dark);
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    opacity: 0.8;
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 54px;
     margin-bottom: 15px;
     color: var(--color-primary-light);
-    text-shadow: 0 0 20px var(--shadow-glow);
+    text-shadow: 0 0 25px var(--shadow-glow);
     font-weight: 800;
-    line-height: 1.2;
+    line-height: 1.1;
+    letter-spacing: -1px;
 }
 
 h2 {
-    margin-top: 50px;
+    margin-top: 60px;
     color: #e0f2fe;
     font-size: 24px;
     border-bottom: 1px solid var(--color-border);
     padding-bottom: 10px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 h3 {
@@ -87,23 +133,69 @@ h3 {
 }
 
 .subtitle {
-    font-size: 20px;
-    color: var(--color-text-muted);
-    margin-bottom: 15px;
+    font-size: 22px;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+    font-weight: 600;
 }
 
 .description {
     font-size: 16px;
-    color: var(--color-text-main);
-    max-width: 800px;
-    margin: 0 auto;
+    color: var(--color-text-muted);
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+
+/* HERO BUTTONS */
+.hero-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    color: var(--color-bg);
+    background-color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    box-shadow: 0 0 15px var(--shadow-subtle);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-light);
+    box-shadow: 0 0 25px var(--shadow-glow);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    color: var(--color-primary);
+    background-color: transparent;
+    border: 1px solid var(--color-primary);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(56, 189, 248, 0.1);
+    transform: translateY(-2px);
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .card {
@@ -114,20 +206,23 @@ h3 {
     border-radius: 8px;
     border: 1px solid var(--color-border);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), inset 0 0 15px var(--shadow-subtle);
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+/* HOVER EFEKTY */
 .card:hover {
     border-color: var(--color-border-hover);
-    box-shadow: 0 4px 25px var(--shadow-subtle), inset 0 0 20px var(--shadow-subtle);
+    box-shadow: 0 8px 30px var(--shadow-subtle), inset 0 0 20px var(--shadow-subtle);
+    transform: translateY(-6px) scale(1.02);
 }
 
 .number {
-    font-size: 42px;
+    font-size: 46px;
     font-weight: 800;
     color: var(--color-primary);
     text-shadow: 0 0 15px var(--shadow-glow);
     margin-bottom: 5px;
+    font-family: monospace;
 }
 
 .small {
@@ -139,7 +234,7 @@ section.box {
     background: var(--color-glass-bg);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    padding: 30px;
+    padding: 35px;
     border-radius: 8px;
     margin-top: 25px;
     border: 1px solid var(--color-border);
@@ -150,46 +245,90 @@ ul {
     padding-left: 0;
 }
 
+/* SVG CHECK ICON PRO SEZNAMY */
 ul li {
     position: relative;
-    padding-left: 25px;
-    margin-bottom: 10px;
+    padding-left: 30px;
+    margin-bottom: 12px;
     color: var(--color-text-main);
+    display: flex;
+    align-items: center;
 }
 
 ul li::before {
-    content: "/>";
-    color: var(--color-primary);
-    font-family: monospace;
-    font-weight: bold;
+    content: "";
     position: absolute;
     left: 0;
+    top: 3px;
+    width: 18px;
+    height: 18px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2338bdf8'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M5 13l4 4L19 7'%3E%3C/path%3E%3C/svg%3E");
+    background-size: cover;
 }
 
-a {
-    display: inline-block;
-    color: var(--color-bg);
-    background-color: var(--color-primary);
-    font-weight: 700;
-    text-decoration: none;
-    padding: 10px 20px;
+/* TIMELINE STYLING */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.timeline-step {
+    background: rgba(10, 15, 30, 0.9);
+    border: 1px solid var(--color-primary);
+    padding: 12px 25px;
     border-radius: 4px;
-    margin-top: 15px;
-    transition: all 0.2s ease;
-    text-transform: uppercase;
-    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-primary-light);
     letter-spacing: 1px;
+    box-shadow: 0 0 15px var(--shadow-subtle);
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    transition: all 0.3s ease;
 }
 
-a:hover {
-    background-color: var(--color-primary-light);
-    box-shadow: 0 0 15px var(--shadow-glow);
+.timeline-step:hover {
+    transform: scale(1.05);
+    background: var(--color-border);
 }
 
-/* DATA TABLE STYLING */
+.timeline-arrow {
+    color: var(--color-primary);
+    font-size: 24px;
+    margin: 10px 0;
+    animation: float 2s infinite;
+}
+
+/* TABLE STYLING EXTENDED */
+.table-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.search-input {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-main);
+    padding: 10px 15px;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 300px;
+    font-family: var(--font-stack);
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 10px var(--shadow-subtle);
+}
+
 .table-wrapper {
     overflow-x: auto;
-    margin-top: 15px;
     border: 1px solid var(--color-border);
     border-radius: 4px;
 }
@@ -203,7 +342,7 @@ a:hover {
 }
 
 .data-table th, .data-table td {
-    padding: 12px 20px;
+    padding: 14px 20px;
     border-bottom: 1px solid rgba(56, 189, 248, 0.1);
 }
 
@@ -220,12 +359,6 @@ a:hover {
     background-color: rgba(56, 189, 248, 0.15);
 }
 
-.data-table th::after {
-    content: " \21C5"; /* Sort arrows */
-    font-size: 12px;
-    opacity: 0.5;
-}
-
 .data-table tbody tr {
     transition: background-color 0.2s ease;
 }
@@ -234,144 +367,150 @@ a:hover {
     background-color: rgba(56, 189, 248, 0.05);
 }
 
-.data-table tbody tr:last-child td {
-    border-bottom: none;
-}
-
-/* TABLE LINKS OVERRIDE */
 .data-table a {
     display: inline;
-    background-color: transparent;
     color: var(--color-primary-light);
-    padding: 0;
-    margin: 0;
-    text-transform: none;
     font-weight: 600;
-    border-radius: 0;
-    letter-spacing: normal;
+    text-decoration: none;
 }
 
 .data-table a:hover {
-    background-color: transparent;
-    box-shadow: none;
     color: var(--color-primary);
     text-decoration: underline;
 }
 
+/* FOOTER */
 footer {
     margin-top: 80px;
-    padding-top: 25px;
+    padding: 40px 0 20px 0;
     border-top: 1px solid var(--color-border);
-    color: #475569;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: var(--color-text-muted);
+    text-decoration: none;
     font-size: 12px;
     text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: var(--color-primary);
+}
+
+.system-sig {
+    color: #475569;
+    font-size: 10px;
+    text-transform: uppercase;
     letter-spacing: 2px;
-    text-align: center;
+    font-family: monospace;
 }
 </style>
 </head>
 <body>
 
+<!-- Kinetické pozadí -->
+<div class="bg-grid"></div>
+
 <header>
+    <div class="system-label">████ PROCESSCORE ████</div>
     <div class="owl-container">
-        <img src="cyber_owl.png" alt="ProcessCore Cyber Owl System S1" class="owl-image">
+        <img src="cyber_owl.png" alt="ProcessCore Cyber Owl System S1" class="owl-image" loading="lazy">
     </div>
 
-    <h1>ProcessCore<br>Quantum<br>Intelligence</h1>
-    <p class="subtitle">Mapping the emerging quantum technology ecosystem before mainstream visibility</p>
-    <p class="description">Evidence-backed intelligence layer for quantum market discovery.</p>
+    <h1>Quantum<br>Intelligence<br>Platform</h1>
+    <p class="subtitle">Evidence-backed discovery engine for the emerging quantum ecosystem.</p>
+    <p class="description">Mapping the emerging quantum technology infrastructure, private capital flow, and hardware development before mainstream visibility.</p>
+    
+    <div class="hero-actions">
+        <a href="#dataset" class="btn btn-primary">Explore Dataset</a>
+        <a href="#" class="btn btn-secondary">Request Demo</a>
+    </div>
 </header>
 
 <main>
     <section class="grid" aria-label="Key Metrics Overview">
         <article class="card">
-            <div class="number">11,148</div>
+            <!-- Data atribut pro JS animaci -->
+            <div class="number" data-target="11148">0</div>
             <div class="small">Technology entities analyzed</div>
         </article>
         <article class="card">
-            <div class="number">3,431</div>
+            <div class="number" data-target="3431">0</div>
             <div class="small">Quantum-related entities identified</div>
         </article>
         <article class="card">
-            <div class="number">0.94</div>
-            <div class="small">Average confidence score</div>
+            <div class="number" data-target="94">0</div>
+            <div class="small">Average confidence score (%)</div>
         </article>
         <article class="card">
-            <div class="number">8,515</div>
+            <div class="number" data-target="8515">0</div>
             <div class="small">Validated URLs</div>
         </article>
     </section>
 
-    <h2>The Problem</h2>
-    <section class="box">
-        <p>Quantum technology markets are fragmented.</p>
-        <p style="margin-top: 10px;">Critical signals are distributed across:</p>
-        <ul style="margin-top: 15px;">
-            <li>Startups</li>
-            <li>Research laboratories</li>
-            <li>Universities</li>
-            <li>Investors</li>
-            <li>Government programs</li>
-            <li>Hardware ecosystems</li>
-        </ul>
-    </section>
-
-    <h2>The Dataset</h2>
-    <section class="grid" aria-label="Dataset Core Components">
-        <article class="card">
-            <h3>Companies</h3>
-            <span class="small">
-            Quantum computing startups<br>
-            Hardware developers<br>
-            Photonics companies<br>
-            Quantum security providers
-            </span>
-        </article>
-        <article class="card">
-            <h3>Research Infrastructure</h3>
-            <span class="small">
-            Universities<br>
-            Research laboratories<br>
-            Technology programs
-            </span>
-        </article>
-        <article class="card">
-            <h3>Capital Layer</h3>
-            <span class="small">
-            Venture funds<br>
-            Investors<br>
-            Accelerators<br>
-            Ecosystem builders
-            </span>
-        </article>
+    <h2>Evolution of Ecosystem</h2>
+    <section class="box" style="padding: 20px;">
+        <div class="timeline">
+            <div class="timeline-step">2024 (Initiation)</div>
+            <div class="timeline-arrow">↓</div>
+            <div class="timeline-step">Dataset Builder</div>
+            <div class="timeline-arrow">↓</div>
+            <div class="timeline-step">Evidence Engine</div>
+            <div class="timeline-arrow">↓</div>
+            <div class="timeline-step">AI Validation</div>
+            <div class="timeline-arrow">↓</div>
+            <div class="timeline-step" style="background: var(--color-primary); color: #000;">Quantum Intelligence API</div>
+        </div>
     </section>
 
     <h2>Data Quality Layer</h2>
-    <section class="box">
-        <span style="color: var(--color-primary); font-weight: bold;">[OK]</span> Entity classification<br>
-        <span style="color: var(--color-primary); font-weight: bold;">[OK]</span> Technology categories<br>
-        <span style="color: var(--color-primary); font-weight: bold;">[OK]</span> Source references<br>
-        <span style="color: var(--color-primary); font-weight: bold;">[OK]</span> Evidence quotes<br>
-        <span style="color: var(--color-primary); font-weight: bold;">[OK]</span> Confidence scoring<br>
-        <span style="color: var(--color-primary); font-weight: bold;">[OK]</span> Validation metadata
+    <section class="grid" aria-label="Dataset Core Components">
+        <article class="card">
+            <h3>Infrastructure</h3>
+            <ul>
+                <li>Quantum hardware</li>
+                <li>Photonic systems</li>
+                <li>Cryogenic technologies</li>
+                <li>Quantum security</li>
+            </ul>
+        </article>
+        <article class="card">
+            <h3>Research Vectors</h3>
+            <ul>
+                <li>Universities</li>
+                <li>Research laboratories</li>
+                <li>Technology programs</li>
+                <li>Government funding</li>
+            </ul>
+        </article>
+        <article class="card">
+            <h3>Validation Logic</h3>
+            <ul>
+                <li>Entity classification</li>
+                <li>Source references</li>
+                <li>Confidence scoring</li>
+                <li>Validation metadata</li>
+            </ul>
+        </article>
     </section>
 
-    <h2>Example Intelligence Signal</h2>
+    <h2 id="dataset">Intelligence Database</h2>
     <section class="box">
-        <h3>Infrastructure Rotation</h3>
-        <p class="small" style="margin-bottom: 15px;">The dataset highlights increasing activity around:</p>
-        <ul>
-            <li>Quantum hardware</li>
-            <li>Photonic systems</li>
-            <li>Cryogenic technologies</li>
-            <li>Quantum security</li>
-            <li>Enabling infrastructure</li>
-        </ul>
-    </section>
-
-    <h2>Public Dataset Sample</h2>
-    <section class="box">
-        <p class="small">An interactive subset demonstrating the structure of the ProcessCore Quantum Intelligence dataset. Click table headers to sort. Entity links navigate directly to the verified source.</p>
+        <div class="table-controls">
+            <p class="small">Interactive dataset sample. Links direct to verified sources.</p>
+            <input type="text" id="searchInput" class="search-input" placeholder="Filter entities or tech..." onkeyup="filterTable()">
+        </div>
+        
         <div class="table-wrapper">
             <table class="data-table" id="quantumTable" aria-label="Sample Quantum Dataset">
                 <thead>
@@ -417,24 +556,76 @@ footer {
             </table>
         </div>
     </section>
-
-    <h2>Research Access</h2>
-    <section class="box">
-        <ul>
-            <li>Quantum ecosystem maps</li>
-            <li>Technology landscape analysis</li>
-            <li>Custom research</li>
-            <li>Data/API access</li>
-        </ul>
-    </section>
 </main>
 
 <footer>
-SYSTEM_S1 // PROCESSCORE QUANTUM INTELLIGENCE // NODE 00<br>
-GITHUB: TODAD80-DEV
+    <div class="footer-links">
+        <a href="#">GitHub</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Contact</a>
+        <a href="#">Research License</a>
+        <a href="#">API Docs</a>
+    </div>
+    <div class="system-sig">SYSTEM_S1 // PROCESSCORE QUANTUM INTELLIGENCE // NODE 00<br>GITHUB: TONDAD80-DEV</div>
 </footer>
 
 <script>
+/* 1. ANIMACE ČÍSEL POMOCÍ OBSERVERU */
+const counters = document.querySelectorAll('.number');
+const speed = 100; // Rychlost načítání
+
+const animateCounters = (counter) => {
+    const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText.replace(/,/g, '');
+        const inc = target / speed;
+
+        if (count < target) {
+            counter.innerText = Math.ceil(count + inc).toLocaleString('en-US');
+            setTimeout(updateCount, 15);
+        } else {
+            // Finální fix formátu, pro případ desetinných míst u %
+            counter.innerText = target === 94 ? "0.94" : target.toLocaleString('en-US');
+        }
+    };
+    updateCount();
+};
+
+const observerOptions = {
+    threshold: 0.5
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateCounters(entry.target);
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+counters.forEach(counter => {
+    observer.observe(counter);
+});
+
+/* 2. FILTROVÁNÍ TABULKY (LIVE SEARCH) */
+function filterTable() {
+    let input = document.getElementById("searchInput");
+    let filter = input.value.toUpperCase();
+    let table = document.getElementById("quantumTable");
+    let tr = table.getElementsByTagName("tr");
+
+    for (let i = 1; i < tr.length; i++) {
+        let textContent = tr[i].textContent || tr[i].innerText;
+        if (textContent.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+        } else {
+            tr[i].style.display = "none";
+        }
+    }
+}
+
+/* 3. ŘAZENÍ TABULKY */
 function sortTable(n) {
     let table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
     table = document.getElementById("quantumTable");
@@ -450,7 +641,6 @@ function sortTable(n) {
             x = rows[i].getElementsByTagName("TD")[n];
             y = rows[i + 1].getElementsByTagName("TD")[n];
             
-            // Extrahování textu s ohledem na možné vnořené <a> tagy
             let valX = x.textContent || x.innerText;
             let valY = y.textContent || y.innerText;
             
