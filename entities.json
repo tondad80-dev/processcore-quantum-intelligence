@@ -24,6 +24,7 @@
       "entity_type": "Startup",
       "score": 0.99,
       "region": "Global/Tech",
+      "url": "https://snorkel.ai",
       "technologies": ["Machine Learning", "Natural Language Processing"],
       "signal": "Prompting methods with language models and applications with weak supervision."
     },
@@ -33,6 +34,7 @@
       "entity_type": "Research Lab",
       "score": 0.99,
       "region": "EDU",
+      "url": "https://www.urmc.rochester.edu",
       "technologies": ["Machine Learning", "AI-based technologies", "Deep Learning", "Signal Processing"],
       "signal": "Partnership with Butterfly Network to transform care with next-generation POCUS devices."
     },
@@ -42,6 +44,7 @@
       "entity_type": "Infrastructure",
       "score": 0.99,
       "region": "NET",
+      "url": "https://io.net",
       "technologies": ["Machine Learning", "Distributed Cloud Computing", "GPU Aggregation"],
       "signal": "Delivers libraries allowing ML teams to access distributed Cloud clusters permissionless."
     },
@@ -51,6 +54,7 @@
       "entity_type": "Research Lab",
       "score": 0.99,
       "region": "ORG",
+      "url": "https://iaifi.org",
       "technologies": ["Artificial Intelligence", "Physics", "Interdisciplinary Research"],
       "signal": "Advancing physics knowledge and galvanizing AI research innovation."
     },
@@ -61,6 +65,7 @@
       "leader": "Stefano Curtarolo",
       "score": 0.99,
       "region": "Global/US",
+      "url": "https://materials.duke.edu",
       "technologies": ["Artificial Intelligence", "Materials Science", "Autonomous Materials Design"],
       "signal": "Research in Autonomous Materials Design and High-Entropy Disordered Systems."
     },
@@ -70,6 +75,7 @@
       "entity_type": "Startup",
       "score": 0.99,
       "region": "Global/US",
+      "url": "https://www.enlitic.com",
       "technologies": ["Deep Learning", "Neural Networks"],
       "signal": "Bringing medical diagnostics and treatment planning into the data-driven world."
     },
@@ -79,6 +85,7 @@
       "entity_type": "Research Lab",
       "score": 0.99,
       "region": "Global/Tech",
+      "url": "https://www.fast.ai",
       "technologies": ["Deep Learning"],
       "signal": "Research lab dedicated to allowing deep learning to meet its enormous potential."
     },
@@ -88,6 +95,7 @@
       "entity_type": "Research Institute",
       "score": 0.99,
       "region": "Global/US",
+      "url": "https://www.amii.ca",
       "technologies": ["Machine Learning", "Non-deductive Reasoning", "Automated Diagnosis"],
       "signal": "Advancing machine learning research and applications at the University of Alberta."
     },
@@ -97,6 +105,7 @@
       "entity_type": "Research Lab",
       "score": 0.99,
       "region": "EDU",
+      "url": "https://bair.berkeley.edu",
       "technologies": ["Artificial Intelligence", "Machine Learning", "Robotics", "Computer Vision"],
       "signal": "Pushing the frontiers of artificial intelligence and machine learning."
     },
@@ -106,6 +115,7 @@
       "entity_type": "Startup",
       "score": 0.99,
       "region": "Global/US",
+      "url": "https://ailylabs.com",
       "technologies": ["Artificial Intelligence", "Decision Intelligence"],
       "signal": "Developing Decision Intelligence to facilitate or augment executive workflows."
     }
