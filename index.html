@@ -87,20 +87,20 @@ footer { margin-top: 60px; padding: 30px 0 15px 0; border-top: 1px solid var(--c
 <main>
     <section class="grid" aria-label="System Metrics">
         <article class="card">
-            <div class="number" data-target="100" data-format="int">0</div>
-            <div class="small">Extracted AI signals</div>
+            <div class="number" data-target="14120" data-format="int">0</div>
+            <div class="small">Enriched entities in Golden DB</div>
         </article>
         <article class="card">
-            <div class="number" data-target="99" data-format="float">0</div>
-            <div class="small">Max confidence score (%)</div>
+            <div class="number" data-target="95" data-format="float">0</div>
+            <div class="small">Standard confidence score (%)</div>
         </article>
         <article class="card">
-            <div class="number" data-target="35" data-format="int">0</div>
-            <div class="small">Global/US Ecosystem Entities</div>
+            <div class="number" data-target="3312" data-format="k">0</div>
+            <div class="small">Crawled frontier URLs</div>
         </article>
         <article class="card">
-            <div class="number" data-target="11" data-format="int">0</div>
-            <div class="small">University / EDU Labs</div>
+            <div class="number" data-target="24870" data-format="int">0</div>
+            <div class="small">Mapped technology vectors</div>
         </article>
     </section>
 
@@ -216,6 +216,8 @@ const animateCounters = (counter) => {
         if (current < target) {
             if (format === 'float') {
                 counter.innerText = (current / 100).toFixed(2);
+            } else if (format === 'k') {
+                counter.innerText = Math.ceil(current) + 'k+';
             } else {
                 counter.innerText = Math.ceil(current).toLocaleString('en-US');
             }
@@ -223,6 +225,8 @@ const animateCounters = (counter) => {
         } else {
             if (format === 'float') {
                 counter.innerText = (target / 100).toFixed(2);
+            } else if (format === 'k') {
+                counter.innerText = target + 'k+';
             } else {
                 counter.innerText = target.toLocaleString('en-US');
             }
