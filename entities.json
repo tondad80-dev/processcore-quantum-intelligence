@@ -1,19 +1,27 @@
 {
+  "dataset_metadata": {
+    "engine": "ProcessCore Intelligence",
+    "version": "v1.0",
+    "category": "AI Ecosystem Mapping",
+    "methodology": "Evidence-backed entity discovery and enrichment",
+    "confidence_threshold": 0.95
+  },
   "topic": "Kde vznikají nové AI firmy?",
-  "generated_at": "2026-07-27T09:02:32.426711",
+  "generated_at": "2026-07-31T17:21:00.000000",
   "total_extracted": 100,
   "confidence_standard": 0.95,
-  "tld_distribution": {
-    "Global/US": 35,
-    "Global/Tech": 12,
-    "EDU": 11,
-    "ORG": 10,
+  "regional_distribution": {
+    "North America": 35,
+    "Global Technology Ecosystem": 12,
+    "Academic Institutions": 11,
+    "Research Organizations": 10,
     "Germany": 5
   },
   "top_actors": [
     {
       "rank": 1,
       "name": "Snorkel AI",
+      "entity_type": "Startup",
       "score": 0.99,
       "region": "Global/Tech",
       "technologies": ["Machine Learning", "Natural Language Processing"],
@@ -22,6 +30,7 @@
     {
       "rank": 2,
       "name": "URMC",
+      "entity_type": "Research Lab",
       "score": 0.99,
       "region": "EDU",
       "technologies": ["Machine Learning", "AI-based technologies", "Deep Learning", "Signal Processing"],
@@ -30,6 +39,7 @@
     {
       "rank": 3,
       "name": "io.net",
+      "entity_type": "Infrastructure",
       "score": 0.99,
       "region": "NET",
       "technologies": ["Machine Learning", "Distributed Cloud Computing", "GPU Aggregation"],
@@ -38,6 +48,7 @@
     {
       "rank": 4,
       "name": "NSF AI Institute (IAIFI)",
+      "entity_type": "Research Lab",
       "score": 0.99,
       "region": "ORG",
       "technologies": ["Artificial Intelligence", "Physics", "Interdisciplinary Research"],
@@ -45,7 +56,9 @@
     },
     {
       "rank": 5,
-      "name": "Stefano Curtarolo, Ph.D.",
+      "name": "Duke University Materials Computation Group",
+      "entity_type": "Research Group",
+      "leader": "Stefano Curtarolo",
       "score": 0.99,
       "region": "Global/US",
       "technologies": ["Artificial Intelligence", "Materials Science", "Autonomous Materials Design"],
@@ -54,6 +67,7 @@
     {
       "rank": 6,
       "name": "Enlitic",
+      "entity_type": "Startup",
       "score": 0.99,
       "region": "Global/US",
       "technologies": ["Deep Learning", "Neural Networks"],
@@ -62,6 +76,7 @@
     {
       "rank": 7,
       "name": "fast.ai",
+      "entity_type": "Research Lab",
       "score": 0.99,
       "region": "Global/Tech",
       "technologies": ["Deep Learning"],
@@ -70,6 +85,7 @@
     {
       "rank": 8,
       "name": "Amii",
+      "entity_type": "Research Institute",
       "score": 0.99,
       "region": "Global/US",
       "technologies": ["Machine Learning", "Non-deductive Reasoning", "Automated Diagnosis"],
@@ -78,6 +94,7 @@
     {
       "rank": 9,
       "name": "BAIR Lab",
+      "entity_type": "Research Lab",
       "score": 0.99,
       "region": "EDU",
       "technologies": ["Artificial Intelligence", "Machine Learning", "Robotics", "Computer Vision"],
@@ -86,6 +103,7 @@
     {
       "rank": 10,
       "name": "Aily Labs",
+      "entity_type": "Startup",
       "score": 0.99,
       "region": "Global/US",
       "technologies": ["Artificial Intelligence", "Decision Intelligence"],
