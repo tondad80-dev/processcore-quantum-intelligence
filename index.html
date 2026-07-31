@@ -75,32 +75,32 @@ footer { margin-top: 60px; padding: 30px 0 15px 0; border-top: 1px solid var(--c
 <div class="bg-grid"></div>
 <header>
     <div class="system-label">████ PROCESSCORE OS ████ // NODE 00</div>
-    <div class="live-badge">🟢 PRODUCTION PIPELINE ACTIVE // 14,120+ ENTITIES</div>
+    <div class="live-badge">🟢 TOPIC ANALYSIS: Kde vznikají nové AI firmy?</div>
     <h1>Global Intelligence<br>& B2B Discovery Platform</h1>
     <p class="subtitle">Autonomous scraping, validation, and enrichment pipeline for advanced ecosystems.</p>
     <p class="description">Mapping governmental frameworks, research labs, deep-tech startups, and grant architectures across Europe and Asia.</p>
     <div class="hero-actions">
         <a href="#dataset" class="btn btn-primary">Explore Dataset</a>
-        <a href="export_sample.json" download class="btn btn-secondary">Download Sample JSON</a>
+        <a href="entities.json" download class="btn btn-secondary">Download Entities JSON</a>
     </div>
 </header>
 <main>
     <section class="grid" aria-label="System Metrics">
         <article class="card">
-            <div class="number" data-target="14120" data-format="int">0</div>
-            <div class="small">Enriched entities in Golden DB</div>
+            <div class="number" data-target="100" data-format="int">0</div>
+            <div class="small">Extracted AI signals</div>
         </article>
         <article class="card">
-            <div class="number" data-target="95" data-format="float">0</div>
-            <div class="small">Standard confidence score (%)</div>
+            <div class="number" data-target="99" data-format="float">0</div>
+            <div class="small">Max confidence score (%)</div>
         </article>
         <article class="card">
-            <div class="number" data-target="3312" data-format="k">0</div>
-            <div class="small">Crawled frontier URLs</div>
+            <div class="number" data-target="35" data-format="int">0</div>
+            <div class="small">Global/US Ecosystem Entities</div>
         </article>
         <article class="card">
-            <div class="number" data-target="24870" data-format="int">0</div>
-            <div class="small">Mapped technology vectors</div>
+            <div class="number" data-target="11" data-format="int">0</div>
+            <div class="small">University / EDU Labs</div>
         </article>
     </section>
 
@@ -144,44 +144,21 @@ footer { margin-top: 60px; padding: 30px 0 15px 0; border-top: 1px solid var(--c
     <h2 id="dataset">Intelligence Database</h2>
     <section class="box">
         <div class="table-controls">
-            <p class="small">Live records extracted from ProcessCore Golden Database. Updated: 2026-07-31.</p>
-            <input type="text" id="searchInput" class="search-input" placeholder="Search entities or tech..." onkeyup="filterTable()">
+            <p class="small">Loaded live from <strong>entities.json</strong>. Topic: "Kde vznikají nové AI firmy?"</p>
+            <input type="text" id="searchInput" class="search-input" placeholder="Search actor or tech..." onkeyup="filterTable()">
         </div>
         <div class="table-wrapper">
             <table class="data-table" id="entityTable">
                 <thead>
                     <tr>
-                        <th>Entity Name</th>
-                        <th>Classification</th>
-                        <th>Technologies / Provenance</th>
-                        <th>Source URL</th>
+                        <th>Actor Name</th>
+                        <th>Region / TLD</th>
+                        <th>Technologies / Signal</th>
+                        <th>Score</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>CzechInvest</strong></td>
-                        <td>GOVERNMENT</td>
-                        <td>Semiconductor Ecosystem, Defence Hubs<br><span class="provenance-tag">Conf: 0.95 | Validated Official Source</span></td>
-                        <td><a href="https://www.czechinvest.org" target="_blank" rel="noopener noreferrer">czechinvest.org</a></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Nasscom NIPP</strong></td>
-                        <td>ACCELERATOR</td>
-                        <td>AI, ML, Quantum Computing, Semiconductors<br><span class="provenance-tag">Conf: 0.95 | Validated Official Source</span></td>
-                        <td><a href="https://nasscom.in/deeptech" target="_blank" rel="noopener noreferrer">nasscom.in</a></td>
-                    </tr>
-                    <tr>
-                        <td><strong>IQB (University of Tokyo)</strong></td>
-                        <td>RESEARCH_LAB</td>
-                        <td>Quantitative experimentation, biological insights<br><span class="provenance-tag">Conf: 0.95 | Validated Official Source</span></td>
-                        <td><a href="https://www.iqb.u-tokyo.ac.jp/en" target="_blank" rel="noopener noreferrer">iqb.u-tokyo.ac.jp</a></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Miraikan Museum</strong></td>
-                        <td>GOVERNMENT</td>
-                        <td>Emerging Science and Innovation<br><span class="provenance-tag">Conf: 0.95 | Validated Official Source</span></td>
-                        <td><a href="https://www.miraikan.jst.go.jp/en" target="_blank" rel="noopener noreferrer">miraikan.jst.go.jp</a></td>
-                    </tr>
+                <tbody id="tableBody">
+                    <tr><td colspan="4" style="text-align: center;">Načítám živá data z entities.json...</td></tr>
                 </tbody>
             </table>
         </div>
@@ -191,6 +168,30 @@ footer { margin-top: 60px; padding: 30px 0 15px 0; border-top: 1px solid var(--c
     <div class="system-sig">PROCESSCORE OS // NODE 00 // SECURE PRODUCTION ENVIRONMENT</div>
 </footer>
 <script>
+document.addEventListener("DOMContentLoaded", () => {
+    fetch('entities.json')
+        .then(response => response.json())
+        .then(data => {
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = '';
+            if (data.top_actors) {
+                data.top_actors.forEach(actor => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td><strong>${actor.name}</strong></td>
+                        <td>${actor.region}</td>
+                        <td>${actor.technologies.join(', ')}<br><span class="provenance-tag">Signal: ${actor.signal}</span></td>
+                        <td>${actor.score}</td>
+                    `;
+                    tbody.appendChild(tr);
+                });
+            }
+        })
+        .catch(err => {
+            document.getElementById('tableBody').innerHTML = `<tr><td colspan="4" style="text-align: center; color: #f87171;">Chyba při načítání entities.json</td></tr>`;
+        });
+});
+
 function filterTable() {
     let input = document.getElementById("searchInput");
     let filter = input.value.toUpperCase();
@@ -209,14 +210,12 @@ const animateCounters = (counter) => {
     let current = 0;
     const speed = 40;
     const increment = target / speed;
-    
+
     const update = () => {
         current += increment;
         if (current < target) {
             if (format === 'float') {
                 counter.innerText = (current / 100).toFixed(2);
-            } else if (format === 'k') {
-                counter.innerText = Math.ceil(current) + 'k+';
             } else {
                 counter.innerText = Math.ceil(current).toLocaleString('en-US');
             }
@@ -224,8 +223,6 @@ const animateCounters = (counter) => {
         } else {
             if (format === 'float') {
                 counter.innerText = (target / 100).toFixed(2);
-            } else if (format === 'k') {
-                counter.innerText = target + 'k+';
             } else {
                 counter.innerText = target.toLocaleString('en-US');
             }
