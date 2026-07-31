@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#050508">
 <meta name="description" content="ProcessCore Intelligence Platform - Enterprise Demo Simulation for global deep-tech, B2B, and government ecosystems.">
 <meta property="og:title" content="ProcessCore Intelligence Platform [DEMO]">
-<meta property="og:description" content="Autonomous discovery and validation engine for global B2B and deep-tech markets.">
+<meta property="og:description" content="Early signal discovery and validation engine for global B2B and deep-tech markets.">
 <meta property="og:type" content="website">
 <title>ProcessCore Intelligence Platform [ENTERPRISE DEMO]</title>
 <style>
@@ -89,7 +89,7 @@ footer { margin-top: 40px; padding: 30px 0 15px 0; border-top: 1px solid var(--c
 <body>
 <div class="bg-grid"></div>
 <div class="enterprise-banner">
-    ⚠️ ENTERPRISE DEMO SIMULATION — Live evaluation environment of ProcessCore OS. Data layers, entities and signals are experimental. SLA & Production APIs available upon enterprise contract.
+    ⚠️ ENTERPRISE DEMO SIMULATION — Live evaluation environment of ProcessCore OS. Data layers, entities and signals are experimental. Integration layers available upon evaluation partnership.
 </div>
 <header>
     <div class="system-label">████ PROCESSCORE OS ████ // NODE 00</div>
@@ -113,7 +113,7 @@ footer { margin-top: 40px; padding: 30px 0 15px 0; border-top: 1px solid var(--c
         </article>
         <article class="card">
             <div class="number" data-target="95" data-format="float">0</div>
-            <div class="small">Evidence Confidence (%)</div>
+            <div class="small">Validation Baseline (%)</div>
         </article>
         <article class="card">
             <div class="number" data-target="3312" data-format="k">0</div>
@@ -125,15 +125,15 @@ footer { margin-top: 40px; padding: 30px 0 15px 0; border-top: 1px solid var(--c
         </article>
     </section>
     <div style="text-align: center;">
-        <div class="snapshot-meta">Dataset Snapshot: 2026-07-31 | Golden DB v1.0 | 14,120 validated entities</div>
+        <div class="snapshot-meta">Dataset Snapshot: 2026-07-31 | Golden DB v1.0 | 14,120 validated entities | Baseline: 0.95</div>
     </div>
 
     <h2>Why ProcessCore?</h2>
     <section class="box">
         <div class="use-cases-grid">
             <div class="use-case-card">
-                <h3>Autonomous Discovery</h3>
-                <p class="small">Autonomous web frontier discovery without static predefined lists.</p>
+                <h3>Continuous Discovery</h3>
+                <p class="small">Agent-assisted web frontier discovery without static predefined lists.</p>
             </div>
             <div class="use-case-card">
                 <h3>Evidence Validation</h3>
@@ -157,14 +157,36 @@ footer { margin-top: 40px; padding: 30px 0 15px 0; border-top: 1px solid var(--c
             <li>✓ <strong>Source URL:</strong> Direct primary trace back to official web or registry.</li>
             <li>✓ <strong>Validation Timestamp:</strong> Exact temporal record of discovery and check.</li>
             <li>✓ <strong>Technology Signals:</strong> Extracted stack and vector markers.</li>
-            <li>✓ <strong>Confidence Score:</strong> Mathematical probability of entity validity.</li>
+            <li>✓ <strong>Confidence Score:</strong> Quantified estimate of entity validity based on evidence signals.</li>
         </ul>
+    </section>
+
+    <h2>Governance & Security Layer</h2>
+    <section class="box">
+        <div class="use-cases-grid">
+            <div class="use-case-card">
+                <h3>Immutable Logs</h3>
+                <p class="small">Traceable processing history and audit-ready data streams.</p>
+            </div>
+            <div class="use-case-card">
+                <h3>Source Traceability</h3>
+                <p class="small">Direct cryptographic or temporal link to original provenance.</p>
+            </div>
+            <div class="use-case-card">
+                <h3>Data Retention</h3>
+                <p class="small">Configurable storage policies and compliance safeguards.</p>
+            </div>
+            <div class="use-case-card">
+                <h3>Human Verification</h3>
+                <p class="small">Built-in checkpoints for high-assurance entity validation.</p>
+            </div>
+        </div>
     </section>
 
     <h2>Pipeline Architecture</h2>
     <section class="box">
         <div class="pipeline">
-            <div class="pipeline-step">1. Autonomous Web Discovery</div>
+            <div class="pipeline-step">1. Continuous Web Discovery</div>
             <div class="pipeline-arrow">↓</div>
             <div class="pipeline-step">2. Content Validation & Filtering</div>
             <div class="pipeline-arrow">↓</div>
@@ -206,6 +228,7 @@ footer { margin-top: 40px; padding: 30px 0 15px 0; border-top: 1px solid var(--c
         </div>
         <div class="table-wrapper">
             <table class="data-table" id="entityTable">
+                <caption>ProcessCore Golden DB - Live Entity Stream</caption>
                 <thead>
                     <tr>
                         <th>Actor Name (Official Web)</th>
@@ -247,19 +270,56 @@ document.addEventListener("DOMContentLoaded", () => {
             if (data.top_actors) {
                 data.top_actors.forEach(actor => {
                     const tr = document.createElement('tr');
-                    const webLink = actor.url ? `<a href="${actor.url}" target="_blank" rel="noopener noreferrer">${actor.name} ↗</a>` : actor.name;
-                    tr.innerHTML = `
-                        <td><strong>${webLink}</strong></td>
-                        <td>${actor.region}</td>
-                        <td>${actor.technologies.join(', ')}<br><span class="provenance-tag">Signal: ${actor.signal}</span></td>
-                        <td>${actor.score}</td>
-                    `;
+                    
+                    const tdName = document.createElement('td');
+                    const strong = document.createElement('strong');
+                    if (actor.url) {
+                        const a = document.createElement('a');
+                        a.href = actor.url;
+                        a.target = "_blank";
+                        a.rel = "noopener noreferrer";
+                        a.textContent = actor.name + " ↗";
+                        strong.appendChild(a);
+                    } else {
+                        strong.textContent = actor.name;
+                    }
+                    tdName.appendChild(strong);
+                    
+                    const tdRegion = document.createElement('td');
+                    tdRegion.textContent = actor.region;
+                    
+                    const tdTech = document.createElement('td');
+                    tdTech.textContent = actor.technologies.join(', ');
+                    const br = document.createElement('br');
+                    tdTech.appendChild(br);
+                    const spanTag = document.createElement('span');
+                    spanTag.className = "provenance-tag";
+                    spanTag.textContent = "Signal: " + actor.signal;
+                    tdTech.appendChild(spanTag);
+                    
+                    const tdScore = document.createElement('td');
+                    tdScore.textContent = actor.score;
+                    
+                    tr.appendChild(tdName);
+                    tr.appendChild(tdRegion);
+                    tr.appendChild(tdTech);
+                    tr.appendChild(tdScore);
+                    
                     tbody.appendChild(tr);
                 });
             }
         })
         .catch(err => {
-            document.getElementById('tableBody').innerHTML = `<tr><td colspan="4" style="text-align: center; color: #f87171;">Error loading entities.json (${err.message})</td></tr>`;
+            const tr = document.createElement('tr');
+            const td = document.createElement('td');
+            td.colSpan = 4;
+            td.style.textAlign = "center";
+            td.style.color = "#f87171";
+            td.textContent = "Error loading entities.json (" + err.message + ")";
+            tr.appendChild(td);
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = '';
+            tbody.appendChild(tr);
         });
 });
 
