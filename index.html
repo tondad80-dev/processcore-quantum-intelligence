@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="cs" style="scroll-behavior: smooth;">
+<html lang="en" style="scroll-behavior: smooth;">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -78,7 +78,7 @@ footer { margin-top: 60px; padding: 30px 0 15px 0; border-top: 1px solid var(--c
 <div class="bg-grid"></div>
 <header>
     <div class="system-label">████ PROCESSCORE OS ████ // NODE 00</div>
-    <div class="live-badge">⚠️ DEMO ENVIRONMENT // LIVE SIMULATION [TOPIC: Kde vznikají nové AI firmy?]</div>
+    <div class="live-badge">⚠️ DEMO ENVIRONMENT // LIVE SIMULATION [TOPIC: Where do new AI companies emerge?]</div>
     <h1>Global Intelligence<br>& B2B Discovery Platform</h1>
     <p class="subtitle">Autonomous scraping, validation, and enrichment pipeline for advanced ecosystems.</p>
     <div class="hero-image-container">
@@ -150,7 +150,7 @@ footer { margin-top: 60px; padding: 30px 0 15px 0; border-top: 1px solid var(--c
     <h2 id="dataset">Intelligence Database</h2>
     <section class="box">
         <div class="table-controls">
-            <p class="small">Loaded live from <strong>entities.json</strong>. Topic: "Kde vznikají nové AI firmy?"</p>
+            <p class="small">Loaded live from <strong>entities.json</strong>. Topic: "Where do new AI companies emerge?"</p>
             <input type="text" id="searchInput" class="search-input" placeholder="Search actor or tech..." onkeyup="filterTable()">
         </div>
         <div class="table-wrapper">
@@ -164,7 +164,7 @@ footer { margin-top: 60px; padding: 30px 0 15px 0; border-top: 1px solid var(--c
                     </tr>
                 </thead>
                 <tbody id="tableBody">
-                    <tr><td colspan="4" style="text-align: center;">Načítám živá data z entities.json...</td></tr>
+                    <tr><td colspan="4" style="text-align: center;">Loading live data from entities.json...</td></tr>
                 </tbody>
             </table>
         </div>
@@ -195,7 +195,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         })
         .catch(err => {
-            document.getElementById('tableBody').innerHTML = `<tr><td colspan="4" style="text-align: center; color: #f87171;">Chyba při načítání entities.json</td></tr>`;
+            document.getElementById('tableBody').innerHTML = `<tr><td colspan="4" style="text-align: center; color: #f87171;">Error loading entities.json</td></tr>`;
         });
 });
 
