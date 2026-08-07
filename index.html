@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#050508">
+<meta name="theme-color" content="#030712">
 <meta name="description" content="ProcessCore Intelligence Platform - Experimental research prototype and early signal discovery engine for global B2B and deep-tech ecosystems.">
 <meta name="author" content="Antonín Dospiva">
 <link rel="canonical" href="https://tondad80-dev.github.io/processcore-quantum-intelligence/">
 
 <!-- Open Graph / LinkedIn -->
 <meta property="og:title" content="ProcessCore Intelligence Platform [RESEARCH PROTOTYPE]">
-<meta property="og:description" content="Experimental early signal discovery engine for global B2B and deep-tech markets. Golden DB v1.0: 28,307 enriched entities, 89,527 registry entities.">
+<meta property="og:description" content="Experimental early signal discovery engine for global B2B and deep-tech markets. Golden DB v1.0: 28,307 AI-assisted enriched records, 89,527 registry entities.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tondad80-dev.github.io/processcore-quantum-intelligence/">
 <meta property="og:image" content="https://tondad80-dev.github.io/processcore-quantum-intelligence/hero_map.png">
@@ -19,7 +19,7 @@
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="ProcessCore Intelligence Platform [RESEARCH PROTOTYPE]">
-<meta name="twitter:description" content="Experimental early signal discovery engine for global B2B and deep-tech markets. Mapping 28,307+ enriched entities.">
+<meta name="twitter:description" content="Experimental early signal discovery engine for global B2B and deep-tech markets. Mapping 28,307+ AI-assisted enriched records.">
 <meta name="twitter:image" content="https://tondad80-dev.github.io/processcore-quantum-intelligence/hero_map.png">
 
 <!-- JSON-LD Structured Data -->
@@ -28,7 +28,7 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "ResearchProject",
+      "@type": "Project",
       "name": "ProcessCore Quantum Intelligence",
       "description": "Experimental B2B and deep-tech ecosystem discovery platform mapping early technology signals.",
       "url": "https://tondad80-dev.github.io/processcore-quantum-intelligence/",
@@ -59,120 +59,128 @@
 <title>ProcessCore Intelligence Platform [RESEARCH PROTOTYPE]</title>
 <style>
 :root {
-    --color-bg: #050508;
-    --color-text-main: #cbd5e1;
+    --color-bg: #030712;
+    --color-surface: rgba(15, 23, 42, 0.65);
+    --color-surface-hover: rgba(30, 41, 59, 0.75);
+    --color-text-main: #f8fafc;
     --color-text-muted: #94a3b8;
     --color-primary: #38bdf8;
     --color-primary-light: #7dd3fc;
     --color-primary-dark: #bae6fd;
-    --color-glass-bg: rgba(10, 15, 30, 0.7);
-    --color-border: rgba(56, 189, 248, 0.15);
-    --color-border-hover: rgba(56, 189, 248, 0.4);
-    --shadow-glow: rgba(56, 189, 248, 0.5);
+    --color-accent: #f59e0b;
+    --color-border: rgba(56, 189, 248, 0.18);
+    --color-border-hover: rgba(56, 189, 248, 0.45);
     --font-stack: "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    --font-mono: "JetBrains Mono", "Fira Code", monospace;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
-    font-family: var(--font-stack); max-width: 1000px; margin: auto; padding: 20px;
+    font-family: var(--font-stack); max-width: 1080px; margin: auto; padding: 24px;
     background-color: var(--color-bg); color: var(--color-text-main); line-height: 1.6;
     overflow-x: hidden;
+    background-image: 
+        radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.08) 0%, transparent 50%),
+        linear-gradient(to right, rgba(56, 189, 248, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(56, 189, 248, 0.03) 1px, transparent 1px);
+    background-size: 100% 100%, 40px 40px, 40px 40px;
+    background-attachment: fixed;
 }
 :focus-visible {
     outline: 2px solid var(--color-primary-light);
     outline-offset: 3px;
 }
 @keyframes pulseGlow {
-    0%, 100% { box-shadow: 0 0 10px rgba(56, 189, 248, 0.2); border-color: rgba(56, 189, 248, 0.3); }
-    50% { box-shadow: 0 0 20px rgba(56, 189, 248, 0.5); border-color: rgba(56, 189, 248, 0.7); }
+    0%, 100% { box-shadow: 0 0 12px rgba(56, 189, 248, 0.15); border-color: rgba(56, 189, 248, 0.3); }
+    50% { box-shadow: 0 0 24px rgba(56, 189, 248, 0.45); border-color: rgba(56, 189, 248, 0.75); }
 }
 @keyframes floatUp {
-    from { opacity: 0; transform: translateY(20px); }
+    from { opacity: 0; transform: translateY(16px); }
     to { opacity: 1; transform: translateY(0); }
 }
 .fade-in-section {
     opacity: 0;
-    transform: translateY(25px);
-    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(20px);
+    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .fade-in-section.is-visible {
     opacity: 1;
     transform: translateY(0);
 }
 .enterprise-banner {
-    background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.4); color: #fbbf24;
-    padding: 10px 16px; border-radius: 6px; font-family: monospace; font-size: 11px; text-align: center;
-    margin-bottom: 25px; letter-spacing: 0.5px;
-    animation: floatUp 0.5s ease-out;
+    background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.35); color: #fbbf24;
+    padding: 10px 16px; border-radius: 6px; font-family: var(--font-mono); font-size: 11px; text-align: center;
+    margin-bottom: 30px; letter-spacing: 0.5px;
+    animation: floatUp 0.4s ease-out;
 }
-.bg-grid {
-    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1;
-    background-size: 40px 40px;
-    background-image: linear-gradient(to right, rgba(56, 189, 248, 0.03) 1px, transparent 1px),
-                      linear-gradient(to bottom, rgba(56, 189, 248, 0.03) 1px, transparent 1px);
-}
-header { text-align: center; margin-bottom: 40px; animation: floatUp 0.7s ease-out; }
-.system-label { font-family: monospace; color: var(--color-primary-dark); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
-h1 { font-size: clamp(32px, 7vw, 48px); margin-bottom: 12px; color: var(--color-primary-light); font-weight: 800; line-height: 1.15; }
-h2 { margin-top: 40px; color: #e0f2fe; font-size: 20px; border-bottom: 1px solid var(--color-border); padding-bottom: 8px; text-transform: uppercase; letter-spacing: 2px; }
-.subtitle { font-size: clamp(16px, 4vw, 20px); color: var(--color-primary); margin-bottom: 15px; font-weight: 600; max-width: 800px; margin-left: auto; margin-right: auto; }
-.description { font-size: 15px; color: var(--color-text-muted); max-width: 700px; margin: 0 auto 20px auto; }
-.hero-image-container { margin: 25px auto 20px auto; max-width: 900px; transition: transform 0.4s ease; }
-.hero-image-container:hover { transform: scale(1.01); }
-.hero-image { width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--color-border); box-shadow: 0 0 30px rgba(56, 189, 248, 0.15); display: block; }
-.hero-actions { display: flex; gap: 12px; justify-content: center; margin-top: 20px; flex-wrap: wrap; }
-.btn { display: inline-block; font-weight: 700; text-decoration: none; padding: 10px 24px; border-radius: 4px; transition: all 0.3s ease; text-transform: uppercase; font-size: 13px; letter-spacing: 1.5px; cursor: pointer; border: none; }
+header { text-align: center; margin-bottom: 48px; animation: floatUp 0.6s ease-out; }
+.system-label { font-family: var(--font-mono); color: var(--color-primary-dark); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
+h1 { font-size: clamp(32px, 6vw, 50px); margin-bottom: 14px; color: var(--color-primary-light); font-weight: 800; line-height: 1.1; letter-spacing: -0.5px; }
+h2 { margin-top: 44px; color: #f0f9ff; font-size: 18px; border-bottom: 1px solid var(--color-border); padding-bottom: 10px; text-transform: uppercase; letter-spacing: 2px; font-family: var(--font-mono); }
+.subtitle { font-size: clamp(16px, 3.8vw, 20px); color: var(--color-primary); margin-bottom: 18px; font-weight: 600; max-width: 820px; margin-left: auto; margin-right: auto; }
+.description { font-size: 15px; color: var(--color-text-muted); max-width: 720px; margin: 0 auto 24px auto; }
+.hero-image-container { margin: 28px auto 24px auto; max-width: 920px; transition: transform 0.35s ease; }
+.hero-image-container:hover { transform: scale(1.008); }
+.hero-image { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--color-border); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(56, 189, 248, 0.12); display: block; }
+.hero-actions { display: flex; gap: 12px; justify-content: center; margin-top: 24px; flex-wrap: wrap; }
+.btn { display: inline-block; font-weight: 700; text-decoration: none; padding: 11px 24px; border-radius: 6px; transition: all 0.25s ease; text-transform: uppercase; font-size: 12px; letter-spacing: 1.5px; cursor: pointer; border: none; font-family: var(--font-mono); }
 .btn-primary { color: var(--color-bg); background-color: var(--color-primary); border: 1px solid var(--color-primary); }
-.btn-primary:hover { background-color: var(--color-primary-light); transform: translateY(-2px); box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4); }
+.btn-primary:hover { background-color: var(--color-primary-light); transform: translateY(-2px); box-shadow: 0 4px 18px rgba(56, 189, 248, 0.45); }
 .btn-secondary { color: var(--color-primary); background-color: transparent; border: 1px solid var(--color-primary); }
-.btn-secondary:hover { background-color: rgba(56, 189, 248, 0.1); transform: translateY(-2px); }
-.btn-social { color: #e2e8f0; background-color: rgba(15, 23, 42, 0.8); border: 1px solid var(--color-border); }
+.btn-secondary:hover { background-color: rgba(56, 189, 248, 0.12); transform: translateY(-2px); }
+.btn-social { color: #e2e8f0; background-color: rgba(15, 23, 42, 0.85); border: 1px solid var(--color-border); }
 .btn-social:hover { background-color: rgba(56, 189, 248, 0.2); border-color: var(--color-primary); transform: translateY(-2px); }
 .btn-accent { color: #000; background-color: #fbbf24; border: 1px solid #fbbf24; }
-.btn-accent:hover { background-color: #f59e0b; transform: translateY(-2px); box-shadow: 0 4px 15px rgba(251, 191, 36, 0.4); }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 30px; }
-.card { background: var(--color-glass-bg); backdrop-filter: blur(10px); padding: 25px 20px; border-radius: 8px; border: 1px solid var(--color-border); text-align: center; transition: all 0.3s ease; }
-.card:hover { border-color: var(--color-primary); transform: translateY(-3px); box-shadow: 0 10px 25px rgba(56, 189, 248, 0.15); }
-.number { font-size: 38px; font-weight: 800; color: var(--color-primary); font-family: monospace; margin-bottom: 5px; }
+.btn-accent:hover { background-color: #f59e0b; transform: translateY(-2px); box-shadow: 0 4px 18px rgba(251, 191, 36, 0.45); }
+
+/* Bento Grid Architecture */
+.bento-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; margin-top: 24px; }
+.bento-card { background: var(--color-surface); backdrop-filter: blur(12px); padding: 26px 20px; border-radius: 10px; border: 1px solid var(--color-border); text-align: center; transition: all 0.25s ease; }
+.bento-card:hover { border-color: var(--color-primary); transform: translateY(-3px); background: var(--color-surface-hover); box-shadow: 0 10px 28px rgba(56, 189, 248, 0.12); }
+.number { font-size: 40px; font-weight: 800; color: var(--color-primary); font-family: var(--font-mono); margin-bottom: 6px; line-height: 1; }
 .small { color: var(--color-text-muted); font-size: 13px; }
-.snapshot-meta { font-family: monospace; font-size: 12px; color: var(--color-primary-dark); margin-top: 8px; }
-section.box { background: var(--color-glass-bg); backdrop-filter: blur(10px); padding: 25px; border-radius: 8px; margin-top: 20px; border: 1px solid var(--color-border); transition: border-color 0.3s ease; }
-section.box:hover { border-color: rgba(56, 189, 248, 0.3); }
-.pipeline { display: flex; flex-direction: column; align-items: center; margin: 15px 0; }
-.pipeline-step { background: rgba(10, 15, 30, 0.9); border: 1px solid var(--color-primary); padding: 10px 20px; border-radius: 4px; font-weight: 700; color: var(--color-primary-light); width: 100%; max-width: 320px; text-align: center; font-size: 14px; transition: transform 0.3s ease; }
-.pipeline-step:hover { transform: scale(1.03); }
-.pipeline-arrow { color: var(--color-primary); font-size: 18px; margin: 6px 0; }
-.use-cases-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 15px; }
-.use-case-card { background: rgba(15, 23, 42, 0.6); padding: 16px; border-radius: 6px; border: 1px solid rgba(56, 189, 248, 0.1); transition: all 0.3s ease; }
-.use-case-card:hover { background: rgba(15, 23, 42, 0.9); border-color: var(--color-primary-light); transform: translateY(-2px); }
-.use-case-card h3 { color: var(--color-primary-light); font-size: 15px; margin-bottom: 6px; }
-.provenance-tag { font-family: monospace; font-size: 11px; color: #38bdf8; background: rgba(56,189,248,0.08); padding: 2px 6px; border-radius: 3px; display: inline-block; margin-top: 4px; }
-.evidence-list { list-style: none; margin-top: 10px; font-size: 13px; color: var(--color-text-muted); }
-.evidence-list li { margin-bottom: 6px; }
-.evidence-list li strong { color: var(--color-primary-light); }
-.status-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; margin-top: 15px; }
-.status-item { background: rgba(15, 23, 42, 0.8); border: 1px solid var(--color-border); padding: 10px 14px; border-radius: 4px; font-family: monospace; font-size: 12px; display: flex; align-items: center; gap: 8px; transition: transform 0.3s ease; }
-.status-item.active { border-color: rgba(56, 189, 248, 0.4); color: var(--color-primary-light); animation: pulseGlow 3s infinite; }
-.status-item.planned { opacity: 0.6; color: var(--color-text-muted); }
+.snapshot-meta { font-family: var(--font-mono); font-size: 12px; color: var(--color-primary-dark); margin-top: 12px; }
+
+section.box { background: var(--color-surface); backdrop-filter: blur(12px); padding: 28px; border-radius: 10px; margin-top: 20px; border: 1px solid var(--color-border); transition: border-color 0.25s ease; }
+section.box:hover { border-color: rgba(56, 189, 248, 0.35); }
+.pipeline { display: flex; flex-direction: column; align-items: center; margin: 16px 0; }
+.pipeline-step { background: rgba(15, 23, 42, 0.95); border: 1px solid var(--color-primary); padding: 12px 24px; border-radius: 6px; font-weight: 700; color: var(--color-primary-light); width: 100%; max-width: 360px; text-align: center; font-size: 13px; font-family: var(--font-mono); transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.pipeline-step:hover { transform: scale(1.02); box-shadow: 0 0 16px rgba(56, 189, 248, 0.25); }
+.pipeline-arrow { color: var(--color-primary); font-size: 18px; margin: 6px 0; font-family: var(--font-mono); }
+.use-cases-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; margin-top: 16px; }
+.use-case-card { background: rgba(15, 23, 42, 0.55); padding: 18px; border-radius: 8px; border: 1px solid rgba(56, 189, 248, 0.12); transition: all 0.25s ease; }
+.use-case-card:hover { background: rgba(30, 41, 59, 0.7); border-color: var(--color-primary-light); transform: translateY(-2px); }
+.use-case-card h3 { color: var(--color-primary-light); font-size: 15px; margin-bottom: 8px; font-family: var(--font-mono); }
+.provenance-tag { font-family: var(--font-mono); font-size: 11px; color: #38bdf8; background: rgba(56, 189, 248, 0.1); padding: 3px 8px; border-radius: 4px; display: inline-block; margin-top: 6px; border: 1px solid rgba(56, 189, 248, 0.2); }
+.evidence-list { list-style: none; margin-top: 12px; font-size: 13px; color: var(--color-text-muted); }
+.evidence-list li { margin-bottom: 8px; }
+.evidence-list li strong { color: var(--color-primary-light); font-family: var(--font-mono); }
+.status-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; margin-top: 16px; }
+.status-item { background: rgba(15, 23, 42, 0.85); border: 1px solid var(--color-border); padding: 11px 16px; border-radius: 6px; font-family: var(--font-mono); font-size: 12px; display: flex; align-items: center; gap: 10px; transition: transform 0.25s ease; }
+.status-item.active { border-color: rgba(56, 189, 248, 0.45); color: var(--color-primary-light); animation: pulseGlow 3s infinite; }
+.status-item.planned { opacity: 0.55; color: var(--color-text-muted); }
 .status-icon { font-weight: 800; font-size: 14px; }
-.disclaimer-box { background: rgba(15, 23, 42, 0.4); border-left: 3px solid var(--color-primary); padding: 16px 20px; margin-top: 30px; border-radius: 0 6px 6px 0; font-size: 13px; color: var(--color-text-muted); }
-.table-controls { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap; gap: 10px; }
-.search-input { background: rgba(0, 0, 0, 0.5); border: 1px solid var(--color-border); color: var(--color-text-main); padding: 8px 12px; border-radius: 4px; width: 100%; max-width: 280px; font-family: var(--font-stack); outline: none; transition: border-color 0.3s ease, box-shadow 0.3s ease; }
-.search-input:focus { border-color: var(--color-primary); box-shadow: 0 0 10px rgba(56, 189, 248, 0.3); }
-.table-wrapper { overflow-x: auto; border: 1px solid var(--color-border); border-radius: 4px; -webkit-overflow-scrolling: touch; }
+.disclaimer-box { background: rgba(15, 23, 42, 0.45); border-left: 3px solid var(--color-primary); padding: 18px 22px; margin-top: 32px; border-radius: 0 8px 8px 0; font-size: 13px; color: var(--color-text-muted); }
+.table-controls { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 12px; }
+.search-input { background: rgba(0, 0, 0, 0.6); border: 1px solid var(--color-border); color: var(--color-text-main); padding: 9px 14px; border-radius: 6px; width: 100%; max-width: 300px; font-family: var(--font-stack); outline: none; transition: border-color 0.25s ease, box-shadow 0.25s ease; }
+.search-input:focus { border-color: var(--color-primary); box-shadow: 0 0 12px rgba(56, 189, 248, 0.35); }
+.table-wrapper { overflow-x: auto; border: 1px solid var(--color-border); border-radius: 8px; -webkit-overflow-scrolling: touch; }
 .data-table { width: 100%; border-collapse: collapse; font-size: 13px; text-align: left; white-space: nowrap; }
-.data-table th, .data-table td { padding: 12px 16px; border-bottom: 1px solid rgba(56, 189, 248, 0.1); }
-.data-table th { background-color: rgba(10, 15, 30, 0.8); color: var(--color-primary-light); cursor: pointer; transition: background-color 0.2s ease; }
-.data-table th:hover { background-color: rgba(56, 189, 248, 0.15); }
-.data-table tbody tr { transition: background-color 0.2s ease, transform 0.2s ease; }
-.data-table tbody tr:hover { background-color: rgba(56, 189, 248, 0.08); }
+.data-table th, .data-table td { padding: 14px 18px; border-bottom: 1px solid rgba(56, 189, 248, 0.12); }
+.data-table th { background-color: rgba(10, 15, 30, 0.9); color: var(--color-primary-light); cursor: pointer; font-family: var(--font-mono); font-size: 12px; text-transform: uppercase; transition: background-color 0.2s ease; }
+.data-table th:hover { background-color: rgba(56, 189, 248, 0.18); }
+.data-table tbody tr { transition: background-color 0.2s ease; }
+.data-table tbody tr:hover { background-color: rgba(56, 189, 248, 0.07); }
 .data-table a { color: var(--color-primary-light); text-decoration: none; font-weight: 600; }
 .data-table a:hover { text-decoration: underline; }
-.meta-links { display: flex; justify-content: center; gap: 20px; margin-top: 20px; font-size: 13px; flex-wrap: wrap; }
-.meta-links a { color: var(--color-primary-light); text-decoration: none; }
+.meta-links { display: flex; justify-content: center; gap: 24px; margin-top: 22px; font-size: 13px; flex-wrap: wrap; }
+.meta-links a { color: var(--color-primary-light); text-decoration: none; font-family: var(--font-mono); }
 .meta-links a:hover { text-decoration: underline; }
-footer { margin-top: 40px; padding: 30px 0 15px 0; border-top: 1px solid var(--color-border); text-align: center; }
-.author-info { color: var(--color-text-main); font-size: 13px; margin-bottom: 8px; font-weight: 600; }
-.system-sig { color: #475569; font-size: 10px; text-transform: uppercase; letter-spacing: 2px; font-family: monospace; }
+footer { margin-top: 48px; padding: 32px 0 18px 0; border-top: 1px solid var(--color-border); text-align: center; }
+.author-info { color: var(--color-text-main); font-size: 13px; margin-bottom: 10px; font-weight: 600; }
+.system-sig { color: #475569; font-size: 10px; text-transform: uppercase; letter-spacing: 2px; font-family: var(--font-mono); }
+@media (max-width: 600px) {
+    .bento-card, section.box { backdrop-filter: none; }
+}
 </style>
 </head>
 <body>
@@ -182,10 +190,10 @@ footer { margin-top: 40px; padding: 30px 0 15px 0; border-top: 1px solid var(--c
 </div>
 <header>
     <div class="system-label">████ PROCESSCORE OS ████ // NODE 00</div>
-    <h1>Global Intelligence<br>& B2B Discovery Platform</h1>
-    <p class="subtitle">Experimental intelligence platform for discovering emerging technologies, startups and research ecosystems before they become mainstream.</p>
+    <h1>Experimental Technology Intelligence<br>& Research Platform</h1>
+    <p class="subtitle">Experimental intelligence platform for discovering emerging technology signals, startups and research ecosystems before they become widely visible.</p>
     <div class="hero-image-container">
-        <img src="hero_map.png" alt="ProcessCore Intelligence Knowledge Graph Map" class="hero-image" loading="lazy">
+        <img src="hero_map.png" alt="ProcessCore Intelligence Knowledge Graph Map" class="hero-image" width="920" height="520" loading="lazy">
     </div>
     <p class="description">Mapping governmental frameworks, research labs, deep-tech startups, and grant architectures across Europe and Asia.</p>
     <div class="hero-actions">
@@ -198,26 +206,26 @@ footer { margin-top: 40px; padding: 30px 0 15px 0; border-top: 1px solid var(--c
     </div>
 </header>
 <main>
-    <section class="grid fade-in-section" aria-label="System Metrics">
-        <article class="card">
+    <section class="bento-grid fade-in-section" aria-label="System Metrics">
+        <article class="bento-card">
             <div class="number" id="metricEnriched" data-target="28307" data-format="int">0</div>
-            <div class="small">Validated / Enriched Entities (Golden DB)</div>
+            <div class="small">AI-Assisted Enriched Records (Golden DB)</div>
         </article>
-        <article class="card">
+        <article class="bento-card">
             <div class="number" id="metricRegistry" data-target="89527" data-format="int">0</div>
             <div class="small">Total Registry Entities (v3 DB)</div>
         </article>
-        <article class="card">
+        <article class="bento-card">
             <div class="number" id="metricUrls" data-target="4301" data-format="k">0</div>
             <div class="small">Frontier URLs Mapped (k+)</div>
         </article>
-        <article class="card">
+        <article class="bento-card">
             <div class="number" id="metricSignals" data-target="24765" data-format="int">0</div>
             <div class="small">Technology Signals (Golden DB)</div>
         </article>
     </section>
     <div style="text-align: center;">
-        <div class="snapshot-meta" id="snapshotLabel">Dataset Snapshot: 1786044236 | Golden DB v1.0 | 28,307 Enriched Entities | Registry: 89,527</div>
+        <div class="snapshot-meta" id="snapshotLabel">Dataset Snapshot: 1786044236 | Golden DB v1.0 | 28,307 Enriched Records | Registry: 89,527</div>
     </div>
 
     <div class="fade-in-section">
@@ -260,6 +268,46 @@ footer { margin-top: 40px; padding: 30px 0 15px 0; border-top: 1px solid var(--c
     </div>
 
     <div class="fade-in-section">
+        <h2>Methodology // 5-Stage Processing Model</h2>
+        <section class="box">
+            <div class="use-cases-grid">
+                <div class="use-case-card">
+                    <h3>1. Discovery</h3>
+                    <p class="small">Agent-assisted crawling of public web sources and innovation registries.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>2. Extraction</h3>
+                    <p class="small">Entity and technology vector extraction using deterministic NLP models.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>3. Normalization</h3>
+                    <p class="small">Canonical entity resolution and deduplication across data streams.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>4. Scoring</h3>
+                    <p class="small">Evidence-based confidence estimation and anomaly filtering.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>5. Storage</h3>
+                    <p class="small">Golden DB persistence accompanied by traceable provenance metadata.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="fade-in-section">
+        <h2>Limitations // Methodological Boundaries</h2>
+        <section class="box">
+            <p class="small" style="margin-bottom: 12px;">To maintain epistemic transparency, the current experimental research prototype operates within the following boundaries:</p>
+            <ul class="evidence-list">
+                <li>- Automated extraction may contain false positives.</li>
+                <li>- Confidence scores represent internal methodology, not external certification.</li>
+                <li>- Dataset coverage depends on publicly available sources.</li>
+            </ul>
+        </section>
+    </div>
+
+    <div class="fade-in-section">
         <h2>Evidence Intelligence Layer</h2>
         <section class="box">
             <p class="small" style="margin-bottom: 12px;">Unlike traditional static scrapers, every record in ProcessCore Golden DB includes verified provenance chains:</p>
@@ -268,6 +316,7 @@ footer { margin-top: 40px; padding: 30px 0 15px 0; border-top: 1px solid var(--c
                 <li>✓ <strong>Validation Timestamp:</strong> Exact temporal record of discovery and check.</li>
                 <li>✓ <strong>Technology Signals:</strong> Extracted stack and vector markers.</li>
                 <li>✓ <strong>Confidence Score:</strong> Quantified estimate of entity validity based on evidence signals.</li>
+                <li>✓ <strong>Provenance Tracking:</strong> Temporal and source provenance tracking.</li>
             </ul>
         </section>
     </div>
@@ -282,7 +331,7 @@ footer { margin-top: 40px; padding: 30px 0 15px 0; border-top: 1px solid var(--c
                 </div>
                 <div class="use-case-card">
                     <h3>Source Traceability</h3>
-                    <p class="small">Direct cryptographic or temporal link to original provenance.</p>
+                    <p class="small">Temporal and source provenance tracking linking back to origin.</p>
                 </div>
                 <div class="use-case-card">
                     <h3>Data Retention</h3>
@@ -403,7 +452,7 @@ footer { margin-top: 40px; padding: 30px 0 15px 0; border-top: 1px solid var(--c
 </main>
 <footer class="fade-in-section">
     <div class="author-info">
-        Research & Engineering — Antonín Dospiva // ProcessCore Research Project
+        Research & Engineering — Antonín Dospiva // Independent experimental research project exploring AI-assisted ecosystem mapping, provenance tracking and early technology signal discovery.
     </div>
     <div class="meta-links">
         <a href="https://github.com/tondad80-dev/processcore-quantum-intelligence" target="_blank" rel="noopener noreferrer">ProcessCore Source Code</a>
@@ -452,7 +501,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     document.getElementById('snapshotLabel').textContent =
                         "Dataset Snapshot: " + data.metrics.snapshot_id +
                         " | Golden DB v1.0 | " + Number(data.metrics.enriched || 28307).toLocaleString('en-US') +
-                        " Enriched Entities | Registry: " + Number(data.metrics.registry || 89527).toLocaleString('en-US');
+                        " Enriched Records | Registry: " + Number(data.metrics.registry || 89527).toLocaleString('en-US');
                 }
             }
 
