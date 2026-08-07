@@ -116,7 +116,7 @@ h2 { margin-top: 40px; color: #e0f2fe; font-size: 20px; border-bottom: 1px solid
 .snapshot-meta { font-family: monospace; font-size: 12px; color: var(--color-primary-dark); margin-top: 8px; }
 section.box { background: var(--color-glass-bg); backdrop-filter: blur(10px); padding: 25px; border-radius: 8px; margin-top: 20px; border: 1px solid var(--color-border); }
 .pipeline { display: flex; flex-direction: column; align-items: center; margin: 15px 0; }
-.pipeline-step { background: rgba(10, 15, 30, 0.9); border: 1px solid var(--color-primary); padding: 10px 20px; border-radius: 4px; font-weight: 700; color: var(--color-primary-light); width: 100%; max-width: 300px; text-align: center; font-size: 14px; }
+.pipeline-step { background: rgba(10, 15, 30, 0.9); border: 1px solid var(--color-primary); padding: 10px 20px; border-radius: 4px; font-weight: 700; color: var(--color-primary-light); width: 100%; max-width: 320px; text-align: center; font-size: 14px; }
 .pipeline-arrow { color: var(--color-primary); font-size: 18px; margin: 6px 0; }
 .use-cases-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 15px; }
 .use-case-card { background: rgba(15, 23, 42, 0.6); padding: 16px; border-radius: 6px; border: 1px solid rgba(56, 189, 248, 0.1); }
@@ -125,6 +125,12 @@ section.box { background: var(--color-glass-bg); backdrop-filter: blur(10px); pa
 .evidence-list { list-style: none; margin-top: 10px; font-size: 13px; color: var(--color-text-muted); }
 .evidence-list li { margin-bottom: 6px; }
 .evidence-list li strong { color: var(--color-primary-light); }
+.status-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; margin-top: 15px; }
+.status-item { background: rgba(15, 23, 42, 0.8); border: 1px solid var(--color-border); padding: 10px 14px; border-radius: 4px; font-family: monospace; font-size: 12px; display: flex; align-items: center; gap: 8px; }
+.status-item.active { border-color: rgba(56, 189, 248, 0.4); color: var(--color-primary-light); }
+.status-item.planned { opacity: 0.6; color: var(--color-text-muted); }
+.status-icon { font-weight: 800; font-size: 14px; }
+.disclaimer-box { background: rgba(15, 23, 42, 0.4); border-left: 3px solid var(--color-primary); padding: 16px 20px; margin-top: 30px; border-radius: 0 6px 6px 0; font-size: 13px; color: var(--color-text-muted); }
 .table-controls { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap; gap: 10px; }
 .search-input { background: rgba(0, 0, 0, 0.5); border: 1px solid var(--color-border); color: var(--color-text-main); padding: 8px 12px; border-radius: 4px; width: 100%; max-width: 280px; font-family: var(--font-stack); outline: none; }
 .table-wrapper { overflow-x: auto; border: 1px solid var(--color-border); border-radius: 4px; -webkit-overflow-scrolling: touch; }
@@ -150,7 +156,7 @@ footer { margin-top: 40px; padding: 30px 0 15px 0; border-top: 1px solid var(--c
 <header>
     <div class="system-label">████ PROCESSCORE OS ████ // NODE 00</div>
     <h1>Global Intelligence<br>& B2B Discovery Platform</h1>
-    <p class="subtitle">Discover early technology signals from research labs, startups, and innovation ecosystems.</p>
+    <p class="subtitle">Experimental intelligence platform for discovering emerging technologies, startups and research ecosystems before they become mainstream.</p>
     <div class="hero-image-container">
         <img src="hero_map.png" alt="ProcessCore Intelligence Knowledge Graph Map" class="hero-image" loading="lazy">
     </div>
@@ -167,25 +173,38 @@ footer { margin-top: 40px; padding: 30px 0 15px 0; border-top: 1px solid var(--c
 <main>
     <section class="grid" aria-label="System Metrics">
         <article class="card">
-            <div class="number" data-target="28307" data-format="int">0</div>
+            <div class="number" id="metricEnriched" data-target="28307" data-format="int">0</div>
             <div class="small">Validated / Enriched Entities (Golden DB)</div>
         </article>
         <article class="card">
-            <div class="number" data-target="89527" data-format="int">0</div>
+            <div class="number" id="metricRegistry" data-target="89527" data-format="int">0</div>
             <div class="small">Total Registry Entities (v3 DB)</div>
         </article>
         <article class="card">
-            <div class="number" data-target="4301" data-format="k">0</div>
+            <div class="number" id="metricUrls" data-target="4301" data-format="k">0</div>
             <div class="small">Frontier URLs Mapped (k+)</div>
         </article>
         <article class="card">
-            <div class="number" data-target="24765" data-format="int">0</div>
+            <div class="number" id="metricSignals" data-target="24765" data-format="int">0</div>
             <div class="small">Technology Signals (Golden DB)</div>
         </article>
     </section>
     <div style="text-align: center;">
-        <div class="snapshot-meta">Dataset Snapshot: 1786044236 | Golden DB v1.0 | 28,307 Enriched Entities | Registry: 89,527</div>
+        <div class="snapshot-meta" id="snapshotLabel">Dataset Snapshot: 1786044236 | Golden DB v1.0 | 28,307 Enriched Entities | Registry: 89,527</div>
     </div>
+
+    <h2>Current Status</h2>
+    <section class="box">
+        <div class="status-grid" aria-label="Project implementation status">
+            <div class="status-item active"><span class="status-icon">✓</span> Research Prototype</div>
+            <div class="status-item active"><span class="status-icon">✓</span> Internal Validation</div>
+            <div class="status-item active"><span class="status-icon">✓</span> Live Crawler Engine</div>
+            <div class="status-item active"><span class="status-icon">✓</span> Golden DB Stream</div>
+            <div class="status-item planned"><span class="status-icon">□</span> Public API (planned)</div>
+            <div class="status-item planned"><span class="status-icon">□</span> Enterprise Dashboard (planned)</div>
+            <div class="status-item planned"><span class="status-icon">□</span> SaaS Integration (planned)</div>
+        </div>
+    </section>
 
     <h2>Why ProcessCore?</h2>
     <section class="box">
@@ -242,18 +261,18 @@ footer { margin-top: 40px; padding: 30px 0 15px 0; border-top: 1px solid var(--c
         </div>
     </section>
 
-    <h2>Pipeline Architecture</h2>
+    <h2>How It Works // Pipeline Architecture</h2>
     <section class="box">
         <div class="pipeline">
             <div class="pipeline-step">1. Continuous Web Discovery</div>
             <div class="pipeline-arrow">↓</div>
-            <div class="pipeline-step">2. Content Validation & Filtering</div>
+            <div class="pipeline-step">2. AI Enrichment & Entity Extraction</div>
             <div class="pipeline-arrow">↓</div>
-            <div class="pipeline-step">3. AI Enrichment & Entity Extraction</div>
+            <div class="pipeline-step">3. Evidence Validation & Provenance Check</div>
             <div class="pipeline-arrow">↓</div>
             <div class="pipeline-step">4. Knowledge Graph & Golden DB Storage</div>
             <div class="pipeline-arrow">↓</div>
-            <div class="pipeline-step" style="background: var(--color-primary); color: #000;">5. Intelligence JSON Export / B2B Feeds</div>
+            <div class="pipeline-step" style="background: var(--color-primary); color: #000;">5. Intelligence Feed / B2B Export</div>
         </div>
     </section>
 
@@ -265,8 +284,8 @@ footer { margin-top: 40px; padding: 30px 0 15px 0; border-top: 1px solid var(--c
                 <p class="small">Early discovery of emerging spin-outs and research labs.</p>
             </div>
             <div class="use-case-card">
-                <h3>Government Intelligence</h3>
-                <p class="small">Monitoring compliance, subsidies, and high-tech ecosystems.</p>
+                <h3>Public Sector Analytics</h3>
+                <p class="small">Monitoring public research, subsidies, and high-tech innovation ecosystems.</p>
             </div>
             <div class="use-case-card">
                 <h3>Corporate Innovation</h3>
@@ -336,17 +355,20 @@ footer { margin-top: 40px; padding: 30px 0 15px 0; border-top: 1px solid var(--c
             </div>
         </noscript>
     </section>
+
+    <div class="disclaimer-box" role="note" aria-label="Experimental prototype disclaimer">
+        <strong>Disclaimer:</strong> This platform is an experimental research prototype intended for technology discovery and analytical purposes. It is not a commercial intelligence service and may contain incomplete or evolving data.
+    </div>
 </main>
 <footer>
     <div class="author-info">
-        Created by Antonín Dospiva // ProcessCore Research Project
+        Research & Engineering — Antonín Dospiva // ProcessCore Research Project
     </div>
     <div class="meta-links">
         <a href="https://github.com/tondad80-dev" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+        <a href="https://www.linkedin.com/in/antonin-dospiva/" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
         <a href="entities.json" download>Dataset Snapshot (JSON)</a>
-        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ftondad80-dev.github.io%2Fprocesscore-quantum-intelligence%2F" target="_blank" rel="noopener noreferrer">LinkedIn Share</a>
-        <a href="https://twitter.com/intent/tweet?text=ProcessCore%20Intelligence%20Platform%20%5BRESEARCH%20PROTOTYPE%5D&url=https%3A%2F%2Ftondad80-dev.github.io%2Fprocesscore-quantum-intelligence%2F" target="_blank" rel="noopener noreferrer">X Share</a>
-        <a href="mailto:tondad80@gmail.com">Contact Research Lead</a>
+        <a href="mailto:tondad80@gmail.com">Contact Email</a>
     </div>
     <br>
     <div class="system-sig">PROCESSCORE OS // NODE 00 // EXPERIMENTAL B2B DISCOVERY PROTOTYPE</div>
@@ -361,6 +383,27 @@ document.addEventListener("DOMContentLoaded", () => {
             return response.json();
         })
         .then(data => {
+            if (data.metrics) {
+                if (data.metrics.enriched) {
+                    document.getElementById('metricEnriched').setAttribute('data-target', data.metrics.enriched);
+                }
+                if (data.metrics.registry) {
+                    document.getElementById('metricRegistry').setAttribute('data-target', data.metrics.registry);
+                }
+                if (data.metrics.urls_k) {
+                    document.getElementById('metricUrls').setAttribute('data-target', data.metrics.urls_k);
+                }
+                if (data.metrics.signals) {
+                    document.getElementById('metricSignals').setAttribute('data-target', data.metrics.signals);
+                }
+                if (data.metrics.snapshot_id) {
+                    document.getElementById('snapshotLabel').textContent =
+                        "Dataset Snapshot: " + data.metrics.snapshot_id +
+                        " | Golden DB v1.0 | " + Number(data.metrics.enriched || 28307).toLocaleString('en-US') +
+                        " Enriched Entities | Registry: " + Number(data.metrics.registry || 89527).toLocaleString('en-US');
+                }
+            }
+
             const tbody = document.getElementById('tableBody');
             tbody.innerHTML = '';
             if (data.top_actors) {
@@ -416,6 +459,50 @@ document.addEventListener("DOMContentLoaded", () => {
             const tbody = document.getElementById('tableBody');
             tbody.innerHTML = '';
             tbody.appendChild(tr);
+        })
+        .finally(() => {
+            const counters = document.querySelectorAll('.number');
+            const animateCounters = (counter) => {
+                const target = +counter.getAttribute('data-target');
+                const format = counter.getAttribute('data-format');
+                let current = 0;
+                const speed = 40;
+                const increment = target / speed;
+
+                const update = () => {
+                    current += increment;
+                    if (current < target) {
+                        if (format === 'float') {
+                            counter.innerText = (current / 100).toFixed(2);
+                        } else if (format === 'k') {
+                            counter.innerText = Math.ceil(current) + 'k+';
+                        } else {
+                            counter.innerText = Math.ceil(current).toLocaleString('en-US');
+                        }
+                        setTimeout(update, 20);
+                    } else {
+                        if (format === 'float') {
+                            counter.innerText = (target / 100).toFixed(2);
+                        } else if (format === 'k') {
+                            counter.innerText = target + 'k+';
+                        } else {
+                            counter.innerText = target.toLocaleString('en-US');
+                        }
+                    }
+                };
+                update();
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounters(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            counters.forEach(counter => observer.observe(counter));
         });
 });
 
@@ -429,49 +516,6 @@ function filterTable() {
         tr[i].style.display = textContent.toUpperCase().indexOf(filter) > -1 ? "" : "none";
     }
 }
-
-const counters = document.querySelectorAll('.number');
-const animateCounters = (counter) => {
-    const target = +counter.getAttribute('data-target');
-    const format = counter.getAttribute('data-format');
-    let current = 0;
-    const speed = 40;
-    const increment = target / speed;
-
-    const update = () => {
-        current += increment;
-        if (current < target) {
-            if (format === 'float') {
-                counter.innerText = (current / 100).toFixed(2);
-            } else if (format === 'k') {
-                counter.innerText = Math.ceil(current) + 'k+';
-            } else {
-                counter.innerText = Math.ceil(current).toLocaleString('en-US');
-            }
-            setTimeout(update, 20);
-        } else {
-            if (format === 'float') {
-                counter.innerText = (target / 100).toFixed(2);
-            } else if (format === 'k') {
-                counter.innerText = target + 'k+';
-            } else {
-                counter.innerText = target.toLocaleString('en-US');
-            }
-        }
-    };
-    update();
-};
-
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            animateCounters(entry.target);
-            observer.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.3 });
-
-counters.forEach(counter => observer.observe(counter));
 </script>
 </body>
 </html>
