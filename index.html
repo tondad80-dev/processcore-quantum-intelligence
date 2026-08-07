@@ -4,11 +4,59 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#050508">
-<meta name="description" content="ProcessCore Intelligence Platform - Enterprise Demo Simulation for global deep-tech, B2B, and government ecosystems.">
-<meta property="og:title" content="ProcessCore Intelligence Platform [DEMO]">
-<meta property="og:description" content="Early signal discovery and validation engine for global B2B and deep-tech markets.">
+<meta name="description" content="ProcessCore Intelligence Platform - Experimental research prototype and early signal discovery engine for global B2B and deep-tech ecosystems.">
+<meta name="author" content="Antonín Dospiva">
+<link rel="canonical" href="https://tondad80-dev.github.io/processcore-quantum-intelligence/">
+
+<!-- Open Graph / LinkedIn -->
+<meta property="og:title" content="ProcessCore Intelligence Platform [RESEARCH PROTOTYPE]">
+<meta property="og:description" content="Experimental early signal discovery engine for global B2B and deep-tech markets. Golden DB v1.0: 14,120 validated entities, 0.95 baseline.">
 <meta property="og:type" content="website">
-<title>ProcessCore Intelligence Platform [ENTERPRISE DEMO]</title>
+<meta property="og:url" content="https://tondad80-dev.github.io/processcore-quantum-intelligence/">
+<meta property="og:image" content="https://tondad80-dev.github.io/processcore-quantum-intelligence/hero_map.png">
+<meta property="og:site_name" content="ProcessCore OS">
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ProcessCore Intelligence Platform [RESEARCH PROTOTYPE]">
+<meta name="twitter:description" content="Experimental early signal discovery engine for global B2B and deep-tech markets. Mapping 14,120+ validated entities.">
+<meta name="twitter:image" content="https://tondad80-dev.github.io/processcore-quantum-intelligence/hero_map.png">
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ResearchProject",
+      "name": "ProcessCore Quantum Intelligence",
+      "description": "Experimental B2B and deep-tech ecosystem discovery platform mapping early technology signals.",
+      "url": "https://tondad80-dev.github.io/processcore-quantum-intelligence/",
+      "author": {
+        "@type": "Person",
+        "name": "Antonín Dospiva"
+      }
+    },
+    {
+      "@type": "Dataset",
+      "name": "ProcessCore Golden DB v1.0",
+      "description": "Live entity stream mapping early AI companies, research labs, and frontier technologies.",
+      "creator": {
+        "@type": "Person",
+        "name": "Antonín Dospiva"
+      },
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "distribution": {
+        "@type": "DataDownload",
+        "encodingFormat": "application/json",
+        "contentUrl": "https://tondad80-dev.github.io/processcore-quantum-intelligence/entities.json"
+      }
+    }
+  ]
+}
+</script>
+
+<title>ProcessCore Intelligence Platform [RESEARCH PROTOTYPE]</title>
 <style>
 :root {
     --color-bg: #050508;
@@ -27,6 +75,10 @@
 body {
     font-family: var(--font-stack); max-width: 1000px; margin: auto; padding: 20px;
     background-color: var(--color-bg); color: var(--color-text-main); line-height: 1.6;
+}
+:focus-visible {
+    outline: 2px solid var(--color-primary-light);
+    outline-offset: 3px;
 }
 .enterprise-banner {
     background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.4); color: #fbbf24;
@@ -53,6 +105,8 @@ h2 { margin-top: 40px; color: #e0f2fe; font-size: 20px; border-bottom: 1px solid
 .btn-primary:hover { background-color: var(--color-primary-light); transform: translateY(-2px); }
 .btn-secondary { color: var(--color-primary); background-color: transparent; border: 1px solid var(--color-primary); }
 .btn-secondary:hover { background-color: rgba(56, 189, 248, 0.1); transform: translateY(-2px); }
+.btn-social { color: #e2e8f0; background-color: rgba(15, 23, 42, 0.8); border: 1px solid var(--color-border); }
+.btn-social:hover { background-color: rgba(56, 189, 248, 0.2); border-color: var(--color-primary); transform: translateY(-2px); }
 .btn-accent { color: #000; background-color: #fbbf24; border: 1px solid #fbbf24; }
 .btn-accent:hover { background-color: #f59e0b; transform: translateY(-2px); }
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 30px; }
@@ -80,29 +134,34 @@ section.box { background: var(--color-glass-bg); backdrop-filter: blur(10px); pa
 .data-table tbody tr:hover { background-color: rgba(56, 189, 248, 0.05); }
 .data-table a { color: var(--color-primary-light); text-decoration: none; font-weight: 600; }
 .data-table a:hover { text-decoration: underline; }
-.meta-links { display: flex; justify-content: center; gap: 20px; margin-top: 20px; font-size: 12px; flex-wrap: wrap; }
-.meta-links span { color: var(--color-text-muted); cursor: not-allowed; }
+.meta-links { display: flex; justify-content: center; gap: 20px; margin-top: 20px; font-size: 13px; flex-wrap: wrap; }
+.meta-links a { color: var(--color-primary-light); text-decoration: none; }
+.meta-links a:hover { text-decoration: underline; }
 footer { margin-top: 40px; padding: 30px 0 15px 0; border-top: 1px solid var(--color-border); text-align: center; }
+.author-info { color: var(--color-text-main); font-size: 13px; margin-bottom: 8px; font-weight: 600; }
 .system-sig { color: #475569; font-size: 10px; text-transform: uppercase; letter-spacing: 2px; font-family: monospace; }
 </style>
 </head>
 <body>
 <div class="bg-grid"></div>
 <div class="enterprise-banner">
-    ⚠️ ENTERPRISE DEMO SIMULATION — Live evaluation environment of ProcessCore OS. Data layers, entities and signals are experimental. Integration layers available upon evaluation partnership.
+    ⚠️ EXPERIMENTAL RESEARCH PROTOTYPE — Live evaluation environment of ProcessCore OS. Data layers, entities and signals are part of an ongoing architectural study.
 </div>
 <header>
     <div class="system-label">████ PROCESSCORE OS ████ // NODE 00</div>
     <h1>Global Intelligence<br>& B2B Discovery Platform</h1>
-    <p class="subtitle">Discover emerging companies, research labs, and innovation ecosystems before they appear in traditional market databases.</p>
+    <p class="subtitle">Discover early technology signals from research labs, startups, and innovation ecosystems.</p>
     <div class="hero-image-container">
-        <img src="hero_map.png" alt="ProcessCore Intelligence Knowledge Graph Map" class="hero-image">
+        <img src="hero_map.png" alt="ProcessCore Intelligence Knowledge Graph Map" class="hero-image" loading="lazy">
     </div>
     <p class="description">Mapping governmental frameworks, research labs, deep-tech startups, and grant architectures across Europe and Asia.</p>
     <div class="hero-actions">
-        <a href="#dataset" class="btn btn-primary">Explore Dataset</a>
-        <a href="entities.json" download class="btn btn-secondary">Download JSON</a>
-        <a href="mailto:tondad80@gmail.com" class="btn btn-accent">Request Enterprise Demo</a>
+        <a href="#dataset" class="btn btn-primary" aria-label="Explore verified dataset">Explore Dataset</a>
+        <a href="entities.json" download class="btn btn-secondary" aria-label="Download JSON dataset">Download JSON</a>
+        <a href="https://github.com/tondad80-dev" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" aria-label="GitHub Repository">GitHub</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ftondad80-dev.github.io%2Fprocesscore-quantum-intelligence%2F" target="_blank" rel="noopener noreferrer" class="btn btn-social" aria-label="Share on LinkedIn">Share on LinkedIn</a>
+        <a href="https://twitter.com/intent/tweet?text=ProcessCore%20Intelligence%20Platform%20%5BRESEARCH%20PROTOTYPE%5D%20-%20Early%20signal%20discovery%20engine%20for%20global%20B2B%20and%20deep-tech%20markets.&url=https%3A%2F%2Ftondad80-dev.github.io%2Fprocesscore-quantum-intelligence%2F" target="_blank" rel="noopener noreferrer" class="btn btn-social" aria-label="Share on Twitter / X">Share on X</a>
+        <a href="mailto:tondad80@gmail.com" class="btn btn-accent" aria-label="Contact project author">Contact Author</a>
     </div>
 </header>
 <main>
@@ -144,8 +203,8 @@ footer { margin-top: 40px; padding: 30px 0 15px 0; border-top: 1px solid var(--c
                 <p class="small">Deep structural linking across tech vectors and grant recipients.</p>
             </div>
             <div class="use-case-card">
-                <h3>Enterprise API</h3>
-                <p class="small">Low-latency data exports and deterministic JSON feeds.</p>
+                <h3>API-Ready Architecture</h3>
+                <p class="small">Deterministic JSON feeds and structured data pipelines for future B2B integration.</p>
             </div>
         </div>
     </section>
@@ -194,7 +253,7 @@ footer { margin-top: 40px; padding: 30px 0 15px 0; border-top: 1px solid var(--c
             <div class="pipeline-arrow">↓</div>
             <div class="pipeline-step">4. Knowledge Graph & Golden DB Storage</div>
             <div class="pipeline-arrow">↓</div>
-            <div class="pipeline-step" style="background: var(--color-primary); color: #000;">5. Intelligence API / B2B Export</div>
+            <div class="pipeline-step" style="background: var(--color-primary); color: #000;">5. Intelligence JSON Export / B2B Feeds</div>
         </div>
     </section>
 
@@ -224,7 +283,7 @@ footer { margin-top: 40px; padding: 30px 0 15px 0; border-top: 1px solid var(--c
     <section class="box">
         <div class="table-controls">
             <p class="small">Loaded live from <strong>entities.json</strong>. Topic: "Where do new AI companies emerge?"</p>
-            <input type="text" id="searchInput" class="search-input" placeholder="Search actor or tech..." onkeyup="filterTable()">
+            <input type="text" id="searchInput" class="search-input" placeholder="Search actor or tech..." aria-label="Search actor or technology" onkeyup="filterTable()">
         </div>
         <div class="table-wrapper">
             <table class="data-table" id="entityTable">
@@ -238,22 +297,59 @@ footer { margin-top: 40px; padding: 30px 0 15px 0; border-top: 1px solid var(--c
                     </tr>
                 </thead>
                 <tbody id="tableBody">
-                    <tr><td colspan="4" style="text-align: center;">Loading live data from entities.json...</td></tr>
+                    <tr>
+                        <td><strong><a href="https://snorkel.ai" target="_blank" rel="noopener noreferrer">Snorkel AI ↗</a></strong></td>
+                        <td>Global/Tech</td>
+                        <td>Machine Learning, Natural Language Processing<br><span class="provenance-tag">Signal: Prompting methods</span></td>
+                        <td>0.98</td>
+                    </tr>
+                    <tr>
+                        <td><strong><a href="https://www.urmc.rochester.edu" target="_blank" rel="noopener noreferrer">URMC ↗</a></strong></td>
+                        <td>EDU</td>
+                        <td>Machine Learning, AI-based tech<br><span class="provenance-tag">Signal: Partnership with AI lab</span></td>
+                        <td>0.95</td>
+                    </tr>
+                    <tr>
+                        <td><strong><a href="https://io.net" target="_blank" rel="noopener noreferrer">io.net ↗</a></strong></td>
+                        <td>NET</td>
+                        <td>Machine Learning, Distributed Computing<br><span class="provenance-tag">Signal: Delivers libraries</span></td>
+                        <td>0.94</td>
+                    </tr>
+                    <tr>
+                        <td><strong><a href="https://iaifi.org" target="_blank" rel="noopener noreferrer">NSF AI Institute (IAIFI) ↗</a></strong></td>
+                        <td>ORG</td>
+                        <td>Artificial Intelligence, Physics, Deep Learning<br><span class="provenance-tag">Signal: Advancing physics</span></td>
+                        <td>0.96</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Duke University Materials Computation Group</strong></td>
+                        <td>Global/US</td>
+                        <td>Artificial Intelligence, Materials Science<br><span class="provenance-tag">Signal: Research in Autonomous Systems</span></td>
+                        <td>0.91</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
+        <noscript>
+            <div style="margin-top: 15px; font-size: 13px; color: var(--color-text-muted);">
+                <strong>Static Index Stream:</strong> Snorkel AI (Global/Tech | ML, NLP), URMC (EDU | AI-based tech), io.net (NET | Distributed Computing), NSF AI Institute IAIFI (ORG | AI, Physics), Duke University Materials Computation Group (Global/US | AI, Materials Science).
+            </div>
+        </noscript>
     </section>
 </main>
 <footer>
+    <div class="author-info">
+        Created by Antonín Dospiva // ProcessCore Research Project
+    </div>
     <div class="meta-links">
-        <span>API Documentation [Coming Soon]</span>
-        <span>SLA & Status [Coming Soon]</span>
-        <span>Data Provenance [Coming Soon]</span>
-        <span>Privacy Policy [Coming Soon]</span>
-        <span>Terms of Service [Coming Soon]</span>
+        <a href="https://github.com/tondad80-dev" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+        <a href="entities.json" download>Dataset Snapshot (JSON)</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ftondad80-dev.github.io%2Fprocesscore-quantum-intelligence%2F" target="_blank" rel="noopener noreferrer">LinkedIn Share</a>
+        <a href="https://twitter.com/intent/tweet?text=ProcessCore%20Intelligence%20Platform%20%5BRESEARCH%20PROTOTYPE%5D&url=https%3A%2F%2Ftondad80-dev.github.io%2Fprocesscore-quantum-intelligence%2F" target="_blank" rel="noopener noreferrer">X Share</a>
+        <a href="mailto:tondad80@gmail.com">Contact Research Lead</a>
     </div>
     <br>
-    <div class="system-sig">PROCESSCORE OS // NODE 00 // SECURE PRODUCTION ENVIRONMENT [DEMO]</div>
+    <div class="system-sig">PROCESSCORE OS // NODE 00 // EXPERIMENTAL B2B DISCOVERY PROTOTYPE</div>
 </footer>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
@@ -270,7 +366,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (data.top_actors) {
                 data.top_actors.forEach(actor => {
                     const tr = document.createElement('tr');
-                    
+
                     const tdName = document.createElement('td');
                     const strong = document.createElement('strong');
                     if (actor.url) {
@@ -284,10 +380,10 @@ document.addEventListener("DOMContentLoaded", () => {
                         strong.textContent = actor.name;
                     }
                     tdName.appendChild(strong);
-                    
+
                     const tdRegion = document.createElement('td');
                     tdRegion.textContent = actor.region;
-                    
+
                     const tdTech = document.createElement('td');
                     tdTech.textContent = actor.technologies.join(', ');
                     const br = document.createElement('br');
@@ -296,15 +392,15 @@ document.addEventListener("DOMContentLoaded", () => {
                     spanTag.className = "provenance-tag";
                     spanTag.textContent = "Signal: " + actor.signal;
                     tdTech.appendChild(spanTag);
-                    
+
                     const tdScore = document.createElement('td');
                     tdScore.textContent = actor.score;
-                    
+
                     tr.appendChild(tdName);
                     tr.appendChild(tdRegion);
                     tr.appendChild(tdTech);
                     tr.appendChild(tdScore);
-                    
+
                     tbody.appendChild(tr);
                 });
             }
