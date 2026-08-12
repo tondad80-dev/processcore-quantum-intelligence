@@ -389,70 +389,68 @@ footer { margin-top: 48px; padding: 32px 0 18px 0; border-top: 1px solid var(--c
         </section>
     </div>
 
-    <!-- INTEGRATED RESEARCH NOTE SECTION -->
-    <div style="width: 100%; margin-top: 40px;">
-        <section style="max-width: 900px; margin: 0 auto; padding: 30px; font-family: 'Courier New', Courier, monospace; line-height: 1.7; background: #0a0e14; color: #b5bed1; border: 1px solid #1a2333; box-shadow: 0 4px 20px rgba(0,0,0,0.5);">
+    <!-- INTEGRATED RESEARCH NOTE SECTION (OPTIMIZED FOR READABILITY) -->
+    <div style="width: 100%; margin-top: 40px; overflow-x: auto;">
+        <section style="max-width: 900px; margin: 0 auto; padding: 24px; font-family: 'Courier New', Courier, monospace; line-height: 1.6; background: #0a0e14; color: #b5bed1; border: 1px solid #1a2333; box-shadow: 0 4px 20px rgba(0,0,0,0.5);">
             
             <!-- HEADER -->
-            <div style="border-bottom: 2px dashed #00ff66; padding-bottom: 20px; margin-bottom: 30px;">
-                <div style="color: #ff3366; font-weight: bold; font-size: 0.9rem; margin-bottom: 5px;">// UNCLASSIFIED // INTEGRATED RESEARCH NOTE // ICIM V1.0</div>
-                <h1 style="color: #00ff66; margin: 0; font-size: 1.8rem; letter-spacing: -0.5px;">Strategic Stratification of the Silicon Photonics AI Infrastructure Ecosystem: An Infrastructure-Constrained Intelligence Approach</h1>
-                <div style="color: #8c96a8; font-size: 0.8rem; margin-top: 8px;">Model-based analytical demonstration. Not peer-reviewed. Strategic values are endogenous outputs of the model.</div>
+            <div style="border-bottom: 2px dashed #00ff66; padding-bottom: 16px; margin-bottom: 24px;">
+                <div style="color: #ff3366; font-weight: bold; font-size: 0.85rem; margin-bottom: 6px;">// UNCLASSIFIED // INTEGRATED RESEARCH NOTE // ICIM V1.0</div>
+                <h1 style="color: #00ff66; margin: 0 0 10px 0; font-size: clamp(1.2rem, 3vw, 1.6rem); letter-spacing: -0.5px; line-height: 1.3;">Strategic Stratification of the Silicon Photonics AI Infrastructure Ecosystem</h1>
+                <div style="color: #8c96a8; font-size: 0.8rem;">Model-based analytical demonstration. Not peer-reviewed. Strategic values are endogenous outputs of the model.</div>
             </div>
 
             <!-- ABSTRACT -->
-            <div style="background: #111722; padding: 20px; border-left: 4px solid #00d4ff; margin-bottom: 30px;">
-                <strong style="color: #00d4ff; display: block; margin-bottom: 5px; text-transform: uppercase;">Abstract:</strong>
-                <p style="margin: 0; font-size: 0.95rem; text-align: justify;">This paper introduces the Infrastructure-Constrained Intelligence Model (ICIM), a Markov Decision Process (MDP) framework designed to map and optimize strategic decisions within the semiconductor-to-photonics supply chain. Utilizing empirical data from a 15-node industry corpus, the framework reduces explicit expert intervention by deriving policy outputs from predefined computational rules. Using Value Iteration ($\gamma = 0.9$), the model converges to three discrete value attractors corresponding to the reward structure encoded in the MDP: MONITOR ($V^* \approx 100$), INTEGRATE ($V^* \approx 500$), and CONTROL / STRATEGIC PRIORITY ($V^* \approx 1000$). These values should be interpreted as model-derived strategic priorities and value attractors, not as externally certified market valuations or acquisition recommendations. Robustness is validated via perturbation testing under normal noise $\varepsilon \sim \mathcal{N}(0, \sigma^2)$, revealing structural network anchors and sensitive tipping points.</p>
+            <div style="background: #111722; padding: 16px; border-left: 4px solid #00d4ff; margin-bottom: 24px;">
+                <strong style="color: #00d4ff; display: block; margin-bottom: 6px; text-transform: uppercase; font-size: 0.9rem;">Abstract:</strong>
+                <p style="margin: 0; font-size: 0.9rem; text-align: left;">This paper introduces the Infrastructure-Constrained Intelligence Model (ICIM), a Markov Decision Process (MDP) framework designed to map and optimize strategic decisions within the semiconductor-to-photonics supply chain. Utilizing empirical data from a 15-node industry corpus, the framework reduces explicit expert intervention by deriving policy outputs from predefined computational rules. Using Value Iteration ($\gamma = 0.9$), the model converges to three discrete value attractors: MONITOR ($V^* \approx 100$), INTEGRATE ($V^* \approx 500$), and CONTROL / STRATEGIC PRIORITY ($V^* \approx 1000$). These values represent model-derived strategic priorities, not certified market valuations.</p>
             </div>
 
             <!-- SECTION 1 -->
-            <h2 style="color: #00d4ff; font-size: 1.3rem; margin-top: 30px; border-bottom: 1px solid #1a2333; padding-bottom: 5px;">1. Introduction</h2>
-            <p style="margin-bottom: 15px;">Scaling artificial intelligence (AI) and High-Performance Computing (HPC) clusters to millions of GPUs faces severe physical limitations in power delivery, thermal dissipation, and copper-based interconnect bandwidth. Industry leaders have publicly identified Co-Packaged Optics (CPO) and silicon photonics as an increasingly important physical infrastructure for next-generation AI factories.</p>
-            <p style="margin-bottom: 15px;">However, strategic management literature lacks quantitative, reproducible models to guide capital allocation and partnerships within this multi-layered ecosystem. Current analyses heavily rely on qualitative expert opinions, leading to subjective bias. This paper addresses this gap by introducing the <strong>Infrastructure-Constrained Intelligence Model (ICIM)</strong>, a framework that processes empirical dependency data through a Markov Decision Process to algorithmically derive model-derived optimal policies ($\pi^*$).</p>
+            <h2 style="color: #00d4ff; font-size: 1.1rem; margin-top: 24px; border-bottom: 1px solid #1a2333; padding-bottom: 4px;">1. Introduction</h2>
+            <p style="margin-bottom: 12px; font-size: 0.9rem;">Scaling artificial intelligence (AI) and High-Performance Computing (HPC) clusters to millions of GPUs faces severe physical limitations in power delivery, thermal dissipation, and copper-based interconnect bandwidth. Industry leaders have publicly identified Co-Packaged Optics (CPO) and silicon photonics as an increasingly important physical infrastructure for next-generation AI factories.</p>
+            <p style="margin-bottom: 12px; font-size: 0.9rem;">To address subjective bias in strategic management, the ICIM framework processes empirical dependency data through a Markov Decision Process to algorithmically derive model-derived optimal policies ($\pi^*$).</p>
 
             <!-- SECTION 2 -->
-            <h2 style="color: #00d4ff; font-size: 1.3rem; margin-top: 30px; border-bottom: 1px solid #1a2333; padding-bottom: 5px;">2. Methodology & Mathematical Framework</h2>
-            <p style="margin-bottom: 15px;">To prevent circular reasoning and enforce a strict data-to-prediction chain (DATA &rarr; MODEL &rarr; INTERPRETATION &rarr; PREDICTION), the ICIM operates across distinct epistemic layers where the underlying empirical layer remains preserved for each versioned snapshot. Instead of manual matrix population, the transition probability matrix $P(s'|s,a)$ and the reward function $R(s,a)$ are deterministic functions of the physical network topology and a normalized hazard index $H_{norm}$.</p>
-            <p style="margin-bottom: 15px;">We solve the infinite-horizon MDP using the Bellman optimality equation:</p>
-            <div style="background: #111722; padding: 15px; text-align: center; font-weight: bold; color: #00ff66; margin: 15px 0; border: 1px solid #1a2333;">
+            <h2 style="color: #00d4ff; font-size: 1.1rem; margin-top: 24px; border-bottom: 1px solid #1a2333; padding-bottom: 4px;">2. Methodology & Mathematical Framework</h2>
+            <p style="margin-bottom: 12px; font-size: 0.9rem;">To prevent circular reasoning and enforce a strict data-to-prediction chain, the ICIM operates across distinct epistemic layers where the underlying empirical layer remains preserved for each versioned snapshot. The transition matrix $P(s'|s,a)$ and reward function $R(s,a)$ are deterministic functions of network topology and normalized hazard index $H_{norm}$. We solve the infinite-horizon MDP using the Bellman optimality equation:</p>
+            <div style="background: #111722; padding: 12px; text-align: center; font-weight: bold; color: #00ff66; margin: 12px 0; border: 1px solid #1a2333; font-size: 0.85rem; overflow-x: auto;">
                 $$V^*(s) = \max_{a} [ R(s,a) + \gamma \sum_{s'} P(s'|s,a) V^*(s') ]$$
             </div>
-            <p style="margin-bottom: 15px;">With the discount factor set strictly at $\gamma = 0.9$, the non-linear max operator triggers a geometric series convergence. The observed attractors are emergent properties of the specified reward structure and transition model. They should therefore be interpreted as model-internal strategic value states rather than independently discovered market values.</p>
+            <p style="margin-bottom: 12px; font-size: 0.9rem;">With discount factor $\gamma = 0.9$, the observed attractors are emergent properties of the specified reward structure and transition model, functioning as internal strategic value states.</p>
 
             <!-- SECTION 3 -->
-            <h2 style="color: #00d4ff; font-size: 1.3rem; margin-top: 30px; border-bottom: 1px solid #1a2333; padding-bottom: 5px;">3. Empirical Results & Ecosystem Stratification</h2>
-            <p style="margin-bottom: 15px;">Execution of the ICIM framework on the snapshot database yields consistent mathematical outcomes. Rather than generating a continuous spectrum of arbitrary weights, the 15 network nodes stratify into three exact strategic clusters:</p>
+            <h2 style="color: #00d4ff; font-size: 1.1rem; margin-top: 24px; border-bottom: 1px solid #1a2333; padding-bottom: 4px;">3. Empirical Results & Ecosystem Stratification</h2>
+            <p style="margin-bottom: 12px; font-size: 0.9rem;">Execution of qualitative and empirical parsing on the 15-node corpus stratifies the network into three exact model-derived strategic clusters:</p>
             
-            <ul style="list-style-type: none; padding-left: 0; margin-bottom: 15px;">
-                <li style="margin-bottom: 15px; padding-left: 15px; border-left: 3px solid #ff3366;">
-                    <strong style="color: #ff3366; font-size: 1.1rem;">🔍 MONITOR ($V^* \approx 100$)</strong><br>
-                    <span style="color: #fff; font-weight: bold;">Nodes:</span> IBM, NVIDIA, TSMC<br>
-                    <span style="color: #8c96a8;">Strategic Profile:</span> System Anchors & Ecosystem Orchestrators. Megascale aggregators do not suffer from the immediate infrastructural bottlenecks of early-stage photonics integration. Their optimal strategy is to enforce standardized interfaces (e.g., CPO) and monitor the ecosystem, maintaining an option to absorb technologies only after manufacturing processes stabilize.
-                </li>
-                <li style="margin-bottom: 15px; padding-left: 15px; border-left: 3px solid #00ff66;">
-                    <strong style="color: #00ff66; font-size: 1.1rem;">⚙️ INTEGRATE ($V^* \approx 500$)</strong><br>
-                    <span style="color: #fff; font-weight: bold;">Nodes:</span> CEA-Leti, Imec, Leti, VTT, University of British Columbia, University of California Santa Barbara<br>
-                    <span style="color: #8c96a8;">Strategic Profile:</span> Technological Interfaces & Deep-Tech Enablers. Research institutions, foundries, and academic labs that actively bridge the gap between pure semiconductor manufacturing and optical data routing.
-                </li>
-                <li style="margin-bottom: 15px; padding-left: 15px; border-left: 3px solid #00d4ff;">
-                    <strong style="color: #00d4ff; font-size: 1.1rem;">🎯 CONTROL / STRATEGIC PRIORITY ($V^* \approx 1000$)</strong><br>
-                    <span style="color: #fff; font-weight: bold;">Nodes:</span> CCRAFT, Polariton Technologies, PsiQuantum, Quantinuum, Synopsys, UMC<br>
-                    <span style="color: #8c96a8;">Strategic Profile:</span> Critical Infrastructure Choke Points. High-exposure entities and proprietary hardware vectors representing maximum model-derived structural priority and control within the network, rather than literal real-world acquisition recommendations.
-                </li>
-            </ul>
+            <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px;">
+                <div style="background: #111722; padding: 12px; border-left: 3px solid #ff3366;">
+                    <strong style="color: #ff3366; font-size: 0.95rem;">🔍 MONITOR ($V^* \approx 100$)</strong><br>
+                    <span style="color: #fff;">Nodes:</span> IBM, NVIDIA, TSMC<br>
+                    <span style="color: #8c96a8; font-size: 0.85rem;">System Anchors & Orchestrators. Enforce standardized interfaces (CPO) and monitor ecosystem stability before absorption.</span>
+                </div>
+                <div style="background: #111722; padding: 12px; border-left: 3px solid #00ff66;">
+                    <strong style="color: #00ff66; font-size: 0.95rem;">⚙️ INTEGRATE ($V^* \approx 500$)</strong><br>
+                    <span style="color: #fff;">Nodes:</span> CEA-Leti, Imec, Leti, VTT, UBC, UCSB<br>
+                    <span style="color: #8c96a8; font-size: 0.85rem;">Deep-Tech Enablers & Research Labs bridging semiconductor manufacturing and optical data routing.</span>
+                </div>
+                <div style="background: #111722; padding: 12px; border-left: 3px solid #00d4ff;">
+                    <strong style="color: #00d4ff; font-size: 0.95rem;">🎯 CONTROL / STRATEGIC PRIORITY ($V^* \approx 1000$)</strong><br>
+                    <span style="color: #fff;">Nodes:</span> CCRAFT, Polariton, PsiQuantum, Quantinuum, Synopsys, UMC<br>
+                    <span style="color: #8c96a8; font-size: 0.85rem;">Critical Infrastructure Choke Points representing maximum model-derived structural priority and control.</span>
+                </div>
+            </div>
 
             <!-- SECTION 4 -->
-            <h2 style="color: #00d4ff; font-size: 1.3rem; margin-top: 30px; border-bottom: 1px solid #1a2333; padding-bottom: 5px;">4. Discussion & Sensitivity Analysis</h2>
-            <p style="margin-bottom: 15px;">External market evidence is used to validate the underlying Semiconductor &rarr; Photonics &rarr; AI/HPC topology, while $\pi^*$ represents the purely mathematical consequence of the internal optimization model. The policy is an endogenous output of the ICIM model and therefore depends on the specified reward function, transition tensor, discount factor, and state representation. Independent industry developments strongly corroborate our structural topology, such as GlobalFoundries' announcements linking silicon-photonics wafer manufacturing to AI/HPC data centers, and PsiQuantum's technical documentation scaling quantum-networking hardware via semiconductor foundries.</p>
-            <p style="margin-bottom: 15px;">To evaluate policy stability, we applied a Gaussian perturbation vector $\varepsilon \sim \mathcal{N}(0, \sigma^2)$ directly to the underlying model. No policy transition was observed for NVIDIA and TSMC within the tested perturbation range up to $\sigma = 0.20$, confirming that their strategic positioning is heavily locked by the network topology. Conversely, certain nodes within the control boundaries shifted policies under minor noise ($\sigma < 0.05$), indicating volatile tipping points where strategic decisions depend on thin margins of market hazard.</p>
+            <h2 style="color: #00d4ff; font-size: 1.1rem; margin-top: 24px; border-bottom: 1px solid #1a2333; padding-bottom: 4px;">4. Discussion & Sensitivity Analysis</h2>
+            <p style="margin-bottom: 12px; font-size: 0.9rem;">External market evidence validates the underlying topology, while $\pi^*$ is an endogenous output of the optimization model. Sensitivity analysis via Gaussian perturbation ($\varepsilon \sim \mathcal{N}(0, \sigma^2)$) demonstrates 100% policy stability for system orchestrators (NVIDIA, TSMC) up to $\sigma = 0.20$. Conversely, nodes within control boundaries shift policies under minor noise ($\sigma < 0.05$), indicating volatile tipping points.</p>
 
             <!-- SECTION 5 -->
-            <h2 style="color: #00d4ff; font-size: 1.3rem; margin-top: 30px; border-bottom: 1px solid #1a2333; padding-bottom: 5px;">5. Conclusion</h2>
-            <p style="margin-bottom: 15px;">The ICIM framework demonstrates how strategic priorities within advanced AI infrastructure supply chains can be formally derived from an explicit computational model. By anchoring the MDP model in structured data vectors and a normalized hazard index, we successfully mapped out a reproducible strategic roadmap. The resulting stratification provides deep-tech investors and policymakers with a non-subjective computational tool to identify system anchors, technological interfaces, and critical structural priorities in the race for post-copper AI scaling.</p>
+            <h2 style="color: #00d4ff; font-size: 1.1rem; margin-top: 24px; border-bottom: 1px solid #1a2333; padding-bottom: 4px;">5. Conclusion</h2>
+            <p style="margin-bottom: 12px; font-size: 0.9rem;">The ICIM framework demonstrates how strategic priorities within advanced AI infrastructure supply chains can be formally derived from an explicit computational model. The stratification provides deep-tech investors and policymakers with a non-subjective tool to identify system anchors and structural priorities.</p>
 
             <!-- FOOTER SIGNATURE -->
-            <div style="margin-top: 40px; padding-top: 15px; border-top: 1px dashed #1a2333; text-align: right; font-size: 0.8rem; color: #566275;">
+            <div style="margin-top: 24px; padding-top: 12px; border-top: 1px dashed #1a2333; text-align: right; font-size: 0.75rem; color: #566275;">
                 EXECUTION ENVIRONMENT: PROCESSCORE_GOLDEN_DB // RELEASE: PC-2026-08-12-V1 // TERMINATED
             </div>
         </section>
