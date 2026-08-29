@@ -19,3 +19,1885 @@
 <meta property="og:site_name" content="ProcessCore">
 
 <!-- X / Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ProcessCore | Evidence Before Interpretation">
+<meta name="twitter:description" content="Deterministic evidence, authority and audited context for human–LLM interaction.">
+<meta name="twitter:image" content="https://tondad80-dev.github.io/processcore-quantum-intelligence/processcore-logo.png">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Project",
+  "name": "ProcessCore",
+  "description": "Experimental systems-engineering project exploring deterministic evidence, authority, provenance, semantic context and auditability around probabilistic AI.",
+  "url": "https://tondad80-dev.github.io/processcore-quantum-intelligence/",
+  "author": {
+    "@type": "Person",
+    "name": "Antonín Dospiva"
+  }
+}
+</script>
+
+<title>ProcessCore | Evidence Before Interpretation</title>
+
+<style>
+:root {
+    --bg: #030712;
+    --bg-deep: #02050b;
+    --surface: rgba(15, 23, 42, 0.66);
+    --surface-hover: rgba(24, 35, 54, 0.80);
+    --text: #f8fafc;
+    --muted: #94a3b8;
+    --dim: #536174;
+    --cyan: #38bdf8;
+    --cyan-light: #7dd3fc;
+    --cyan-pale: #bae6fd;
+    --green: #5ee7b1;
+    --amber: #fbbf24;
+    --red: #fb7185;
+    --border: rgba(56, 189, 248, 0.17);
+    --border-hover: rgba(56, 189, 248, 0.48);
+    --font: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --mono: "JetBrains Mono", "Fira Code", "SFMono-Regular", Consolas, monospace;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: var(--bg);
+}
+
+body {
+    font-family: var(--font);
+    color: var(--text);
+    background-color: var(--bg);
+    line-height: 1.65;
+    overflow-x: hidden;
+
+    background-image:
+        radial-gradient(
+            circle at 50% -5%,
+            rgba(56, 189, 248, 0.13) 0%,
+            rgba(56, 189, 248, 0.035) 25%,
+            transparent 52%
+        ),
+        radial-gradient(
+            circle at 90% 35%,
+            rgba(125, 211, 252, 0.025),
+            transparent 24%
+        ),
+        linear-gradient(
+            to right,
+            rgba(56, 189, 248, 0.028) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            to bottom,
+            rgba(56, 189, 248, 0.028) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        100% 100%,
+        100% 100%,
+        40px 40px,
+        40px 40px;
+
+    background-attachment: fixed;
+}
+
+a {
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+::selection {
+    background: rgba(56, 189, 248, 0.25);
+    color: #fff;
+}
+
+:focus-visible {
+    outline: 2px solid var(--cyan-light);
+    outline-offset: 4px;
+}
+
+/* ---------------------------------------------------------
+   Animation
+--------------------------------------------------------- */
+
+@keyframes floatUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes statusPulse {
+    0%, 100% {
+        border-color: rgba(94, 231, 177, 0.28);
+        box-shadow: 0 0 10px rgba(94, 231, 177, 0.04);
+    }
+    50% {
+        border-color: rgba(94, 231, 177, 0.58);
+        box-shadow: 0 0 22px rgba(94, 231, 177, 0.09);
+    }
+}
+
+.fade-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+        opacity 0.55s cubic-bezier(.16,1,.3,1),
+        transform 0.55s cubic-bezier(.16,1,.3,1);
+}
+
+.fade-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ---------------------------------------------------------
+   Layout
+--------------------------------------------------------- */
+
+.container {
+    width: min(1080px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+/* ---------------------------------------------------------
+   System banner
+--------------------------------------------------------- */
+
+.system-banner {
+    border-bottom: 1px solid rgba(56, 189, 248, 0.16);
+    background: rgba(2, 6, 13, 0.88);
+    backdrop-filter: blur(14px);
+    font-family: var(--mono);
+    color: var(--cyan-pale);
+    font-size: 10px;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 9px 16px;
+}
+
+/* ---------------------------------------------------------
+   Sticky navigation
+--------------------------------------------------------- */
+
+nav.main-nav {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    border-bottom: 1px solid var(--border);
+    background: rgba(3, 7, 18, 0.80);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 68px;
+    gap: 20px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    text-decoration: none;
+}
+
+.brand img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.brand-text {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    font-size: 17px;
+}
+
+.brand-sub {
+    font-family: var(--mono);
+    color: var(--dim);
+    font-size: 9px;
+    letter-spacing: 0.12em;
+}
+
+.nav-links {
+    display: flex;
+    gap: 21px;
+    align-items: center;
+    font-family: var(--mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+    color: var(--muted);
+}
+
+.nav-links a {
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--cyan-light);
+}
+
+/* ---------------------------------------------------------
+   Hero
+--------------------------------------------------------- */
+
+.hero {
+    padding: 86px 0 76px;
+    text-align: center;
+    animation: floatUp 0.65s ease-out;
+}
+
+.system-label {
+    font-family: var(--mono);
+    color: var(--cyan-pale);
+    font-size: 10px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 7vw, 70px);
+    line-height: 1.03;
+    letter-spacing: -0.045em;
+    font-weight: 850;
+    max-width: 970px;
+    margin: 0 auto;
+}
+
+.gradient-text {
+    background: linear-gradient(
+        100deg,
+        #ffffff,
+        #9cdfff 48%,
+        #d9e6f3
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero-subtitle {
+    color: var(--cyan);
+    font-weight: 620;
+    font-size: clamp(16px, 2vw, 20px);
+    max-width: 820px;
+    margin: 24px auto 0;
+}
+
+.hero-description {
+    color: var(--muted);
+    font-size: 15px;
+    max-width: 740px;
+    margin: 20px auto 0;
+}
+
+.hero-principle {
+    margin: 30px auto 0;
+    max-width: 790px;
+    padding: 19px 24px;
+    border: 1px solid rgba(125, 211, 252, 0.18);
+    border-radius: 8px;
+    background: rgba(15, 23, 42, 0.46);
+    backdrop-filter: blur(12px);
+    color: #eaf5ff;
+    font-size: clamp(17px, 2vw, 21px);
+    font-weight: 650;
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 11px;
+    flex-wrap: wrap;
+    margin-top: 29px;
+}
+
+/* ---------------------------------------------------------
+   Buttons
+--------------------------------------------------------- */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0 20px;
+    border-radius: 6px;
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.22s ease;
+}
+
+.btn-primary {
+    background: var(--cyan);
+    color: #020711;
+    border: 1px solid var(--cyan);
+}
+
+.btn-primary:hover {
+    background: var(--cyan-light);
+    transform: translateY(-2px);
+    box-shadow: 0 7px 22px rgba(56, 189, 248, 0.25);
+}
+
+.btn-secondary {
+    color: var(--cyan-light);
+    border: 1px solid rgba(56, 189, 248, 0.4);
+    background: rgba(56, 189, 248, 0.035);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    background: rgba(56, 189, 248, 0.11);
+    border-color: var(--cyan);
+}
+
+/* ---------------------------------------------------------
+   Section basics
+--------------------------------------------------------- */
+
+.section {
+    padding: 62px 0;
+}
+
+.section + .section {
+    border-top: 1px solid rgba(56, 189, 248, 0.09);
+}
+
+.section-label {
+    font-family: var(--mono);
+    color: var(--cyan);
+    text-transform: uppercase;
+    letter-spacing: 0.20em;
+    font-size: 10px;
+    margin-bottom: 11px;
+}
+
+h2 {
+    color: #f0f9ff;
+    font-size: clamp(25px, 4vw, 38px);
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    margin-bottom: 16px;
+}
+
+.section-lead {
+    color: var(--muted);
+    max-width: 790px;
+    font-size: 16px;
+}
+
+/* ---------------------------------------------------------
+   Glass box
+--------------------------------------------------------- */
+
+.box {
+    margin-top: 25px;
+    padding: 28px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    backdrop-filter: blur(13px);
+    -webkit-backdrop-filter: blur(13px);
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+.box:hover {
+    border-color: rgba(56, 189, 248, 0.31);
+    background: rgba(15, 23, 42, 0.72);
+}
+
+/* ---------------------------------------------------------
+   Architecture flow
+--------------------------------------------------------- */
+
+.arch-scroll {
+    overflow-x: auto;
+    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.architecture-flow {
+    min-width: 910px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 16px 2px;
+}
+
+.flow-node {
+    min-width: 88px;
+    padding: 12px 10px;
+    border: 1px solid rgba(56, 189, 248, 0.31);
+    background: rgba(4, 10, 19, 0.83);
+    color: var(--cyan-pale);
+    border-radius: 6px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    transition: 0.25s ease;
+}
+
+.flow-node:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 17px rgba(56, 189, 248, 0.12);
+}
+
+.flow-node.authority,
+.flow-node.audit {
+    color: var(--green);
+    border-color: rgba(94, 231, 177, 0.45);
+}
+
+.flow-node.consumer {
+    color: var(--amber);
+    border-color: rgba(251, 191, 36, 0.42);
+}
+
+.arrow {
+    color: #486175;
+    font-family: var(--mono);
+}
+
+/* ---------------------------------------------------------
+   Core rule
+--------------------------------------------------------- */
+
+.core-rule {
+    margin-top: 22px;
+    padding: 18px 21px;
+    border-left: 3px solid var(--cyan);
+    background: rgba(56, 189, 248, 0.045);
+    color: #dcebf6;
+    border-radius: 0 7px 7px 0;
+    font-size: 16px;
+}
+
+/* ---------------------------------------------------------
+   Bento cards
+--------------------------------------------------------- */
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 27px;
+}
+
+.bento-card {
+    background: var(--surface);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 24px;
+    border-radius: 9px;
+    border: 1px solid var(--border);
+    min-height: 215px;
+    transition: all 0.25s ease;
+}
+
+.bento-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--border-hover);
+    background: var(--surface-hover);
+    box-shadow: 0 12px 30px rgba(0,0,0,.23);
+}
+
+.card-index {
+    font-family: var(--mono);
+    color: var(--cyan);
+    font-size: 10px;
+    letter-spacing: 0.13em;
+    margin-bottom: 13px;
+}
+
+.bento-card h3 {
+    font-size: 17px;
+    color: var(--cyan-pale);
+    margin-bottom: 10px;
+}
+
+.bento-card p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+
+/* ---------------------------------------------------------
+   Public architecture snapshot
+--------------------------------------------------------- */
+
+.pc-public-architecture {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 72px 0;
+    border-top: 1px solid rgba(56, 189, 248, 0.09);
+}
+
+.pc-section-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.20em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 12px;
+}
+
+.pc-public-architecture h2 {
+    font-size: clamp(32px, 5vw, 56px);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    margin: 0 0 18px;
+    color: #f0f9ff;
+}
+
+.pc-lead {
+    max-width: 760px;
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--muted);
+    margin-bottom: 38px;
+}
+
+.pc-flow {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+    gap: 14px;
+    align-items: stretch;
+}
+
+.pc-node {
+    position: relative;
+    min-height: 220px;
+    padding: 24px 20px;
+    border: 1px solid rgba(56, 189, 248, 0.20);
+    border-radius: 10px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(17, 27, 46, 0.78),
+            rgba(7, 13, 24, 0.82)
+        );
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.025),
+        0 14px 34px rgba(0,0,0,0.16);
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.pc-node:hover {
+    transform: translateY(-4px);
+    border-color: rgba(56, 189, 248, 0.48);
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.035),
+        0 18px 40px rgba(0,0,0,0.28),
+        0 0 24px rgba(56,189,248,0.07);
+}
+
+.pc-node span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    margin-bottom: 18px;
+    border-radius: 50%;
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    background: rgba(56, 189, 248, 0.08);
+    color: var(--cyan);
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+}
+
+.pc-node strong {
+    display: block;
+    margin-bottom: 9px;
+    color: var(--cyan-pale);
+    font-size: 17px;
+}
+
+.pc-node p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+.pc-arrow {
+    align-self: center;
+    color: var(--cyan);
+    font-family: var(--mono);
+    font-size: 18px;
+    opacity: 0.62;
+}
+
+.pc-principles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.pc-principles > div {
+    padding: 18px 20px;
+    border: 1px solid rgba(94, 231, 177, 0.18);
+    border-radius: 8px;
+    background: rgba(7, 13, 23, 0.72);
+}
+
+.pc-principles strong {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--green);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.03em;
+}
+
+.pc-principles span {
+    display: block;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.pc-public-note {
+    margin-top: 24px;
+    padding: 16px 18px;
+    border-left: 3px solid var(--amber);
+    border-radius: 0 7px 7px 0;
+    background: rgba(251, 191, 36, 0.035);
+    color: #8f9daf;
+    font-size: 12px;
+    line-height: 1.65;
+}
+
+/* ---------------------------------------------------------
+   Project architecture
+--------------------------------------------------------- */
+
+.project-layout {
+    display: grid;
+    grid-template-columns: 0.82fr 1.35fr;
+    gap: 18px;
+    margin-top: 28px;
+}
+
+.project-list {
+    display: grid;
+    gap: 11px;
+}
+
+.project-card {
+    background: rgba(8, 14, 25, 0.76);
+    border: 1px solid var(--border);
+    padding: 19px;
+    border-radius: 8px;
+    transition: 0.22s ease;
+}
+
+.project-card:hover {
+    border-color: rgba(56, 189, 248, 0.37);
+    transform: translateX(2px);
+}
+
+.project-card strong {
+    color: var(--cyan-pale);
+    display: block;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.project-card span {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.authority-card {
+    padding: 27px;
+    border-radius: 10px;
+    border: 1px solid rgba(94, 231, 177, 0.34);
+    background: linear-gradient(
+        135deg,
+        rgba(94, 231, 177, 0.055),
+        rgba(56, 189, 248, 0.03)
+    );
+}
+
+.authority-card h3 {
+    color: var(--green);
+    margin-bottom: 11px;
+    font-family: var(--mono);
+    letter-spacing: 0.02em;
+    font-size: 15px;
+}
+
+.authority-card p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.capability-list {
+    list-style: none;
+    display: grid;
+    gap: 7px;
+    margin-top: 18px;
+}
+
+.capability-list li {
+    position: relative;
+    padding: 11px 14px 11px 36px;
+    border: 1px solid rgba(56, 189, 248, 0.12);
+    background: rgba(3, 8, 15, 0.55);
+    border-radius: 5px;
+    font-family: var(--mono);
+    font-size: 10px;
+    color: #c6d6e4;
+}
+
+.capability-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 14px;
+    color: var(--green);
+    font-weight: 800;
+}
+
+/* ---------------------------------------------------------
+   Verified status
+--------------------------------------------------------- */
+
+.status-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 26px;
+}
+
+.status-card {
+    background: rgba(7, 13, 23, 0.78);
+    border: 1px solid rgba(94, 231, 177, 0.25);
+    padding: 17px;
+    border-radius: 7px;
+    animation: statusPulse 4s infinite;
+}
+
+.status-top {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--green);
+    font-family: var(--mono);
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    margin-bottom: 7px;
+}
+
+.status-card strong {
+    color: #e8f6ff;
+    display: block;
+    font-size: 14px;
+}
+
+.status-card p {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* ---------------------------------------------------------
+   Query pipeline
+--------------------------------------------------------- */
+
+.pipeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 12px 0;
+}
+
+.pipeline-step {
+    width: 100%;
+    max-width: 470px;
+    text-align: center;
+    padding: 12px 20px;
+    background: rgba(7, 13, 24, 0.92);
+    border: 1px solid rgba(56, 189, 248, 0.30);
+    border-radius: 6px;
+    color: var(--cyan-pale);
+    font-family: var(--mono);
+    font-size: 11px;
+    transition: 0.22s ease;
+}
+
+.pipeline-step:hover {
+    transform: scale(1.015);
+    border-color: var(--cyan);
+}
+
+.pipeline-step.authority {
+    border-color: rgba(94, 231, 177, 0.42);
+    color: var(--green);
+}
+
+.pipeline-step.consumer {
+    background: var(--cyan);
+    color: #020712;
+    border-color: var(--cyan);
+    font-weight: 800;
+}
+
+.pipeline-arrow {
+    color: var(--cyan);
+    font-family: var(--mono);
+    margin: 4px 0;
+}
+
+/* ---------------------------------------------------------
+   Principle statement
+--------------------------------------------------------- */
+
+.statement {
+    margin-top: 30px;
+    padding: 35px 25px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(56,189,248,.075),
+            transparent 62%
+        ),
+        rgba(8,14,24,.72);
+    font-size: clamp(20px, 3vw, 29px);
+    line-height: 1.38;
+    font-weight: 680;
+    color: #eaf7ff;
+}
+
+.statement strong {
+    color: var(--cyan-light);
+}
+
+.statement small {
+    display: block;
+    margin-top: 13px;
+    color: var(--dim);
+    font-family: var(--mono);
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+}
+
+/* ---------------------------------------------------------
+   Failure semantics
+--------------------------------------------------------- */
+
+.failure-card {
+    border-top: 2px solid rgba(251, 113, 133, 0.52);
+}
+
+.failure-card .card-index {
+    color: var(--red);
+}
+
+/* ---------------------------------------------------------
+   Archive
+--------------------------------------------------------- */
+
+.archive-box {
+    margin-top: 26px;
+    padding: 28px;
+    border: 1px solid rgba(251, 191, 36, 0.26);
+    border-radius: 10px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(251,191,36,.045),
+            rgba(8,14,25,.72)
+        );
+}
+
+.archive-tag {
+    display: inline-block;
+    padding: 4px 9px;
+    border: 1px solid rgba(251, 191, 36, 0.35);
+    border-radius: 4px;
+    color: var(--amber);
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    margin-bottom: 13px;
+}
+
+.archive-box h3 {
+    color: #fff5d6;
+    margin-bottom: 9px;
+    font-size: 18px;
+}
+
+.archive-box p {
+    color: var(--muted);
+    max-width: 800px;
+    font-size: 13px;
+}
+
+.archive-actions {
+    margin-top: 18px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* ---------------------------------------------------------
+   Disclaimer
+--------------------------------------------------------- */
+
+.disclaimer {
+    padding: 18px 21px;
+    margin-top: 30px;
+    border-left: 3px solid var(--cyan);
+    background: rgba(15, 23, 42, 0.43);
+    color: var(--muted);
+    border-radius: 0 7px 7px 0;
+    font-size: 12px;
+}
+
+/* ---------------------------------------------------------
+   Footer
+--------------------------------------------------------- */
+
+footer {
+    margin-top: 25px;
+    padding: 35px 0 25px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+}
+
+.footer-title {
+    color: var(--text);
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.footer-description {
+    color: var(--muted);
+    font-size: 12px;
+    max-width: 720px;
+    margin: 7px auto 0;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    flex-wrap: wrap;
+    margin-top: 17px;
+    font-family: var(--mono);
+    font-size: 10px;
+}
+
+.footer-links a {
+    color: var(--cyan-light);
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.system-signature {
+    margin-top: 23px;
+    color: #475569;
+    font-family: var(--mono);
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+}
+
+/* ---------------------------------------------------------
+   Responsive
+--------------------------------------------------------- */
+
+
+@media (max-width: 980px) {
+    .pc-flow {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .pc-arrow {
+        transform: rotate(90deg);
+        justify-self: center;
+    }
+}
+
+@media (max-width: 850px) {
+    .bento-grid,
+    .status-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: calc(100% - 26px);
+    }
+
+
+    .pc-public-architecture {
+        width: calc(100% - 26px);
+        padding: 52px 0;
+    }
+
+    .pc-public-architecture h2 {
+        font-size: clamp(30px, 11vw, 46px);
+    }
+
+    .pc-lead {
+        font-size: 15px;
+        margin-bottom: 28px;
+    }
+
+    .pc-node {
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .pc-principles {
+        grid-template-columns: 1fr;
+    }
+
+    .system-banner {
+        font-size: 7.5px;
+        letter-spacing: 0.10em;
+        line-height: 1.45;
+        padding: 8px 12px;
+    }
+
+    .hero {
+        padding: 60px 0 56px;
+    }
+
+    .hero h1 {
+        font-size: clamp(40px, 12vw, 58px);
+    }
+
+    .hero-subtitle {
+        line-height: 1.45;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .section {
+        padding: 49px 0;
+    }
+
+    .box,
+    .archive-box,
+    .authority-card {
+        padding: 20px;
+    }
+
+    .bento-card {
+        min-height: auto;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.001ms !important;
+    }
+
+    .fade-section {
+        opacity: 1;
+        transform: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="system-banner">
+    PROCESSCORE // NODE00 // DETERMINISTIC EVIDENCE & CONTEXT AUTHORITY // EXPERIMENTAL SYSTEMS ENGINEERING
+</div>
+
+<nav class="main-nav">
+    <div class="container nav-inner">
+
+        <a href="#" class="brand">
+            <img src="processcore-logo.png" alt="ProcessCore pearl emblem">
+            <div>
+                <div class="brand-text">ProcessCore</div>
+                <div class="brand-sub">EVIDENCE BEFORE INTERPRETATION</div>
+            </div>
+        </a>
+
+        <div class="nav-links">
+            <a href="#principle">Principle</a>
+            <a href="#evidence-architecture">Public Architecture</a>
+            <a href="#architecture">Architecture</a>
+            <a href="#implementation">Implementation</a>
+            <a href="#archive">Archive</a>
+        </div>
+
+    </div>
+</nav>
+
+<header class="hero">
+    <div class="container">
+
+        <div class="system-label">
+            ████ PROCESSCORE ████ // AUTHORITY LAYER
+        </div>
+
+        <h1>
+            Evidence before
+            <span class="gradient-text">interpretation.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+            Deterministic evidence, authority, semantic context and auditability around probabilistic AI.
+        </p>
+
+        <p class="hero-description">
+            ProcessCore is an experimental systems-engineering project exploring how a human operator can use
+            language models without allowing the model itself to determine what counts as authoritative system state.
+        </p>
+
+        <div class="hero-principle">
+            The model can interpret evidence.<br>
+            <strong>It does not decide what counts as evidence.</strong>
+        </div>
+
+        <div class="hero-actions">
+            <a href="#architecture" class="btn btn-primary">
+                Explore Architecture
+            </a>
+
+            <a href="#archive" class="btn btn-secondary">
+                Research Lineage
+            </a>
+        </div>
+
+    </div>
+</header>
+
+<main>
+
+<section class="section fade-section" id="principle">
+    <div class="container">
+
+        <div class="section-label">
+            01 // Authority Principle
+        </div>
+
+        <h2>
+            Trust is established before the model receives context.
+        </h2>
+
+        <p class="section-lead">
+            ProcessCore is not an LLM and does not become authoritative because a model generated a confident answer.
+            Its role is to maintain a controlled path from observable system state to evidence, authority,
+            semantic context, deterministic query execution and audit.
+        </p>
+
+        <section class="box">
+
+            <div class="arch-scroll">
+
+                <div class="architecture-flow">
+
+                    <div class="flow-node">REALITY</div>
+                    <div class="arrow">→</div>
+
+                    <div class="flow-node">EVIDENCE</div>
+                    <div class="arrow">→</div>
+
+                    <div class="flow-node authority">AUTHORITY</div>
+                    <div class="arrow">→</div>
+
+                    <div class="flow-node">SEMANTICS</div>
+                    <div class="arrow">→</div>
+
+                    <div class="flow-node">CONTEXT</div>
+                    <div class="arrow">→</div>
+
+                    <div class="flow-node">QUERY</div>
+                    <div class="arrow">→</div>
+
+                    <div class="flow-node">RESPONSE</div>
+                    <div class="arrow">→</div>
+
+                    <div class="flow-node audit">AUDIT</div>
+                    <div class="arrow">→</div>
+
+                    <div class="flow-node consumer">HUMAN / LLM</div>
+
+                </div>
+            </div>
+
+            <div class="core-rule">
+                Semantic similarity can retrieve evidence.
+                <strong>It cannot make evidence authoritative.</strong>
+            </div>
+
+        </section>
+
+    </div>
+</section>
+
+
+<section class="pc-public-architecture fade-section" id="evidence-architecture">
+
+    <div class="pc-section-label">
+        PROCESSCORE / PUBLIC ARCHITECTURE SNAPSHOT
+    </div>
+
+    <h2>
+        Evidence before interpretation.
+    </h2>
+
+    <p class="pc-lead">
+        ProcessCore separates deterministic evidence processing from
+        probabilistic AI interpretation.
+    </p>
+
+    <div class="pc-flow">
+
+        <div class="pc-node">
+            <span>01</span>
+            <strong>Evidence</strong>
+            <p>Verified operational and contextual data.</p>
+        </div>
+
+        <div class="pc-arrow">→</div>
+
+        <div class="pc-node">
+            <span>02</span>
+            <strong>Authority</strong>
+            <p>A frozen, reproducible state defines what is currently trusted.</p>
+        </div>
+
+        <div class="pc-arrow">→</div>
+
+        <div class="pc-node">
+            <span>03</span>
+            <strong>Query Plane</strong>
+            <p>
+                Queries pass through deterministic contracts, execution,
+                response framing and append-only audit.
+            </p>
+        </div>
+
+        <div class="pc-arrow">→</div>
+
+        <div class="pc-node">
+            <span>04</span>
+            <strong>Interpretation</strong>
+            <p>
+                Human interfaces and AI may interpret the result,
+                but they do not redefine the underlying evidence.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="pc-principles">
+
+        <div>
+            <strong>Deterministic query path</strong>
+            <span>Same authoritative inputs are evaluated through a defined processing chain.</span>
+        </div>
+
+        <div>
+            <strong>Audit before exposure</strong>
+            <span>Authoritative responses are bound to an append-only audit trail.</span>
+        </div>
+
+        <div>
+            <strong>Authority separation</strong>
+            <span>Storage, presentation layers and LLMs are not treated as semantic authority.</span>
+        </div>
+
+        <div>
+            <strong>Reproducible baseline</strong>
+            <span>The operational query architecture can be validated against a frozen reference state.</span>
+        </div>
+
+    </div>
+
+    <p class="pc-public-note">
+        Public descriptions intentionally omit implementation paths,
+        infrastructure identifiers, cryptographic identities and operational
+        security details.
+    </p>
+
+</section>
+
+<section class="section fade-section">
+    <div class="container">
+
+        <div class="section-label">
+            02 // Design Model
+        </div>
+
+        <h2>
+            Evidence, authority and interpretation are separate layers.
+        </h2>
+
+        <div class="bento-grid">
+
+            <article class="bento-card">
+                <div class="card-index">LAYER 01</div>
+                <h3>Evidence before interpretation</h3>
+                <p>
+                    Source identity, project scope and currentness are checked before information
+                    can enter an authoritative context path.
+                </p>
+            </article>
+
+            <article class="bento-card">
+                <div class="card-index">LAYER 02</div>
+                <h3>Deterministic authority boundary</h3>
+                <p>
+                    Retrieval can identify potentially relevant evidence.
+                    Policy and authority controls determine whether that evidence may actually be used.
+                </p>
+            </article>
+
+            <article class="bento-card">
+                <div class="card-index">LAYER 03</div>
+                <h3>Audited query path</h3>
+                <p>
+                    Query execution, deterministic response construction and durable audit persistence
+                    form a controlled path before a response reaches a consumer.
+                </p>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="section fade-section" id="architecture">
+    <div class="container">
+
+        <div class="section-label">
+            03 // Node00 Project Boundaries
+        </div>
+
+        <h2>
+            Independent projects. Explicit responsibility.
+        </h2>
+
+        <p class="section-lead">
+            ProcessCore does not merge every workload into one runtime.
+            Node00 maintains separate project scopes with different responsibilities.
+        </p>
+
+        <div class="project-layout">
+
+            <div class="project-list">
+
+                <div class="project-card">
+                    <strong>QCore</strong>
+                    <span>
+                        Independent production data acquisition, processing and enrichment runtime.
+                    </span>
+                </div>
+
+                <div class="project-card">
+                    <strong>AgriCore</strong>
+                    <span>
+                        Independent experimental domain project with its own project boundary.
+                    </span>
+                </div>
+
+                <div class="project-card">
+                    <strong>ProcessCore</strong>
+                    <span>
+                        Evidence, authority, semantic context, query and audit system.
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="authority-card">
+
+                <h3>
+                    PROCESSCORE // AUTHORITY PLANE
+                </h3>
+
+                <p>
+                    ProcessCore provides deterministic evidence and project-scoped context
+                    for downstream human or LLM interpretation.
+                    Production data acquisition remains separated in QCore.
+                </p>
+
+                <ul class="capability-list">
+                    <li>Explicit project routing</li>
+                    <li>Source identity and provenance</li>
+                    <li>Currentness verification</li>
+                    <li>Project-scoped semantic retrieval</li>
+                    <li>Policy and authority validation</li>
+                    <li>Deterministic query response</li>
+                    <li>Durable append-only audit</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="disclaimer">
+            <strong>Boundary rule:</strong>
+            project scope is an explicit routing boundary.
+            It is not authentication or authorization, and ProcessCore does not infer project identity
+            when it has not been explicitly supplied.
+        </div>
+
+    </div>
+</section>
+
+<section class="section fade-section" id="implementation">
+    <div class="container">
+
+        <div class="section-label">
+            04 // Verified Implementation
+        </div>
+
+        <h2>
+            Implemented as a working system, not only an architectural diagram.
+        </h2>
+
+        <p class="section-lead">
+            The current implementation on Node00 separates evidence,
+            semantic context, deterministic query handling and audit persistence
+            into controlled layers.
+        </p>
+
+        <div class="status-grid">
+
+            <div class="status-card">
+                <div class="status-top">✓ VERIFIED</div>
+                <strong>Multi-project boundaries</strong>
+                <p>
+                    ProcessCore, QCore and AgriCore remain explicitly separated.
+                </p>
+            </div>
+
+            <div class="status-card">
+                <div class="status-top">✓ VERIFIED</div>
+                <strong>Local semantic context</strong>
+                <p>
+                    Local embeddings support project-scoped semantic retrieval.
+                </p>
+            </div>
+
+            <div class="status-card">
+                <div class="status-top">✓ VERIFIED</div>
+                <strong>Exact relevance validation</strong>
+                <p>
+                    Approximate nearest-neighbour retrieval is not treated as final authority.
+                </p>
+            </div>
+
+            <div class="status-card">
+                <div class="status-top">✓ VERIFIED</div>
+                <strong>Source currentness</strong>
+                <p>
+                    Evidence identity is checked against explicitly registered source state.
+                </p>
+            </div>
+
+            <div class="status-card">
+                <div class="status-top">✓ VERIFIED</div>
+                <strong>Deterministic query plane</strong>
+                <p>
+                    Query contract, executor and deterministic response envelope are implemented.
+                </p>
+            </div>
+
+            <div class="status-card">
+                <div class="status-top">✓ VERIFIED</div>
+                <strong>Durable query audit</strong>
+                <p>
+                    Consumer responses pass through append-only audit persistence.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="statement">
+            You don't have to make the LLM deterministic.<br>
+            <strong>You can make its authority deterministic.</strong>
+            <small>ProcessCore design principle</small>
+        </div>
+
+    </div>
+</section>
+
+<section class="section fade-section">
+    <div class="container">
+
+        <div class="section-label">
+            05 // Controlled Query Path
+        </div>
+
+        <h2>
+            Interpretation happens downstream.
+        </h2>
+
+        <p class="section-lead">
+            The language model receives context only after the lower authority layers
+            have established the evidence path.
+        </p>
+
+        <section class="box">
+
+            <div class="pipeline">
+
+                <div class="pipeline-step">
+                    Explicit Project + Query Input
+                </div>
+
+                <div class="pipeline-arrow">↓</div>
+
+                <div class="pipeline-step">
+                    Deterministic Query Contract
+                </div>
+
+                <div class="pipeline-arrow">↓</div>
+
+                <div class="pipeline-step authority">
+                    Authority Verification
+                </div>
+
+                <div class="pipeline-arrow">↓</div>
+
+                <div class="pipeline-step">
+                    Project-Scoped Semantic Resolver
+                </div>
+
+                <div class="pipeline-arrow">↓</div>
+
+                <div class="pipeline-step">
+                    Deterministic Response Envelope
+                </div>
+
+                <div class="pipeline-arrow">↓</div>
+
+                <div class="pipeline-step authority">
+                    Durable Query Audit
+                </div>
+
+                <div class="pipeline-arrow">↓</div>
+
+                <div class="pipeline-step consumer">
+                    HUMAN / DOWNSTREAM CONSUMER / LLM
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+</section>
+
+<section class="section fade-section">
+    <div class="container">
+
+        <div class="section-label">
+            06 // Failure Semantics
+        </div>
+
+        <h2>
+            Unknown is preferable to invented certainty.
+        </h2>
+
+        <p class="section-lead">
+            Critical inconsistencies are not silently converted into assumptions.
+            When authority cannot be established, the relevant path fails closed.
+        </p>
+
+        <div class="bento-grid">
+
+            <article class="bento-card failure-card">
+                <div class="card-index">SOURCE</div>
+                <h3>Identity changed</h3>
+                <p>
+                    Changed or missing evidence cannot simply inherit the authority
+                    of an earlier source state.
+                </p>
+            </article>
+
+            <article class="bento-card failure-card">
+                <div class="card-index">SCOPE</div>
+                <h3>Context is bounded</h3>
+                <p>
+                    Semantic similarity does not allow evidence from another project
+                    to silently become authoritative.
+                </p>
+            </article>
+
+            <article class="bento-card failure-card">
+                <div class="card-index">AUDIT</div>
+                <h3>Persistence before exposure</h3>
+                <p>
+                    If mandatory audit persistence fails,
+                    the corresponding response is not exposed as if execution succeeded.
+                </p>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="section fade-section">
+    <div class="container">
+
+        <div class="section-label">
+            07 // Architectural Boundary
+        </div>
+
+        <h2>
+            What ProcessCore is not.
+        </h2>
+
+        <div class="bento-grid">
+
+            <article class="bento-card">
+                <div class="card-index">NOT</div>
+                <h3>An LLM</h3>
+                <p>
+                    Probabilistic interpretation remains downstream
+                    from the deterministic evidence and authority path.
+                </p>
+            </article>
+
+            <article class="bento-card">
+                <div class="card-index">NOT</div>
+                <h3>A production crawler</h3>
+                <p>
+                    Production acquisition and enrichment responsibilities
+                    are separated into QCore.
+                </p>
+            </article>
+
+            <article class="bento-card">
+                <div class="card-index">NOT</div>
+                <h3>A confidence engine</h3>
+                <p>
+                    Model confidence, semantic similarity and evidence authority
+                    are treated as different concepts.
+                </p>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="section fade-section" id="archive">
+    <div class="container">
+
+        <div class="section-label">
+            08 // Research Lineage
+        </div>
+
+        <h2>
+            Earlier architecture is preserved, not rewritten.
+        </h2>
+
+        <p class="section-lead">
+            ProcessCore evolved from an earlier technology-intelligence
+            and ecosystem discovery architecture.
+            That historical state remains preserved as a frozen research snapshot.
+        </p>
+
+        <div class="archive-box">
+
+            <div class="archive-tag">
+                Frozen Historical Snapshot
+            </div>
+
+            <h3>
+                PC-2026-08-12-V1
+            </h3>
+
+            <p>
+                This snapshot represents the earlier ProcessCore data-discovery architecture
+                before production data acquisition, processing and enrichment responsibilities
+                were separated into QCore.
+
+                It remains available as historical evidence of the project's architectural evolution
+                and should not be interpreted as the current ProcessCore runtime model.
+            </p>
+
+            <div class="archive-actions">
+
+                <a
+                    href="PC-2026-08-12-V1.html"
+                    class="btn btn-secondary"
+                >
+                    View Historical Snapshot
+                </a>
+
+                <a
+                    href="https://github.com/tondad80-dev/processcore-quantum-intelligence"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-secondary"
+                >
+                    Historical Repository
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="disclaimer">
+            <strong>Experimental project:</strong>
+            ProcessCore is an independent systems-engineering research project.
+            Public descriptions distinguish verified implementation state
+            from planned development and historical research.
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="container">
+
+        <div class="footer-title">
+            Research & Systems Engineering — Antonín Dospiva
+        </div>
+
+        <div class="footer-description">
+            Independent experimental project exploring deterministic evidence,
+            provenance, authority, semantic context and auditability around probabilistic AI.
+        </div>
+
+        <div class="footer-links">
+
+            <a href="#principle">
+                Architecture
+            </a>
+
+            <a href="#implementation">
+                Implementation
+            </a>
+
+            <a href="#archive">
+                Research Archive
+            </a>
+
+            <a
+                href="https://www.linkedin.com/in/tonda-dospiva-b160281a7/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                LinkedIn
+            </a>
+
+            <a href="mailto:tondad80@gmail.com">
+                Contact
+            </a>
+
+        </div>
+
+        <div class="system-signature">
+            PROCESSCORE // NODE00 //
+            EVIDENCE → AUTHORITY → CONTEXT → AUDIT //
+            EXPERIMENTAL SYSTEMS ENGINEERING
+        </div>
+
+    </div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const observer = new IntersectionObserver(
+        entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        {
+            threshold: 0.10
+        }
+    );
+
+    document
+        .querySelectorAll(".fade-section")
+        .forEach(element => observer.observe(element));
+
+});
+</script>
+
+</body>
+</html>
