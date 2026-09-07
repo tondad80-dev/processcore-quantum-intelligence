@@ -1,82 +1,98 @@
-ProcessCore
+# ProcessCore
 
-Evidence before interpretation.
+**Evidence before interpretation.**
 
-ProcessCore is an independent experimental systems-engineering project exploring how deterministic evidence, provenance, authority, semantic context and auditability can be placed around probabilistic AI interpretation.
+ProcessCore is an independent experimental systems-engineering project exploring how deterministic evidence, provenance, authority and auditability can be established around probabilistic AI interpretation.
 
-The core principle is simple:
+> The model may interpret evidence. It does not establish what evidence is authoritative.
 
-«The model can interpret evidence. It does not decide what counts as evidence.»
+## Current public state — 2026-09-08
 
-Why ProcessCore exists
+**ProcessCore Prototype v0.1 has reached a completed and frozen implementation milestone.**
 
-Language models are useful interpreters, but model confidence is not evidence and semantic similarity is not authority.
+The frozen prototype has been validated locally on a Raspberry Pi-based Node00 environment. The current public architectural framing is:
 
-ProcessCore explores a different boundary:
+**EVIDENCE → PROVENANCE → AUTHORITY → INTERPRETATION**
 
-REALITY
-  ↓
-EVIDENCE
-  ↓
-AUTHORITY
-  ↓
-SEMANTICS
-  ↓
-CONTEXT
-  ↓
-QUERY
-  ↓
-RESPONSE
-  ↓
-AUDIT
-  ↓
-HUMAN / LLM
+ProcessCore does not make a language model deterministic. It makes the evidence/authority path explicit, bounded, inspectable and auditable within the limits established by the frozen prototype contract.
 
-The objective is not to make an LLM deterministic. The objective is to make the evidence path explicit, bounded and reproducible before probabilistic interpretation occurs.
-
-Current public architecture
-
-ProcessCore focuses on:
+### What is currently supported
 
 - explicit evidence identity and provenance;
+- source and project currentness checks;
 - project-scoped context boundaries;
-- source currentness verification;
 - deterministic evidence comparison;
 - structured answer generation;
 - fail-closed handling of unresolved authority;
+- version-scoped authority across controlled successor transitions;
 - append-only audit mechanisms;
-- separation of evidence authority from downstream human or LLM interpretation.
+- separation of technical authority from downstream human or AI interpretation.
 
-Project boundaries
+## Validation is not authority
 
-The current Node00 architecture separates responsibilities between independent projects:
+A validator is a test layer, not an automatic source of truth.
 
-- ProcessCore — evidence, authority, semantic context, deterministic processing and audit architecture;
-- QCore — independent production data acquisition, processing and enrichment runtime;
-- AgriCore — independent experimental domain project.
+A recent ProcessCore / AgriCore case produced a validation failure. The failure was preserved rather than rewritten. A subsequent read-only reconciliation showed that the published contract remained coherent and that the validator was testing an incorrect representation assumption.
 
-These project boundaries are intentional. A capability verified in one project is not automatically treated as authority in another.
+The architectural lesson is:
 
-Verification semantics
+- evidence ≠ validation;
+- validation ≠ authority;
+- authority ≠ interpretation.
 
-Public references to verified functionality describe bounded components supported by Node00 evidence.
+Validation logic must itself be auditable: its inputs, assumptions and expected representation need provenance too.
 
-They do not imply that every component, interface and transport path has already been verified together as a complete end-to-end product.
+This is an architectural conclusion from the documented ProcessCore / AgriCore case. It is not presented as a quotation or rule from an external standard.
 
-The integrated ProcessCore Prototype v0.1 is validated incrementally through explicit milestones.
+## AgriCore external test
 
-Failure semantics
+AgriCore is the first independent project being used to test whether frozen ProcessCore v0.1 can remain generic while project-specific state stays outside the core.
 
-ProcessCore prefers an explicit unknown over invented certainty.
+Current public-safe boundaries:
 
-Examples of intended boundaries include:
+- AgriCore remains a separate runtime and project scope;
+- Raspberry Pi / Node00 evidence remains runtime truth;
+- ProcessCore acts as the parent accounting/evidence layer for significant AgriCore checkpoints;
+- the test has progressed beyond design-only review into bounded execution and validation attempts;
+- failures and unresolved states are preserved as evidence rather than converted into PASS;
+- successor authority must be established explicitly for the successor version rather than inherited from the frozen baseline;
+- historical baseline references remain provenance, not active successor authority.
 
-- changed evidence does not silently inherit the authority of an earlier source state;
-- semantically similar evidence from another project does not silently cross scope boundaries;
-- unresolved authority is not converted into confidence;
-- audit history is preserved rather than rewritten to make execution appear successful.
+The external test does **not** currently prove:
 
-What ProcessCore is not
+- universal portability;
+- production readiness;
+- successful successor runtime operation;
+- functional AgriCore implementation;
+- autonomous remediation;
+- hallucination elimination.
+
+The next stronger public milestone remains the first accepted repeatable actual-state snapshot together with AgriCore PH0 closure/verification, followed by the first real development-delta cycle.
+
+## Project boundaries
+
+The Node00 environment keeps responsibilities separated:
+
+- **ProcessCore** — evidence, provenance, authority, deterministic processing and audit architecture;
+- **QCore** — independent production data acquisition, processing and enrichment runtime;
+- **AgriCore** — independent experimental domain project.
+
+A result verified in one project does not automatically become authority in another.
+
+## Failure semantics
+
+ProcessCore prefers explicit uncertainty to invented certainty.
+
+Examples:
+
+- changed evidence does not silently inherit the authority of an earlier state;
+- semantically similar evidence does not automatically cross a project boundary;
+- unresolved authority remains unresolved;
+- validation failure is not silently rewritten into success;
+- historical audit state is preserved;
+- a failed validator may itself become the object of audit when its assumptions conflict with authoritative evidence.
+
+## What ProcessCore is not
 
 ProcessCore is not:
 
@@ -84,37 +100,31 @@ ProcessCore is not:
 - a production web crawler;
 - a confidence engine;
 - a claim that probabilistic models can be made fully deterministic;
-- a claim of formal verification of the complete integrated system.
+- proof of universal portability;
+- a production-ready autonomous system.
 
-Research lineage
+## Research lineage
 
 ProcessCore evolved from an earlier technology-intelligence and ecosystem-discovery architecture.
 
-That earlier research remains preserved in this repository as historical material, including the frozen snapshot:
+That earlier state remains preserved as project history, including:
 
-"PC-2026-08-12-V1.html"
+`PC-2026-08-12-V1.html`
 
-Historical quantum-ecosystem, crawler, enrichment and market-intelligence material should be read as project lineage, not as the current ProcessCore runtime definition.
+Historical quantum-ecosystem, crawler, enrichment and market-intelligence material should be read as research lineage, not as the current ProcessCore definition.
 
-Public reference
+## Public references
 
-Project website:
-
+Website:  
 https://tondad80-dev.github.io/processcore-quantum-intelligence/
 
-LinkedIn:
-
+LinkedIn:  
 https://www.linkedin.com/in/tonda-dospiva-b160281a7/
 
-Status
-
-ProcessCore is an independent experimental systems-engineering project under active development.
-
-Public descriptions intentionally distinguish:
-
-verified component state → integration work → planned development → historical research
+Repository:  
+https://github.com/tondad80-dev/processcore-quantum-intelligence
 
 ---
 
-Antonín Dospiva
-Research & Systems Engineering
+**Antonín Dospiva**  
+Systems Architecture · AI Evidence · Provenance · Auditability
