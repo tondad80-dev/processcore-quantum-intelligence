@@ -3,40 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <meta name="theme-color" content="#030712">
 <meta name="author" content="Antonín Dospiva">
-<meta name="description" content="ProcessCore — an experimental systems-engineering project for deterministic evidence, authority, provenance, semantic context and audited human–LLM interaction.">
+<meta name="description" content="ProcessCore — experimental systems engineering for deterministic evidence, provenance, authority and auditability around probabilistic AI interpretation.">
 <meta name="robots" content="index,follow">
 
 <link rel="canonical" href="https://tondad80-dev.github.io/processcore-quantum-intelligence/">
 <link rel="icon" href="processcore-logo.png" type="image/png">
 
-<!-- Open Graph / LinkedIn -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="ProcessCore | Evidence Before Interpretation">
-<meta property="og:description" content="A deterministic evidence, authority and audit layer between operational systems and probabilistic AI interpretation.">
+<meta property="og:description" content="Deterministic evidence, provenance, authority and auditability before probabilistic interpretation. Prototype v0.1 complete and frozen; external AgriCore test active.">
 <meta property="og:url" content="https://tondad80-dev.github.io/processcore-quantum-intelligence/">
 <meta property="og:image" content="https://tondad80-dev.github.io/processcore-quantum-intelligence/processcore-logo.png">
-<meta property="og:image:secure_url" content="https://tondad80-dev.github.io/processcore-quantum-intelligence/processcore-logo.png">
 <meta property="og:image:alt" content="ProcessCore — Evidence before interpretation">
 <meta property="og:site_name" content="ProcessCore">
 
-<!-- X / Twitter -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ProcessCore | Evidence Before Interpretation">
-<meta name="twitter:description" content="Deterministic evidence, authority and audited context around probabilistic AI interpretation.">
+<meta name="twitter:description" content="Deterministic evidence, provenance, authority and auditability before probabilistic interpretation.">
 <meta name="twitter:image" content="https://tondad80-dev.github.io/processcore-quantum-intelligence/processcore-logo.png">
-<meta name="twitter:image:alt" content="ProcessCore — Evidence before interpretation">
 
-<!-- Structured data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ResearchProject",
   "name": "ProcessCore",
-  "description": "Experimental systems-engineering project exploring deterministic evidence, authority, provenance, semantic context and auditability around probabilistic AI.",
+  "description": "Independent experimental systems-engineering project exploring deterministic evidence, provenance, authority and auditability around probabilistic AI interpretation.",
   "url": "https://tondad80-dev.github.io/processcore-quantum-intelligence/",
   "creator": {
     "@type": "Person",
@@ -47,1893 +41,395 @@
 
 <title>ProcessCore | Evidence Before Interpretation</title>
 
-<!-- Progressive enhancement: content remains visible if JavaScript is unavailable. -->
-<script>document.documentElement.classList.add("js");</script>
-
 <style>
-:root {
-    --bg: #030712;
-    --bg-deep: #02050b;
-    --surface: rgba(15, 23, 42, 0.66);
-    --surface-hover: rgba(24, 35, 54, 0.80);
-    --text: #f8fafc;
-    --muted: #94a3b8;
-    --dim: #64748b;
-    --cyan: #38bdf8;
-    --cyan-light: #7dd3fc;
-    --cyan-pale: #bae6fd;
-    --green: #5ee7b1;
-    --amber: #fbbf24;
-    --red: #fb7185;
-    --border: rgba(56, 189, 248, 0.17);
-    --border-hover: rgba(56, 189, 248, 0.48);
-    --font: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    --mono: "JetBrains Mono", "Fira Code", "SFMono-Regular", Consolas, monospace;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    background: var(--bg);
-}
-
-body {
-    font-family: var(--font);
-    color: var(--text);
-    background-color: var(--bg);
-    line-height: 1.65;
-    overflow-x: hidden;
-    background-image:
-        radial-gradient(circle at 50% -5%, rgba(56,189,248,.13) 0%, rgba(56,189,248,.035) 25%, transparent 52%),
-        radial-gradient(circle at 90% 35%, rgba(125,211,252,.025), transparent 24%),
-        linear-gradient(to right, rgba(56,189,248,.028) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(56,189,248,.028) 1px, transparent 1px);
-    background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
-    background-attachment: fixed;
-}
-
-a { color: inherit; }
-img { max-width: 100%; }
-
-::selection {
-    background: rgba(56,189,248,.25);
-    color: #fff;
-}
-
-:focus-visible {
-    outline: 2px solid var(--cyan-light);
-    outline-offset: 4px;
-}
-
-@keyframes floatUp {
-    from { opacity: 0; transform: translateY(18px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes statusPulse {
-    0%, 100% {
-        border-color: rgba(94,231,177,.25);
-        box-shadow: 0 0 10px rgba(94,231,177,.04);
-    }
-    50% {
-        border-color: rgba(94,231,177,.52);
-        box-shadow: 0 0 20px rgba(94,231,177,.08);
-    }
-}
-
-.fade-section {
-    opacity: 1;
-    transform: none;
-}
-
-.js .fade-section {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity .55s cubic-bezier(.16,1,.3,1), transform .55s cubic-bezier(.16,1,.3,1);
-}
-
-.js .fade-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.container {
-    width: min(1080px, calc(100% - 40px));
-    margin: 0 auto;
-}
-
-.system-banner {
-    border-bottom: 1px solid rgba(56,189,248,.16);
-    background: rgba(2,6,13,.88);
-    backdrop-filter: blur(14px);
-    font-family: var(--mono);
-    color: var(--cyan-pale);
-    font-size: 10px;
-    letter-spacing: .13em;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 9px 16px;
-}
-
-nav.main-nav {
-    position: sticky;
-    top: 0;
-    z-index: 30;
-    border-bottom: 1px solid var(--border);
-    background: rgba(3,7,18,.80);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-}
-
-.nav-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 68px;
-    gap: 20px;
-}
-
-.brand {
-    display: flex;
-    align-items: center;
-    gap: 11px;
-    text-decoration: none;
-}
-
-.brand img {
-    width: 42px;
-    height: 42px;
-    object-fit: contain;
-}
-
-.brand-text {
-    font-weight: 800;
-    letter-spacing: -.02em;
-    font-size: 17px;
-}
-
-.brand-sub {
-    font-family: var(--mono);
-    color: var(--dim);
-    font-size: 9px;
-    letter-spacing: .12em;
-}
-
-.nav-links {
-    display: flex;
-    gap: 21px;
-    align-items: center;
-    font-family: var(--mono);
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: .10em;
-    color: var(--muted);
-}
-
-.nav-links a {
-    text-decoration: none;
-    transition: color .2s ease;
-}
-
-.nav-links a:hover { color: var(--cyan-light); }
-
-.hero {
-    padding: 86px 0 76px;
-    text-align: center;
-    animation: floatUp .65s ease-out;
-}
-
-.system-label {
-    font-family: var(--mono);
-    color: var(--cyan-pale);
-    font-size: 10px;
-    letter-spacing: .24em;
-    text-transform: uppercase;
-    margin-bottom: 24px;
-}
-
-.hero h1 {
-    font-size: clamp(40px, 7vw, 70px);
-    line-height: 1.03;
-    letter-spacing: -.045em;
-    font-weight: 850;
-    max-width: 970px;
-    margin: 0 auto;
-}
-
-.gradient-text {
-    background: linear-gradient(100deg, #fff, #9cdfff 48%, #d9e6f3);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
-.hero-subtitle {
-    color: var(--cyan);
-    font-weight: 620;
-    font-size: clamp(16px, 2vw, 20px);
-    max-width: 820px;
-    margin: 24px auto 0;
-}
-
-.hero-description {
-    color: var(--muted);
-    font-size: 15px;
-    max-width: 760px;
-    margin: 20px auto 0;
-}
-
-.hero-principle {
-    margin: 30px auto 0;
-    max-width: 790px;
-    padding: 19px 24px;
-    border: 1px solid rgba(125,211,252,.18);
-    border-radius: 8px;
-    background: rgba(15,23,42,.46);
-    backdrop-filter: blur(12px);
-    color: #eaf5ff;
-    font-size: clamp(17px, 2vw, 21px);
-    font-weight: 650;
-}
-
-.hero-actions {
-    display: flex;
-    justify-content: center;
-    gap: 11px;
-    flex-wrap: wrap;
-    margin-top: 29px;
-}
-
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 44px;
-    padding: 0 20px;
-    border-radius: 6px;
-    font-family: var(--mono);
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: all .22s ease;
-}
-
-.btn-primary {
-    background: var(--cyan);
-    color: #020711;
-    border: 1px solid var(--cyan);
-}
-
-.btn-primary:hover {
-    background: var(--cyan-light);
-    transform: translateY(-2px);
-    box-shadow: 0 7px 22px rgba(56,189,248,.25);
-}
-
-.btn-secondary {
-    color: var(--cyan-light);
-    border: 1px solid rgba(56,189,248,.4);
-    background: rgba(56,189,248,.035);
-}
-
-.btn-secondary:hover {
-    transform: translateY(-2px);
-    background: rgba(56,189,248,.11);
-    border-color: var(--cyan);
-}
-
-.section { padding: 62px 0; }
-.section + .section { border-top: 1px solid rgba(56,189,248,.09); }
-
-.section-label,
-.pc-section-label {
-    font-family: var(--mono);
-    color: var(--cyan);
-    text-transform: uppercase;
-    letter-spacing: .20em;
-    font-size: 10px;
-    margin-bottom: 11px;
-}
-
-h2 {
-    color: #f0f9ff;
-    font-size: clamp(25px, 4vw, 38px);
-    line-height: 1.15;
-    letter-spacing: -.03em;
-    margin-bottom: 16px;
-}
-
-.section-lead {
-    color: var(--muted);
-    max-width: 810px;
-    font-size: 16px;
-}
-
-.box {
-    margin-top: 25px;
-    padding: 28px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    backdrop-filter: blur(13px);
-    -webkit-backdrop-filter: blur(13px);
-    transition: border-color .25s ease, background .25s ease;
-}
-
-.box:hover {
-    border-color: rgba(56,189,248,.31);
-    background: rgba(15,23,42,.72);
-}
-
-.arch-scroll {
-    overflow-x: auto;
-    padding-bottom: 4px;
-    -webkit-overflow-scrolling: touch;
-}
-
-.architecture-flow {
-    min-width: 910px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 7px;
-    padding: 16px 2px;
-}
-
-.flow-node {
-    min-width: 88px;
-    padding: 12px 10px;
-    border: 1px solid rgba(56,189,248,.31);
-    background: rgba(4,10,19,.83);
-    color: var(--cyan-pale);
-    border-radius: 6px;
-    font-family: var(--mono);
-    font-size: 10px;
-    letter-spacing: .05em;
-    text-align: center;
-    transition: .25s ease;
-}
-
-.flow-node:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 0 17px rgba(56,189,248,.12);
-}
-
-.flow-node.authority,
-.flow-node.audit {
-    color: var(--green);
-    border-color: rgba(94,231,177,.45);
-}
-
-.flow-node.consumer {
-    color: var(--amber);
-    border-color: rgba(251,191,36,.42);
-}
-
-.arrow {
-    color: #486175;
-    font-family: var(--mono);
-}
-
-.core-rule,
-.disclaimer,
-.status-note {
-    margin-top: 22px;
-    padding: 18px 21px;
-    border-left: 3px solid var(--cyan);
-    background: rgba(56,189,248,.045);
-    color: #dcebf6;
-    border-radius: 0 7px 7px 0;
-    font-size: 14px;
-}
-
-.status-note {
-    border-left-color: var(--amber);
-    background: rgba(251,191,36,.04);
-    color: var(--muted);
-}
-
-.bento-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    margin-top: 27px;
-}
-
-.bento-card {
-    background: var(--surface);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    padding: 24px;
-    border-radius: 9px;
-    border: 1px solid var(--border);
-    min-height: 215px;
-    transition: all .25s ease;
-}
-
-.bento-card:hover {
-    transform: translateY(-3px);
-    border-color: var(--border-hover);
-    background: var(--surface-hover);
-    box-shadow: 0 12px 30px rgba(0,0,0,.23);
-}
-
-.card-index {
-    font-family: var(--mono);
-    color: var(--cyan);
-    font-size: 10px;
-    letter-spacing: .13em;
-    margin-bottom: 13px;
-}
-
-.bento-card h3 {
-    font-size: 17px;
-    color: var(--cyan-pale);
-    margin-bottom: 10px;
-}
-
-.bento-card p {
-    color: var(--muted);
-    font-size: 13px;
-}
-
-.pc-public-architecture {
-    width: min(1180px, calc(100% - 40px));
-    margin: 0 auto;
-    padding: 72px 0;
-    border-top: 1px solid rgba(56,189,248,.09);
-}
-
-.pc-public-architecture h2 {
-    font-size: clamp(32px, 5vw, 56px);
-    line-height: 1.05;
-    letter-spacing: -.04em;
-    margin: 0 0 18px;
-}
-
-.pc-lead {
-    max-width: 780px;
-    font-size: 17px;
-    line-height: 1.7;
-    color: var(--muted);
-    margin-bottom: 38px;
-}
-
-.pc-flow {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
-    gap: 14px;
-    align-items: stretch;
-}
-
-.pc-node {
-    min-height: 220px;
-    padding: 24px 20px;
-    border: 1px solid rgba(56,189,248,.20);
-    border-radius: 10px;
-    background: linear-gradient(145deg, rgba(17,27,46,.78), rgba(7,13,24,.82));
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.025), 0 14px 34px rgba(0,0,0,.16);
-    transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
-}
-
-.pc-node:hover {
-    transform: translateY(-4px);
-    border-color: rgba(56,189,248,.48);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.035), 0 18px 40px rgba(0,0,0,.28), 0 0 24px rgba(56,189,248,.07);
-}
-
-.pc-node span {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    margin-bottom: 18px;
-    border-radius: 50%;
-    border: 1px solid rgba(56,189,248,.35);
-    background: rgba(56,189,248,.08);
-    color: var(--cyan);
-    font-family: var(--mono);
-    font-size: 10px;
-    font-weight: 800;
-}
-
-.pc-node strong {
-    display: block;
-    margin-bottom: 9px;
-    color: var(--cyan-pale);
-    font-size: 17px;
-}
-
-.pc-node p {
-    color: var(--muted);
-    font-size: 13px;
-}
-
-.pc-arrow {
-    align-self: center;
-    color: var(--cyan);
-    font-family: var(--mono);
-    font-size: 18px;
-    opacity: .62;
-}
-
-.pc-principles {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    margin-top: 24px;
-}
-
-.pc-principles > div {
-    padding: 18px 20px;
-    border: 1px solid rgba(94,231,177,.18);
-    border-radius: 8px;
-    background: rgba(7,13,23,.72);
-}
-
-.pc-principles strong {
-    display: block;
-    margin-bottom: 6px;
-    color: var(--green);
-    font-family: var(--mono);
-    font-size: 11px;
-}
-
-.pc-principles span {
-    display: block;
-    color: var(--muted);
-    font-size: 12px;
-}
-
-.pc-public-note {
-    margin-top: 24px;
-    padding: 16px 18px;
-    border-left: 3px solid var(--amber);
-    border-radius: 0 7px 7px 0;
-    background: rgba(251,191,36,.035);
-    color: #8f9daf;
-    font-size: 12px;
-}
-
-.project-layout {
-    display: grid;
-    grid-template-columns: .82fr 1.35fr;
-    gap: 18px;
-    margin-top: 28px;
-}
-
-.project-list {
-    display: grid;
-    gap: 11px;
-}
-
-.project-card {
-    background: rgba(8,14,25,.76);
-    border: 1px solid var(--border);
-    padding: 19px;
-    border-radius: 8px;
-}
-
-.project-card strong {
-    color: var(--cyan-pale);
-    display: block;
-    font-size: 15px;
-    margin-bottom: 5px;
-}
-
-.project-card span {
-    color: var(--muted);
-    font-size: 12px;
-}
-
-.authority-card {
-    padding: 27px;
-    border-radius: 10px;
-    border: 1px solid rgba(94,231,177,.34);
-    background: linear-gradient(135deg, rgba(94,231,177,.055), rgba(56,189,248,.03));
-}
-
-.authority-card h3 {
-    color: var(--green);
-    margin-bottom: 11px;
-    font-family: var(--mono);
-    font-size: 15px;
-}
-
-.authority-card p {
-    color: var(--muted);
-    font-size: 13px;
-}
-
-.capability-list {
-    list-style: none;
-    display: grid;
-    gap: 7px;
-    margin-top: 18px;
-}
-
-.capability-list li {
-    position: relative;
-    padding: 11px 14px 11px 36px;
-    border: 1px solid rgba(56,189,248,.12);
-    background: rgba(3,8,15,.55);
-    border-radius: 5px;
-    font-family: var(--mono);
-    font-size: 10px;
-    color: #c6d6e4;
-}
-
-.capability-list li::before {
-    content: "•";
-    position: absolute;
-    left: 15px;
-    color: var(--cyan);
-    font-weight: 800;
-}
-
-.status-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    margin-top: 26px;
-}
-
-.status-card {
-    background: rgba(7,13,23,.78);
-    border: 1px solid rgba(94,231,177,.25);
-    padding: 17px;
-    border-radius: 7px;
-    animation: statusPulse 4s infinite;
-}
-
-.status-card.integration {
-    border-color: rgba(251,191,36,.34);
-    animation: none;
-}
-
-.status-top {
-    color: var(--green);
-    font-family: var(--mono);
-    font-size: 9px;
-    text-transform: uppercase;
-    letter-spacing: .13em;
-    margin-bottom: 7px;
-}
-
-.status-top.integration { color: var(--amber); }
-
-.status-card strong {
-    color: #e8f6ff;
-    display: block;
-    font-size: 14px;
-}
-
-.status-card p {
-    color: var(--muted);
-    font-size: 12px;
-    margin-top: 5px;
-}
-
-.pipeline {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 12px 0;
-}
-
-.pipeline-step {
-    width: 100%;
-    max-width: 500px;
-    text-align: center;
-    padding: 12px 20px;
-    background: rgba(7,13,24,.92);
-    border: 1px solid rgba(56,189,248,.30);
-    border-radius: 6px;
-    color: var(--cyan-pale);
-    font-family: var(--mono);
-    font-size: 11px;
-}
-
-.pipeline-step.authority {
-    border-color: rgba(94,231,177,.42);
-    color: var(--green);
-}
-
-.pipeline-step.consumer {
-    background: var(--cyan);
-    color: #020712;
-    border-color: var(--cyan);
-    font-weight: 800;
-}
-
-.pipeline-arrow {
-    color: var(--cyan);
-    font-family: var(--mono);
-    margin: 4px 0;
-}
-
-.statement {
-    margin-top: 30px;
-    padding: 35px 25px;
-    text-align: center;
-    border-radius: 10px;
-    border: 1px solid var(--border);
-    background: radial-gradient(circle at 50% 45%, rgba(56,189,248,.075), transparent 62%), rgba(8,14,24,.72);
-    font-size: clamp(20px, 3vw, 29px);
-    line-height: 1.38;
-    font-weight: 680;
-    color: #eaf7ff;
-}
-
-.statement strong { color: var(--cyan-light); }
-
-.statement small {
-    display: block;
-    margin-top: 13px;
-    color: var(--dim);
-    font-family: var(--mono);
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: .16em;
-}
-
-.failure-card { border-top: 2px solid rgba(251,113,133,.52); }
-.failure-card .card-index { color: var(--red); }
-
-.archive-box {
-    margin-top: 26px;
-    padding: 28px;
-    border: 1px solid rgba(251,191,36,.26);
-    border-radius: 10px;
-    background: linear-gradient(135deg, rgba(251,191,36,.045), rgba(8,14,25,.72));
-}
-
-.archive-tag {
-    display: inline-block;
-    padding: 4px 9px;
-    border: 1px solid rgba(251,191,36,.35);
-    border-radius: 4px;
-    color: var(--amber);
-    font-family: var(--mono);
-    font-size: 9px;
-    letter-spacing: .10em;
-    text-transform: uppercase;
-    margin-bottom: 13px;
-}
-
-.archive-box h3 {
-    color: #fff5d6;
-    margin-bottom: 9px;
-    font-size: 18px;
-}
-
-.archive-box p {
-    color: var(--muted);
-    max-width: 820px;
-    font-size: 13px;
-}
-
-.archive-actions {
-    margin-top: 18px;
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-footer {
-    margin-top: 25px;
-    padding: 35px 0 25px;
-    border-top: 1px solid var(--border);
-    text-align: center;
-}
-
-.footer-title {
-    color: var(--text);
-    font-weight: 700;
-    font-size: 13px;
-}
-
-.footer-description {
-    color: var(--muted);
-    font-size: 12px;
-    max-width: 760px;
-    margin: 7px auto 0;
-}
-
-.footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 22px;
-    flex-wrap: wrap;
-    margin-top: 17px;
-    font-family: var(--mono);
-    font-size: 10px;
-}
-
-.footer-links a {
-    color: var(--cyan-light);
-    text-decoration: none;
-}
-
-.footer-links a:hover { text-decoration: underline; }
-
-.system-signature {
-    margin-top: 23px;
-    color: #64748b;
-    font-family: var(--mono);
-    font-size: 9px;
-    text-transform: uppercase;
-    letter-spacing: .18em;
-}
-
-@media (max-width: 980px) {
-    .pc-flow { grid-template-columns: 1fr; gap: 10px; }
-    .pc-arrow { transform: rotate(90deg); justify-self: center; }
-}
-
-@media (max-width: 850px) {
-    .bento-grid,
-    .status-grid,
-    .project-layout { grid-template-columns: 1fr; }
-
-    .nav-links { display: none; }
-}
-
-@media (max-width: 600px) {
-    body { background-attachment: scroll; }
-
-    .container { width: calc(100% - 26px); }
-
-    .pc-public-architecture {
-        width: calc(100% - 26px);
-        padding: 52px 0;
-    }
-
-    .pc-public-architecture h2 {
-        font-size: clamp(30px, 11vw, 46px);
-    }
-
-    .pc-lead {
-        font-size: 15px;
-        margin-bottom: 28px;
-    }
-
-    .pc-node {
-        min-height: auto;
-        padding: 20px;
-    }
-
-    .pc-principles { grid-template-columns: 1fr; }
-
-    .system-banner {
-        font-size: 9px;
-        letter-spacing: .07em;
-        line-height: 1.45;
-        padding: 8px 12px;
-    }
-
-    .brand-sub { font-size: 8px; }
-
-    .hero { padding: 60px 0 56px; }
-
-    .hero h1 {
-        font-size: clamp(40px, 12vw, 58px);
-    }
-
-    .hero-subtitle { line-height: 1.45; }
-    .hero-description { font-size: 14px; }
-    .section { padding: 49px 0; }
-
-    .box,
-    .archive-box,
-    .authority-card {
-        padding: 20px;
-    }
-
-    .bento-card { min-height: auto; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        animation-duration: .001ms !important;
-        animation-iteration-count: 1 !important;
-        scroll-behavior: auto !important;
-        transition-duration: .001ms !important;
-    }
-
-    .js .fade-section {
-        opacity: 1;
-        transform: none;
-    }
-}
+:root{
+  --bg:#030712;
+  --bg2:#07101d;
+  --surface:rgba(15,23,42,.72);
+  --surface2:rgba(9,16,29,.88);
+  --text:#f8fafc;
+  --muted:#94a3b8;
+  --dim:#64748b;
+  --cyan:#38bdf8;
+  --cyan2:#7dd3fc;
+  --green:#5ee7b1;
+  --amber:#fbbf24;
+  --red:#fb7185;
+  --border:rgba(56,189,248,.18);
+  --font:"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:"JetBrains Mono","Fira Code","SFMono-Regular",Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--bg)}
+body{
+  font-family:var(--font);
+  color:var(--text);
+  background:
+    radial-gradient(circle at 50% -5%,rgba(56,189,248,.15),transparent 35%),
+    linear-gradient(rgba(56,189,248,.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(56,189,248,.025) 1px,transparent 1px),
+    var(--bg);
+  background-size:100% 100%,40px 40px,40px 40px,auto;
+  line-height:1.65;
+}
+a{color:inherit}
+.container{width:min(1080px,calc(100% - 36px));margin:0 auto}
+.banner{
+  padding:9px 16px;
+  text-align:center;
+  border-bottom:1px solid var(--border);
+  background:rgba(2,6,13,.9);
+  color:var(--cyan2);
+  font:700 10px var(--mono);
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+nav{
+  position:sticky;top:0;z-index:20;
+  border-bottom:1px solid var(--border);
+  background:rgba(3,7,18,.84);
+  backdrop-filter:blur(14px);
+}
+.nav{
+  min-height:66px;display:flex;align-items:center;justify-content:space-between;gap:18px
+}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none}
+.brand img{width:42px;height:42px;object-fit:contain}
+.brand strong{display:block;font-size:17px}
+.brand small{display:block;color:var(--dim);font:9px var(--mono);letter-spacing:.11em}
+.links{display:flex;gap:20px;font:10px var(--mono);text-transform:uppercase;letter-spacing:.09em;color:var(--muted)}
+.links a{text-decoration:none}.links a:hover{color:var(--cyan2)}
+.hero{padding:92px 0 70px;text-align:center}
+.kicker{font:700 10px var(--mono);letter-spacing:.22em;color:var(--cyan2);text-transform:uppercase;margin-bottom:20px}
+h1{font-size:clamp(42px,7vw,72px);line-height:1.03;letter-spacing:-.045em}
+.gradient{
+  background:linear-gradient(95deg,#fff,#9ddfff 50%,#e6eef7);
+  -webkit-background-clip:text;background-clip:text;color:transparent
+}
+.hero .lead{max-width:800px;margin:24px auto 0;color:var(--cyan2);font-size:clamp(17px,2vw,21px);font-weight:650}
+.hero .desc{max-width:760px;margin:18px auto 0;color:var(--muted);font-size:15px}
+.rule{
+  max-width:820px;margin:28px auto 0;padding:20px 24px;
+  border:1px solid rgba(125,211,252,.2);border-radius:9px;
+  background:rgba(15,23,42,.52);font-size:clamp(17px,2vw,21px)
+}
+.rule strong{color:var(--cyan2)}
+.status-row{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:32px
+}
+.status{
+  padding:18px;border:1px solid var(--border);border-radius:8px;background:var(--surface2);text-align:left
+}
+.status .tag{font:800 9px var(--mono);letter-spacing:.11em;text-transform:uppercase;margin-bottom:7px}
+.ok .tag{color:var(--green)} .watch .tag{color:var(--amber)} .bound .tag{color:var(--cyan2)}
+.status strong{display:block;font-size:14px}.status p{margin-top:5px;color:var(--muted);font-size:12px}
+section{padding:64px 0;border-top:1px solid rgba(56,189,248,.09)}
+.label{font:800 10px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-bottom:10px}
+h2{font-size:clamp(27px,4vw,40px);line-height:1.14;letter-spacing:-.03em;margin-bottom:15px}
+.section-lead{max-width:820px;color:var(--muted);font-size:16px}
+.flow{
+  margin-top:28px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px
+}
+.node{
+  min-height:195px;padding:23px;border-radius:9px;border:1px solid var(--border);
+  background:linear-gradient(145deg,rgba(17,27,46,.8),rgba(7,13,24,.88))
+}
+.node .n{display:inline-flex;width:31px;height:31px;border-radius:50%;align-items:center;justify-content:center;border:1px solid rgba(56,189,248,.35);color:var(--cyan);font:800 10px var(--mono);margin-bottom:16px}
+.node h3{font-size:17px;color:#dff5ff;margin-bottom:8px}.node p{font-size:13px;color:var(--muted)}
+.callout{
+  margin-top:24px;padding:20px 22px;border-left:3px solid var(--cyan);border-radius:0 8px 8px 0;background:rgba(56,189,248,.045);color:#dcebf6
+}
+.callout.validation{border-left-color:var(--red);background:rgba(251,113,133,.04)}
+.callout strong{color:#fff}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+.card{padding:24px;border-radius:9px;border:1px solid var(--border);background:var(--surface)}
+.card h3{font-size:17px;color:var(--cyan2);margin-bottom:8px}.card p{color:var(--muted);font-size:13px}
+.list{margin-top:17px;display:grid;gap:8px;list-style:none}
+.list li{padding:10px 13px 10px 34px;position:relative;border:1px solid rgba(56,189,248,.12);border-radius:6px;background:rgba(3,8,15,.55);font:10px var(--mono);color:#c9d7e3}
+.list li:before{content:"•";position:absolute;left:14px;color:var(--cyan)}
+.boundary li:before{color:var(--amber)}
+.quote{
+  margin-top:28px;padding:34px 24px;text-align:center;border:1px solid var(--border);border-radius:10px;
+  background:radial-gradient(circle at 50% 40%,rgba(56,189,248,.08),transparent 62%),rgba(8,14,24,.72);
+  font-size:clamp(20px,3vw,29px);font-weight:680
+}
+.quote strong{color:var(--cyan2)}
+.archive{
+  margin-top:26px;padding:26px;border-radius:9px;border:1px solid rgba(251,191,36,.27);
+  background:linear-gradient(135deg,rgba(251,191,36,.045),rgba(8,14,25,.75))
+}
+.archive .tag{display:inline-block;padding:4px 9px;border:1px solid rgba(251,191,36,.34);border-radius:4px;color:var(--amber);font:9px var(--mono);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px}
+.archive p{color:var(--muted);font-size:13px;max-width:830px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-flex;align-items:center;min-height:42px;padding:0 18px;border-radius:6px;border:1px solid rgba(56,189,248,.4);color:var(--cyan2);text-decoration:none;font:800 10px var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.btn:hover{background:rgba(56,189,248,.1)}
+footer{padding:38px 0 28px;border-top:1px solid var(--border);text-align:center}
+footer p{max-width:760px;margin:7px auto 0;color:var(--muted);font-size:12px}
+.footer-links{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:16px;font:10px var(--mono)}
+.footer-links a{color:var(--cyan2);text-decoration:none}
+.signature{margin-top:22px;color:var(--dim);font:9px var(--mono);letter-spacing:.15em;text-transform:uppercase}
+@media(max-width:900px){.status-row,.flow{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}.links{display:none}}
+@media(max-width:600px){.status-row,.flow{grid-template-columns:1fr}.hero{padding:62px 0 50px}}
 </style>
 </head>
-
 <body>
 
-<div class="system-banner">
-    PROCESSCORE // NODE00 // DETERMINISTIC EVIDENCE &amp; CONTEXT AUTHORITY // EXPERIMENTAL SYSTEMS ENGINEERING
+<div class="banner">
+  PROCESSCORE // PROTOTYPE V0.1 COMPLETE + FROZEN // AGRICORE EXTERNAL TEST ACTIVE // 2026-09-08 PUBLIC-SAFE STATE
 </div>
 
-<nav class="main-nav" aria-label="Primary navigation">
-    <div class="container nav-inner">
-
-        <a href="#top" class="brand" aria-label="ProcessCore home">
-            <img
-                src="processcore-logo.png"
-                alt="ProcessCore pearl emblem"
-                width="42"
-                height="42"
-            >
-
-            <div>
-                <div class="brand-text">ProcessCore</div>
-                <div class="brand-sub">EVIDENCE BEFORE INTERPRETATION</div>
-            </div>
-        </a>
-
-        <div class="nav-links">
-            <a href="#principle">Principle</a>
-            <a href="#evidence-architecture">Public Architecture</a>
-            <a href="#architecture">Boundaries</a>
-            <a href="#implementation">Implementation</a>
-            <a href="#archive">Archive</a>
-        </div>
-
+<nav>
+  <div class="container nav">
+    <a class="brand" href="#top">
+      <img src="processcore-logo.png" alt="ProcessCore emblem" width="42" height="42">
+      <span>
+        <strong>ProcessCore</strong>
+        <small>EVIDENCE BEFORE INTERPRETATION</small>
+      </span>
+    </a>
+    <div class="links">
+      <a href="#architecture">Architecture</a>
+      <a href="#state">State</a>
+      <a href="#agricore">AgriCore</a>
+      <a href="#validation">Validation</a>
+      <a href="#boundaries">Boundaries</a>
+      <a href="#archive">Archive</a>
     </div>
+  </div>
 </nav>
 
 <header class="hero" id="top">
-    <div class="container">
-
-        <div class="system-label">
-            ████ PROCESSCORE ████ // AUTHORITY LAYER
-        </div>
-
-        <h1>
-            Evidence before
-            <span class="gradient-text">interpretation.</span>
-        </h1>
-
-        <p class="hero-subtitle">
-            Deterministic evidence, authority, provenance, semantic context and auditability around probabilistic AI.
-        </p>
-
-        <p class="hero-description">
-            ProcessCore is an experimental systems-engineering project exploring how a human operator can use
-            language models without allowing the model itself to determine what counts as authoritative system state.
-        </p>
-
-        <div class="hero-principle">
-            The model can interpret evidence.<br>
-            <strong>It does not decide what counts as evidence.</strong>
-        </div>
-
-        <div class="hero-actions">
-            <a href="#evidence-architecture" class="btn btn-primary">
-                Explore Architecture
-            </a>
-
-            <a href="#archive" class="btn btn-secondary">
-                Research Lineage
-            </a>
-        </div>
-
+  <div class="container">
+    <div class="kicker">PROCESSCORE // SYSTEMS ARCHITECTURE</div>
+    <h1>Evidence before <span class="gradient">interpretation.</span></h1>
+    <p class="lead">Deterministic evidence, provenance, authority and auditability around probabilistic AI.</p>
+    <p class="desc">
+      ProcessCore is an independent experimental systems-engineering project exploring how a human operator can use
+      probabilistic models without allowing the model itself to establish what counts as authoritative system state.
+    </p>
+    <div class="rule">
+      The model may interpret evidence.<br>
+      <strong>It does not establish what evidence is authoritative.</strong>
     </div>
+
+    <div class="status-row" aria-label="Current ProcessCore public status">
+      <div class="status ok">
+        <div class="tag">✓ Frozen milestone</div>
+        <strong>Prototype v0.1</strong>
+        <p>Completed and frozen implementation milestone.</p>
+      </div>
+      <div class="status ok">
+        <div class="tag">✓ Local validation</div>
+        <strong>Node00</strong>
+        <p>Validated locally on a Raspberry Pi-based environment.</p>
+      </div>
+      <div class="status watch">
+        <div class="tag">◐ External test</div>
+        <strong>AgriCore</strong>
+        <p>Independent test active; failures remain evidence.</p>
+      </div>
+      <div class="status bound">
+        <div class="tag">Boundary</div>
+        <strong>Portability</strong>
+        <p>Not proven. Production readiness is not claimed.</p>
+      </div>
+    </div>
+  </div>
 </header>
 
 <main>
 
-<section class="section fade-section" id="principle">
-    <div class="container">
-
-        <div class="section-label">
-            01 // Authority Principle
-        </div>
-
-        <h2>
-            Trust is established before the model receives context.
-        </h2>
-
-        <p class="section-lead">
-            ProcessCore is not an LLM and does not become authoritative because a model generated a confident answer.
-            Its role is to maintain a controlled path from observable system state to evidence, authority,
-            semantic context, deterministic processing and audit.
-        </p>
-
-        <div class="box">
-
-            <div class="arch-scroll" aria-label="ProcessCore evidence architecture">
-
-                <div class="architecture-flow">
-
-                    <div class="flow-node">REALITY</div>
-                    <div class="arrow">→</div>
-
-                    <div class="flow-node">EVIDENCE</div>
-                    <div class="arrow">→</div>
-
-                    <div class="flow-node authority">AUTHORITY</div>
-                    <div class="arrow">→</div>
-
-                    <div class="flow-node">SEMANTICS</div>
-                    <div class="arrow">→</div>
-
-                    <div class="flow-node">CONTEXT</div>
-                    <div class="arrow">→</div>
-
-                    <div class="flow-node">QUERY</div>
-                    <div class="arrow">→</div>
-
-                    <div class="flow-node">RESPONSE</div>
-                    <div class="arrow">→</div>
-
-                    <div class="flow-node audit">AUDIT</div>
-                    <div class="arrow">→</div>
-
-                    <div class="flow-node consumer">HUMAN / LLM</div>
-
-                </div>
-
-            </div>
-
-            <div class="core-rule">
-                Semantic similarity can retrieve evidence.
-                <strong>It cannot make evidence authoritative.</strong>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-<section
-    class="pc-public-architecture fade-section"
-    id="evidence-architecture"
->
-
-    <div class="pc-section-label">
-        PROCESSCORE / PUBLIC ARCHITECTURE
-    </div>
-
-    <h2>
-        Evidence before interpretation.
-    </h2>
-
-    <p class="pc-lead">
-        ProcessCore separates deterministic evidence handling and authority decisions
-        from downstream probabilistic interpretation.
+<section id="architecture">
+  <div class="container">
+    <div class="label">01 // Public architecture</div>
+    <h2>Authority is established before interpretation.</h2>
+    <p class="section-lead">
+      ProcessCore separates the path that establishes evidence identity and authority from downstream human or AI interpretation.
     </p>
 
-    <div class="pc-flow">
-
-        <div class="pc-node">
-            <span>01</span>
-
-            <strong>
-                Evidence
-            </strong>
-
-            <p>
-                Observable operational or contextual state is captured as explicit evidence.
-            </p>
-        </div>
-
-        <div class="pc-arrow">
-            →
-        </div>
-
-        <div class="pc-node">
-            <span>02</span>
-
-            <strong>
-                Authority
-            </strong>
-
-            <p>
-                Identity, scope, currentness and policy determine what may be treated as authoritative.
-            </p>
-        </div>
-
-        <div class="pc-arrow">
-            →
-        </div>
-
-        <div class="pc-node">
-            <span>03</span>
-
-            <strong>
-                Query Plane
-            </strong>
-
-            <p>
-                The controlled architecture defines deterministic contracts,
-                processing, response framing and audit boundaries.
-            </p>
-        </div>
-
-        <div class="pc-arrow">
-            →
-        </div>
-
-        <div class="pc-node">
-            <span>04</span>
-
-            <strong>
-                Interpretation
-            </strong>
-
-            <p>
-                Human interfaces and AI may interpret the result,
-                but they do not redefine the underlying evidence.
-            </p>
-        </div>
-
+    <div class="flow">
+      <article class="node">
+        <span class="n">01</span>
+        <h3>Evidence</h3>
+        <p>Observable system or project state is captured as explicit, bounded evidence.</p>
+      </article>
+      <article class="node">
+        <span class="n">02</span>
+        <h3>Provenance</h3>
+        <p>Source identity, scope, lineage and currentness are attached to the evidence path.</p>
+      </article>
+      <article class="node">
+        <span class="n">03</span>
+        <h3>Authority</h3>
+        <p>Explicit rules determine what may be treated as authoritative for the current project and version.</p>
+      </article>
+      <article class="node">
+        <span class="n">04</span>
+        <h3>Interpretation</h3>
+        <p>Humans and AI may interpret the result without redefining the evidence underneath it.</p>
+      </article>
     </div>
 
-    <div class="pc-principles">
-
-        <div>
-            <strong>
-                Deterministic evidence path
-            </strong>
-
-            <span>
-                Evidence identity and processing rules are established independently of model confidence.
-            </span>
-        </div>
-
-        <div>
-            <strong>
-                Fail-closed authority
-            </strong>
-
-            <span>
-                Unresolved authority is represented as unresolved rather than silently converted into certainty.
-            </span>
-        </div>
-
-        <div>
-            <strong>
-                Authority separation
-            </strong>
-
-            <span>
-                Storage, presentation layers, semantic similarity and LLM output are not authority by themselves.
-            </span>
-        </div>
-
-        <div>
-            <strong>
-                Reproducible evidence
-            </strong>
-
-            <span>
-                Bounded observations and deterministic artifacts can be checked against frozen reference state.
-            </span>
-        </div>
-
+    <div class="callout">
+      <strong>Design principle:</strong>
+      semantic similarity may retrieve evidence, but it cannot make evidence authoritative.
     </div>
+  </div>
+</section>
 
-    <p class="pc-public-note">
-        Public descriptions intentionally omit implementation paths,
-        infrastructure identifiers, cryptographic identities and operational
-        security details.
+<section id="state">
+  <div class="container">
+    <div class="label">02 // Current public-safe state</div>
+    <h2>Prototype complete. Claims remain bounded.</h2>
+    <p class="section-lead">
+      ProcessCore Prototype v0.1 has reached a completed and frozen implementation milestone. That does not mean every future project, successor version or operational environment has been proven.
     </p>
 
+    <div class="grid">
+      <article class="card">
+        <h3>Frozen v0.1</h3>
+        <p>The current prototype baseline is complete and frozen. Future successor work requires its own authority and lifecycle state.</p>
+      </article>
+      <article class="card">
+        <h3>Deterministic evidence path</h3>
+        <p>Evidence identity, comparison, response framing and audit boundaries are established independently of model confidence.</p>
+      </article>
+      <article class="card">
+        <h3>Version-scoped authority</h3>
+        <p>Historical baseline references remain provenance. They do not silently become active authority for a successor version.</p>
+      </article>
+    </div>
+
+    <div class="quote">
+      You do not have to make the LLM deterministic.<br>
+      <strong>You can make the evidence path deterministic.</strong>
+    </div>
+  </div>
 </section>
 
-<section class="section fade-section">
-    <div class="container">
+<section id="agricore">
+  <div class="container">
+    <div class="label">03 // Independent external test</div>
+    <h2>AgriCore tests the boundary, not the marketing claim.</h2>
+    <p class="section-lead">
+      AgriCore is the first independent project being used to test whether frozen ProcessCore v0.1 can remain generic while project-specific state stays outside the core.
+    </p>
 
-        <div class="section-label">
-            02 // Design Model
-        </div>
-
-        <h2>
-            Evidence, authority and interpretation are separate layers.
-        </h2>
-
-        <div class="bento-grid">
-
-            <article class="bento-card">
-
-                <div class="card-index">
-                    LAYER 01
-                </div>
-
-                <h3>
-                    Evidence before interpretation
-                </h3>
-
-                <p>
-                    Source identity, project scope and currentness are evaluated before information
-                    can enter an authoritative context path.
-                </p>
-
-            </article>
-
-            <article class="bento-card">
-
-                <div class="card-index">
-                    LAYER 02
-                </div>
-
-                <h3>
-                    Deterministic authority boundary
-                </h3>
-
-                <p>
-                    Retrieval can identify potentially relevant evidence.
-                    Authority controls determine whether that evidence may actually be used.
-                </p>
-
-            </article>
-
-            <article class="bento-card">
-
-                <div class="card-index">
-                    LAYER 03
-                </div>
-
-                <h3>
-                    Auditable processing path
-                </h3>
-
-                <p>
-                    Deterministic processing, response construction and audit are treated as explicit system layers,
-                    not as properties of the language model.
-                </p>
-
-            </article>
-
-        </div>
-
+    <div class="grid">
+      <article class="card">
+        <h3>Independent project</h3>
+        <p>AgriCore keeps its own runtime and project authority. ProcessCore does not merge that authority into itself.</p>
+      </article>
+      <article class="card">
+        <h3>Real execution reached</h3>
+        <p>The test has progressed beyond design-only review into bounded execution and validation attempts.</p>
+      </article>
+      <article class="card">
+        <h3>Failure remains evidence</h3>
+        <p>Unsuccessful or unresolved results are preserved and do not become PASS through wording or state rewriting.</p>
+      </article>
     </div>
+
+    <div class="callout">
+      <strong>Current boundary:</strong>
+      the external test does not yet prove universal portability, production readiness, functional AgriCore implementation or successful successor runtime operation.
+    </div>
+  </div>
 </section>
 
-<section class="section fade-section" id="architecture">
-    <div class="container">
+<section id="validation">
+  <div class="container">
+    <div class="label">04 // Validation semantics</div>
+    <h2>Validation is not authority.</h2>
+    <p class="section-lead">
+      A recent ProcessCore / AgriCore test produced a validation failure. The system state was preserved and examined read-only instead of being immediately “fixed.”
+    </p>
 
-        <div class="section-label">
-            03 // Node00 Project Boundaries
-        </div>
-
-        <h2>
-            Independent projects. Explicit responsibility.
-        </h2>
-
-        <p class="section-lead">
-            ProcessCore does not merge every workload into one runtime.
-            Node00 maintains separate project scopes with different responsibilities.
-        </p>
-
-        <div class="project-layout">
-
-            <div class="project-list">
-
-                <div class="project-card">
-                    <strong>
-                        QCore
-                    </strong>
-
-                    <span>
-                        Independent production data acquisition, processing and enrichment runtime.
-                    </span>
-                </div>
-
-                <div class="project-card">
-                    <strong>
-                        AgriCore
-                    </strong>
-
-                    <span>
-                        Independent experimental domain project with its own project boundary.
-                    </span>
-                </div>
-
-                <div class="project-card">
-                    <strong>
-                        ProcessCore
-                    </strong>
-
-                    <span>
-                        Evidence, authority, semantic context, deterministic processing and audit architecture.
-                    </span>
-                </div>
-
-            </div>
-
-            <div class="authority-card">
-
-                <h3>
-                    PROCESSCORE // AUTHORITY PLANE
-                </h3>
-
-                <p>
-                    ProcessCore provides bounded evidence and project-scoped context
-                    for downstream human or LLM interpretation.
-                    Production data acquisition remains separated in QCore.
-                </p>
-
-                <ul class="capability-list">
-                    <li>Explicit project routing</li>
-                    <li>Source identity and provenance</li>
-                    <li>Currentness verification</li>
-                    <li>Project-scoped semantic retrieval</li>
-                    <li>Policy and authority boundaries</li>
-                    <li>Deterministic evidence comparison</li>
-                    <li>Structured answer generation</li>
-                    <li>Append-only audit mechanisms</li>
-                </ul>
-
-            </div>
-
-        </div>
-
-        <div class="disclaimer">
-            <strong>
-                Boundary rule:
-            </strong>
-
-            project scope is an explicit routing boundary.
-            It is not authentication or authorization, and ProcessCore does not infer project identity
-            when it has not been explicitly supplied.
-        </div>
-
+    <div class="callout validation">
+      The reconciliation showed that the published contract remained coherent while the validator expected a different representation of authority.
+      <strong>The validation logic itself therefore became part of the audit surface.</strong>
     </div>
+
+    <div class="grid">
+      <article class="card">
+        <h3>evidence ≠ validation</h3>
+        <p>Evidence exists independently of the rule set used to test it.</p>
+      </article>
+      <article class="card">
+        <h3>validation ≠ authority</h3>
+        <p>A red validator result does not automatically redefine the authoritative project state.</p>
+      </article>
+      <article class="card">
+        <h3>authority ≠ interpretation</h3>
+        <p>Authority is established before downstream human or AI interpretation.</p>
+      </article>
+    </div>
+
+    <div class="callout">
+      <strong>Claim boundary:</strong>
+      “Validation is not authority” is presented here as a ProcessCore architectural conclusion from a documented case, not as a quotation from an external standard.
+    </div>
+  </div>
 </section>
 
-<section class="section fade-section" id="implementation">
-    <div class="container">
+<section id="boundaries">
+  <div class="container">
+    <div class="label">05 // Boundaries</div>
+    <h2>What ProcessCore does not claim.</h2>
+    <p class="section-lead">The public description is intentionally narrower than the ambition of the research.</p>
 
-        <div class="section-label">
-            04 // Verified Implementation
-        </div>
-
-        <h2>
-            Verified components. End-to-end integration is validated separately.
-        </h2>
-
-        <p class="section-lead">
-            Node00 contains verified implementation components for observation,
-            deterministic comparison, structured answer generation,
-            project-scoped context and audit foundations.
-
-            Component verification does not by itself imply completion
-            of the full ProcessCore Prototype v0.1 path.
-        </p>
-
-        <div class="status-grid">
-
-            <div class="status-card">
-
-                <div class="status-top">
-                    ✓ VERIFIED COMPONENT
-                </div>
-
-                <strong>
-                    Fresh observation
-                </strong>
-
-                <p>
-                    Point-in-time Node00 state can be captured as a bounded evidence object.
-                </p>
-
-            </div>
-
-            <div class="status-card">
-
-                <div class="status-top">
-                    ✓ VERIFIED COMPONENT
-                </div>
-
-                <strong>
-                    Deterministic comparison
-                </strong>
-
-                <p>
-                    Observed state can be compared with a frozen reference through a canonical evidence delta.
-                </p>
-
-            </div>
-
-            <div class="status-card">
-
-                <div class="status-top">
-                    ✓ VERIFIED COMPONENT
-                </div>
-
-                <strong>
-                    Structured Answer Engine
-                </strong>
-
-                <p>
-                    State, change, unknown and evidence can be emitted
-                    without granting authority to an LLM.
-                </p>
-
-            </div>
-
-            <div class="status-card">
-
-                <div class="status-top">
-                    ✓ VERIFIED COMPONENT
-                </div>
-
-                <strong>
-                    Project-scoped context
-                </strong>
-
-                <p>
-                    Semantic retrieval is bounded by explicit project scope
-                    and separate authority rules.
-                </p>
-
-            </div>
-
-            <div class="status-card">
-
-                <div class="status-top">
-                    ✓ VERIFIED FOUNDATION
-                </div>
-
-                <strong>
-                    Append-only audit
-                </strong>
-
-                <p>
-                    Historical query outcomes are preserved rather than silently rewritten or normalized.
-                </p>
-
-            </div>
-
-            <div class="status-card integration">
-
-                <div class="status-top integration">
-                    ◐ INTEGRATION IN PROGRESS
-                </div>
-
-                <strong>
-                    Prototype v0.1 end-to-end path
-                </strong>
-
-                <p>
-                    CLI, orchestration, answer transport and audit handoff
-                    are admitted through explicit milestone validation.
-                </p>
-
-            </div>
-
-        </div>
-
-        <div class="status-note">
-
-            <strong>
-                Status semantics:
-            </strong>
-
-            “Verified component” means a bounded capability is supported by Node00 evidence.
-            It does not mean that every surrounding interface and end-to-end transport path
-            has already been verified together.
-
-        </div>
-
-        <div class="statement">
-
-            You don't have to make the LLM deterministic.<br>
-
-            <strong>
-                You can make the evidence path deterministic.
-            </strong>
-
-            <small>
-                ProcessCore design principle
-            </small>
-
-        </div>
-
-    </div>
+    <ul class="list boundary">
+      <li>ProcessCore is not an LLM.</li>
+      <li>ProcessCore is not a production web crawler; production acquisition remains separated in QCore.</li>
+      <li>Model confidence and semantic similarity are not treated as authority.</li>
+      <li>Prototype v0.1 completion does not prove universal portability.</li>
+      <li>No production-readiness or autonomous-remediation claim is made.</li>
+      <li>No claim is made that hallucinations are eliminated.</li>
+      <li>AgriCore has not yet proven a successful successor runtime or completed functional implementation.</li>
+    </ul>
+  </div>
 </section>
 
-<section class="section fade-section">
-    <div class="container">
+<section id="archive">
+  <div class="container">
+    <div class="label">06 // Research lineage</div>
+    <h2>Earlier architecture is preserved as history.</h2>
+    <p class="section-lead">
+      ProcessCore evolved from an earlier technology-intelligence and ecosystem-discovery architecture.
+      Historical material remains available as project lineage rather than being rewritten as the current model.
+    </p>
 
-        <div class="section-label">
-            05 // Controlled Query Architecture
-        </div>
-
-        <h2>
-            Interpretation happens downstream.
-        </h2>
-
-        <p class="section-lead">
-            This is the controlled target architecture for the integrated prototype.
-            Individual layers are admitted to end-to-end operation only after their
-            corresponding evidence and milestone gates pass.
-        </p>
-
-        <div class="box">
-
-            <div class="pipeline">
-
-                <div class="pipeline-step">
-                    Explicit Project + Query Input
-                </div>
-
-                <div class="pipeline-arrow">
-                    ↓
-                </div>
-
-                <div class="pipeline-step">
-                    Deterministic Query Contract
-                </div>
-
-                <div class="pipeline-arrow">
-                    ↓
-                </div>
-
-                <div class="pipeline-step authority">
-                    Authority Verification
-                </div>
-
-                <div class="pipeline-arrow">
-                    ↓
-                </div>
-
-                <div class="pipeline-step">
-                    Project-Scoped Semantic Resolver
-                </div>
-
-                <div class="pipeline-arrow">
-                    ↓
-                </div>
-
-                <div class="pipeline-step">
-                    Deterministic Evidence / Answer Orchestration
-                </div>
-
-                <div class="pipeline-arrow">
-                    ↓
-                </div>
-
-                <div class="pipeline-step">
-                    Deterministic Response Envelope
-                </div>
-
-                <div class="pipeline-arrow">
-                    ↓
-                </div>
-
-                <div class="pipeline-step authority">
-                    Durable Query Audit
-                </div>
-
-                <div class="pipeline-arrow">
-                    ↓
-                </div>
-
-                <div class="pipeline-step consumer">
-                    HUMAN / DOWNSTREAM CONSUMER / LLM
-                </div>
-
-            </div>
-
-        </div>
-
+    <div class="archive">
+      <span class="tag">Frozen historical snapshot</span>
+      <h3>PC-2026-08-12-V1</h3>
+      <p>
+        Earlier quantum-ecosystem, crawler, enrichment and market-intelligence material documents the project's architectural evolution.
+        It should not be read as the current ProcessCore runtime definition.
+      </p>
+      <div class="actions">
+        <a class="btn" href="PC-2026-08-12-V1.html">View historical snapshot</a>
+        <a class="btn" href="https://github.com/tondad80-dev/processcore-quantum-intelligence" target="_blank" rel="noopener noreferrer">Repository</a>
+      </div>
     </div>
-</section>
-
-<section class="section fade-section">
-    <div class="container">
-
-        <div class="section-label">
-            06 // Failure Semantics
-        </div>
-
-        <h2>
-            Unknown is preferable to invented certainty.
-        </h2>
-
-        <p class="section-lead">
-            Critical inconsistencies are not silently converted into assumptions.
-            Where authority cannot be established, the intended behavior is
-            fail-closed rather than fabricated certainty.
-        </p>
-
-        <div class="bento-grid">
-
-            <article class="bento-card failure-card">
-
-                <div class="card-index">
-                    SOURCE
-                </div>
-
-                <h3>
-                    Identity changed
-                </h3>
-
-                <p>
-                    Changed or missing evidence cannot simply inherit the authority
-                    of an earlier source state.
-                </p>
-
-            </article>
-
-            <article class="bento-card failure-card">
-
-                <div class="card-index">
-                    SCOPE
-                </div>
-
-                <h3>
-                    Context is bounded
-                </h3>
-
-                <p>
-                    Semantic similarity does not allow evidence from another project
-                    to silently become authoritative.
-                </p>
-
-            </article>
-
-            <article class="bento-card failure-card">
-
-                <div class="card-index">
-                    AUDIT
-                </div>
-
-                <h3>
-                    Persistence is part of the contract
-                </h3>
-
-                <p>
-                    The architecture treats required audit persistence
-                    as part of successful controlled exposure,
-                    not as an optional afterthought.
-                </p>
-
-            </article>
-
-        </div>
-
-    </div>
-</section>
-
-<section class="section fade-section">
-    <div class="container">
-
-        <div class="section-label">
-            07 // Architectural Boundary
-        </div>
-
-        <h2>
-            What ProcessCore is not.
-        </h2>
-
-        <div class="bento-grid">
-
-            <article class="bento-card">
-
-                <div class="card-index">
-                    NOT
-                </div>
-
-                <h3>
-                    An LLM
-                </h3>
-
-                <p>
-                    Probabilistic interpretation remains downstream
-                    from the deterministic evidence and authority path.
-                </p>
-
-            </article>
-
-            <article class="bento-card">
-
-                <div class="card-index">
-                    NOT
-                </div>
-
-                <h3>
-                    A production crawler
-                </h3>
-
-                <p>
-                    Production acquisition and enrichment responsibilities
-                    are separated into QCore.
-                </p>
-
-            </article>
-
-            <article class="bento-card">
-
-                <div class="card-index">
-                    NOT
-                </div>
-
-                <h3>
-                    A confidence engine
-                </h3>
-
-                <p>
-                    Model confidence, semantic similarity and evidence authority
-                    are treated as different concepts.
-                </p>
-
-            </article>
-
-        </div>
-
-    </div>
-</section>
-
-<section class="section fade-section" id="archive">
-    <div class="container">
-
-        <div class="section-label">
-            08 // Research Lineage
-        </div>
-
-        <h2>
-            Earlier architecture is preserved, not rewritten.
-        </h2>
-
-        <p class="section-lead">
-            ProcessCore evolved from an earlier technology-intelligence
-            and ecosystem-discovery architecture.
-
-            That historical state remains preserved as a frozen research snapshot
-            rather than being presented as the current runtime model.
-        </p>
-
-        <div class="archive-box">
-
-            <div class="archive-tag">
-                Frozen Historical Snapshot
-            </div>
-
-            <h3>
-                PC-2026-08-12-V1
-            </h3>
-
-            <p>
-                This snapshot represents the earlier ProcessCore data-discovery architecture
-                before production data acquisition, processing and enrichment responsibilities
-                were separated into QCore.
-
-                It remains available as historical evidence of the project's architectural evolution.
-            </p>
-
-            <div class="archive-actions">
-
-                <a
-                    href="PC-2026-08-12-V1.html"
-                    class="btn btn-secondary"
-                >
-                    View Historical Snapshot
-                </a>
-
-                <a
-                    href="https://github.com/tondad80-dev/processcore-quantum-intelligence"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn btn-secondary"
-                >
-                    Historical Repository
-                </a>
-
-            </div>
-
-        </div>
-
-        <div class="disclaimer">
-
-            <strong>
-                Experimental project:
-            </strong>
-
-            ProcessCore is an independent systems-engineering research project.
-
-            Public descriptions distinguish verified component state,
-            integration work, planned development and historical research.
-
-        </div>
-
-    </div>
+  </div>
 </section>
 
 </main>
 
 <footer>
-    <div class="container">
-
-        <div class="footer-title">
-            Research &amp; Systems Engineering — Antonín Dospiva
-        </div>
-
-        <div class="footer-description">
-            Independent experimental project exploring deterministic evidence,
-            provenance, authority, semantic context and auditability around probabilistic AI.
-        </div>
-
-        <div class="footer-links">
-
-            <a href="#principle">
-                Principle
-            </a>
-
-            <a href="#implementation">
-                Implementation
-            </a>
-
-            <a href="#archive">
-                Research Archive
-            </a>
-
-            <a
-                href="https://www.linkedin.com/in/tonda-dospiva-b160281a7/"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                LinkedIn
-            </a>
-
-            <a href="mailto:tondad80@gmail.com">
-                Contact
-            </a>
-
-        </div>
-
-        <div class="system-signature">
-            PROCESSCORE // NODE00 //
-            EVIDENCE → AUTHORITY → CONTEXT → AUDIT //
-            EXPERIMENTAL SYSTEMS ENGINEERING
-        </div>
-
+  <div class="container">
+    <strong>Antonín Dospiva — Systems Architecture</strong>
+    <p>AI evidence, provenance, authority and auditability. Independent experimental systems engineering.</p>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/tonda-dospiva-b160281a7/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/tondad80-dev/processcore-quantum-intelligence" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="mailto:tondad80@gmail.com">Contact</a>
     </div>
+    <div class="signature">
+      PROCESSCORE // EVIDENCE → PROVENANCE → AUTHORITY → INTERPRETATION // PUBLIC-SAFE STATE 2026-09-08
+    </div>
+  </div>
 </footer>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-
-    const sections = document.querySelectorAll(".fade-section");
-
-    if (!("IntersectionObserver" in window)) {
-        sections.forEach(section => section.classList.add("visible"));
-        return;
-    }
-
-    const observer = new IntersectionObserver(
-        entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                    observer.unobserve(entry.target);
-                }
-            });
-        },
-        {
-            threshold: 0.10
-        }
-    );
-
-    sections.forEach(section => observer.observe(section));
-
-});
-</script>
 
 </body>
 </html>
