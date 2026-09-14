@@ -6,15 +6,19 @@ ProcessCore is an independent experimental systems-engineering project exploring
 
 > The model may interpret evidence. It does not establish what evidence is authoritative.
 
-## Current public state — 2026-09-08
+## Current public state — 2026-09-14
 
-**ProcessCore Prototype v0.1 has reached a completed and frozen implementation milestone.**
+**ProcessCore observation runtime v0.4 is the current accepted stable reference baseline.**
 
-The frozen prototype has been validated locally on a Raspberry Pi-based Node00 environment. The current public architectural framing is:
+The v0.4 observation baseline has demonstrated functional and semantic repeatability across accepted controlled runs. Legitimately volatile runtime state remains explicit volatility rather than being forced into false byte-for-byte identity.
+
+Prototype v0.1 remains complete and frozen as an earlier implementation milestone. It is preserved as project lineage and is not rewritten as the current runtime baseline.
+
+The current public architectural framing remains:
 
 **EVIDENCE → PROVENANCE → AUTHORITY → INTERPRETATION**
 
-ProcessCore does not make a language model deterministic. It makes the evidence/authority path explicit, bounded, inspectable and auditable within the limits established by the frozen prototype contract.
+ProcessCore does not make a language model deterministic. It makes the evidence/authority path explicit, bounded, inspectable and auditable.
 
 ### What is currently supported
 
@@ -22,17 +26,27 @@ ProcessCore does not make a language model deterministic. It makes the evidence/
 - source and project currentness checks;
 - project-scoped context boundaries;
 - deterministic evidence comparison;
-- structured answer generation;
 - fail-closed handling of unresolved authority;
 - version-scoped authority across controlled successor transitions;
 - append-only audit mechanisms;
-- separation of technical authority from downstream human or AI interpretation.
+- separation of technical authority from downstream human or AI interpretation;
+- stable v0.4 observation-runtime behavior with demonstrated functional repeatability.
+
+## Post-v0.4 research boundary
+
+Current research extends ProcessCore beyond observation while preserving a strict separation between evidence and effect authority.
+
+**Observation does not authorize effect.**
+
+An observed condition may establish evidence and support a decision, but it does not by itself authorize or execute a state-changing action. Any effect requires a separate deterministic policy decision inside an explicit operator-governed boundary. LLM authority remains none.
+
+This post-v0.4 work is active research. It is **not** a declared ProcessCore v0.5 release and does not replace the accepted v0.4 baseline.
 
 ## Validation is not authority
 
 A validator is a test layer, not an automatic source of truth.
 
-A recent ProcessCore / AgriCore case produced a validation failure. The failure was preserved rather than rewritten. A subsequent read-only reconciliation showed that the published contract remained coherent and that the validator was testing an incorrect representation assumption.
+Documented ProcessCore / AgriCore and ProcessCore-Lab cases have preserved validation failures for read-only reconciliation instead of automatically rewriting the underlying state. Reconciliation has shown cases where the authoritative contract remained coherent while the validator expected a different representation.
 
 The architectural lesson is:
 
@@ -42,36 +56,32 @@ The architectural lesson is:
 
 Validation logic must itself be auditable: its inputs, assumptions and expected representation need provenance too.
 
-This is an architectural conclusion from the documented ProcessCore / AgriCore case. It is not presented as a quotation or rule from an external standard.
+This is an architectural conclusion from documented ProcessCore cases. It is not presented as a quotation or rule from an external standard.
 
-## AgriCore external test
+## AgriCore bound-project test context
 
-AgriCore is the first independent project being used to test whether frozen ProcessCore v0.1 can remain generic while project-specific state stays outside the core.
+AgriCore remains a separate runtime and project scope used to test project-bound evidence, provenance and authority behavior.
 
 Current public-safe boundaries:
 
 - AgriCore remains a separate runtime and project scope;
-- Raspberry Pi / Node00 evidence remains runtime truth;
-- ProcessCore acts as the parent accounting/evidence layer for significant AgriCore checkpoints;
-- the test has progressed beyond design-only review into bounded execution and validation attempts;
+- Raspberry Pi / Node00 evidence remains runtime truth where applicable;
+- similar evidence does not automatically cross a project boundary;
+- ProcessCore evolution does not automatically advance AgriCore;
 - failures and unresolved states are preserved as evidence rather than converted into PASS;
-- successor authority must be established explicitly for the successor version rather than inherited from the frozen baseline;
-- historical baseline references remain provenance, not active successor authority.
+- successor authority must be established explicitly rather than inherited from a historical baseline.
 
-The external test does **not** currently prove:
+AgriCore does **not** currently prove:
 
 - universal portability;
+- external interoperability;
 - production readiness;
-- successful successor runtime operation;
-- functional AgriCore implementation;
 - autonomous remediation;
 - hallucination elimination.
 
-The next stronger public milestone remains the first accepted repeatable actual-state snapshot together with AgriCore PH0 closure/verification, followed by the first real development-delta cycle.
-
 ## Project boundaries
 
-The Node00 environment keeps responsibilities separated:
+Responsibilities remain separated:
 
 - **ProcessCore** — evidence, provenance, authority, deterministic processing and audit architecture;
 - **QCore** — independent production data acquisition, processing and enrichment runtime;
@@ -90,7 +100,8 @@ Examples:
 - unresolved authority remains unresolved;
 - validation failure is not silently rewritten into success;
 - historical audit state is preserved;
-- a failed validator may itself become the object of audit when its assumptions conflict with authoritative evidence.
+- a failed validator may itself become the object of audit when its assumptions conflict with authoritative evidence;
+- observation does not silently become authorization for an effect.
 
 ## What ProcessCore is not
 
@@ -100,8 +111,9 @@ ProcessCore is not:
 - a production web crawler;
 - a confidence engine;
 - a claim that probabilistic models can be made fully deterministic;
-- proof of universal portability;
-- a production-ready autonomous system.
+- proof of universal portability or external interoperability;
+- a production-ready autonomous system;
+- a declared v0.5 release.
 
 ## Research lineage
 
@@ -111,7 +123,7 @@ That earlier state remains preserved as project history, including:
 
 `PC-2026-08-12-V1.html`
 
-Historical quantum-ecosystem, crawler, enrichment and market-intelligence material should be read as research lineage, not as the current ProcessCore definition.
+Historical quantum-ecosystem, crawler, enrichment and market-intelligence material should be read as research lineage, not as the current ProcessCore runtime definition.
 
 ## Public references
 
@@ -127,4 +139,4 @@ https://github.com/tondad80-dev/processcore-quantum-intelligence
 ---
 
 **Antonín Dospiva**  
-Systems Architecture · AI Evidence · Provenance · Auditability
+Systems Architect · AI Evidence · Provenance · Auditability
