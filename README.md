@@ -6,19 +6,23 @@ ProcessCore is an independent experimental systems-engineering project exploring
 
 > The model may interpret evidence. It does not establish what evidence is authoritative.
 
-## Current public state — 2026-09-14
+## Current public state — 2026-09-15
 
-**ProcessCore observation runtime v0.4 is the current accepted stable reference baseline.**
+**ProcessCore observation runtime v0.4 remains the accepted stable public reference baseline.**
 
 The v0.4 observation baseline has demonstrated functional and semantic repeatability across accepted controlled runs. Legitimately volatile runtime state remains explicit volatility rather than being forced into false byte-for-byte identity.
 
 Prototype v0.1 remains complete and frozen as an earlier implementation milestone. It is preserved as project lineage and is not rewritten as the current runtime baseline.
 
-The current public architectural framing remains:
+The current public architectural framing is:
 
 **EVIDENCE → PROVENANCE → AUTHORITY → INTERPRETATION**
 
-ProcessCore does not make a language model deterministic. It makes the evidence/authority path explicit, bounded, inspectable and auditable.
+with the post-v0.4 control-path invariant:
+
+**ACTUAL_STATE ≠ EXPECTED_STATE ≠ POLICY_DECISION ≠ AUTHORIZATION ≠ EFFECT**
+
+ProcessCore does not make a language model deterministic. It makes the evidence and authority path explicit, bounded, inspectable and auditable.
 
 ### What is currently supported
 
@@ -30,17 +34,22 @@ ProcessCore does not make a language model deterministic. It makes the evidence/
 - version-scoped authority across controlled successor transitions;
 - append-only audit mechanisms;
 - separation of technical authority from downstream human or AI interpretation;
-- stable v0.4 observation-runtime behavior with demonstrated functional repeatability.
+- stable v0.4 observation-runtime behavior with demonstrated functional repeatability;
+- bounded post-v0.4 validation of explicit separation between actual state, expected state, policy decision, authorization and effect.
 
-## Post-v0.4 research boundary
+## Post-v0.4 control boundary
 
-Current research extends ProcessCore beyond observation while preserving a strict separation between evidence and effect authority.
+Current research extends ProcessCore beyond observation while preserving separate control boundaries.
 
-**Observation does not authorize effect.**
+**Detecting drift is not permission to fix it.**
 
-An observed condition may establish evidence and support a decision, but it does not by itself authorize or execute a state-changing action. Any effect requires a separate deterministic policy decision inside an explicit operator-governed boundary. LLM authority remains none.
+Observed state is evidence. Expected state comes from valid project-scoped authority. Their difference may support classification or a deterministic policy decision, but a policy decision does **not** itself authorize a state-changing effect.
 
-This post-v0.4 work is active research. It is **not** a declared ProcessCore v0.5 release and does not replace the accepted v0.4 baseline.
+A state-changing effect requires separate explicit authorization. If an effect occurs, execution evidence and post-effect observation must remain separately inspectable and auditable; the resulting observation creates new evidence rather than silently rewriting the prior state.
+
+LLM authority remains none.
+
+This post-v0.4 work is bounded research and validation. It is **not** a declared ProcessCore v0.5 release, not a live autonomous-remediation claim and not a production-readiness claim. The accepted v0.4 baseline remains preserved.
 
 ## Validation is not authority
 
@@ -60,16 +69,18 @@ This is an architectural conclusion from documented ProcessCore cases. It is not
 
 ## AgriCore bound-project test context
 
-AgriCore remains a separate runtime and project scope used to test project-bound evidence, provenance and authority behavior.
+AgriCore remains a separate runtime and project authority. Its current public-safe state is governed by a ledger-consistency hold, so unreconciled later experimental history is not represented here as current AgriCore truth.
 
 Current public-safe boundaries:
 
-- AgriCore remains a separate runtime and project scope;
-- Raspberry Pi / Node00 evidence remains runtime truth where applicable;
+- AgriCore remains a separate runtime and project authority;
+- Raspberry Pi / project evidence remains runtime truth where applicable;
 - similar evidence does not automatically cross a project boundary;
 - ProcessCore evolution does not automatically advance AgriCore;
-- failures and unresolved states are preserved as evidence rather than converted into PASS;
-- successor authority must be established explicitly rather than inherited from a historical baseline.
+- the current authorized direction is read-only reconciliation of persistence-readiness and schema/runtime identity boundaries;
+- candidate persistence, lifecycle mutation and runtime authorization are not claimed from the controlling reconciled state;
+- failures and unresolved states remain unresolved rather than being converted into PASS;
+- later unreconciled history stays outside the current public-state claim until reconciled.
 
 AgriCore does **not** currently prove:
 
@@ -83,7 +94,7 @@ AgriCore does **not** currently prove:
 
 Responsibilities remain separated:
 
-- **ProcessCore** — evidence, provenance, authority, deterministic processing and audit architecture;
+- **ProcessCore** — evidence, provenance, authority, deterministic processing and audit/control architecture;
 - **QCore** — independent production data acquisition, processing and enrichment runtime;
 - **AgriCore** — independent experimental domain project.
 
@@ -101,7 +112,9 @@ Examples:
 - validation failure is not silently rewritten into success;
 - historical audit state is preserved;
 - a failed validator may itself become the object of audit when its assumptions conflict with authoritative evidence;
-- observation does not silently become authorization for an effect.
+- observed drift does not create a policy decision;
+- a policy decision does not itself authorize an effect;
+- authorization does not remove the requirement for post-effect evidence.
 
 ## What ProcessCore is not
 
@@ -113,6 +126,7 @@ ProcessCore is not:
 - a claim that probabilistic models can be made fully deterministic;
 - proof of universal portability or external interoperability;
 - a production-ready autonomous system;
+- live autonomous remediation;
 - a declared v0.5 release.
 
 ## Research lineage
