@@ -6,7 +6,7 @@ ProcessCore is an independent experimental systems-engineering project exploring
 
 > The model may interpret evidence. It does not establish what evidence is authoritative.
 
-## Current public state — 2026-09-15
+## Current public state — 2026-09-20
 
 **ProcessCore observation runtime v0.4 remains the accepted stable public reference baseline.**
 
@@ -14,13 +14,23 @@ The v0.4 observation baseline has demonstrated functional and semantic repeatabi
 
 Prototype v0.1 remains complete and frozen as an earlier implementation milestone. It is preserved as project lineage and is not rewritten as the current runtime baseline.
 
-The current public architectural framing is:
+Post-v0.4 work has now crossed an additional implementation boundary: a persistent control-plane execution path has been created on Node00 under create-once control and verified after creation.
+
+That path remains deliberately inert.
+
+Its existence does not mean that it is active, runtime-tested, authorized for execution, scheduled, or permitted to produce effects.
+
+The current public architectural framing remains:
 
 **EVIDENCE → PROVENANCE → AUTHORITY → INTERPRETATION**
 
 with the post-v0.4 control-path invariant:
 
 **ACTUAL_STATE ≠ EXPECTED_STATE ≠ POLICY_DECISION ≠ AUTHORIZATION ≠ EFFECT**
+
+with an additional implementation boundary:
+
+**PERSISTENCE ≠ ACTIVATION ≠ EXECUTION AUTHORITY ≠ EFFECT**
 
 ProcessCore does not make a language model deterministic. It makes the evidence and authority path explicit, bounded, inspectable and auditable.
 
@@ -35,7 +45,8 @@ ProcessCore does not make a language model deterministic. It makes the evidence 
 - append-only audit mechanisms;
 - separation of technical authority from downstream human or AI interpretation;
 - stable v0.4 observation-runtime behavior with demonstrated functional repeatability;
-- bounded post-v0.4 validation of explicit separation between actual state, expected state, policy decision, authorization and effect.
+- bounded post-v0.4 validation of explicit separation between actual state, expected state, policy decision, authorization and effect;
+- create-once persistence of a control-plane execution path while keeping activation, execution authority and effect authority separate.
 
 ## Post-v0.4 control boundary
 
@@ -45,11 +56,17 @@ Current research extends ProcessCore beyond observation while preserving separat
 
 Observed state is evidence. Expected state comes from valid project-scoped authority. Their difference may support classification or a deterministic policy decision, but a policy decision does **not** itself authorize a state-changing effect.
 
+A further boundary is now explicit in the implementation:
+
+**The existence of an execution path is not execution authority.**
+
+A persistent control-plane path has been created and verified after creation, but remains intentionally inert. Persistence alone does not activate it, authorize runtime execution, create scheduling authority, or permit effects.
+
 A state-changing effect requires separate explicit authorization. If an effect occurs, execution evidence and post-effect observation must remain separately inspectable and auditable; the resulting observation creates new evidence rather than silently rewriting the prior state.
 
 LLM authority remains none.
 
-This post-v0.4 work is bounded research and validation. It is **not** a declared ProcessCore v0.5 release, not a live autonomous-remediation claim and not a production-readiness claim. The accepted v0.4 baseline remains preserved.
+This post-v0.4 work is bounded research and validation. It is **not** a declared ProcessCore v0.5 release, not a live autonomous-remediation claim, not proof of runtime readiness and not a production-readiness claim. The accepted v0.4 baseline remains preserved.
 
 ## Validation is not authority
 
@@ -127,6 +144,7 @@ ProcessCore is not:
 - proof of universal portability or external interoperability;
 - a production-ready autonomous system;
 - live autonomous remediation;
+- proof that a persisted execution path is active, runtime-ready or authorized to execute;
 - a declared v0.5 release.
 
 ## Research lineage
