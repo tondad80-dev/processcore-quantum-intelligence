@@ -172,3 +172,11 @@ https://github.com/tondad80-dev/processcore-quantum-intelligence
 
 **Antonín Dospiva**  
 Systems Architect · AI Evidence · Provenance · Auditability
+
+## License
+
+ProcessCore is licensed under the [Apache License 2.0](LICENSE).
+
+Copyright © 2026 Antonín Dospiva.
+
+The Apache License 2.0 permits use, modification and distribution under its terms, including the license's notice and attribution requirements.
