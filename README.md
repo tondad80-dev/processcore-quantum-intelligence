@@ -14,11 +14,11 @@ The v0.4 observation baseline has demonstrated functional and semantic repeatabi
 
 Prototype v0.1 remains complete and frozen as an earlier implementation milestone. It is preserved as project lineage and is not rewritten as the current runtime baseline.
 
-Post-v0.4 work has now crossed an additional implementation boundary: a persistent control-plane execution path has been created on Node00 under create-once control and verified after creation.
+Post-v0.4 work has now crossed an additional implementation boundary: a persistent control-plane execution path has been created on Node00 under create-once control, verified after creation, and completed one explicitly authorized manual one-shot runtime invocation.
 
-That path remains deliberately inert.
+That invocation completed with a no-effect result: observed state matched expected state, so no action was taken.
 
-Its existence does not mean that it is active, runtime-tested, authorized for execution, scheduled, or permitted to produce effects.
+The path is not continuously active or scheduled. No further runtime execution is currently authorized, and no effect authority was granted.
 
 The current public architectural framing remains:
 
@@ -46,7 +46,7 @@ ProcessCore does not make a language model deterministic. It makes the evidence 
 - separation of technical authority from downstream human or AI interpretation;
 - stable v0.4 observation-runtime behavior with demonstrated functional repeatability;
 - bounded post-v0.4 validation of explicit separation between actual state, expected state, policy decision, authorization and effect;
-- create-once persistence of a control-plane execution path while keeping activation, execution authority and effect authority separate.
+- create-once persistence plus one controlled manual no-effect invocation of the control-plane path, while keeping ongoing activation, further execution authority and effect authority separate.
 
 ## Post-v0.4 control boundary
 
@@ -60,7 +60,7 @@ A further boundary is now explicit in the implementation:
 
 **The existence of an execution path is not execution authority.**
 
-A persistent control-plane path has been created and verified after creation, but remains intentionally inert. Persistence alone does not activate it, authorize runtime execution, create scheduling authority, or permit effects.
+A persistent control-plane path has been created and verified after creation. It has also completed one explicitly authorized manual one-shot invocation with a no-effect result. After that invocation, it remains inactive, unscheduled, unauthorized for further runtime execution and without effect authority. The successful one-shot does not convert persistence into continuing authority.
 
 A state-changing effect requires separate explicit authorization. If an effect occurs, execution evidence and post-effect observation must remain separately inspectable and auditable; the resulting observation creates new evidence rather than silently rewriting the prior state.
 
@@ -144,7 +144,7 @@ ProcessCore is not:
 - proof of universal portability or external interoperability;
 - a production-ready autonomous system;
 - live autonomous remediation;
-- proof that a persisted execution path is active, runtime-ready or authorized to execute;
+- proof that a persisted execution path is continuously active, generally runtime-ready, authorized for further execution or permitted to produce effects;
 - a declared v0.5 release.
 
 ## Research lineage
