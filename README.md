@@ -6,7 +6,7 @@ ProcessCore is an independent experimental systems-engineering project exploring
 
 > The model may interpret evidence. It does not establish what evidence is authoritative.
 
-## Current public state — 2026-09-20
+## Current public state — 2026-09-21
 
 **ProcessCore observation runtime v0.4 remains the accepted stable public reference baseline.**
 
@@ -19,6 +19,12 @@ Post-v0.4 work has now crossed an additional implementation boundary: a persiste
 That invocation completed with a no-effect result: observed state matched expected state, so no action was taken.
 
 The path is not continuously active or scheduled. No further runtime execution is currently authorized, and no effect authority was granted.
+
+The active development frontier has since moved into a separate **AI Factory pre-generation track**. ProcessCore now has an explicit Factory Job contract surface, a frozen first AgriCore software-change specification, and a first real create-once Factory Job Instance.
+
+That first real instance passed structural validation but was stopped before any model request when semantic reconciliation detected that specification identity had been incorrectly bound as candidate-output identity. The blocked instance was preserved rather than executed or rewritten, and a corrective successor contract design was frozen.
+
+No model request, AI-generated software candidate, candidate materialization, promotion, adoption or deployment is claimed from this state.
 
 The current public architectural framing remains:
 
@@ -46,7 +52,29 @@ ProcessCore does not make a language model deterministic. It makes the evidence 
 - separation of technical authority from downstream human or AI interpretation;
 - stable v0.4 observation-runtime behavior with demonstrated functional repeatability;
 - bounded post-v0.4 validation of explicit separation between actual state, expected state, policy decision, authorization and effect;
-- create-once persistence plus one controlled manual no-effect invocation of the control-plane path, while keeping ongoing activation, further execution authority and effect authority separate.
+- create-once persistence plus one controlled manual no-effect invocation of the control-plane path, while keeping ongoing activation, further execution authority and effect authority separate;
+- a governed AI-software-factory pre-generation control surface with explicit Factory Job contracts, a real job instance, and demonstrated fail-closed semantic blocking before model invocation.
+
+## AI Factory pre-generation track
+
+ProcessCore is now testing whether the same evidence, provenance and authority discipline can govern **software generation** rather than only observed system state.
+
+The first bound workload is AgriCore. A specific software-change specification was frozen, a Factory Job Instance contract was validated, and one real immutable job instance was created.
+
+The instance was **not executed**. Before any model request, semantic reconciliation found that the contract treated specification identity as if it were the identity of a future generated artifact. The job was therefore blocked fail-closed.
+
+The corrective design separates three identities that must not be conflated:
+
+**SPECIFICATION IDENTITY ≠ MODEL RESPONSE IDENTITY ≠ MATERIALIZED ARTIFACT IDENTITY**
+
+This is evidence of a concrete pre-generation factory control surface. It is **not** evidence that ProcessCore already performs end-to-end AI software generation.
+
+At the current public-safe boundary:
+
+- model request: **not occurred**;
+- AI-generated software candidate: **not occurred**;
+- candidate materialization: **not occurred**;
+- promotion / adoption / deployment: **not occurred**.
 
 ## Post-v0.4 control boundary
 
@@ -145,6 +173,8 @@ ProcessCore is not:
 - a production-ready autonomous system;
 - live autonomous remediation;
 - proof that a persisted execution path is continuously active, generally runtime-ready, authorized for further execution or permitted to produce effects;
+- a completed, autonomous or production-ready AI software factory;
+- a claim that ProcessCore has already generated, adopted or deployed software through the AI Factory track;
 - a declared v0.5 release.
 
 ## Research lineage
