@@ -6,7 +6,7 @@ ProcessCore is an independent experimental systems-engineering project exploring
 
 > The model may interpret evidence. It does not establish what evidence is authoritative.
 
-## Current public state — 2026-09-21
+## Current public state — 2026-09-26
 
 **ProcessCore observation runtime v0.4 remains the accepted stable public reference baseline.**
 
@@ -20,11 +20,11 @@ That invocation completed with a no-effect result: observed state matched expect
 
 The path is not continuously active or scheduled. No further runtime execution is currently authorized, and no effect authority was granted.
 
-The active development frontier has since moved into a separate **AI Factory pre-generation track**. ProcessCore now has an explicit Factory Job contract surface, a frozen first AgriCore software-change specification, and a first real create-once Factory Job Instance.
+The active development frontier has since moved into a governed **AI Factory track**. ProcessCore has an explicit Factory Job contract surface, a frozen AgriCore software-change specification, a real create-once Factory Job Instance, and preserved evidence from earlier fail-closed pre-generation reconciliation.
 
-That first real instance passed structural validation but was stopped before any model request when semantic reconciliation detected that specification identity had been incorrectly bound as candidate-output identity. The blocked instance was preserved rather than executed or rewritten, and a corrective successor contract design was frozen.
+After corrective contract and route work, one bounded Factory model invocation was performed against the governed AgriCore workload and produced one isolated software candidate. The candidate passed static AST parsing and compilation.
 
-No model request, AI-generated software candidate, candidate materialization, promotion, adoption or deployment is claimed from this state.
+A subsequent read-only validation/import reconciliation did not authorize candidate import or execution. The candidate therefore remains isolated: no active AgriCore source or runtime mutation, promotion, adoption or deployment is claimed.
 
 The current public architectural framing remains:
 
@@ -53,27 +53,35 @@ ProcessCore does not make a language model deterministic. It makes the evidence 
 - stable v0.4 observation-runtime behavior with demonstrated functional repeatability;
 - bounded post-v0.4 validation of explicit separation between actual state, expected state, policy decision, authorization and effect;
 - create-once persistence plus one controlled manual no-effect invocation of the control-plane path, while keeping ongoing activation, further execution authority and effect authority separate;
-- a governed AI-software-factory pre-generation control surface with explicit Factory Job contracts, a real job instance, and demonstrated fail-closed semantic blocking before model invocation.
+- a governed AI-software-factory control surface with explicit Factory Job contracts, a real job instance, one bounded model invocation, one isolated generated candidate, and downstream fail-closed separation between generation, execution and adoption authority.
 
-## AI Factory pre-generation track
+## AI Factory controlled-generation track
 
-ProcessCore is now testing whether the same evidence, provenance and authority discipline can govern **software generation** rather than only observed system state.
+ProcessCore is testing whether the same evidence, provenance and authority discipline can govern **software generation** rather than only observed system state.
 
-The first bound workload is AgriCore. A specific software-change specification was frozen, a Factory Job Instance contract was validated, and one real immutable job instance was created.
+The first bound workload is AgriCore. A specific software-change specification was frozen, a Factory Job Instance contract was validated, and one real immutable job instance was created. Earlier semantic reconciliation stopped the first route before model invocation when specification identity had been conflated with future candidate identity; that fail-closed evidence remains preserved.
 
-The instance was **not executed**. Before any model request, semantic reconciliation found that the contract treated specification identity as if it were the identity of a future generated artifact. The job was therefore blocked fail-closed.
+After corrective work, the governed Factory path performed **one bounded model invocation** and produced **one isolated software candidate**. Static AST parsing and compilation passed.
 
-The corrective design separates three identities that must not be conflated:
+The next boundary remained separate. A subsequent read-only validation/import reconciliation did not authorize importing or executing the candidate, so it remains isolated from the active AgriCore source and runtime.
+
+The identity boundary remains:
 
 **SPECIFICATION IDENTITY ≠ MODEL RESPONSE IDENTITY ≠ MATERIALIZED ARTIFACT IDENTITY**
 
-This is evidence of a concrete pre-generation factory control surface. It is **not** evidence that ProcessCore already performs end-to-end AI software generation.
+and the authority boundary is now explicit:
+
+**GENERATION ≠ EXECUTION AUTHORITY ≠ INTEGRATION ≠ ADOPTION ≠ DEPLOYMENT**
+
+This is evidence of controlled software generation under explicit governance. It is **not** evidence of a completed, autonomous or production-ready AI software factory.
 
 At the current public-safe boundary:
 
-- model request: **not occurred**;
-- AI-generated software candidate: **not occurred**;
-- candidate materialization: **not occurred**;
+- bounded model invocation: **occurred exactly once**;
+- isolated software candidate: **created**;
+- static AST / compile validation: **passed**;
+- candidate import / execution: **not occurred**;
+- active AgriCore source/runtime mutation: **not occurred**;
 - promotion / adoption / deployment: **not occurred**.
 
 ## Post-v0.4 control boundary
@@ -114,7 +122,7 @@ This is an architectural conclusion from documented ProcessCore cases. It is not
 
 ## AgriCore bound-project test context
 
-AgriCore remains a separate runtime and project authority. Its current public-safe state is governed by a ledger-consistency hold, so unreconciled later experimental history is not represented here as current AgriCore truth.
+AgriCore remains a separate runtime and project authority. It is the first bound workload to cross the ProcessCore model-request and candidate-generation boundary under explicit governance, without transferring ProcessCore authority into the AgriCore runtime.
 
 Current public-safe boundaries:
 
@@ -122,8 +130,8 @@ Current public-safe boundaries:
 - Raspberry Pi / project evidence remains runtime truth where applicable;
 - similar evidence does not automatically cross a project boundary;
 - ProcessCore evolution does not automatically advance AgriCore;
-- the current authorized direction is read-only reconciliation of persistence-readiness and schema/runtime identity boundaries;
-- candidate persistence, lifecycle mutation and runtime authorization are not claimed from the controlling reconciled state;
+- one isolated candidate has been generated and remains outside the active AgriCore source/runtime;
+- candidate import, execution, lifecycle mutation and runtime authorization are not claimed from the controlling reconciled state;
 - failures and unresolved states remain unresolved rather than being converted into PASS;
 - later unreconciled history stays outside the current public-state claim until reconciled.
 
@@ -174,7 +182,7 @@ ProcessCore is not:
 - live autonomous remediation;
 - proof that a persisted execution path is continuously active, generally runtime-ready, authorized for further execution or permitted to produce effects;
 - a completed, autonomous or production-ready AI software factory;
-- a claim that ProcessCore has already generated, adopted or deployed software through the AI Factory track;
+- a claim that an isolated generated candidate is executed, integrated, adopted or deployed software;
 - a declared v0.5 release.
 
 ## Research lineage
