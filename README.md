@@ -2,11 +2,11 @@
 
 **Evidence before interpretation.**
 
-ProcessCore is an independent experimental systems-engineering project exploring how deterministic evidence, provenance, authority and auditability can be established around probabilistic AI interpretation.
+ProcessCore is an independent experimental systems-engineering project exploring how deterministic evidence, provenance, authority and auditability can be established around probabilistic AI interpretation and governed software generation.
 
 > The model may interpret evidence. It does not establish what evidence is authoritative.
 
-## Current public state — 2026-09-26
+## Current public state — 2026-09-29
 
 **ProcessCore observation runtime v0.4 remains the accepted stable public reference baseline.**
 
@@ -24,7 +24,11 @@ The active development frontier has since moved into a governed **AI Factory tra
 
 After corrective contract and route work, one bounded Factory model invocation was performed against the governed AgriCore workload and produced one isolated software candidate. The candidate passed static AST parsing and compilation.
 
-A subsequent read-only validation/import reconciliation did not authorize candidate import or execution. The candidate therefore remains isolated: no active AgriCore source or runtime mutation, promotion, adoption or deployment is claimed.
+That controlled-generation result remains the strongest fully reconciled public Factory boundary.
+
+Later technical evidence has progressed beyond the first generated candidate into further AgriCore validation/adoption work and real-data input profiling. Those later results are deliberately **not promoted into the canonical public state yet** because the newest accounting/authority continuity chain is still under reconciliation. ProcessCore treats that gap as part of the system: technical progress and public authority are separate claims.
+
+The strategic target is now explicit: **a reusable safe software factory with human authority and sealed evidence**. AgriCore is the first proof project. Reusable factory capability is not yet claimed; a distinct second Factory job remains an important reuse gate.
 
 The current public architectural framing remains:
 
@@ -53,36 +57,32 @@ ProcessCore does not make a language model deterministic. It makes the evidence 
 - stable v0.4 observation-runtime behavior with demonstrated functional repeatability;
 - bounded post-v0.4 validation of explicit separation between actual state, expected state, policy decision, authorization and effect;
 - create-once persistence plus one controlled manual no-effect invocation of the control-plane path, while keeping ongoing activation, further execution authority and effect authority separate;
-- a governed AI-software-factory control surface with explicit Factory Job contracts, a real job instance, one bounded model invocation, one isolated generated candidate, and downstream fail-closed separation between generation, execution and adoption authority.
+- a governed AI-software-factory control surface with explicit Factory Job contracts, a real job instance, one bounded model invocation and one isolated generated candidate;
+- an explicit strategic target of a reusable safe software factory with human authority and sealed evidence, while stronger later technical results remain below canonical public claims until their authority chain is reconciled.
 
-## AI Factory controlled-generation track
+## AI Factory — reusable software factory target
 
 ProcessCore is testing whether the same evidence, provenance and authority discipline can govern **software generation** rather than only observed system state.
 
-The first bound workload is AgriCore. A specific software-change specification was frozen, a Factory Job Instance contract was validated, and one real immutable job instance was created. Earlier semantic reconciliation stopped the first route before model invocation when specification identity had been conflated with future candidate identity; that fail-closed evidence remains preserved.
+The strategic target is a **reusable safe software factory with human authority and sealed evidence**. AgriCore is the first proof project.
 
-After corrective work, the governed Factory path performed **one bounded model invocation** and produced **one isolated software candidate**. Static AST parsing and compilation passed.
-
-The next boundary remained separate. A subsequent read-only validation/import reconciliation did not authorize importing or executing the candidate, so it remains isolated from the active AgriCore source and runtime.
+The fully reconciled public evidence currently establishes a governed Factory path through a specific software-change specification, an immutable job instance, **one bounded model invocation** and **one isolated software candidate**. Static AST parsing and compilation passed.
 
 The identity boundary remains:
 
 **SPECIFICATION IDENTITY ≠ MODEL RESPONSE IDENTITY ≠ MATERIALIZED ARTIFACT IDENTITY**
 
-and the authority boundary is now explicit:
+and the authority boundary remains:
 
 **GENERATION ≠ EXECUTION AUTHORITY ≠ INTEGRATION ≠ ADOPTION ≠ DEPLOYMENT**
 
-This is evidence of controlled software generation under explicit governance. It is **not** evidence of a completed, autonomous or production-ready AI software factory.
+Later technical evidence has advanced into additional AgriCore validation/adoption work and a real-data input profile. That evidence is useful for project work, but the newest accounting/authority chain is still being reconciled. It is therefore not used here to claim a stronger canonical public Factory state.
 
-At the current public-safe boundary:
+This distinction is intentional:
 
-- bounded model invocation: **occurred exactly once**;
-- isolated software candidate: **created**;
-- static AST / compile validation: **passed**;
-- candidate import / execution: **not occurred**;
-- active AgriCore source/runtime mutation: **not occurred**;
-- promotion / adoption / deployment: **not occurred**.
+**TECHNICAL PROGRESS ≠ RECONCILED AUTHORITY ≠ PUBLIC CLAIM**
+
+The next architectural proof is reuse. A second distinct Factory job under the same authority model has not yet been proven, so ProcessCore does **not** currently claim a completed, autonomous, reusable or production-ready AI software factory.
 
 ## Post-v0.4 control boundary
 
@@ -120,25 +120,27 @@ Validation logic must itself be auditable: its inputs, assumptions and expected 
 
 This is an architectural conclusion from documented ProcessCore cases. It is not presented as a quotation or rule from an external standard.
 
-## AgriCore bound-project test context
+## AgriCore proof-project context
 
-AgriCore remains a separate runtime and project authority. It is the first bound workload to cross the ProcessCore model-request and candidate-generation boundary under explicit governance, without transferring ProcessCore authority into the AgriCore runtime.
+AgriCore remains a separate runtime and project authority. It is the first real proof project for the ProcessCore AI Factory.
+
+The public claim is deliberately narrower than the latest technical work. The reconciled public baseline proves controlled candidate generation under explicit governance. Later technical evidence has moved into additional validation/adoption work and profiling of a 500-record real-data input candidate, but those later results remain outside the canonical public state until the newest authority chain is reconciled.
 
 Current public-safe boundaries:
 
 - AgriCore remains a separate runtime and project authority;
 - Raspberry Pi / project evidence remains runtime truth where applicable;
-- similar evidence does not automatically cross a project boundary;
 - ProcessCore evolution does not automatically advance AgriCore;
-- one isolated candidate has been generated and remains outside the active AgriCore source/runtime;
-- candidate import, execution, lifecycle mutation and runtime authorization are not claimed from the controlling reconciled state;
-- failures and unresolved states remain unresolved rather than being converted into PASS;
-- later unreconciled history stays outside the current public-state claim until reconciled.
+- generation, validation, adoption, runtime execution and deployment remain separate authority boundaries;
+- structural completeness of input data is not presented as semantic correctness;
+- later technical PASS results are not silently converted into public authority;
+- one proof workload does not yet establish a reusable Factory across distinct jobs.
 
 AgriCore does **not** currently prove:
 
 - universal portability;
 - external interoperability;
+- reusable end-to-end software-factory capability;
 - production readiness;
 - autonomous remediation;
 - hallucination elimination.
@@ -181,8 +183,9 @@ ProcessCore is not:
 - a production-ready autonomous system;
 - live autonomous remediation;
 - proof that a persisted execution path is continuously active, generally runtime-ready, authorized for further execution or permitted to produce effects;
-- a completed, autonomous or production-ready AI software factory;
-- a claim that an isolated generated candidate is executed, integrated, adopted or deployed software;
+- a completed, autonomous, reusable or production-ready AI software factory;
+- a claim that the current reconciled public candidate alone proves executed, integrated or adopted software;
+- proof that one AgriCore workload generalizes to a second distinct Factory job;
 - a declared v0.5 release.
 
 ## Research lineage
