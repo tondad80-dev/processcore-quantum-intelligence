@@ -185,12 +185,25 @@ footer p{max-width:760px;margin:7px auto 0;color:var(--muted);font-size:12px}
 .signature{margin-top:22px;color:var(--dim);font:9px var(--mono);letter-spacing:.15em;text-transform:uppercase}
 @media(max-width:900px){.status-row,.flow{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}.links{display:none}}
 @media(max-width:600px){.status-row,.flow{grid-template-columns:1fr}.hero{padding:62px 0 50px}}
+
+.hero-actions{justify-content:center}
+.review-note{margin-top:18px;color:var(--muted);font-size:12px}
+.table-wrap{margin-top:28px;overflow-x:auto;border:1px solid var(--border);border-radius:9px}
+table{width:100%;border-collapse:collapse;font-size:14px;text-align:left}
+caption{text-align:left;padding:16px 20px;background:var(--surface2);color:var(--cyan2);font-weight:650}
+th,td{padding:16px 20px;vertical-align:top;border-top:1px solid var(--border)}
+thead{background:var(--surface)}td{color:var(--muted)}tbody th{width:18%;color:#dff5ff}
+a:focus-visible{outline:2px solid var(--cyan2);outline-offset:4px}
+section{scroll-margin-top:110px}
+@media(max-width:900px){.nav{flex-wrap:wrap;padding:12px 0}.links{display:flex;width:100%;overflow-x:auto;gap:18px;padding:8px 0;font-size:11px;white-space:nowrap}}
+@media(max-width:600px){table{min-width:580px}.btn{font-size:11px}th,td{padding:12px 14px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
 
 <div class="banner">
-  PROCESSCORE // V0.4 STABLE BASELINE // GOVERNED AI FACTORY // 2026-09-29 PUBLIC-SAFE STATE
+  PROCESSCORE // V0.4 STABLE BASELINE // GOVERNED AI FACTORY // STABLE REFERENCE 2026-09-29 // PAGE REVIEWED 2026-10-10
 </div>
 
 <nav>
@@ -202,14 +215,8 @@ footer p{max-width:760px;margin:7px auto 0;color:var(--muted);font-size:12px}
         <small>EVIDENCE BEFORE INTERPRETATION</small>
       </span>
     </a>
-    <div class="links">
-      <a href="#architecture">Architecture</a>
-      <a href="#state">State</a>
-      <a href="#factory">AI Factory</a>
-      <a href="#effect">Control boundary</a>
-      <a href="#agricore">AgriCore</a>
-      <a href="#validation">Validation</a>
-      <a href="#boundaries">Boundaries</a>
+    <div class="links" aria-label="Page sections">
+      <a href="#evidence">Evidence</a><a href="#agricore">AgriCore</a><a href="#state">Status</a><a href="#architecture">Architecture</a><a href="#boundaries">Scope</a>
     </div>
   </div>
 </nav>
@@ -218,17 +225,14 @@ footer p{max-width:760px;margin:7px auto 0;color:var(--muted);font-size:12px}
   <div class="container">
     <div class="kicker">PROCESSCORE // SYSTEMS ARCHITECTURE</div>
     <h1>Evidence before <span class="gradient">interpretation.</span></h1>
-    <p class="lead">Deterministic evidence, provenance, authority and auditability for runtime control and governed software generation around probabilistic AI.</p>
-    <p class="desc">
-      ProcessCore is an independent experimental systems-engineering project exploring how probabilistic models can operate around
-      explicit evidence and authority boundaries — and how the same discipline can govern software generation without allowing a model
-      to acquire execution, integration or adoption authority merely because it produced code.
-    </p>
+    <p class="lead">AI proposes a software change. ProcessCore keeps the evidence, checks and decision traceable.</p>
+    <p class="desc">An independent systems-engineering project testing how AI-generated software can move through explicit evidence and human authorization. The current public proof is one controlled candidate-generation run; reusable factory capability remains a development goal.</p>
     <div class="rule">
       The model may interpret evidence.<br>
       <strong>It does not establish what evidence is authoritative.</strong>
     </div>
 
+    <div class="actions hero-actions"><a class="btn" href="#evidence">See the documented run</a><a class="btn" href="https://github.com/tondad80-dev/processcore-quantum-intelligence/blob/main/README.md" target="_blank" rel="noopener noreferrer">Read the project baseline</a></div>
     <div class="status-row" aria-label="Current ProcessCore public status">
       <div class="status ok">
         <div class="tag">✓ Stable baseline</div>
@@ -236,9 +240,8 @@ footer p{max-width:760px;margin:7px auto 0;color:var(--muted);font-size:12px}
         <p>Accepted public reference baseline with demonstrated functional repeatability.</p>
       </div>
       <div class="status ok">
-        <div class="tag">✓ Frozen lineage</div>
-        <strong>Prototype v0.1</strong>
-        <p>Completed and frozen historical implementation milestone.</p>
+        <div class="tag">Controlled generation</div><strong>One isolated candidate</strong>
+        <p>One bounded model invocation; static parsing and compilation passed.</p>
       </div>
       <div class="status watch">
         <div class="tag">Active frontier</div>
@@ -246,19 +249,42 @@ footer p{max-width:760px;margin:7px auto 0;color:var(--muted);font-size:12px}
         <p>The strategic target is a reusable safe software factory with human authority and sealed evidence. AgriCore is the first proof project.</p>
       </div>
       <div class="status bound">
-        <div class="tag">Public claim gate</div>
-        <strong>Progress is not automatically authority</strong>
-        <p>Later technical work can advance beyond the canonical public state. Stronger claims remain withheld until their authority chain is reconciled.</p>
+        <div class="tag">Next proof</div><strong>A second distinct job</strong>
+        <p>Reuse across different jobs remains unproven. Candidate generation is separate from authorized adoption.</p>
       </div>
     </div>
+    <p class="review-note">Page reviewed <time datetime="2026-10-10">10 October 2026</time> · Reconciled public reference: 29 September 2026 · Observation baseline: v0.4</p>
   </div>
 </header>
 
 <main>
 
+<section id="evidence">
+  <div class="container">
+    <div class="label">Documented example</div>
+    <h2>What happened in the AgriCore factory run.</h2>
+    <p class="section-lead">The publicly documented run produced an isolated software candidate for a bounded AgriCore change. Its successful static checks did not authorize adoption.</p>
+    <div class="table-wrap">
+      <table>
+        <caption>Scope of the reconciled public Factory result</caption>
+        <thead><tr><th scope="col">Stage</th><th scope="col">Documented result</th><th scope="col">What it establishes</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Specification</th><td>Bounded software-change specification and immutable job instance.</td><td>A defined workload.</td></tr>
+          <tr><th scope="row">Generation</th><td>One model invocation produced one isolated candidate.</td><td>A materialized candidate.</td></tr>
+          <tr><th scope="row">Static checks</th><td>AST parsing and compilation passed.</td><td>Syntax and compilation checks passed within that scope.</td></tr>
+          <tr><th scope="row">Adoption</th><td>Separate authorization still required.</td><td>The run alone does not establish execution, integration or deployment.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="actions"><a class="btn" href="https://github.com/tondad80-dev/processcore-quantum-intelligence/blob/main/README.md#ai-factory--reusable-software-factory-target" target="_blank" rel="noopener noreferrer">Read the public run summary</a></div>
+    <p class="review-note">This is a summary of the public baseline. Underlying runtime artifacts are not reproduced on this page.</p>
+  </div>
+</section>
+
+
 <section id="architecture">
   <div class="container">
-    <div class="label">01 // Public architecture</div>
+    <div class="label">Public architecture</div>
     <h2>Authority is established before interpretation.</h2>
     <p class="section-lead">
       ProcessCore separates the path that establishes evidence identity and authority from downstream human or AI interpretation.
@@ -297,75 +323,30 @@ footer p{max-width:760px;margin:7px auto 0;color:var(--muted);font-size:12px}
 
 <section id="state">
   <div class="container">
-    <div class="label">02 // Current public-safe state</div>
-    <h2>v0.4 remains stable while the active frontier becomes a governed software factory.</h2>
-    <p class="section-lead">
-      ProcessCore observation runtime v0.4 remains the accepted stable public reference baseline.
-      The persistent control path has completed one bounded manual no-effect invocation, and that evidence remains valid.
-      The active development frontier is now a governed AI Factory intended to become a reusable safe software factory with human authority and sealed evidence.
-      The reconciled public baseline proves controlled generation through one bounded model invocation and one isolated candidate.
-      Later technical work has progressed into further AgriCore validation/adoption and real-data input profiling, but the newest authority chain is still being reconciled, so those later results are not promoted here as canonical public state.
-    </p>
-
+    <div class="label">Project status · reviewed 10 October 2026</div>
+    <h2>A stable reference. An open development frontier.</h2>
+    <p class="section-lead">The accepted observation baseline remains v0.4. The public Factory reference remains the reconciled state of 29 September; this page review does not declare a new runtime release.</p>
     <div class="grid">
-      <article class="card">
-        <h3>Stable v0.4 baseline</h3>
-        <p>The observation runtime and its linked immutable identities remain the stable public reference. Post-v0.4 work does not silently replace or rewrite them.</p>
-      </article>
-      <article class="card">
-        <h3>Persistent runtime boundary</h3>
-        <p>A control-plane execution path was created under create-once control, verified after creation and completed one authorized manual no-effect invocation. No continuing activation, scheduling authority, remediation authority, further execution authority or effect authority is claimed.</p>
-      </article>
-      <article class="card">
-        <h3>Public-state discipline</h3>
-        <p>Prototype v0.1 remains frozen lineage, while later technical evidence is kept below stronger public claims until the relevant authority and continuity chain is reconciled.</p>
-      </article>
+      <article class="card"><h3>Observation baseline</h3><p>Functional and semantic repeatability were demonstrated in accepted controlled runs. Prototype v0.1 is preserved as an earlier milestone.</p></article>
+      <article class="card"><h3>Bounded control invocation</h3><p>A persisted control path completed one authorized manual invocation. Observed state matched expected state, so it took no action.</p></article>
+      <article class="card"><h3>Next acceptance gate</h3><p>Reconcile later AgriCore work and demonstrate a second distinct Factory job before claiming reusable end-to-end capability.</p></article>
     </div>
-
-    <div class="quote">
-      You do not have to make the LLM deterministic.<br>
-      <strong>You can make the evidence and authority path deterministic.</strong>
-    </div>
+    <div class="actions"><a class="btn" href="https://github.com/tondad80-dev/processcore-quantum-intelligence/blob/main/public-status-2026-10-10.md" target="_blank" rel="noopener noreferrer">Read this status review</a></div>
   </div>
 </section>
 
 <section id="factory">
   <div class="container">
-    <div class="label">03 // AI Factory — reusable software factory target</div>
-    <h2>Controlled generation is now a proof point, not the destination.</h2>
-    <p class="section-lead">
-      ProcessCore is applying its evidence, provenance and authority model to software-generation work.
-      Its strategic target is a <strong>reusable safe software factory with human authority and sealed evidence</strong>.
-      AgriCore is the first proof project. The currently reconciled public state proves a governed path through one bounded model invocation and one isolated software candidate; later technical work has progressed further, but stronger end-to-end claims remain withheld until the latest authority chain is reconciled.
-    </p>
-
-    <div class="grid">
-      <article class="card">
-        <h3>Governed workload</h3>
-        <p>A software-change specification and immutable job instance define the bounded workload. Earlier semantic mismatches were preserved as evidence rather than overwritten to force progress.</p>
-      </article>
-      <article class="card">
-        <h3>Controlled generation proof</h3>
-        <p>One bounded Factory model invocation produced an isolated software candidate and static AST/compile validation passed. Generation therefore exists as evidence without becoming automatic execution or adoption authority.</p>
-      </article>
-      <article class="card">
-        <h3>Reuse remains to be proven</h3>
-        <p>The architectural target is broader than a single AgriCore job. A second distinct Factory job under the same authority model is still required before reusable factory capability can be claimed.</p>
-      </article>
-    </div>
-
-    <div class="callout">
-      <strong>Factory boundary:</strong>
-      SPECIFICATION IDENTITY ≠ MODEL RESPONSE IDENTITY ≠ MATERIALIZED ARTIFACT IDENTITY.
-      GENERATION ≠ EXECUTION AUTHORITY ≠ INTEGRATION ≠ ADOPTION ≠ DEPLOYMENT.
-      At the current reconciled public boundary, controlled generation is proven; a completed reusable end-to-end software factory is not.
-    </div>
+    <div class="label">AI Factory</div>
+    <h2>From one controlled run to repeatable software work.</h2>
+    <p class="section-lead">The target is a reusable software factory with human authority and inspectable evidence. AgriCore provides the first independent workload. Later validation and adoption work must have its own reconciled evidence chain; a new AgriCore version alone does not prove factory reuse.</p>
+    <div class="callout"><strong>Identity and authority:</strong> the specification, model response and materialized artifact retain separate identities. Generation, validation, adoption and deployment remain separately accountable steps.</div>
   </div>
 </section>
 
 <section id="effect">
   <div class="container">
-    <div class="label">04 // Post-v0.4 control boundary</div>
+    <div class="label">Post-v0.4 control boundary</div>
     <h2>Detection, policy and authorization are separate.</h2>
     <p class="section-lead">
       Current research keeps actual state, expected state, policy decision, authorization and effect as distinct boundaries. A system may detect drift and even produce a policy decision without thereby gaining authority to change reality.
@@ -403,40 +384,24 @@ footer p{max-width:760px;margin:7px auto 0;color:var(--muted);font-size:12px}
 
 <section id="agricore">
   <div class="container">
-    <div class="label">05 // Proof project</div>
-    <h2>AgriCore is the first proof project — not a shortcut around its own authority.</h2>
-    <p class="section-lead">
-      AgriCore remains a separate runtime and project authority. ProcessCore uses it as the first real workload for the governed Factory path.
-      This is deliberately more demanding than a demo: ProcessCore may generate, validate and account for candidate work without silently transferring authority into AgriCore.
-      Later technical evidence has advanced beyond the first generated candidate, including controlled AgriCore validation/adoption work and profiling of a 500-record real-data input candidate, but those later results remain outside the canonical public state until the newest authority chain is reconciled.
-    </p>
-
+    <div class="label">AgriCore · independent working demonstrator</div>
+    <h2>A practical supplier-search workflow.</h2>
+    <p class="section-lead">AgriCore is being developed to compare agricultural supplier candidates against a commodity, price target and search area. Source material and optional cost assumptions help the user inspect a candidate before treating it as a usable offer.</p>
     <div class="grid">
-      <article class="card">
-        <h3>Independent project</h3>
-        <p>AgriCore keeps its own runtime and project authority. Evidence or progress does not cross the ProcessCore boundary automatically.</p>
-      </article>
-      <article class="card">
-        <h3>Real proof workload</h3>
-        <p>The Factory is being judged against a real project path rather than against self-contained demonstration code. Structural data readiness is not treated as semantic correctness.</p>
-      </article>
-      <article class="card">
-        <h3>No silent authority transfer</h3>
-        <p>Generation, validation, adoption, runtime execution and deployment remain separate decisions. A later technical PASS is not promoted into public authority until its continuity is reconciled.</p>
-      </article>
+      <article class="card"><h3>Define the search</h3><p>Select a commodity, price target and area. Transport, packaging and loss assumptions can refine the comparison.</p></article>
+      <article class="card"><h3>Inspect the source</h3><p>Review archived candidates alongside their original material. A search match does not by itself confirm price, stock or delivery.</p></article>
+      <article class="card"><h3>Decide what to verify</h3><p>Identify missing terms and prepare supplier questions. Confirmation remains a separate step before a purchasing decision.</p></article>
     </div>
-
     <div class="callout">
-      <strong>Current public boundary:</strong>
-      AgriCore demonstrates that ProcessCore is moving from an evidence architecture toward a governed software factory.
-      It does not yet establish reusable end-to-end factory capability, production readiness, autonomous remediation or universal portability.
+      <strong>Latest owner-reported snapshot — 10 October 2026:</strong> version 0.1.32; 20 candidates in archives; supplier emails prepared, none sent in the reported step. Live search and supplier delivery were not verified by this review.
     </div>
+    <p class="review-note">This development snapshot describes AgriCore. It does not advance the reconciled ProcessCore Factory claim.</p>
   </div>
 </section>
 
 <section id="validation">
   <div class="container">
-    <div class="label">06 // Validation semantics</div>
+    <div class="label">Validation semantics</div>
     <h2>Validation is not authority.</h2>
     <p class="section-lead">
       ProcessCore has repeatedly preserved validator failures for read-only reconciliation rather than treating a red result as automatic proof that the underlying implementation or authoritative state is wrong.
@@ -471,31 +436,22 @@ footer p{max-width:760px;margin:7px auto 0;color:var(--muted);font-size:12px}
 
 <section id="boundaries">
   <div class="container">
-    <div class="label">07 // Boundaries</div>
-    <h2>What ProcessCore does not claim.</h2>
-    <p class="section-lead">The public description remains intentionally narrower than the ambition of the research.</p>
-
+    <div class="label">Scope and next checks</div>
+    <h2>Keep each result within its evidence.</h2>
+    <p class="section-lead">ProcessCore, QCore and AgriCore have separate project boundaries. A result in one project does not authorize a change in another.</p>
     <ul class="list boundary">
-      <li>ProcessCore is not an LLM.</li>
-      <li>ProcessCore is not a production web crawler; production acquisition remains separated in QCore.</li>
-      <li>Model confidence and semantic similarity are not treated as authority.</li>
-      <li>Observed drift does not create a policy decision.</li>
-      <li>A policy decision does not itself authorize an effect.</li>
-      <li>Authorization does not remove the requirement for post-effect evidence.</li>
-      <li>One bounded no-effect invocation is not proof of continuing activation, general runtime readiness, further execution authority or effect authority.</li>
-      <li>At the current reconciled public boundary, a generated candidate does not by itself prove executable, integrated or adopted software.</li>
-      <li>One AgriCore workload does not yet prove a reusable end-to-end software factory; a distinct second Factory job remains an important reuse gate.</li>
-      <li>Accepted v0.4 repeatability does not prove universal portability or external interoperability.</li>
-      <li>Post-v0.4 research is not a declared v0.5 release.</li>
-      <li>No production-readiness or autonomous-remediation claim is made.</li>
-      <li>No claim is made that hallucinations are eliminated.</li>
+      <li>Factory reuse across distinct jobs remains to be demonstrated.</li>
+      <li>Static checks establish a limited validation result; adoption and runtime behavior require separate evidence.</li>
+      <li>One no-effect control invocation does not authorize continuing activation or remediation.</li>
+      <li>The current public evidence does not establish production readiness, universal portability or hallucination elimination.</li>
     </ul>
+    <div class="callout"><strong>QCore audit — 10 October review:</strong> an inspected snapshot contained 42,122 SCOUTED records and no FOR_WORKER records. The event-log-to-registry handoff remains unverified end to end; the audit has not established the cause of AI usage or cost fluctuations.</div>
   </div>
 </section>
 
 <section id="archive">
   <div class="container">
-    <div class="label">07 // Research lineage</div>
+    <div class="label">Research lineage</div>
     <h2>Earlier architecture is preserved as history.</h2>
     <p class="section-lead">
       ProcessCore evolved from an earlier technology-intelligence and ecosystem-discovery architecture.
@@ -526,11 +482,12 @@ footer p{max-width:760px;margin:7px auto 0;color:var(--muted);font-size:12px}
     <div class="footer-links">
       <a href="https://www.linkedin.com/in/tonda-dospiva-b160281a7/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       <a href="https://github.com/tondad80-dev/processcore-quantum-intelligence" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://tondad80-dev.github.io/commercial-golden-api-deploy/">Golden · scouting product candidate</a>
       <a href="LICENSE">Apache-2.0 License</a>
       <a href="mailto:tondad80@gmail.com">Contact</a>
     </div>
     <div class="signature">
-      PROCESSCORE // GOVERNED SOFTWARE GENERATION // AUTHORITY BEFORE EFFECT // PUBLIC-SAFE STATE 2026-09-29
+      PROCESSCORE // GOVERNED SOFTWARE GENERATION // AUTHORITY BEFORE EFFECT // STABLE REFERENCE 2026-09-29 // PAGE REVIEWED 2026-10-10
     </div>
   </div>
 </footer>
