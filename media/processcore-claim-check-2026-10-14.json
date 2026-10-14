@@ -1,0 +1,78 @@
+{
+  "schema": "processcore_public_claim_check_v1",
+  "description": "Public-safe summary of a read-only check on Pi; readable labels describe structured scalar claims. This is not the raw internal evidence.",
+  "claim_gate_version": "0.1.2",
+  "status": "PARTIAL",
+  "claim_count": 8,
+  "supported_count": 6,
+  "returncode": 1,
+  "execution_authorized": false,
+  "source_errors_present": false,
+  "claims": [
+    {
+      "claim": "Observed ProcessCore identity matches",
+      "status": "SUPPORTED",
+      "reason": "EXACT_SOURCE_FIELD",
+      "observed_value": true,
+      "source_kind": "node_observation",
+      "source_checked_at_utc": "2026-10-14T14:50:32.935318+00:00"
+    },
+    {
+      "claim": "Historical NORMALIZE record contains 7 successful tests",
+      "status": "SUPPORTED",
+      "reason": "EXACT_SOURCE_FIELD",
+      "observed_value": 7,
+      "source_kind": "historical_factory_record",
+      "source_checked_at_utc": "2026-10-14T14:50:34.106620+00:00"
+    },
+    {
+      "claim": "Historical SUMMARY record contains 8 successful tests",
+      "status": "SUPPORTED",
+      "reason": "EXACT_SOURCE_FIELD",
+      "observed_value": 8,
+      "source_kind": "historical_factory_record",
+      "source_checked_at_utc": "2026-10-14T14:50:34.106620+00:00"
+    },
+    {
+      "claim": "Original NORMALIZE record meets the current runner acceptance requirements",
+      "status": "MISMATCH",
+      "reason": "VALUE_DIFFERS_IN_THIS_SOURCE",
+      "observed_value": false,
+      "source_kind": "historical_factory_record",
+      "source_checked_at_utc": "2026-10-14T14:50:34.106620+00:00"
+    },
+    {
+      "claim": "An unrestricted correctness guarantee is supported",
+      "status": "UNKNOWN",
+      "reason": "FIELD_OUTSIDE_SCOPE",
+      "observed_value": null,
+      "source_kind": null,
+      "source_checked_at_utc": null
+    },
+    {
+      "claim": "CLAIM-SUMMARY record contains 21 successful tests",
+      "status": "SUPPORTED",
+      "reason": "EXACT_SOURCE_FIELD",
+      "observed_value": 21,
+      "source_kind": "historical_factory_record",
+      "source_checked_at_utc": "2026-10-14T14:50:34.106620+00:00"
+    },
+    {
+      "claim": "CLAIM-SUMMARY meets the current runner acceptance requirements",
+      "status": "SUPPORTED",
+      "reason": "EXACT_SOURCE_FIELD",
+      "observed_value": true,
+      "source_kind": "historical_factory_record",
+      "source_checked_at_utc": "2026-10-14T14:50:34.106620+00:00"
+    },
+    {
+      "claim": "CLAIM-SUMMARY delivery integrity is verified",
+      "status": "SUPPORTED",
+      "reason": "EXACT_SOURCE_FIELD",
+      "observed_value": true,
+      "source_kind": "historical_factory_record",
+      "source_checked_at_utc": "2026-10-14T14:50:34.106620+00:00"
+    }
+  ],
+  "scope": "Selected source fields only. Inspecting historical test records did not rerun candidate tests. No model calls, new Factory jobs or product deployment were performed by this check."
+}

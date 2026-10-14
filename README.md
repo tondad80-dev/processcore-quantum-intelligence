@@ -4,20 +4,23 @@
 
 ProcessCore is an independent engineering project developing checks for AI-generated Python modules on Raspberry Pi. It pairs explicit specifications with predefined tests and recorded results. Deployment remains a separate human decision.
 
-[Website](https://tondad80-dev.github.io/processcore-quantum-intelligence/) · [Dated verification](public-status-2026-10-14.md)
+[Website](https://tondad80-dev.github.io/processcore-quantum-intelligence/) · [Earlier website review](public-status-2026-10-14.md) · [Latest claim check](media/processcore-claim-check-2026-10-14.json)
 
 ## Reviewed public state — 14 October 2026
 
 Observation runtime **v0.4** remains the accepted public reference baseline. The separately versioned Factory module **0.1.3-rc.1** is installed on Raspberry Pi. All **29 manifest files** matched their declared size and SHA-256 during this review.
 
-Two distinct original Factory **0.1.0** jobs have stored test and acceptance evidence:
+Two original Factory **0.1.0** jobs retain historical test and acceptance evidence. A new **CLAIM-SUMMARY-002** job adds an accepted candidate under the current **0.1.3-rc.1** runner:
 
-| Original job | Prescribed tests | Recorded decision | Product adoption |
+| Job record | Prescribed tests | Recorded decision | Product adoption |
 | --- | --- | --- | --- |
-| NORMALIZE | 7 passed | Accepted candidate | Not deployed into a product |
-| SUMMARY | 8 passed | Accepted candidate | Not deployed into a product |
+| NORMALIZE | 7 passed | Historical accepted candidate | Not deployed into a product |
+| SUMMARY | 8 passed | Historical accepted candidate | Not deployed into a product |
+| CLAIM-SUMMARY-002 | 21 passed; 73 candidate calls; return code 0 | Accepted and packaged under the current runner boundary | No product deployment established by this record |
 
-The original job files and the acceptance records' references to their results matched their stored hashes. Each job recorded one model invocation. These are bounded module results, not evidence that arbitrary generated code is correct.
+The reviewed result, acceptance and delivery bindings matched their stored hashes. Each successful job recorded one model invocation. The new candidate summarizes already-classified claim statuses; it does not itself determine whether a claim is true. Its record has been adopted as claim evidence, without product adoption or execution authority.
+
+The original 7/8-test records lack the newer runner’s completion fields and do not satisfy its current acceptance requirements. Their historical acceptance remains intact. These are bounded module results, not evidence that arbitrary generated code is correct.
 
 ## Actual Pi terminal verification
 
@@ -33,13 +36,33 @@ The test did not call or evaluate the forged candidate's incorrect answer. It ve
 
 The replay is slowed for readability. Identity and paths are masked. The recorded verification made no model calls or production changes, and preserved the original job.
 
+## Read-only claim gate 0.1.2
+
+The separate claim gate is **ADOPTED_AND_INSTALLED** on Pi. All **12 manifest files** and the launcher matched their installation records. It checks selected structured scalar claims against permitted read-only source adapters, comparing both value and type and checking source freshness.
+
+An actual check at **16:50 CEST on 14 October 2026** returned:
+
+| Outcome | Claims |
+| --- | --- |
+| SUPPORTED | 6 |
+| MISMATCH | 1 |
+| UNKNOWN | 1 |
+
+Overall **PARTIAL**, return code **1**. The original NORMALIZE record did not meet the current runner requirements; an unrestricted correctness-guarantee field was outside the supported scope. Recorded test counts of 7, 8 and 21 remained supported historical facts.
+
+[Public summary of all eight outcomes](media/processcore-claim-check-2026-10-14.json)
+
+The full set of outcomes is SUPPORTED, MISMATCH, UNKNOWN, STALE and UNVERIFIED. A 300-second freshness limit concerns source inspection/observation, not repeating historical candidate tests. This interface checks selected structured fields, not arbitrary prose, and always returns `execution_authorized=false`.
+
+This read-only check made no model calls, created no Factory jobs and performed no product deployment. **ProcessCore 1.0 has not been declared.**
+
 ## Architecture and scope
 
 **EVIDENCE → PROVENANCE → AUTHORITY → INTERPRETATION**
 
 A task specification, generated artifact, passing test, candidate acceptance and permission to deploy are separate records and decisions.
 
-The current Factory runner separates test-runner and candidate execution environments. The isolated control above is a new verification; it does not rewrite the historical generation or acceptance of the original jobs.
+The current Factory runner separates test-runner and candidate execution environments. CLAIM-SUMMARY-002 provides a new 21-test result under this boundary. The recorded NORMALIZE control is a separate verification; neither rewrites the historical generation or acceptance of the original jobs.
 
 Advisory reuse may inform a new task under an explicit contract. It does not authorize execution or dispense with fresh tests and acceptance. End-to-end reuse with fresh acceptance and product integration remains to be demonstrated. General production readiness, universal portability, token savings and hallucination elimination are not established by the public evidence.
 

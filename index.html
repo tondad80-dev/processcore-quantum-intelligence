@@ -20,7 +20,7 @@ limitations under the License.
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#030712">
 <meta name="author" content="Antonín Dospiva">
-<meta name="description" content="ProcessCore: an independent engineering portfolio with recorded Raspberry Pi checks of AI-generated Python modules. Inspect a controlled 999-tests-claimed, zero-completed verification and its evidence.">
+<meta name="description" content="ProcessCore: recorded Raspberry Pi checks of AI-generated Python modules and selected structured claims. Three accepted candidate records; read-only claim gate 0.1.2. Product deployment remains separate.">
 <meta name="robots" content="index,follow">
 
 <link rel="canonical" href="https://tondad80-dev.github.io/processcore-quantum-intelligence/">
@@ -29,7 +29,7 @@ limitations under the License.
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="ProcessCore | Evidence Before Interpretation">
-<meta property="og:description" content="Recorded Pi tests, inspectable results and separate deployment decisions. A bounded engineering prototype.">
+<meta property="og:description" content="Recorded Pi tests and a read-only claim check: three accepted candidate records, with product deployment as a separate decision.">
 <meta property="og:url" content="https://tondad80-dev.github.io/processcore-quantum-intelligence/">
 <meta property="og:image" content="https://tondad80-dev.github.io/processcore-quantum-intelligence/media/processcore-false-pass-poster.png">
 <meta property="og:image:alt" content="Masked Pi terminal: 999 tests claimed, zero completed; the independent runner rejects the incomplete run.">
@@ -37,7 +37,7 @@ limitations under the License.
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="ProcessCore | Evidence Before Interpretation">
-<meta name="twitter:description" content="Recorded Pi tests, inspectable results and separate deployment decisions. A bounded engineering prototype.">
+<meta name="twitter:description" content="Recorded Pi tests and a read-only claim check: three accepted candidate records, with product deployment as a separate decision.">
 <meta name="twitter:image" content="https://tondad80-dev.github.io/processcore-quantum-intelligence/media/processcore-false-pass-poster.png">
 
 <script type="application/ld+json">
@@ -637,6 +637,16 @@ section, #contact, #top { scroll-margin-top: 110px; }
 @media (max-width: 900px) { .hero-layout { grid-template-columns: 1fr; gap: 28px; } .terminal-preview { max-width: 600px; } }
 @media (max-width: 600px) { .deeper>summary { padding: 16px; font-size: 15px; } .deeper-body { padding-left: 16px; padding-right: 16px; } }
 
+
+.claim-check-summary { display:flex; flex-wrap:wrap; gap:10px 24px; align-items:center; margin-top:24px; padding:18px 20px; border:1px solid var(--border); border-radius:9px; background:var(--surface2); color:var(--muted); font-size:14px; }
+.claim-check-summary strong { color:var(--cyan2); }
+.claim-supported { color:var(--green); font-family:var(--mono); }
+.claim-mismatch { color:var(--amber); font-family:var(--mono); }
+.claim-unknown { color:var(--cyan2); font-family:var(--mono); }
+#claim-check tbody th { width:45%; }
+
+#component-details .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 900px) { #component-details .grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -655,7 +665,7 @@ section, #contact, #top { scroll-margin-top: 110px; }
       </span>
     </a>
     <div class="links" aria-label="Page sections">
-      <a href="#false-pass-verification">Verification</a><a href="#evidence">Evidence</a><a href="#state">Status</a><a href="#architecture">Architecture</a><a href="#contact">Contact</a>
+      <a href="#false-pass-verification">Verification</a><a href="#claim-check">Claims</a><a href="#evidence">Evidence</a><a href="#state">Status</a><a href="#architecture">Architecture</a><a href="#contact">Contact</a>
     </div>
   </div>
 </nav>
@@ -680,7 +690,7 @@ section, #contact, #top { scroll-margin-top: 110px; }
       <figcaption>A deliberately constructed offline fixture. Actual recorded execution; identity masked and playback slowed.</figcaption>
     </figure>
     </div>
-    <p class="review-note">Page reviewed <time datetime="2026-10-14">14 October 2026</time> · Factory module: 0.1.3-rc.1 · Observation baseline: v0.4</p>
+    <p class="review-note">Factory and claims checked <time datetime="2026-10-14T14:50:34Z">14 October 2026 · 16:50 CEST</time> · Factory: 0.1.3-rc.1 · Claims: 0.1.2 · Observation baseline: v0.4</p>
   </div>
 </header>
 
@@ -738,21 +748,48 @@ section, #contact, #top { scroll-margin-top: 110px; }
   </div>
 </section>
 
+
+<section id="claim-check" aria-labelledby="claim-check-title">
+  <div class="container">
+    <p class="label">New read-only evidence check · 14 October 2026</p>
+    <h2 id="claim-check-title">A recorded fact is different from a new claim.</h2>
+    <p class="section-lead">Claim gate 0.1.2 compares selected structured claims with source records. It checks the scalar value, its type and the freshness of the inspection. A supported field supplies evidence for that specific claim.</p>
+    <div class="claim-check-summary" role="note"><strong>Actual Pi check: 8 claims.</strong><span>6 SUPPORTED · 1 MISMATCH · 1 UNKNOWN</span><span>Overall: PARTIAL · return code 1</span></div>
+    <div class="table-wrap"><table>
+      <caption>Readable examples from the recorded structured check</caption>
+      <thead><tr><th scope="col">Claim</th><th scope="col">Result</th><th scope="col">Observed field</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">CLAIM-SUMMARY records 21 successful tests</th><td class="claim-supported">SUPPORTED</td><td>21 — historical test record inspected now.</td></tr>
+        <tr><th scope="row">Original NORMALIZE meets today’s runner requirements</th><td class="claim-mismatch">MISMATCH</td><td>false — the original acceptance remains historical.</td></tr>
+        <tr><th scope="row">An unrestricted correctness guarantee is supported</th><td class="claim-unknown">UNKNOWN</td><td>Requested field is outside the permitted scope.</td></tr>
+      </tbody>
+    </table></div>
+    <p class="review-note">Recorded at 16:50 CEST. The structured request was valid; its partial result deliberately returned 1. Checking stored records did not rerun their tests. No model calls, new jobs or product changes occurred in this check.</p>
+    <p class="review-note"><a href="media/processcore-claim-check-2026-10-14.json">Read the public summary of all eight outcomes</a></p>
+    <details class="deeper" id="claim-check-scope"><summary>How the claim check is bounded</summary><div class="deeper-body">
+      <p class="section-lead">The installed module reports SUPPORTED, MISMATCH, UNKNOWN, STALE or UNVERIFIED for selected scalar fields from permitted read-only adapters. It checks both value and type; source inspections have a 300-second freshness limit. The inspection time is distinct from the time of a historical test.</p>
+      <div class="callout">The new Factory job’s result and delivery are adopted as claim evidence. Its code has not thereby been integrated into a product. This interface checks structured fields, not arbitrary prose, and always returns <code>execution_authorized=false</code>.</div>
+      <p class="review-note">All 12 claim-gate manifest files and the launcher matched their installation records. ProcessCore as a whole remains below a declared 1.0 release.</p>
+    </div></details>
+  </div>
+</section>
+
 <section id="evidence">
   <div class="container">
     <div class="label">Verified examples · 14 October 2026</div>
-    <h2>Two tasks. Inspectable results.</h2>
-    <p class="section-lead">Two original Factory 0.1.0 jobs generated Python modules from explicit specifications and ran predefined tests on Raspberry Pi. Each recorded one model invocation and a separate candidate acceptance.</p>
+    <h2>Three accepted candidate records.</h2>
+    <p class="section-lead">Two original Factory 0.1.0 jobs retain their historical acceptance records. A new CLAIM-SUMMARY-002 candidate completed its 21 prescribed tests under Factory 0.1.3-rc.1. Each successful job recorded one model invocation and a separate candidate acceptance.</p>
     <div class="table-wrap"><table>
       <caption>Verified Factory job results</caption>
       <thead><tr><th scope="col">Job</th><th scope="col">Result</th><th scope="col">Boundary</th></tr></thead>
       <tbody>
-        <tr><th scope="row">NORMALIZE</th><td>7 prescribed tests passed; candidate accepted.</td><td>Limited to the specified module and tested cases.</td></tr>
-        <tr><th scope="row">SUMMARY</th><td>8 prescribed tests passed; candidate accepted.</td><td>Limited to the specified module and tested cases.</td></tr>
-        <tr><th scope="row">Product deployment</th><td>Neither candidate is deployed into a product.</td><td>Acceptance as a candidate does not establish product adoption.</td></tr>
+        <tr><th scope="row">NORMALIZE</th><td>7 stored tests passed; historical candidate acceptance.</td><td>Factory 0.1.0 record; it lacks the current runner’s completion fields.</td></tr>
+        <tr><th scope="row">SUMMARY</th><td>8 stored tests passed; historical candidate acceptance.</td><td>Factory 0.1.0 record; it lacks the current runner’s completion fields.</td></tr>
+        <tr><th scope="row">CLAIM-SUMMARY-002</th><td>21 tests passed; 73 candidate calls; return code 0. Candidate accepted and packaged.</td><td>Current runner boundary verified. Summarizes already-classified claims; its record is adopted as claim evidence.</td></tr>
+        <tr><th scope="row">Product deployment</th><td>No product deployment is established by these records.</td><td>Accepting a candidate or inspecting its evidence does not deploy its code.</td></tr>
       </tbody>
     </table></div>
-    <p class="review-note">Verification checked all 29 files in the installed module manifest, the original job results and their acceptance records. The original jobs were generated with Factory 0.1.0; the terminal replay separately checks the current 0.1.3-rc.1 runner. Raw internal artifacts are not reproduced here. <a href="https://github.com/tondad80-dev/processcore-quantum-intelligence/blob/main/public-status-2026-10-14.md" target="_blank" rel="noopener noreferrer">Read the dated verification note</a>.</p>
+    <p class="review-note">Verification checked all 29 installed Factory manifest files and the new job’s result, acceptance and delivery integrity. The terminal replay and original examples remain dated evidence. Inspecting the stored records did not rerun their candidate tests. Raw internal artifacts are not reproduced here. <a href="https://github.com/tondad80-dev/processcore-quantum-intelligence/blob/main/public-status-2026-10-14.md" target="_blank" rel="noopener noreferrer">Read the earlier website verification</a>.</p>
   <p class="review-note"><a href="https://github.com/tondad80-dev/processcore-quantum-intelligence/blob/main/README.md" target="_blank" rel="noopener noreferrer">Read the project baseline and evidence summary</a></p></div>
 </section>
 
@@ -760,7 +797,7 @@ section, #contact, #top { scroll-margin-top: 110px; }
 <div class="container">
   <p class="label">Optional browser illustration</p>
   <h2 id="demo-title">Explore the example modules.</h2>
-  <p class="section-lead">Open two fixed input/output examples and their six-stage walkthrough. These examples are precomputed; the browser does not execute Python or connect to the Pi.</p>
+  <p class="section-lead">Open fixed input/output examples of the two original Factory 0.1.0 candidates and their six-stage walkthrough. These examples are precomputed; the browser does not execute Python or connect to the Pi.</p>
   <details class="deeper" id="demo-showcase"><summary>Open NORMALIZE and SUMMARY examples</summary><div class="deeper-body">  <div class="pc-demo__workspace">
     <div class="pc-demo__toolbar">
       <div class="pc-demo__tabs" role="tablist" aria-label="Example job">
@@ -837,7 +874,7 @@ section, #contact, #top { scroll-margin-top: 110px; }
 <section id="state"><div class="container">
   <p class="label">Reviewed 14 October 2026</p>
   <h2>What has been demonstrated?</h2>
-  <p class="section-lead">Two original Python jobs have accepted candidates. The recorded terminal check separately verifies the newer runner against an incomplete test run.</p>
+  <p class="section-lead">Two historical jobs remain accepted under their original checks. CLAIM-SUMMARY-002 adds a 21-test candidate under the current runner. The separate read-only claim gate checks selected facts against inspected records.</p>
   <details class="deeper" id="component-details"><summary>Component versions and remaining checks</summary><div class="deeper-body">    <div class="status-row" aria-label="Reviewed ProcessCore component status">
       <div class="status ok">
         <div class="tag">✓ Stable baseline</div>
@@ -845,8 +882,8 @@ section, #contact, #top { scroll-margin-top: 110px; }
         <p>Accepted public reference baseline with demonstrated functional repeatability.</p>
       </div>
       <div class="status ok">
-        <div class="tag">Tested candidates</div><strong>Two distinct Python jobs</strong>
-        <p>NORMALIZE: 7 tests. SUMMARY: 8 tests. Both accepted as candidates; neither deployed into a product.</p>
+        <div class="tag">Candidate evidence</div><strong>Two historical jobs; one new candidate</strong>
+        <p>NORMALIZE: 7 stored tests. SUMMARY: 8 stored tests. CLAIM-SUMMARY-002: 21 tests under the current runner. Candidate acceptance remains separate from product deployment.</p>
       </div>
       <div class="status watch">
         <div class="tag">Active frontier</div>
@@ -863,8 +900,9 @@ section, #contact, #top { scroll-margin-top: 110px; }
     <p class="section-lead">Observation runtime v0.4 and Factory module 0.1.3-rc.1 are separate versioned components. The new module does not declare a new observation-runtime release or a general production-ready factory.</p>
     <div class="grid">
       <article class="card"><h3>Observation baseline v0.4</h3><p>The accepted observation baseline remains preserved. Earlier controlled runs demonstrated functional and semantic repeatability.</p></article>
-      <article class="card"><h3>Factory module 0.1.3-rc.1</h3><p>Installed on Pi with matching integrity across 29 manifest files. The original 0.1.0 jobs have stored acceptance results of 7 and 8 tests. The current runner separates the test runner from candidate execution; the recorded verification includes a fresh NORMALIZE control.</p></article>
-      <article class="card"><h3>Next acceptance gate</h3><p>Demonstrate a fresh task using advisory reuse, then independently validate its delivery and product integration. Broader usability and token savings remain unproven.</p></article>
+      <article class="card"><h3>Factory module 0.1.3-rc.1</h3><p>Installed on Pi with matching integrity across 29 manifest files. The new CLAIM-SUMMARY-002 record verifies 21 tests, 73 candidate calls and complete acceptance/delivery bindings. Original 0.1.0 records remain historical; they do not meet today’s completion-field requirements.</p></article>
+      <article class="card"><h3>Read-only claim gate 0.1.2</h3><p>Installed with matching integrity across 12 manifest files. It checks selected scalar values and types against permitted sources and retains separate results for each claim.</p></article>
+      <article class="card"><h3>Next release checks</h3><p>Evaluate broader task coverage, advisory reuse and separately authorized product integration. ProcessCore 1.0 has not been declared.</p></article>
     </div></div></details>
 </div></section>
 
@@ -873,9 +911,9 @@ section, #contact, #top { scroll-margin-top: 110px; }
   <h2>What these checks establish.</h2>
   <p class="section-lead">The public results cover specified Python modules and one controlled failure mode in the acceptance runner. The prescribed tests define the scope of each result.</p>
   <ul class="list boundary">
-    <li>Candidate acceptance and product deployment are separate decisions. Neither of the two original candidates is deployed into a product.</li>
+    <li>The three accepted candidate records and the claim gate’s evidence checks remain separate from product deployment. The new job is adopted as claim evidence.</li>
     <li>End-to-end reuse with fresh acceptance and product integration remains to be demonstrated in this reviewed snapshot.</li>
-    <li>General production readiness, universal portability, token savings and hallucination elimination are not established by these results.</li>
+    <li>General production readiness, universal portability, token savings and hallucination elimination are not established by these results. ProcessCore 1.0 has not been declared.</li>
   </ul>
 </div></section>
 
@@ -1085,7 +1123,7 @@ section, #contact, #top { scroll-margin-top: 110px; }
       <a href="mailto:tondad80@gmail.com">Contact</a>
     </div>
     <div class="signature">
-      PROCESSCORE // GOVERNED SOFTWARE GENERATION // AUTHORITY BEFORE EFFECT // OBSERVATION V0.4 // FACTORY 0.1.3-rc.1 // PAGE REVIEWED 2026-10-14
+      PROCESSCORE // GOVERNED SOFTWARE GENERATION // AUTHORITY BEFORE EFFECT // OBSERVATION V0.4 // FACTORY 0.1.3-rc.1 // CLAIMS 0.1.2 // REVIEWED 2026-10-14
     </div>
   </div>
 </footer>
