@@ -119,7 +119,7 @@ nav{
 h1{font-size:clamp(42px,7vw,72px);line-height:1.03;letter-spacing:-.045em}
 .gradient{
   background:linear-gradient(95deg,#fff,#9ddfff 50%,#e6eef7);
-  -webkit-background-clip:text;background-clip;color:transparent
+  -webkit-background-clip:text;background-clip:text;color:transparent
 }
 .hero .lead{max-width:800px;margin:24px auto 0;color:var(--cyan2);font-size:clamp(17px,2vw,21px);font-weight:650}
 .hero .desc{max-width:760px;margin:18px auto 0;color:var(--muted);font-size:15px}
@@ -198,6 +198,278 @@ section{scroll-margin-top:110px}
 @media(max-width:900px){.nav{flex-wrap:wrap;padding:12px 0}.links{display:flex;width:100%;overflow-x:auto;gap:18px;padding:8px 0;font-size:11px;white-space:nowrap}}
 @media(max-width:600px){table{min-width:580px}.btn{font-size:11px}th,td{padding:12px 14px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}}
+
+/* Presentation layer: local vector artwork and an accessible browser illustration. */
+.hero{padding:66px 0 46px;text-align:left}
+.hero-layout{display:grid;grid-template-columns:1.02fr 1fr;gap:46px;align-items:center}
+.hero h1{font-size:clamp(42px,5.8vw,65px);line-height:1.07;max-width:620px}
+.hero .lead{font-size:19px;margin:22px 0 0;max-width:550px;color:#c8dce9;font-weight:450}
+.hero .desc{margin:16px 0 0;font-size:14px}
+.hero-actions{justify-content:flex-start;margin-top:28px}
+.btn-primary{background:var(--cyan2);color:#041321;border-color:var(--cyan2)}
+.btn-primary:hover{background:#b8e8ff}
+.hero-principle{border-left:2px solid var(--green);padding-left:14px;color:var(--muted);font-size:12px;margin-top:24px}
+.hero-principle strong{display:block;color:#dcebf6;font-size:13px}
+.proof-art{border:1px solid rgba(125,211,252,.25);border-radius:18px;background:radial-gradient(ellipse at 50% 32%,rgba(56,189,248,.13),transparent 70%),#07111d;overflow:hidden;box-shadow:0 22px 60px rgba(0,0,0,.26)}
+.proof-art-head{display:flex;justify-content:space-between;gap:14px;padding:18px 22px;border-bottom:1px solid var(--border);font:10px var(--mono);letter-spacing:.08em;color:var(--cyan2)}
+.proof-art-head span:last-child{color:var(--muted)}
+.proof-art svg{display:block;width:100%;height:auto}
+.proof-art figcaption{padding:14px 20px;border-top:1px solid var(--border);font-size:12px;color:var(--muted)}
+.proof-art text{font-family:var(--font)}
+.proof-art .mono{font-family:var(--mono)}
+.status-row{margin-top:42px}
+.status{border-radius:10px;border-top:2px solid rgba(125,211,252,.25)}
+.ok{border-top-color:rgba(94,231,177,.6)}
+.watch{border-top-color:rgba(251,191,36,.6)}
+.deeper{margin-top:20px;border:1px solid var(--border);border-radius:10px;overflow:hidden}
+.deeper>summary{cursor:pointer;padding:18px 22px;color:var(--cyan2);background:var(--surface);font-size:15px;font-weight:650}
+.deeper>summary:focus-visible{outline:2px solid var(--cyan2);outline-offset:-3px}
+.deeper-body{padding:0 22px 22px}
+.closing-cta{padding:34px;border:1px solid rgba(94,231,177,.3);border-radius:12px;background:linear-gradient(125deg,rgba(94,231,177,.06),rgba(56,189,248,.04));margin:0 0 24px}
+.closing-cta h2{font-size:30px}
+.closing-cta p{color:var(--muted);max-width:710px;font-size:14px}
+@media(max-width:900px){.hero-layout{grid-template-columns:1fr;gap:32px}.hero h1{max-width:700px}.proof-art{max-width:600px}.hero{padding-top:44px}}
+@media(max-width:600px){.hero h1{font-size:42px}.hero .lead{font-size:17px}.proof-art-head{padding:14px;font-size:9px}.closing-cta{padding:24px}.btn{letter-spacing:.04em}}
+.pc-demo {
+  --pc-demo-navy: #081321;
+  --pc-demo-surface: #0d2033;
+  --pc-demo-surface-soft: #10283c;
+  --pc-demo-border: #294254;
+  --pc-demo-text: #e7f3f7;
+  --pc-demo-muted: #afc4d0;
+  --pc-demo-cyan: #76def0;
+  --pc-demo-mint: #9aefd2;
+  --pc-demo-warning: #ffd196;
+  color: var(--pc-demo-text);
+  padding: clamp(2rem, 5vw, 4rem) 0;
+  text-align: left;
+}
+.pc-demo *, .pc-demo *::before, .pc-demo *::after { box-sizing: border-box; }
+.pc-demo button { font: inherit; cursor: pointer; }
+.pc-demo button:focus-visible, .pc-demo [tabindex]:focus-visible {
+  outline: 3px solid var(--pc-demo-cyan);
+  outline-offset: 4px;
+}
+.pc-demo__intro { max-width: 760px; margin-bottom: 1.75rem; }
+.pc-demo__eyebrow {
+  margin: 0 0 .75rem;
+  color: var(--pc-demo-mint);
+  font-size: .74rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.pc-demo h2 {
+  margin: 0 0 1rem;
+  max-width: 720px;
+  color: var(--pc-demo-text);
+  font-size: clamp(1.85rem, 3.5vw, 3rem);
+  line-height: 1.12;
+  letter-spacing: -.035em;
+}
+.pc-demo__lede, .pc-demo__boundary {
+  margin: 0;
+  color: var(--pc-demo-muted);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+.pc-demo__workspace {
+  overflow: hidden;
+  background: var(--pc-demo-navy);
+  border: 1px solid var(--pc-demo-border);
+  border-radius: 22px;
+}
+.pc-demo__toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1.2rem clamp(1rem, 3vw, 2rem);
+  border-bottom: 1px solid var(--pc-demo-border);
+  background: var(--pc-demo-surface);
+}
+.pc-demo__tabs, .pc-demo__cases, .pc-demo__playback {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+.pc-demo__tab, .pc-demo__case, .pc-demo__control {
+  min-height: 44px;
+  padding: .7rem 1rem;
+  color: var(--pc-demo-muted);
+  background: transparent;
+  border: 1px solid var(--pc-demo-border);
+  border-radius: 10px;
+  font-size: .82rem;
+  font-weight: 650;
+  line-height: 1.25;
+}
+.pc-demo__tab { letter-spacing: .045em; }
+.pc-demo__tab[aria-selected="true"] {
+  color: var(--pc-demo-navy);
+  background: var(--pc-demo-cyan);
+  border-color: var(--pc-demo-cyan);
+}
+.pc-demo__case[aria-pressed="true"] {
+  color: var(--pc-demo-mint);
+  background: #183c3d;
+  border-color: #478674;
+}
+.pc-demo__tab:hover, .pc-demo__case:hover, .pc-demo__control:hover { border-color: var(--pc-demo-cyan); }
+.pc-demo__proof {
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  margin: 0;
+  color: var(--pc-demo-mint);
+  font-size: .78rem;
+  line-height: 1.5;
+}
+.pc-demo__proof-dot {
+  flex: 0 0 auto;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--pc-demo-mint);
+}
+.pc-demo__job { padding: clamp(1rem, 3vw, 2rem); }
+.pc-demo__job-heading, .pc-demo__walkthrough-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.pc-demo h3 {
+  margin: 0 0 .45rem;
+  color: var(--pc-demo-text);
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  line-height: 1.35;
+  letter-spacing: -.02em;
+}
+.pc-demo__job-heading p {
+  margin: 0;
+  color: var(--pc-demo-muted);
+  font-size: .88rem;
+  line-height: 1.6;
+}
+.pc-demo__panels {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.pc-demo__code-panel {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--pc-demo-border);
+  border-radius: 12px;
+  background: #06111d;
+}
+.pc-demo__code-panel--result { border-color: #386459; }
+.pc-demo__code-panel--error { border-color: #8c6444; }
+.pc-demo__code-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .5rem;
+  padding: .85rem 1rem;
+  border-bottom: 1px solid var(--pc-demo-border);
+  background: var(--pc-demo-surface);
+}
+.pc-demo h4 { margin: 0; font-size: .8rem; font-weight: 650; line-height: 1.4; color: var(--pc-demo-text); }
+.pc-demo__code-heading span { color: var(--pc-demo-muted); font-size: .68rem; line-height: 1.4; }
+.pc-demo__code-panel--result .pc-demo__code-heading span { color: var(--pc-demo-mint); }
+.pc-demo__code-panel--error .pc-demo__code-heading span { color: var(--pc-demo-warning); }
+.pc-demo pre {
+  min-height: 132px;
+  margin: 0;
+  padding: 1.1rem 1rem;
+  overflow-x: auto;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  color: var(--pc-demo-cyan);
+  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+  font-size: .81rem;
+  line-height: 1.7;
+  text-align: left;
+  white-space: pre;
+}
+.pc-demo code { padding: 0; color: inherit; background: transparent; font: inherit; }
+.pc-demo__code-panel--result pre { color: var(--pc-demo-mint); }
+.pc-demo__code-panel--error pre { color: var(--pc-demo-warning); }
+.pc-demo__case-note {
+  min-height: 2.8em;
+  margin: 1rem 0 0;
+  color: var(--pc-demo-muted);
+  font-size: .84rem;
+  line-height: 1.5;
+}
+.pc-demo__walkthrough {
+  padding: clamp(1rem, 3vw, 2rem);
+  border-top: 1px solid var(--pc-demo-border);
+  background: var(--pc-demo-surface);
+}
+.pc-demo__walkthrough .pc-demo__eyebrow { margin-bottom: .5rem; font-size: .66rem; }
+.pc-demo__control { color: var(--pc-demo-navy); background: var(--pc-demo-mint); border-color: var(--pc-demo-mint); }
+.pc-demo__control--quiet { color: var(--pc-demo-text); background: transparent; border-color: var(--pc-demo-border); }
+.pc-demo__control:disabled { opacity: .55; cursor: default; border-color: var(--pc-demo-border); }
+.pc-demo__stages {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .6rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.pc-demo__stage {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  width: 100%;
+  height: 100%;
+  min-height: 72px;
+  padding: .9rem;
+  color: var(--pc-demo-muted);
+  background: var(--pc-demo-navy);
+  border: 1px solid var(--pc-demo-border);
+  border-radius: 10px;
+  font-size: .78rem;
+  line-height: 1.45;
+  text-align: left;
+}
+.pc-demo__stage:hover { border-color: #65889d; }
+.pc-demo__stage[aria-current="step"] { color: var(--pc-demo-text); border-color: var(--pc-demo-cyan); background: #163448; }
+.pc-demo__stage-number { color: var(--pc-demo-cyan); font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: .75rem; }
+.pc-demo__stage--gate { flex-wrap: wrap; border-style: dashed; }
+.pc-demo__stage--gate .pc-demo__stage-number { color: var(--pc-demo-warning); }
+.pc-demo__stage--gate[aria-current="step"] { border-color: var(--pc-demo-warning); background: #332c27; }
+.pc-demo__gate-label { margin-left: 1.8rem; color: var(--pc-demo-warning); font-size: .65rem; }
+.pc-demo__stage-detail { min-height: 106px; margin-top: 1rem; padding: 1rem 1.2rem; background: var(--pc-demo-navy); border-radius: 10px; }
+.pc-demo__stage-kicker { margin: 0 0 .45rem; color: var(--pc-demo-cyan); font-size: .75rem; font-weight: 650; }
+.pc-demo__stage-detail > p:last-child { margin: 0; color: var(--pc-demo-text); font-size: .88rem; line-height: 1.6; }
+.pc-demo__motion-note { margin: .85rem 0 0; color: var(--pc-demo-muted); font-size: .75rem; line-height: 1.5; }
+.pc-demo__boundary { max-width: 900px; margin-top: 1.2rem; font-size: .84rem; }
+@media (max-width: 700px) {
+  .pc-demo__panels { grid-template-columns: 1fr; }
+  .pc-demo__stages { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pc-demo__toolbar { align-items: flex-start; }
+  .pc-demo__proof { flex-basis: 100%; }
+  .pc-demo__case-note { min-height: 0; }
+  .pc-demo pre { min-height: 115px; font-size: .77rem; }
+}
+@media (max-width: 390px) {
+  .pc-demo__stages { grid-template-columns: 1fr; }
+  .pc-demo__stage { min-height: 56px; }
+  .pc-demo__gate-label { margin-left: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pc-demo *, .pc-demo *::before, .pc-demo *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+
 </style>
 </head>
 <body>
@@ -216,23 +488,58 @@ section{scroll-margin-top:110px}
       </span>
     </a>
     <div class="links" aria-label="Page sections">
-      <a href="#evidence">Evidence</a><a href="#agricore">AgriCore</a><a href="#state">Status</a><a href="#architecture">Architecture</a><a href="#boundaries">Scope</a>
+      <a href="#demo-showcase">Explore examples</a><a href="#evidence">Evidence</a><a href="#state">Status</a><a href="#architecture">Architecture</a><a href="#contact">Contact</a>
     </div>
   </div>
 </nav>
 
 <header class="hero" id="top">
   <div class="container">
+    <div class="hero-layout">
+    <div>
     <div class="kicker">PROCESSCORE // SYSTEMS ARCHITECTURE</div>
-    <h1>Evidence before <span class="gradient">interpretation.</span></h1>
-    <p class="lead">AI proposes a software change. ProcessCore keeps the evidence, checks and decision traceable.</p>
-    <p class="desc">An independent systems-engineering project testing how AI-generated software can move through explicit evidence and human authorization. Two distinct Python-module jobs have produced tested, accepted candidates. Factory module 0.1.2 also checks whether a previous result is relevant to a new task; broader factory capability remains a development goal.</p>
-    <div class="rule">
-      The model may interpret evidence.<br>
-      <strong>It does not establish what evidence is authoritative.</strong>
+    <h1>AI-generated code.<br><span class="gradient">Evidence you can inspect.</span></h1>
+    <p class="lead">From an explicit task to a tested candidate. ProcessCore keeps the specification, checks and human decision traceable.</p>
+    <p class="desc">Independent systems engineering on Raspberry Pi. Two distinct Python-module jobs have produced tested, accepted candidates. Explore what they do and where their evidence ends.</p>
+    <div class="actions hero-actions"><a class="btn btn-primary" href="#demo-showcase">Explore the examples <span aria-hidden="true">&nbsp;↗</span></a><a class="btn" href="https://github.com/tondad80-dev/processcore-quantum-intelligence/blob/main/README.md" target="_blank" rel="noopener noreferrer">Read the project baseline</a></div>
+    <p class="hero-principle"><strong>Evidence before interpretation.</strong>A model proposal, a passing test and permission to deploy are separate decisions.</p>
     </div>
-
-    <div class="actions hero-actions"><a class="btn" href="#evidence">See the tested examples</a><a class="btn" href="https://github.com/tondad80-dev/processcore-quantum-intelligence/blob/main/README.md" target="_blank" rel="noopener noreferrer">Read the project baseline</a></div>
+    <figure class="proof-art">
+      <div class="proof-art-head"><span>EVIDENCE WORKBENCH</span><span>Illustrative workflow</span></div>
+      <svg viewBox="0 0 500 430" role="img" aria-labelledby="workbench-title workbench-desc">
+        <title id="workbench-title">Two tested candidates, with deployment as a separate gate</title>
+        <desc id="workbench-desc">An explicit specification enters Factory module 0.1.2. NORMALIZE has seven passing tests and SUMMARY eight. Both are accepted candidates. Product deployment remains a separate decision.</desc>
+        <defs>
+          <pattern id="workbench-dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#1a3448"/></pattern>
+          <linearGradient id="module-fill" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#123347"/><stop offset="1" stop-color="#091724"/></linearGradient>
+        </defs>
+        <rect width="500" height="430" fill="url(#workbench-dots)"/>
+        <g fill="none" stroke="#376783" stroke-width="2">
+          <path d="M250 72V102M250 182V212M140 232V202H360V232M140 301V335H360V301M250 335V352"/>
+          <path d="M62 55H30V363H62M438 55H470V363H438" stroke="#19394d"/>
+        </g>
+        <rect x="150" y="30" width="200" height="42" rx="7" fill="#0b1c2b" stroke="#376783"/>
+        <text x="250" y="56" fill="#a6cde4" text-anchor="middle" font-size="12" class="mono">EXPLICIT SPECIFICATION</text>
+        <g stroke="#50809a" stroke-width="2"><path d="M201 98V107M219 98V107M237 98V107M255 98V107M273 98V107M291 98V107M201 179V188M219 179V188M237 179V188M255 179V188M273 179V188M291 179V188M166 123H177M166 141H177M166 159H177M323 123H334M323 141H334M323 159H334"/></g>
+        <rect x="177" y="107" width="146" height="72" rx="8" fill="url(#module-fill)" stroke="#7dd3fc"/>
+        <text x="250" y="136" fill="#f1f8fc" text-anchor="middle" font-size="18" font-weight="700">ProcessCore</text>
+        <text x="250" y="159" fill="#7dd3fc" text-anchor="middle" font-size="11" class="mono">FACTORY 0.1.2</text>
+        <g>
+          <rect x="62" y="232" width="156" height="69" rx="9" fill="#0b222b" stroke="#327e70"/>
+          <text x="82" y="258" fill="#dff8ef" font-size="13" font-weight="700" class="mono">NORMALIZE</text>
+          <text x="82" y="281" fill="#5ee7b1" font-size="12">7 tests passed</text>
+          <rect x="282" y="232" width="156" height="69" rx="9" fill="#0b222b" stroke="#327e70"/>
+          <text x="302" y="258" fill="#dff8ef" font-size="13" font-weight="700" class="mono">SUMMARY</text>
+          <text x="302" y="281" fill="#5ee7b1" font-size="12">8 tests passed</text>
+        </g>
+        <circle cx="250" cy="335" r="4" fill="#7dd3fc"/>
+        <rect x="117" y="352" width="266" height="49" rx="7" fill="#201e17" stroke="#9d823a" stroke-dasharray="4 4"/>
+        <text x="250" y="372" fill="#fbbf24" text-anchor="middle" font-size="11" font-weight="650">SEPARATE DEPLOYMENT DECISION</text>
+        <text x="250" y="390" fill="#c4b994" text-anchor="middle" font-size="10">Candidate acceptance does not authorize deployment.</text>
+      </svg>
+      <figcaption>Stored evidence reviewed on 14 October 2026. This illustration does not connect to or execute the Pi.</figcaption>
+    </figure>
+    </div>
     <div class="status-row" aria-label="Current ProcessCore public status">
       <div class="status ok">
         <div class="tag">✓ Stable baseline</div>
@@ -258,6 +565,87 @@ section{scroll-margin-top:110px}
 </header>
 
 <main>
+
+<section class="pc-demo" id="demo-showcase" aria-labelledby="demo-title">
+  <div class="container">
+  <div class="pc-demo__intro">
+    <p class="pc-demo__eyebrow">Browser illustration · fixed examples</p>
+    <h2 id="demo-title">Two jobs. A visible path to acceptance.</h2>
+    <p class="pc-demo__lede">Explore a small example of each accepted Python candidate. These are precomputed fixtures: this page does not run Python or connect to the Pi.</p>
+  </div>
+
+  <div class="pc-demo__workspace">
+    <div class="pc-demo__toolbar">
+      <div class="pc-demo__tabs" role="tablist" aria-label="Example job">
+        <button class="pc-demo__tab" id="demo-tab-normalize" type="button" role="tab" aria-selected="true" aria-controls="demo-job-panel" tabindex="0" data-demo-job="normalize">NORMALIZE</button>
+        <button class="pc-demo__tab" id="demo-tab-summary" type="button" role="tab" aria-selected="false" aria-controls="demo-job-panel" tabindex="-1" data-demo-job="summary">SUMMARY</button>
+      </div>
+      <p class="pc-demo__proof" id="demo-proof"><span class="pc-demo__proof-dot" aria-hidden="true"></span><span id="demo-proof-text">Accepted candidate · 7 stored tests passed</span></p>
+    </div>
+
+    <div class="pc-demo__job" id="demo-job-panel" role="tabpanel" aria-labelledby="demo-tab-normalize" tabindex="0">
+      <div class="pc-demo__job-heading">
+        <div>
+          <h3 id="demo-job-title">Normalize names and amounts</h3>
+          <p id="demo-job-description">Trim and uppercase names, then convert amounts to integers.</p>
+        </div>
+        <div class="pc-demo__cases" role="group" aria-label="Choose a fixed example">
+          <button class="pc-demo__case" type="button" aria-pressed="true" data-demo-case="valid">Valid input</button>
+          <button class="pc-demo__case" type="button" aria-pressed="false" data-demo-case="invalid">Invalid input</button>
+        </div>
+      </div>
+
+      <div class="pc-demo__panels">
+        <div class="pc-demo__code-panel">
+          <div class="pc-demo__code-heading"><h4 id="demo-input-heading">Example input</h4><span>Fixed fixture</span></div>
+          <pre aria-labelledby="demo-input-heading"><code id="demo-input">[
+  {"name": "  pear ", "amount": "12"}
+]</code></pre>
+        </div>
+        <div class="pc-demo__code-panel pc-demo__code-panel--result" id="demo-result-panel">
+          <div class="pc-demo__code-heading"><h4 id="demo-output-heading">Expected result</h4><span id="demo-result-kind">Valid result</span></div>
+          <pre aria-labelledby="demo-output-heading"><code id="demo-output">[
+  {"name": "PEAR", "amount": 12}
+]</code></pre>
+        </div>
+      </div>
+      <p class="pc-demo__case-note" id="demo-case-note">A cleaned name and a numeric amount, shown as a fixed example.</p>
+    </div>
+
+    <div class="pc-demo__walkthrough" aria-labelledby="demo-walkthrough-title">
+      <div class="pc-demo__walkthrough-heading">
+        <div>
+          <p class="pc-demo__eyebrow">Explore the six stages</p>
+          <h3 id="demo-walkthrough-title">Acceptance has a boundary.</h3>
+        </div>
+        <div class="pc-demo__playback" role="group" aria-label="Walkthrough controls">
+          <button class="pc-demo__control" id="demo-play" type="button" aria-describedby="demo-motion-note">Play walkthrough</button>
+          <button class="pc-demo__control pc-demo__control--quiet" id="demo-replay" type="button">Replay</button>
+        </div>
+      </div>
+
+      <ol class="pc-demo__stages" aria-label="Candidate workflow">
+        <li><button class="pc-demo__stage" type="button" data-demo-stage="0" aria-current="step"><span class="pc-demo__stage-number" aria-hidden="true">01</span><span>Specification</span></button></li>
+        <li><button class="pc-demo__stage" type="button" data-demo-stage="1"><span class="pc-demo__stage-number" aria-hidden="true">02</span><span>Generation</span></button></li>
+        <li><button class="pc-demo__stage" type="button" data-demo-stage="2"><span class="pc-demo__stage-number" aria-hidden="true">03</span><span>Static checks</span></button></li>
+        <li><button class="pc-demo__stage" type="button" data-demo-stage="3"><span class="pc-demo__stage-number" aria-hidden="true">04</span><span>Isolated tests</span></button></li>
+        <li><button class="pc-demo__stage" type="button" data-demo-stage="4"><span class="pc-demo__stage-number" aria-hidden="true">05</span><span>Candidate acceptance</span></button></li>
+        <li><button class="pc-demo__stage pc-demo__stage--gate" type="button" data-demo-stage="5"><span class="pc-demo__stage-number" aria-hidden="true">06</span><span>Separate deployment gate</span><span class="pc-demo__gate-label">Not authorized</span></button></li>
+      </ol>
+
+      <div class="pc-demo__stage-detail" id="demo-stage-detail">
+        <p class="pc-demo__stage-kicker" id="demo-stage-kicker">Stage 1 of 6 · Specification</p>
+        <p id="demo-stage-explanation">Specify how names and amounts should be normalized, including rejection of a boolean amount.</p>
+      </div>
+      <p class="pc-demo__motion-note" id="demo-motion-note">Paused by default. Select any stage, or play the illustrated walkthrough.</p>
+    </div>
+  </div>
+
+  <p class="pc-demo__boundary">The stored results are 7 passing tests for NORMALIZE and 8 for SUMMARY. Both are accepted candidates; this showcase does not establish production deployment or general factory capability.</p>
+<noscript><p class="pc-demo__boundary">This static view shows the NORMALIZE example. Enable JavaScript to switch examples and explore the walkthrough.</p></noscript>
+</div>
+</section>
+
 
 <section id="evidence">
   <div class="container">
@@ -470,6 +858,15 @@ section{scroll-margin-top:110px}
 
 </main>
 
+<div class="container" id="contact">
+  <div class="closing-cta">
+    <div class="label">Discuss a concrete task</div>
+    <h2>Bring a small, testable software problem.</h2>
+    <p>Interested in evidence and acceptance around AI-generated Python modules? Describe the input, expected output and how you would decide whether the result is useful. We can discuss whether it fits the current experimental scope.</p>
+    <div class="actions"><a class="btn btn-primary" href="mailto:tondad80@gmail.com?subject=ProcessCore%20%E2%80%94%20a%20testable%20software%20task">Discuss your task</a><a class="btn" href="https://www.linkedin.com/in/tonda-dospiva-b160281a7/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a></div>
+  </div>
+</div>
+
 <footer>
   <div class="container">
     <strong>Antonín Dospiva — Systems Architect</strong>
@@ -488,5 +885,219 @@ section{scroll-margin-top:110px}
 </footer>
 
 <div class="container" role="note" style="padding:18px 0;color:#94a3b8;font-size:12px">Public evidence note (14 October 2026): this page is a dated review of evidence on Pi, not a live health report. Tested candidates, advisory reuse, product adoption and commercial outcomes remain separate claims. No general production readiness or customer adoption is established.</div>
+<script>
+(function () {
+  "use strict";
+
+  function initDemo() {
+    const root = document.getElementById("demo-showcase");
+    if (!root || root.dataset.demoReady === "true") return;
+    root.dataset.demoReady = "true";
+
+    // These fixtures illustrate stored candidate behavior. No Python, network,
+    // or Pi execution occurs in this browser widget.
+    const jobs = {
+      normalize: {
+        title: "Normalize names and amounts",
+        description: "Trim and uppercase names, then convert amounts to integers.",
+        tests: 7,
+        specification: "Specify how names and amounts should be normalized, including rejection of a boolean amount.",
+        cases: {
+          valid: {
+            input: '[\n  {"name": "  pear ", "amount": "12"}\n]',
+            output: '[\n  {"name": "PEAR", "amount": 12}\n]',
+            note: "A cleaned name and a numeric amount, shown as a fixed example."
+          },
+          invalid: {
+            input: '[\n  {"name": "  pear ", "amount": true}\n]',
+            output: "ValueError",
+            note: "A boolean amount is invalid. The fixed expected result is ValueError."
+          }
+        }
+      },
+      summary: {
+        title: "Summarize validated records by category",
+        description: "Validate every row before deduplication, then count and total by category.",
+        tests: 8,
+        specification: "Specify row validation, ID deduplication, and totals by category. Every row must validate before duplicate IDs are removed.",
+        cases: {
+          valid: {
+            input: '[\n  {"id": "1", "category": "a", "value": 3},\n  {"id": "2", "category": "a", "value": -1}\n]',
+            output: '{\n  "a": {"count": 2, "total": 2}\n}',
+            note: "Two distinct records in category a produce count 2 and total 2, shown as a fixed example."
+          },
+          invalid: {
+            input: '[\n  {"id": "1", "category": "a", "value": 3},\n  {"id": "1", "category": "a", "value": true}\n]',
+            output: "ValueError",
+            note: "The second row has a duplicate ID and an invalid boolean value. Validation happens before deduplication, so it still raises ValueError."
+          }
+        }
+      }
+    };
+    const stageTitles = ["Specification", "Generation", "Static checks", "Isolated tests", "Candidate acceptance", "Separate deployment gate"];
+    const tabs = Array.from(root.querySelectorAll("[data-demo-job]"));
+    const cases = Array.from(root.querySelectorAll("[data-demo-case]"));
+    const stages = Array.from(root.querySelectorAll("[data-demo-stage]"));
+    const play = root.querySelector("#demo-play");
+    const replay = root.querySelector("#demo-replay");
+    const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let jobKey = "normalize";
+    let caseKey = "valid";
+    let stageIndex = 0;
+    let timer = null;
+    let playing = false;
+
+    function setText(id, value) {
+      root.querySelector("#" + id).textContent = value;
+    }
+
+    function renderControls() {
+      play.disabled = motion.matches;
+      play.textContent = playing ? "Pause walkthrough" : "Play walkthrough";
+      replay.textContent = motion.matches ? "Reset walkthrough" : "Replay";
+      setText("demo-motion-note", motion.matches
+        ? "Reduced motion is enabled. Select stages manually; reset returns to the first stage."
+        : playing
+          ? "Playing an illustrated sequence of fixed examples. Pause or select any stage."
+          : "Paused. Select any stage, or play the illustrated walkthrough.");
+    }
+
+    function pause() {
+      if (timer !== null) window.clearTimeout(timer);
+      timer = null;
+      playing = false;
+      renderControls();
+    }
+
+    function renderStage() {
+      const job = jobs[jobKey];
+      const explanations = [
+        job.specification,
+        "Generate a Python candidate against the job specification. Generated code remains a candidate at this stage.",
+        "Check the candidate against static validation rules before isolated testing. This illustration does not rerun those checks.",
+        job.tests + " passing tests are recorded for this candidate. Those results apply to this job and its tested scope.",
+        "The candidate has been accepted with its stored evidence. Acceptance does not itself authorize deployment into a product.",
+        "Deployment requires a separate decision. Production deployment is not authorized by this candidate acceptance or by this browser showcase."
+      ];
+      stages.forEach(function (button, index) {
+        if (index === stageIndex) button.setAttribute("aria-current", "step");
+        else button.removeAttribute("aria-current");
+      });
+      setText("demo-stage-kicker", "Stage " + (stageIndex + 1) + " of 6 · " + stageTitles[stageIndex]);
+      setText("demo-stage-explanation", explanations[stageIndex]);
+    }
+
+    function renderJob() {
+      const job = jobs[jobKey];
+      const fixture = job.cases[caseKey];
+      tabs.forEach(function (tab) {
+        const selected = tab.dataset.demoJob === jobKey;
+        tab.setAttribute("aria-selected", String(selected));
+        tab.tabIndex = selected ? 0 : -1;
+      });
+      cases.forEach(function (button) {
+        button.setAttribute("aria-pressed", String(button.dataset.demoCase === caseKey));
+      });
+      root.querySelector("#demo-job-panel").setAttribute("aria-labelledby", "demo-tab-" + jobKey);
+      setText("demo-job-title", job.title);
+      setText("demo-job-description", job.description);
+      setText("demo-proof-text", "Accepted candidate · " + job.tests + " stored tests passed");
+      setText("demo-input", fixture.input);
+      setText("demo-output", fixture.output);
+      setText("demo-result-kind", caseKey === "invalid" ? "Expected rejection" : "Valid result");
+      setText("demo-case-note", fixture.note);
+      root.querySelector("#demo-result-panel").classList.toggle("pc-demo__code-panel--error", caseKey === "invalid");
+      renderStage();
+    }
+
+    function selectJob(key) {
+      if (!Object.prototype.hasOwnProperty.call(jobs, key)) return;
+      pause();
+      jobKey = key;
+      caseKey = "valid";
+      stageIndex = 0;
+      renderJob();
+    }
+
+    function scheduleNext() {
+      if (!playing || motion.matches || document.hidden) {
+        pause();
+        return;
+      }
+      timer = window.setTimeout(function () {
+        timer = null;
+        if (!playing || motion.matches || document.hidden) {
+          pause();
+          return;
+        }
+        stageIndex += 1;
+        renderStage();
+        if (stageIndex === stages.length - 1) pause();
+        else scheduleNext();
+      }, 2800);
+    }
+
+    function start() {
+      pause();
+      if (motion.matches || document.hidden) return;
+      if (stageIndex === stages.length - 1) {
+        stageIndex = 0;
+        renderStage();
+      }
+      playing = true;
+      renderControls();
+      scheduleNext();
+    }
+
+    tabs.forEach(function (tab, index) {
+      tab.addEventListener("click", function () { selectJob(tab.dataset.demoJob); });
+      tab.addEventListener("keydown", function (event) {
+        let nextIndex;
+        if (event.key === "ArrowRight") nextIndex = (index + 1) % tabs.length;
+        else if (event.key === "ArrowLeft") nextIndex = (index + tabs.length - 1) % tabs.length;
+        else if (event.key === "Home") nextIndex = 0;
+        else if (event.key === "End") nextIndex = tabs.length - 1;
+        else return;
+        event.preventDefault();
+        selectJob(tabs[nextIndex].dataset.demoJob);
+        tabs[nextIndex].focus();
+      });
+    });
+    cases.forEach(function (button) {
+      button.addEventListener("click", function () {
+        pause();
+        caseKey = button.dataset.demoCase;
+        renderJob();
+      });
+    });
+    stages.forEach(function (button) {
+      button.addEventListener("click", function () {
+        pause();
+        stageIndex = Number(button.dataset.demoStage);
+        renderStage();
+      });
+    });
+    play.addEventListener("click", function () { if (playing) pause(); else start(); });
+    replay.addEventListener("click", function () {
+      pause();
+      stageIndex = 0;
+      renderStage();
+      if (!motion.matches) start();
+    });
+    document.addEventListener("visibilitychange", function () { if (document.hidden) pause(); });
+    window.addEventListener("pagehide", pause);
+    if (typeof motion.addEventListener === "function") motion.addEventListener("change", pause);
+    else if (typeof motion.addListener === "function") motion.addListener(pause);
+
+    renderJob();
+    renderControls();
+  }
+
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initDemo, { once: true });
+  else initDemo();
+}());
+
+</script>
 </body>
 </html>
+
