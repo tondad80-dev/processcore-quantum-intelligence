@@ -2,7 +2,7 @@
 
 **Evidence before interpretation.**
 
-ProcessCore is an independent experimental systems-engineering project exploring evidence, provenance, authority and auditability around AI interpretation and governed software generation.
+ProcessCore is an independent engineering project developing checks for AI-generated Python modules on Raspberry Pi. It pairs explicit specifications with predefined tests and recorded results. Deployment remains a separate human decision.
 
 [Website](https://tondad80-dev.github.io/processcore-quantum-intelligence/) · [Dated verification](public-status-2026-10-14.md)
 
@@ -63,6 +63,8 @@ A result in ProcessCore, QCore or AgriCore does not automatically advance the au
 Earlier ecosystem-discovery and market-intelligence material is historical lineage. Its archived metrics and scientific claims are not presented as currently reproduced results. The historic JSON download is an excerpt; per-record validation evidence is not included.
 
 ## Contact and contributions
+
+For a possible collaboration, send a small Python task with sample input, the expected output and what should count as failure. If it fits the prototype, we can discuss a bounded experiment, its tests and the evidence needed to judge the result.
 
 **Antonín Dospiva — Systems Architect**  
 [LinkedIn](https://www.linkedin.com/in/tonda-dospiva-b160281a7/) · [Repository](https://github.com/tondad80-dev/processcore-quantum-intelligence) · [Contribution guidance](CONTRIBUTING.md)

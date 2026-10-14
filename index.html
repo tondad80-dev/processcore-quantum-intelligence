@@ -20,7 +20,7 @@ limitations under the License.
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#030712">
 <meta name="author" content="Antonín Dospiva">
-<meta name="description" content="ProcessCore — deterministic evidence, provenance, authority and auditability around probabilistic AI and governed software generation. Observation baseline v0.4; Factory module 0.1.3-rc.1 with two tested, accepted Python candidates and bounded advisory reuse.">
+<meta name="description" content="ProcessCore: an independent engineering portfolio with recorded Raspberry Pi checks of AI-generated Python modules. Inspect a controlled 999-tests-claimed, zero-completed verification and its evidence.">
 <meta name="robots" content="index,follow">
 
 <link rel="canonical" href="https://tondad80-dev.github.io/processcore-quantum-intelligence/">
@@ -29,7 +29,7 @@ limitations under the License.
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="ProcessCore | Evidence Before Interpretation">
-<meta property="og:description" content="Observation v0.4; Factory module 0.1.3-rc.1 with two tested, accepted Python candidates and advisory reuse. Product adoption remains separate.">
+<meta property="og:description" content="Recorded Pi tests, inspectable results and separate deployment decisions. A bounded engineering prototype.">
 <meta property="og:url" content="https://tondad80-dev.github.io/processcore-quantum-intelligence/">
 <meta property="og:image" content="https://tondad80-dev.github.io/processcore-quantum-intelligence/media/processcore-false-pass-poster.png">
 <meta property="og:image:alt" content="Masked Pi terminal: 999 tests claimed, zero completed; the independent runner rejects the incomplete run.">
@@ -37,7 +37,7 @@ limitations under the License.
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="ProcessCore | Evidence Before Interpretation">
-<meta name="twitter:description" content="Observation v0.4; Factory module 0.1.3-rc.1 with two tested, accepted Python candidates and advisory reuse. Product adoption remains separate.">
+<meta name="twitter:description" content="Recorded Pi tests, inspectable results and separate deployment decisions. A bounded engineering prototype.">
 <meta name="twitter:image" content="https://tondad80-dev.github.io/processcore-quantum-intelligence/media/processcore-false-pass-poster.png">
 
 <script type="application/ld+json">
@@ -612,6 +612,31 @@ section, #contact, #top { scroll-margin-top: 110px; }
 @media (max-width: 900px) {
   section, #contact, #top { scroll-margin-top: 140px; }
 }
+
+/* A short introduction leads to recorded evidence; detail stays optional. */
+.hero-layout { grid-template-columns: 1.05fr 1fr; gap: 40px; }
+.terminal-preview { overflow: hidden; border: 1px solid rgba(125,211,252,.3); border-radius: 16px; background: #07111d; box-shadow: 0 22px 60px rgba(0,0,0,.26); }
+.terminal-preview-head { display: flex; justify-content: space-between; gap: 12px; padding: 16px 18px; color: var(--cyan2); font: 11px var(--mono); }
+.terminal-preview a { display: block; text-decoration: none; }
+.terminal-preview img { display: block; width: 100%; height: auto; }
+.terminal-preview-action { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 15px; color: #041321; background: var(--cyan2); font-size: 14px; font-weight: 700; }
+.terminal-preview a:hover .terminal-preview-action { background: #b8e8ff; }
+.terminal-preview a:focus-visible { outline: 3px solid var(--green); outline-offset: -3px; }
+.terminal-preview figcaption { padding: 14px 18px; color: var(--muted); font-size: 12px; }
+.deeper { margin-top: 18px; }
+.deeper>summary { font-size: 16px; line-height: 1.5; min-height: 56px; }
+.deeper[open]>.deeper-body { padding-top: 22px; }
+.deeper-body>.section-lead { font-size: 15px; }
+.deeper-body>h3 { font-size: 23px; line-height: 1.3; margin-bottom: 14px; }
+.deeper-body .proof-art { max-width: 560px; margin: 28px auto 0; }
+.deeper-body .status-row { margin-top: 0; }
+.closing-cta p + p { margin-top: 12px; }
+#related-projects table { min-width: 0; }
+#related-projects tbody th { width: 24%; }
+#archive { padding-top: 32px; padding-bottom: 32px; }
+@media (max-width: 900px) { .hero-layout { grid-template-columns: 1fr; gap: 28px; } .terminal-preview { max-width: 600px; } }
+@media (max-width: 600px) { .deeper>summary { padding: 16px; font-size: 15px; } .deeper-body { padding-left: 16px; padding-right: 16px; } }
+
 </style>
 </head>
 <body>
@@ -639,75 +664,27 @@ section, #contact, #top { scroll-margin-top: 110px; }
   <div class="container">
     <div class="hero-layout">
     <div>
-    <div class="kicker">PROCESSCORE // SYSTEMS ARCHITECTURE</div>
-    <h1>AI-generated code.<br><span class="gradient">Evidence you can inspect.</span></h1>
-    <p class="lead">From an explicit task to a tested candidate. ProcessCore records the specification and checks, and keeps deployment as a separate human decision.</p>
-    <p class="desc">Independent systems engineering on Raspberry Pi. Two distinct Python-module jobs have produced tested, accepted candidates. Explore what they do and where their evidence ends.</p>
-    <div class="actions hero-actions"><a class="btn btn-primary" href="#false-pass-verification">Watch the verification <span aria-hidden="true">&nbsp;↗</span></a><a class="btn" href="https://github.com/tondad80-dev/processcore-quantum-intelligence/blob/main/README.md" target="_blank" rel="noopener noreferrer">Read the project baseline</a></div>
+    <div class="kicker">ANTONÍN DOSPIVA // SYSTEMS ENGINEERING</div>
+    <h1>AI-written code.<br><span class="gradient">Check what actually ran.</span></h1>
+    <p class="lead">I’m developing ProcessCore to check AI-generated Python modules on Raspberry Pi using predefined tests and recorded results. Deployment remains a separate human decision.</p>
+    <p class="desc">An independent engineering portfolio by Antonín Dospiva. Start with a recorded test, then inspect the results and technical notes.</p>
+    <div class="actions hero-actions"><a class="btn btn-primary" href="#false-pass-verification">Watch the verification <span aria-hidden="true">&nbsp;↗</span></a><a class="btn" href="#contact">Discuss a Python task</a></div>
     <p class="hero-principle"><strong>Evidence before interpretation.</strong>A model proposal, a passing test and permission to deploy are separate decisions.</p>
     </div>
-    <figure class="proof-art">
-      <div class="proof-art-head"><span>EVIDENCE WORKBENCH</span><span>Illustrative workflow</span></div>
-      <svg viewBox="0 0 500 430" role="img" aria-labelledby="workbench-title workbench-desc">
-        <title id="workbench-title">Two historical tested candidates, with deployment as a separate gate</title>
-        <desc id="workbench-desc">The original Factory 0.1.0 jobs produced NORMALIZE with seven passing tests and SUMMARY with eight. Both are accepted candidates. The current runner is 0.1.3-rc.1; its recorded verification includes a fresh NORMALIZE control. Product deployment remains a separate decision.</desc>
-        <defs>
-          <pattern id="workbench-dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#1a3448"/></pattern>
-          <linearGradient id="module-fill" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#123347"/><stop offset="1" stop-color="#091724"/></linearGradient>
-        </defs>
-        <rect width="500" height="430" fill="url(#workbench-dots)"/>
-        <g fill="none" stroke="#376783" stroke-width="2">
-          <path d="M250 72V102M250 182V212M140 232V202H360V232M140 301V335H360V301M250 335V352"/>
-          <path d="M62 55H30V363H62M438 55H470V363H438" stroke="#19394d"/>
-        </g>
-        <rect x="150" y="30" width="200" height="42" rx="7" fill="#0b1c2b" stroke="#376783"/>
-        <text x="250" y="56" fill="#a6cde4" text-anchor="middle" font-size="12" class="mono">EXPLICIT SPECIFICATION</text>
-        <g stroke="#50809a" stroke-width="2"><path d="M201 98V107M219 98V107M237 98V107M255 98V107M273 98V107M291 98V107M201 179V188M219 179V188M237 179V188M255 179V188M273 179V188M291 179V188M166 123H177M166 141H177M166 159H177M323 123H334M323 141H334M323 159H334"/></g>
-        <rect x="177" y="107" width="146" height="72" rx="8" fill="url(#module-fill)" stroke="#7dd3fc"/>
-        <text x="250" y="136" fill="#f1f8fc" text-anchor="middle" font-size="18" font-weight="700">ProcessCore</text>
-        <text x="250" y="159" fill="#7dd3fc" text-anchor="middle" font-size="11" class="mono">FACTORY 0.1.0 JOBS</text>
-        <g>
-          <rect x="62" y="232" width="156" height="69" rx="9" fill="#0b222b" stroke="#327e70"/>
-          <text x="82" y="258" fill="#dff8ef" font-size="13" font-weight="700" class="mono">NORMALIZE</text>
-          <text x="82" y="281" fill="#5ee7b1" font-size="12">7 tests passed</text>
-          <rect x="282" y="232" width="156" height="69" rx="9" fill="#0b222b" stroke="#327e70"/>
-          <text x="302" y="258" fill="#dff8ef" font-size="13" font-weight="700" class="mono">SUMMARY</text>
-          <text x="302" y="281" fill="#5ee7b1" font-size="12">8 tests passed</text>
-        </g>
-        <circle cx="250" cy="335" r="4" fill="#7dd3fc"/>
-        <rect x="117" y="352" width="266" height="49" rx="7" fill="#201e17" stroke="#9d823a" stroke-dasharray="4 4"/>
-        <text x="250" y="372" fill="#fbbf24" text-anchor="middle" font-size="11" font-weight="650">SEPARATE DEPLOYMENT DECISION</text>
-        <text x="250" y="390" fill="#c4b994" text-anchor="middle" font-size="10">Candidate acceptance does not authorize deployment.</text>
-      </svg>
-      <figcaption>Original jobs: Factory 0.1.0. Stored evidence reviewed on 14 October 2026. This illustration does not connect to or execute the Pi.</figcaption>
+    <figure class="terminal-preview">
+      <div class="terminal-preview-head"><span>ACTUAL PI TERMINAL</span><span>34-SECOND REPLAY</span></div>
+      <a href="#false-pass-verification" aria-label="Watch the recorded Pi verification: 999 tests claimed, none completed">
+        <img src="media/processcore-false-pass-poster.png" alt="Masked terminal output: the independent runner records zero completed tests and rejects the incomplete run." width="1600" height="1200" fetchpriority="high">
+        <span class="terminal-preview-action"><span aria-hidden="true">▶</span> Watch the recorded check</span>
+      </a>
+      <figcaption>A deliberately constructed offline fixture. Actual recorded execution; identity masked and playback slowed.</figcaption>
     </figure>
-    </div>
-    <div class="status-row" aria-label="Current ProcessCore public status">
-      <div class="status ok">
-        <div class="tag">✓ Stable baseline</div>
-        <strong>Observation runtime v0.4</strong>
-        <p>Accepted public reference baseline with demonstrated functional repeatability.</p>
-      </div>
-      <div class="status ok">
-        <div class="tag">Tested candidates</div><strong>Two distinct Python jobs</strong>
-        <p>NORMALIZE: 7 tests. SUMMARY: 8 tests. Both accepted as candidates; neither deployed into a product.</p>
-      </div>
-      <div class="status watch">
-        <div class="tag">Active frontier</div>
-        <strong>Governed AI Factory</strong>
-        <p>The strategic target is a reusable safe software factory with human authority and sealed evidence. AgriCore is a development demonstrator for this direction.</p>
-      </div>
-      <div class="status bound">
-        <div class="tag">Advisory reuse</div><strong>12 modeled conditions</strong>
-        <p>Previous results can inform a new task under an explicit contract. Fresh tests and acceptance remain required.</p>
-      </div>
     </div>
     <p class="review-note">Page reviewed <time datetime="2026-10-14">14 October 2026</time> · Factory module: 0.1.3-rc.1 · Observation baseline: v0.4</p>
   </div>
 </header>
 
 <main>
-<!-- Insert as a section inside the existing main element; add wow-web-snippet.css to the existing stylesheet. -->
 <section class="pc-proof" id="false-pass-verification" aria-labelledby="pc-proof-title">
   <div class="container">
     <div class="pc-proof-heading">
@@ -761,16 +738,30 @@ section, #contact, #top { scroll-margin-top: 110px; }
   </div>
 </section>
 
-
-<section class="pc-demo" id="demo-showcase" aria-labelledby="demo-title">
+<section id="evidence">
   <div class="container">
-  <div class="pc-demo__intro">
-    <p class="pc-demo__eyebrow">Browser illustration · fixed examples</p>
-    <h2 id="demo-title">Two jobs. A visible path to acceptance.</h2>
-    <p class="pc-demo__lede">Explore a small example of each accepted Python candidate. These are precomputed fixtures: this page does not run Python or connect to the Pi.</p>
-  </div>
+    <div class="label">Verified examples · 14 October 2026</div>
+    <h2>Two tasks. Inspectable results.</h2>
+    <p class="section-lead">Two original Factory 0.1.0 jobs generated Python modules from explicit specifications and ran predefined tests on Raspberry Pi. Each recorded one model invocation and a separate candidate acceptance.</p>
+    <div class="table-wrap"><table>
+      <caption>Verified Factory job results</caption>
+      <thead><tr><th scope="col">Job</th><th scope="col">Result</th><th scope="col">Boundary</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">NORMALIZE</th><td>7 prescribed tests passed; candidate accepted.</td><td>Limited to the specified module and tested cases.</td></tr>
+        <tr><th scope="row">SUMMARY</th><td>8 prescribed tests passed; candidate accepted.</td><td>Limited to the specified module and tested cases.</td></tr>
+        <tr><th scope="row">Product deployment</th><td>Neither candidate is deployed into a product.</td><td>Acceptance as a candidate does not establish product adoption.</td></tr>
+      </tbody>
+    </table></div>
+    <p class="review-note">Verification checked all 29 files in the installed module manifest, the original job results and their acceptance records. The original jobs were generated with Factory 0.1.0; the terminal replay separately checks the current 0.1.3-rc.1 runner. Raw internal artifacts are not reproduced here. <a href="https://github.com/tondad80-dev/processcore-quantum-intelligence/blob/main/public-status-2026-10-14.md" target="_blank" rel="noopener noreferrer">Read the dated verification note</a>.</p>
+  <p class="review-note"><a href="https://github.com/tondad80-dev/processcore-quantum-intelligence/blob/main/README.md" target="_blank" rel="noopener noreferrer">Read the project baseline and evidence summary</a></p></div>
+</section>
 
-  <div class="pc-demo__workspace">
+<section class="pc-demo" aria-labelledby="demo-title">
+<div class="container">
+  <p class="label">Optional browser illustration</p>
+  <h2 id="demo-title">Explore the example modules.</h2>
+  <p class="section-lead">Open two fixed input/output examples and their six-stage walkthrough. These examples are precomputed; the browser does not execute Python or connect to the Pi.</p>
+  <details class="deeper" id="demo-showcase"><summary>Open NORMALIZE and SUMMARY examples</summary><div class="deeper-body">  <div class="pc-demo__workspace">
     <div class="pc-demo__toolbar">
       <div class="pc-demo__tabs" role="tablist" aria-label="Example job">
         <button class="pc-demo__tab" id="demo-tab-normalize" type="button" role="tab" aria-selected="true" aria-controls="demo-job-panel" tabindex="0" data-demo-job="normalize">NORMALIZE</button>
@@ -839,57 +830,85 @@ section, #contact, #top { scroll-margin-top: 110px; }
 
   <p class="pc-demo__boundary">The stored results are 7 passing tests for NORMALIZE and 8 for SUMMARY. Both are accepted candidates; this showcase does not establish production deployment or general factory capability.</p>
 <noscript><p class="pc-demo__boundary">This static view shows the NORMALIZE example. Enable JavaScript to switch examples and explore the walkthrough.</p></noscript>
+</div></details>
 </div>
 </section>
 
+<section id="state"><div class="container">
+  <p class="label">Reviewed 14 October 2026</p>
+  <h2>What has been demonstrated?</h2>
+  <p class="section-lead">Two original Python jobs have accepted candidates. The recorded terminal check separately verifies the newer runner against an incomplete test run.</p>
+  <details class="deeper" id="component-details"><summary>Component versions and remaining checks</summary><div class="deeper-body">    <div class="status-row" aria-label="Reviewed ProcessCore component status">
+      <div class="status ok">
+        <div class="tag">✓ Stable baseline</div>
+        <strong>Observation runtime v0.4</strong>
+        <p>Accepted public reference baseline with demonstrated functional repeatability.</p>
+      </div>
+      <div class="status ok">
+        <div class="tag">Tested candidates</div><strong>Two distinct Python jobs</strong>
+        <p>NORMALIZE: 7 tests. SUMMARY: 8 tests. Both accepted as candidates; neither deployed into a product.</p>
+      </div>
+      <div class="status watch">
+        <div class="tag">Active frontier</div>
+        <strong>Governed AI Factory</strong>
+        <p>The strategic target is a reusable safe software factory with human authority and sealed evidence. AgriCore is a development demonstrator for this direction.</p>
+      </div>
+      <div class="status bound">
+        <div class="tag">Advisory reuse</div><strong>12 modeled conditions</strong>
+        <p>Previous results can inform a new task under an explicit contract. Fresh tests and acceptance remain required.</p>
+      </div>
+    </div>
 
-<section id="evidence">
-  <div class="container">
-    <div class="label">Verified examples · 14 October 2026</div>
-    <h2>Two tasks. Inspectable results.</h2>
-    <p class="section-lead">The same bounded Factory workflow generated and tested two distinct Python modules on Raspberry Pi. Each job used an explicit specification and predefined acceptance tests, with one model invocation and a separately recorded candidate acceptance.</p>
-    <div class="table-wrap"><table>
-      <caption>Verified Factory job results</caption>
-      <thead><tr><th scope="col">Job</th><th scope="col">Result</th><th scope="col">Boundary</th></tr></thead>
-      <tbody>
-        <tr><th scope="row">NORMALIZE</th><td>7 prescribed tests passed; candidate accepted.</td><td>Limited to the specified module and tested cases.</td></tr>
-        <tr><th scope="row">SUMMARY</th><td>8 prescribed tests passed; candidate accepted.</td><td>Limited to the specified module and tested cases.</td></tr>
-        <tr><th scope="row">Product deployment</th><td>Neither candidate is deployed into a product.</td><td>Acceptance as a candidate does not establish product adoption.</td></tr>
-      </tbody>
-    </table></div>
-    <p class="review-note">Verification checked all 29 files in the installed module manifest, the original job results and their acceptance records. The original jobs were generated with Factory 0.1.0; the terminal replay separately checks the current 0.1.3-rc.1 runner. Raw internal artifacts are not reproduced here. <a href="https://github.com/tondad80-dev/processcore-quantum-intelligence/blob/main/public-status-2026-10-14.md" target="_blank" rel="noopener noreferrer">Read the dated verification note</a>.</p>
-  </div>
-</section>
+    
+    <p class="section-lead">Observation runtime v0.4 and Factory module 0.1.3-rc.1 are separate versioned components. The new module does not declare a new observation-runtime release or a general production-ready factory.</p>
+    <div class="grid">
+      <article class="card"><h3>Observation baseline v0.4</h3><p>The accepted observation baseline remains preserved. Earlier controlled runs demonstrated functional and semantic repeatability.</p></article>
+      <article class="card"><h3>Factory module 0.1.3-rc.1</h3><p>Installed on Pi with matching integrity across 29 manifest files. The original 0.1.0 jobs have stored acceptance results of 7 and 8 tests. The current runner separates the test runner from candidate execution; the recorded verification includes a fresh NORMALIZE control.</p></article>
+      <article class="card"><h3>Next acceptance gate</h3><p>Demonstrate a fresh task using advisory reuse, then independently validate its delivery and product integration. Broader usability and token savings remain unproven.</p></article>
+    </div></div></details>
+</div></section>
 
+<section id="boundaries"><div class="container">
+  <p class="label">Scope of the evidence</p>
+  <h2>What these checks establish.</h2>
+  <p class="section-lead">The public results cover specified Python modules and one controlled failure mode in the acceptance runner. The prescribed tests define the scope of each result.</p>
+  <ul class="list boundary">
+    <li>Candidate acceptance and product deployment are separate decisions. Neither of the two original candidates is deployed into a product.</li>
+    <li>End-to-end reuse with fresh acceptance and product integration remains to be demonstrated in this reviewed snapshot.</li>
+    <li>General production readiness, universal portability, token savings and hallucination elimination are not established by these results.</li>
+  </ul>
+</div></section>
 
-<section id="architecture">
-  <div class="container">
-    <div class="label">Public architecture</div>
-    <h2>Authority is established before interpretation.</h2>
+<section id="architecture"><div class="container">
+  <p class="label">Optional technical notes</p>
+  <h2>Look inside the engineering.</h2>
+  <p class="section-lead">Inspect how ProcessCore records evidence, separates tests from candidate execution and keeps decisions about changes explicit.</p>
+  <details class="deeper" id="evidence-design"><summary>Evidence, sources and decisions</summary><div class="deeper-body">
+    
     <p class="section-lead">
-      ProcessCore separates the path that establishes evidence identity and authority from downstream human or AI interpretation.
+      ProcessCore records what was observed, where it came from and which rules apply. Human or AI interpretation remains a separate step.
     </p>
 
     <div class="flow">
       <article class="node">
         <span class="n">01</span>
         <h3>Evidence</h3>
-        <p>Observable system or project state is captured as explicit, bounded evidence.</p>
+        <p>Record the observed input or result so it can be inspected.</p>
       </article>
       <article class="node">
         <span class="n">02</span>
         <h3>Provenance</h3>
-        <p>Source identity, scope, lineage and currentness are attached to the evidence path.</p>
+        <p>Identify the source, version and scope of each record.</p>
       </article>
       <article class="node">
         <span class="n">03</span>
         <h3>Authority</h3>
-        <p>Explicit rules determine what may be treated as authoritative for the current project and version.</p>
+        <p>Specify which record or decision applies to this project and version.</p>
       </article>
       <article class="node">
         <span class="n">04</span>
         <h3>Interpretation</h3>
-        <p>Humans and AI may interpret the result without redefining the evidence underneath it.</p>
+        <p>Explain the result while preserving its original record.</p>
       </article>
     </div>
 
@@ -897,36 +916,46 @@ section, #contact, #top { scroll-margin-top: 110px; }
       <strong>Control-path invariant:</strong>
       ACTUAL_STATE ≠ EXPECTED_STATE ≠ POLICY_DECISION ≠ AUTHORIZATION ≠ EFFECT.
       Detecting a difference does not create permission to change it.
-    </div>
-  </div>
-</section>
-
-<section id="state">
-  <div class="container">
-    <div class="label">Project status · reviewed 14 October 2026</div>
-    <h2>A stable baseline. A working bounded Factory module.</h2>
-    <p class="section-lead">Observation runtime v0.4 and Factory module 0.1.3-rc.1 are separate versioned components. The new module does not declare a new observation-runtime release or a general production-ready factory.</p>
-    <div class="grid">
-      <article class="card"><h3>Observation baseline v0.4</h3><p>The accepted observation baseline remains preserved. Earlier controlled runs demonstrated functional and semantic repeatability.</p></article>
-      <article class="card"><h3>Factory module 0.1.3-rc.1</h3><p>Installed on Pi with matching integrity across 29 manifest files. The original 0.1.0 jobs have stored acceptance results of 7 and 8 tests. The current runner separates the test runner from candidate execution; the recorded verification includes a fresh NORMALIZE control.</p></article>
-      <article class="card"><h3>Next acceptance gate</h3><p>Demonstrate a fresh task using advisory reuse, then independently validate its delivery and product integration. Broader usability and token savings remain unproven.</p></article>
-    </div>
-  </div>
-</section>
-
-<section id="factory">
-  <div class="container">
-    <div class="label">AI Factory · advisory reuse</div>
-    <h2>Use earlier work with explicit limits.</h2>
+    </div>    <figure class="proof-art">
+      <div class="proof-art-head"><span>EVIDENCE WORKBENCH</span><span>Illustrative workflow</span></div>
+      <svg viewBox="0 0 500 430" role="img" aria-labelledby="workbench-title workbench-desc">
+        <title id="workbench-title">Two historical tested candidates, with deployment as a separate gate</title>
+        <desc id="workbench-desc">The original Factory 0.1.0 jobs produced NORMALIZE with seven passing tests and SUMMARY with eight. Both are accepted candidates. The current runner is 0.1.3-rc.1; its recorded verification includes a fresh NORMALIZE control. Product deployment remains a separate decision.</desc>
+        <defs>
+          <pattern id="workbench-dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#1a3448"/></pattern>
+          <linearGradient id="module-fill" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#123347"/><stop offset="1" stop-color="#091724"/></linearGradient>
+        </defs>
+        <rect width="500" height="430" fill="url(#workbench-dots)"/>
+        <g fill="none" stroke="#376783" stroke-width="2">
+          <path d="M250 72V102M250 182V212M140 232V202H360V232M140 301V335H360V301M250 335V352"/>
+          <path d="M62 55H30V363H62M438 55H470V363H438" stroke="#19394d"/>
+        </g>
+        <rect x="150" y="30" width="200" height="42" rx="7" fill="#0b1c2b" stroke="#376783"/>
+        <text x="250" y="56" fill="#a6cde4" text-anchor="middle" font-size="12" class="mono">EXPLICIT SPECIFICATION</text>
+        <g stroke="#50809a" stroke-width="2"><path d="M201 98V107M219 98V107M237 98V107M255 98V107M273 98V107M291 98V107M201 179V188M219 179V188M237 179V188M255 179V188M273 179V188M291 179V188M166 123H177M166 141H177M166 159H177M323 123H334M323 141H334M323 159H334"/></g>
+        <rect x="177" y="107" width="146" height="72" rx="8" fill="url(#module-fill)" stroke="#7dd3fc"/>
+        <text x="250" y="136" fill="#f1f8fc" text-anchor="middle" font-size="18" font-weight="700">ProcessCore</text>
+        <text x="250" y="159" fill="#7dd3fc" text-anchor="middle" font-size="11" class="mono">FACTORY 0.1.0 JOBS</text>
+        <g>
+          <rect x="62" y="232" width="156" height="69" rx="9" fill="#0b222b" stroke="#327e70"/>
+          <text x="82" y="258" fill="#dff8ef" font-size="13" font-weight="700" class="mono">NORMALIZE</text>
+          <text x="82" y="281" fill="#5ee7b1" font-size="12">7 tests passed</text>
+          <rect x="282" y="232" width="156" height="69" rx="9" fill="#0b222b" stroke="#327e70"/>
+          <text x="302" y="258" fill="#dff8ef" font-size="13" font-weight="700" class="mono">SUMMARY</text>
+          <text x="302" y="281" fill="#5ee7b1" font-size="12">8 tests passed</text>
+        </g>
+        <circle cx="250" cy="335" r="4" fill="#7dd3fc"/>
+        <rect x="117" y="352" width="266" height="49" rx="7" fill="#201e17" stroke="#9d823a" stroke-dasharray="4 4"/>
+        <text x="250" y="372" fill="#fbbf24" text-anchor="middle" font-size="11" font-weight="650">SEPARATE DEPLOYMENT DECISION</text>
+        <text x="250" y="390" fill="#c4b994" text-anchor="middle" font-size="10">Candidate acceptance does not authorize deployment.</text>
+      </svg>
+      <figcaption>Original jobs: Factory 0.1.0. Stored evidence reviewed on 14 October 2026. This illustration does not connect to or execute the Pi.</figcaption>
+    </figure></div></details>
+  <details class="deeper" id="factory"><summary>Reuse — when earlier work can inform a new task</summary><div class="deeper-body">
+    <h3>Use earlier work with explicit limits.</h3>
     <p class="section-lead">Module 0.1.3-rc.1 checks 12 modeled conditions against an explicit contract for a new job. Its reviewed profiles currently cover the NORMALIZE and SUMMARY candidates. A matching result can supply reference context for new generation; it does not transfer the earlier task's authorization.</p>
-    <div class="callout"><strong>Fresh acceptance required:</strong> the check is advisory, supported by bounded tests and code review. It is not a formal proof, automatic execution permission or measured token-saving result. Unsupported requirements remain reference-only.</div>
-  </div>
-</section>
-
-<section id="effect">
-  <div class="container">
-    <div class="label">Post-v0.4 control boundary</div>
-    <h2>Detection, policy and authorization are separate.</h2>
+    <div class="callout"><strong>Fresh acceptance required:</strong> the check is advisory, supported by bounded tests and code review. It is not a formal proof, automatic execution permission or measured token-saving result. Unsupported requirements remain reference-only.</div></div></details><details class="deeper" id="effect"><summary>Runtime control — detecting a change and authorizing an action</summary><div class="deeper-body">
+    <h3>Detection, policy and authorization are separate.</h3>
     <p class="section-lead">
       Current research keeps actual state, expected state, policy decision, authorization and effect as distinct boundaries. A system may detect drift and even produce a policy decision without thereby gaining authority to change reality.
     </p>
@@ -957,31 +986,8 @@ section, #contact, #top { scroll-margin-top: 110px; }
       this post-v0.4 work remains bounded research and validation.
       The bounded no-effect invocation is not proof of general runtime readiness, not a declared ProcessCore v0.5 release,
       not live autonomous remediation and not a production-readiness claim.
-    </div>
-  </div>
-</section>
-
-<section id="agricore">
-  <div class="container">
-    <div class="label">AgriCore · independent working demonstrator</div>
-    <h2>A practical supplier-search workflow.</h2>
-    <p class="section-lead">AgriCore is being developed to compare agricultural supplier candidates against a commodity, price target and search area. Source material and optional cost assumptions help the user inspect a candidate before treating it as a usable offer.</p>
-    <div class="grid">
-      <article class="card"><h3>Define the search</h3><p>Select a commodity, price target and area. Transport, packaging and loss assumptions can refine the comparison.</p></article>
-      <article class="card"><h3>Inspect the source</h3><p>Review archived candidates alongside their original material. A search match does not by itself confirm price, stock or delivery.</p></article>
-      <article class="card"><h3>Decide what to verify</h3><p>Identify missing terms and prepare supplier questions. Confirmation remains a separate step before a purchasing decision.</p></article>
-    </div>
-    <div class="callout">
-      <strong>Pi evidence reviewed — 14 October 2026:</strong> AgriCore 0.1.38 has a stored result of 579 passing regression tests, including supplier-reply work. This is a shadow candidate: production adoption and Factory job closure are not established by that verification. No confirmed purchasing outcome is claimed.
-    </div>
-    <p class="review-note">This development snapshot describes AgriCore. It does not advance the reconciled ProcessCore Factory claim.</p>
-  </div>
-</section>
-
-<section id="validation">
-  <div class="container">
-    <div class="label">Validation semantics</div>
-    <h2>Validation is not authority.</h2>
+    </div></div></details><details class="deeper" id="validation"><summary>Validation — checking the rules as well as the result</summary><div class="deeper-body">
+    <h3>Validation is not authority.</h3>
     <p class="section-lead">
       ProcessCore has repeatedly preserved validator failures for read-only reconciliation rather than treating a red result as automatic proof that the underlying implementation or authoritative state is wrong.
     </p>
@@ -1009,29 +1015,35 @@ section, #contact, #top { scroll-margin-top: 110px; }
     <div class="callout">
       <strong>Claim boundary:</strong>
       “Validation is not authority” is presented here as a ProcessCore architectural conclusion from documented project cases, not as a quotation from an external standard.
+    </div></div></details>
+</div></section>
+
+<section id="related-projects"><div class="container">
+  <p class="label">Related work</p>
+  <h2>Where the other projects fit.</h2>
+  <p class="section-lead">ProcessCore is the checking and evidence project presented here. AgriCore explores a supplier-search workflow; QCore acquires and prepares catalog data. Each has its own results and deployment decisions.</p>
+  <div class="table-wrap"><table>
+    <caption>Project roles</caption><thead><tr><th scope="col">Project</th><th scope="col">Role</th></tr></thead>
+    <tbody><tr><th scope="row">ProcessCore</th><td>Check generated modules and record the evidence used to assess them.</td></tr><tr><th scope="row">AgriCore</th><td>Develop a workflow for inspecting agricultural supplier candidates.</td></tr><tr><th scope="row">QCore</th><td>Acquire and prepare data for a separate catalog workflow.</td></tr></tbody>
+  </table></div>
+  <details class="deeper" id="agricore"><summary>AgriCore — supplier-search development snapshot</summary><div class="deeper-body">
+    <h3>A practical supplier-search workflow.</h3>
+    <p class="section-lead">AgriCore is being developed to compare agricultural supplier candidates against a commodity, price target and search area. Source material and optional cost assumptions help the user inspect a candidate before treating it as a usable offer.</p>
+    <div class="grid">
+      <article class="card"><h3>Define the search</h3><p>Select a commodity, price target and area. Transport, packaging and loss assumptions can refine the comparison.</p></article>
+      <article class="card"><h3>Inspect the source</h3><p>Review archived candidates alongside their original material. A search match does not by itself confirm price, stock or delivery.</p></article>
+      <article class="card"><h3>Decide what to verify</h3><p>Identify missing terms and prepare supplier questions. Confirmation remains a separate step before a purchasing decision.</p></article>
     </div>
-  </div>
-</section>
+    <div class="callout">
+      <strong>Pi evidence reviewed — 14 October 2026:</strong> AgriCore 0.1.38 has a stored result of 579 passing regression tests, including supplier-reply work. This is a shadow candidate: production adoption and Factory job closure are not established by that verification. No confirmed purchasing outcome is claimed.
+    </div>
+    <p class="review-note">This development snapshot describes AgriCore. It does not advance the reconciled ProcessCore Factory claim.</p></div></details>
+  <details class="deeper" id="qcore"><summary>QCore — catalog development snapshot</summary><div class="deeper-body"><div class="callout"><strong>QCore — 14 October review:</strong> three services were running. The reviewed catalog held 25 internal trial profiles and no commercially released profiles. Most queued candidates lacked complete source evidence; the LLM triage reported its daily limit. Service activity and queue size do not establish customer-ready data.</div></div></details>
+</div></section>
 
-<section id="boundaries">
-  <div class="container">
-    <div class="label">Scope and next checks</div>
-    <h2>Keep each result within its evidence.</h2>
-    <p class="section-lead">ProcessCore, QCore and AgriCore have separate project boundaries. A result in one project does not authorize a change in another.</p>
-    <ul class="list boundary">
-      <li>Two distinct jobs have tested, accepted candidates. End-to-end reuse with fresh acceptance and product deployment remains to be demonstrated.</li>
-      <li>Static checks establish a limited validation result; adoption and runtime behavior require separate evidence.</li>
-      <li>One no-effect control invocation does not authorize continuing activation or remediation.</li>
-      <li>The current public evidence does not establish production readiness, universal portability or hallucination elimination.</li>
-    </ul>
-    <div class="callout"><strong>QCore — 14 October review:</strong> three services were running. The reviewed catalog held 25 internal trial profiles and no commercially released profiles. Most queued candidates lacked complete source evidence; the LLM triage reported its daily limit. Service activity and queue size do not establish customer-ready data.</div>
-  </div>
-</section>
-
-<section id="archive">
-  <div class="container">
-    <div class="label">Research lineage</div>
-    <h2>Earlier architecture is preserved as history.</h2>
+<section id="archive"><div class="container"><p class="label">Project history</p>
+  <details class="deeper" id="historical-material"><summary>Earlier architectural snapshot — August 2026</summary><div class="deeper-body">
+    
     <p class="section-lead">
       ProcessCore evolved from an earlier technology-intelligence and ecosystem-discovery architecture.
       Historical material remains available as project lineage rather than being rewritten as the current model.
@@ -1048,18 +1060,16 @@ section, #contact, #top { scroll-margin-top: 110px; }
         <a class="btn" href="PC-2026-08-12-V1.html">View historical snapshot</a>
         <a class="btn" href="https://github.com/tondad80-dev/processcore-quantum-intelligence" target="_blank" rel="noopener noreferrer">Repository</a>
       </div>
-    </div>
-  </div>
-</section>
-
+    </div></div></details>
+</div></section>
 </main>
 
 <div class="container" id="contact">
   <div class="closing-cta">
-    <div class="label">Discuss a concrete task</div>
-    <h2>Bring a small, testable software problem.</h2>
-    <p>Interested in evidence and acceptance around AI-generated Python modules? Describe the input, expected output and how you would decide whether the result is useful. We can discuss whether it fits the current experimental scope.</p>
-    <div class="actions"><a class="btn btn-primary" href="mailto:tondad80@gmail.com?subject=ProcessCore%20%E2%80%94%20a%20testable%20software%20task">Discuss your task</a><a class="btn" href="https://www.linkedin.com/in/tonda-dospiva-b160281a7/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a></div>
+    <div class="label">Technical portfolio · explore a collaboration</div>
+    <h2>Discuss a testable Python task.</h2>
+    <p>Send a small Python task with sample input, the expected output, and what should count as failure.</p><p>If it fits the current prototype, we can discuss a bounded experiment, its tests, and the evidence needed to judge the result.</p>
+    <div class="actions"><a class="btn btn-primary" href="mailto:tondad80@gmail.com?subject=ProcessCore%20%E2%80%94%20a%20testable%20software%20task">Discuss a Python task</a><a class="btn" href="https://www.linkedin.com/in/tonda-dospiva-b160281a7/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a></div>
   </div>
 </div>
 
@@ -1080,7 +1090,7 @@ section, #contact, #top { scroll-margin-top: 110px; }
   </div>
 </footer>
 
-<div class="container" role="note" style="padding:18px 0;color:#94a3b8;font-size:12px">Public evidence note (14 October 2026): this page is a dated review of evidence on Pi, not a live health report. Tested candidates, advisory reuse, product adoption and commercial outcomes remain separate claims. No general production readiness or customer adoption is established.</div>
+
 <script>
 (function () {
   "use strict";
@@ -1282,6 +1292,7 @@ section, #contact, #top { scroll-margin-top: 110px; }
     });
     document.addEventListener("visibilitychange", function () { if (document.hidden) pause(); });
     window.addEventListener("pagehide", pause);
+    root.addEventListener("toggle", function () { if (!root.open) pause(); });
     if (typeof motion.addEventListener === "function") motion.addEventListener("change", pause);
     else if (typeof motion.addListener === "function") motion.addListener(pause);
 
@@ -1291,6 +1302,30 @@ section, #contact, #top { scroll-margin-top: 110px; }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initDemo, { once: true });
   else initDemo();
+}());
+
+
+(function () {
+  "use strict";
+  function revealHashTarget() {
+    const hash = window.location && window.location.hash;
+    if (!hash || hash.length < 2) return;
+    let id;
+    try { id = decodeURIComponent(hash.slice(1)); } catch (_) { return; }
+    const target = document.getElementById(id);
+    if (!target) return;
+    let node = target;
+    while (node) {
+      if (node.tagName === "DETAILS") node.open = true;
+      node = node.parentElement;
+    }
+    if (typeof target.scrollIntoView === "function" && typeof window.requestAnimationFrame === "function") {
+      window.requestAnimationFrame(function () { target.scrollIntoView({ block: "start", behavior: "auto" }); });
+    }
+  }
+  window.addEventListener("hashchange", revealHashTarget);
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", revealHashTarget, { once: true });
+  else revealHashTarget();
 }());
 
 </script>
