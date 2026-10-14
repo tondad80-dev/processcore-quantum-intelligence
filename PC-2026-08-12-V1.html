@@ -6,13 +6,13 @@
 <meta name="theme-color" content="#030712">
 <meta name="description" content="ProcessCore Intelligence Platform — experimental research prototype. Immutable research snapshot PC-2026-08-12-V1 mapping AI, B2B and deep-tech ecosystems.">
 <meta name="author" content="Antonín Dospiva">
-<link rel="canonical" href="https://tondad80-dev.github.io/processcore-quantum-intelligence/">
+<link rel="canonical" href="https://tondad80-dev.github.io/processcore-quantum-intelligence/PC-2026-08-12-V1.html">
 
 <!-- Open Graph / LinkedIn -->
 <meta property="og:title" content="ProcessCore Intelligence Platform [RESEARCH PROTOTYPE]">
 <meta property="og:description" content="Immutable ProcessCore research snapshot PC-2026-08-12-V1: 28,307 AI-assisted enriched records and 89,527 registry entities.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://tondad80-dev.github.io/processcore-quantum-intelligence/">
+<meta property="og:url" content="https://tondad80-dev.github.io/processcore-quantum-intelligence/PC-2026-08-12-V1.html">
 <meta property="og:image" content="https://tondad80-dev.github.io/processcore-quantum-intelligence/hero_map.png">
 <meta property="og:site_name" content="ProcessCore OS">
 
@@ -31,7 +31,7 @@
       "@type": "Project",
       "name": "ProcessCore Quantum Intelligence",
       "description": "Experimental B2B and deep-tech ecosystem discovery platform mapping early technology signals.",
-      "url": "https://tondad80-dev.github.io/processcore-quantum-intelligence/",
+      "url": "https://tondad80-dev.github.io/processcore-quantum-intelligence/PC-2026-08-12-V1.html",
       "author": {
         "@type": "Person",
         "name": "Antonín Dospiva"
@@ -100,8 +100,8 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 .fade-in-section {
-    opacity: 0;
-    transform: translateY(20px);
+    opacity: 1;
+    transform: none;
     transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .fade-in-section.is-visible {
@@ -183,10 +183,20 @@ footer { margin-top: 48px; padding: 32px 0 18px 0; border-top: 1px solid var(--c
 @media (max-width: 600px) {
     .bento-card, section.box { backdrop-filter: none; }
 }
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto !important; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+}
 </style>
 </head>
 <body>
 <div class="bg-grid"></div>
+<aside class="archive-review-note" role="note" aria-label="Historical archive review" style="max-width:920px;margin:20px auto;padding:20px;border:1px solid #38bdf8;border-radius:12px;background:#0f172a;color:#cbd5e1;line-height:1.6;">
+    <strong style="display:block;color:#7dd3fc;">Historical archive · presentation reviewed <time datetime="2026-10-14">14 October 2026</time></strong>
+    <p style="margin:10px 0;">The content below preserves the original author report dated 12 August 2026. Its historical metrics and scientific statements have not been independently re-verified by this website review. For the current ProcessCore status, <a href="https://tondad80-dev.github.io/processcore-quantum-intelligence/" style="color:#7dd3fc;text-decoration:underline;">visit the current project page</a>.</p>
+    <p style="margin:10px 0 0;"><strong>Dataset download limitation:</strong> <a href="entities.json" style="color:#7dd3fc;text-decoration:underline;">entities.json</a> is a historical excerpt generated on 31 July 2026, with ten published top actors. Its scores differ from the HTML table below. It does not include per-record validation evidence and does not publish the complete dataset described by the original report.</p>
+</aside>
+
 <div class="enterprise-banner">
     ⚠️ EXPERIMENTAL RESEARCH PROTOTYPE — IMMUTABLE RESEARCH SNAPSHOT<br>
     Release: PC-2026-08-12-V1 · Snapshot Date: 2026-08-12 · Data layers, entities and analytical outputs are frozen for this release.
@@ -203,27 +213,27 @@ footer { margin-top: 48px; padding: 32px 0 18px 0; border-top: 1px solid var(--c
         <a href="#dataset" class="btn btn-primary" aria-label="Explore research dataset">Explore Dataset</a>
         <a href="entities.json" download class="btn btn-secondary" aria-label="Download JSON dataset">Download JSON</a>
         <a href="https://github.com/tondad80-dev/processcore-quantum-intelligence" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" aria-label="ProcessCore Source Repository">Source Repository</a>
-        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ftondad80-dev.github.io%2Fprocesscore-quantum-intelligence%2F" target="_blank" rel="noopener noreferrer" class="btn btn-social" aria-label="Share on LinkedIn">Share on LinkedIn</a>
-        <a href="https://x.com/intent/post?text=ProcessCore%20Intelligence%20Platform%20%5BRESEARCH%20PROTOTYPE%5D%20-%20Immutable%20research%20snapshot%20PC-2026-08-12-V1.&url=https%3A%2F%2Ftondad80-dev.github.io%2Fprocesscore-quantum-intelligence%2F" target="_blank" rel="noopener noreferrer" class="btn btn-social" aria-label="Share on X">Share on X</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ftondad80-dev.github.io%2Fprocesscore-quantum-intelligence%2FPC-2026-08-12-V1.html" target="_blank" rel="noopener noreferrer" class="btn btn-social" aria-label="Share on LinkedIn">Share on LinkedIn</a>
+        <a href="https://x.com/intent/post?text=ProcessCore%20Intelligence%20Platform%20%5BRESEARCH%20PROTOTYPE%5D%20-%20Immutable%20research%20snapshot%20PC-2026-08-12-V1.&url=https%3A%2F%2Ftondad80-dev.github.io%2Fprocesscore-quantum-intelligence%2FPC-2026-08-12-V1.html" target="_blank" rel="noopener noreferrer" class="btn btn-social" aria-label="Share on X">Share on X</a>
         <a href="mailto:tondad80@gmail.com" class="btn btn-accent" aria-label="Contact project author">Contact Author</a>
     </div>
 </header>
 <main>
     <section class="bento-grid fade-in-section" aria-label="System Metrics">
         <article class="bento-card">
-            <div class="number" id="metricEnriched" data-target="28307" data-format="int">0</div>
+            <div class="number" id="metricEnriched" data-target="28307" data-format="int">28,307</div>
             <div class="small">AI-Assisted Enriched Records (Golden DB)</div>
         </article>
         <article class="bento-card">
-            <div class="number" id="metricRegistry" data-target="89527" data-format="int">0</div>
+            <div class="number" id="metricRegistry" data-target="89527" data-format="int">89,527</div>
             <div class="small">Total Registry Entities (v3 DB)</div>
         </article>
         <article class="bento-card">
-            <div class="number" id="metricUrls" data-target="4301" data-format="k">0</div>
+            <div class="number" id="metricUrls" data-target="4301" data-format="k">4.3k+</div>
             <div class="small">Frontier URLs Mapped (k+)</div>
         </article>
         <article class="bento-card">
-            <div class="number" id="metricSignals" data-target="24765" data-format="int">0</div>
+            <div class="number" id="metricSignals" data-target="24765" data-format="int">24,765</div>
             <div class="small">Technology Signals (Golden DB)</div>
         </article>
     </section>
@@ -232,7 +242,7 @@ footer { margin-top: 48px; padding: 32px 0 18px 0; border-top: 1px solid var(--c
     </div>
 
     <div class="fade-in-section">
-        <h2>Current Status</h2>
+        <h2>Status recorded on 12 August 2026</h2>
         <section class="box">
             <div class="status-grid" aria-label="Project implementation status">
                 <div class="status-item active"><span class="status-icon">✓</span> Research Prototype</div>
@@ -400,6 +410,8 @@ footer { margin-top: 48px; padding: 32px 0 18px 0; border-top: 1px solid var(--c
                 <div style="color: #8c96a8; font-size: 0.8rem;">Model-based analytical demonstration. Not peer-reviewed. Strategic values are endogenous outputs of the model.</div>
             </div>
 
+            <p role="note" style="margin:0 0 18px;padding:12px;border:1px solid #334155;color:#cbd5e1;font-size:0.85rem;"><strong>Mathematical source notation:</strong> expressions below preserve the original LaTeX source and are displayed as text.</p>
+
             <!-- ABSTRACT -->
             <div style="background: #111722; padding: 16px; border-left: 4px solid #00d4ff; margin-bottom: 24px;">
                 <strong style="color: #00d4ff; display: block; margin-bottom: 6px; text-transform: uppercase; font-size: 0.9rem;">Abstract:</strong>
@@ -462,7 +474,7 @@ footer { margin-top: 48px; padding: 32px 0 18px 0; border-top: 1px solid var(--c
         <section class="box">
             <div class="table-controls">
                 <p class="small">Static entity index — ProcessCore snapshot 2026-08-12. Topic: "Where do new AI companies emerge?"</p>
-                <input type="text" id="searchInput" class="search-input" placeholder="Search actor or tech..." aria-label="Search actor or technology" onkeyup="filterTable()">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search actor or tech..." aria-label="Search actor or technology" oninput="filterTable()">
             </div>
             <div class="table-wrapper">
                 <table class="data-table" id="entityTable">
@@ -527,7 +539,7 @@ footer { margin-top: 48px; padding: 32px 0 18px 0; border-top: 1px solid var(--c
     </div>
     <div class="meta-links">
         <a href="https://github.com/tondad80-dev/processcore-quantum-intelligence" target="_blank" rel="noopener noreferrer">ProcessCore Source Code</a>
-        <a href="https://www.linkedin.com/in/antonin-dospiva/" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+        <a href="https://www.linkedin.com/in/tonda-dospiva-b160281a7/" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
         <a href="entities.json" download>Dataset Snapshot (JSON)</a>
         <a href="mailto:tondad80@gmail.com">Contact Email</a>
     </div>
@@ -535,61 +547,7 @@ footer { margin-top: 48px; padding: 32px 0 18px 0; border-top: 1px solid var(--c
     <div class="system-sig">PROCESSCORE OS // NODE 00 // RELEASE PC-2026-08-12-V1 // TERMINATED</div>
 </footer>
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-    const revealObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.15 });
-
-    document.querySelectorAll('.fade-in-section').forEach(el => revealObserver.observe(el));
-
-    const counters = document.querySelectorAll('.number');
-    const animateCounters = (counter) => {
-        const target = +counter.getAttribute('data-target');
-        const format = counter.getAttribute('data-format');
-        let current = 0;
-        const speed = 40;
-        const increment = target / speed;
-
-        const update = () => {
-            current += increment;
-            if (current < target) {
-                if (format === 'float') {
-                    counter.innerText = (current / 100).toFixed(2);
-                } else if (format === 'k') {
-                    counter.innerText = (current / 1000).toFixed(1) + 'k+';
-                } else {
-                    counter.innerText = Math.ceil(current).toLocaleString('en-US');
-                }
-                setTimeout(update, 20);
-            } else {
-                if (format === 'float') {
-                    counter.innerText = (target / 100).toFixed(2);
-                } else if (format === 'k') {
-                    counter.innerText = (target / 1000).toFixed(1) + 'k+';
-                } else {
-                    counter.innerText = target.toLocaleString('en-US');
-                }
-            }
-        };
-        update();
-    };
-
-    const counterObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateCounters(entry.target);
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.3 });
-
-    counters.forEach(counter => counterObserver.observe(counter));
-});
+// Historical values and content stay visible without JavaScript.
 
 function filterTable() {
     let input = document.getElementById("searchInput");

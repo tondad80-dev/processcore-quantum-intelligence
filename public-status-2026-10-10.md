@@ -1,5 +1,7 @@
 # Public status review — 10 October 2026
 
+> **Historical review:** this document records evidence available on 10 October 2026. Its current-state statements refer to that date. For the reviewed 14 October Factory status, see the [current README](README.md) and [dated verification](public-status-2026-10-14.md). The original results below are preserved.
+
 This review updates the website's explanation, not the accepted runtime baseline.
 
 ## Evidence levels
@@ -7,8 +9,8 @@ This review updates the website's explanation, not the accepted runtime baseline
 | Item | Source and scope | Status |
 | --- | --- | --- |
 | ProcessCore observation runtime | Accepted public baseline described in [README](README.md) | v0.4 remains the reference. |
-| Bounded Factory run | Reconciled 29 September public state in [README](README.md#ai-factory--reusable-software-factory-target) | One model invocation, one isolated candidate, static AST/compile checks passed. |
-| Factory reuse | Current public baseline | A second distinct job has not been demonstrated in the reconciled public evidence. |
+| Bounded Factory run | Reconciled 29 September public state in [29 September explanation](public-status-2026-09-29.md#ai-factory--reusable-software-factory-target) | One model invocation, one isolated candidate, static AST/compile checks passed. |
+| Factory reuse | Public baseline available on 10 October | A second distinct job has not been demonstrated in the reconciled public evidence. |
 | AgriCore development | Owner-provided project status on 10 October | Version 0.1.32; 20 archived candidates; supplier emails prepared, none sent in the reported step. Live search and supplier delivery were not independently verified in this review. |
 | QCore audit | Latest project audit report and inspected snapshot discussed on 10 October | 42,122 SCOUTED records; none FOR_WORKER. End-to-end event-log-to-registry transfer and cost causality remain unresolved. |
 
