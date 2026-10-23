@@ -6,9 +6,15 @@ ProcessCore is an independent engineering project developing checks for AI-gener
 
 [Website](https://tondad80-dev.github.io/processcore-quantum-intelligence/) · [Earlier website review](public-status-2026-10-14.md) · [Latest claim check](media/processcore-claim-check-2026-10-14.json)
 
-## Reviewed public state — 14 October 2026
+## Current public status — 24 October 2026
 
-Observation runtime **v0.4** remains the accepted public reference baseline. The separately versioned Factory module **0.1.3-rc.1** is installed on Raspberry Pi. All **29 manifest files** matched their declared size and SHA-256 during this review.
+A **scoped ProcessCore 1.0.0 release** was accepted and adopted on Raspberry Pi / Node00 on **14 October 2026**. Its existing release record was inspected again on **24 October**. It covers a bounded observation, retrieval, Python-module checking and structured-claim workflow. It does not establish general production readiness, arbitrary repository editing or automatic deployment of generated outputs.
+
+Repository-task support has progressed to task preparation and fixed runtime probes, but an actual generated repository change has not completed end-to-end candidate acceptance. This extension has a separate qualification and acceptance boundary.
+
+### Preserved module evidence — 14 October 2026
+
+Observation runtime **v0.4** and Factory module **0.1.3-rc.1** are separately versioned components. The scoped release does not renumber them. All **29 Factory manifest files** matched their declared size and SHA-256 in the **14 October review**; this documentation update did not rerun that check.
 
 Two original Factory **0.1.0** jobs retain historical test and acceptance evidence. A new **CLAIM-SUMMARY-002** job adds an accepted candidate under the current **0.1.3-rc.1** runner:
 
@@ -54,7 +60,7 @@ Overall **PARTIAL**, return code **1**. The original NORMALIZE record did not me
 
 The full set of outcomes is SUPPORTED, MISMATCH, UNKNOWN, STALE and UNVERIFIED. A 300-second freshness limit concerns source inspection/observation, not repeating historical candidate tests. This interface checks selected structured fields, not arbitrary prose, and always returns `execution_authorized=false`.
 
-This read-only check made no model calls, created no Factory jobs and performed no product deployment. **ProcessCore 1.0 has not been declared.**
+This recorded read-only check made no model calls, created no Factory jobs and performed no product deployment. The separate scoped 1.0.0 release acceptance does not turn these selected-field checks into verification of arbitrary prose or adoption of every generated output.
 
 ## Architecture and scope
 
@@ -70,9 +76,9 @@ The post-v0.4 control research also separates observed state, expected state, po
 
 ## Separate project snapshots
 
-AgriCore is a development demonstrator with its own runtime and project authority. The reviewed **0.1.38** shadow candidate has a stored result of **579 passing regression tests**. Production adoption and Factory job closure are not established by that result. A supplier-search match does not confirm price, stock, delivery or a purchasing outcome.
+**AgriCore:** active work was closed by the owner pending external assessment. External assessment and customer acceptance remain pending in its current project record. The **14 October review** of shadow candidate **0.1.38** records **579 passing regression tests**; those tests were not rerun for this update. Closing the active AgriCore work item does not establish production adoption or completion of a Factory job. A supplier-search match does not confirm price, stock, delivery or a purchasing outcome.
 
-The **14 October** QCore review found three running services, 25 internal trial profiles and no commercially released profiles. Service activity and queue size do not establish customer-ready data.
+**QCore:** a read-only Pi observation on **24 October 2026 at 00:06 CEST** found **36 currently reviewed internal trial profiles** and **zero commercially released profiles**. Primary-source review remains partial, two profiles retain flagged source anomalies, and independent confirmation remains open. These counts do not establish commercial readiness, customer delivery, aggregate processing throughput or the size of the separate Golden product. This replaces the main page's earlier dated 25-profile snapshot; historical review notes retain their original figures.
 
 A result in ProcessCore, QCore or AgriCore does not automatically advance the authority or status of another project.
 
