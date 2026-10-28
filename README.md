@@ -6,11 +6,13 @@ ProcessCore is an independent engineering project developing checks for AI-gener
 
 [Website](https://tondad80-dev.github.io/processcore-quantum-intelligence/) · [Earlier website review](public-status-2026-10-14.md) · [Latest claim check](media/processcore-claim-check-2026-10-14.json)
 
-## Current public status — 24 October 2026
+## Current public status — 28 October 2026
 
-A **scoped ProcessCore 1.0.0 release** was accepted and adopted on Raspberry Pi / Node00 on **14 October 2026**. Its existing release record was inspected again on **24 October**. It covers a bounded observation, retrieval, Python-module checking and structured-claim workflow. It does not establish general production readiness, arbitrary repository editing or automatic deployment of generated outputs.
+A **scoped ProcessCore 1.0.2 assembly** was accepted on Raspberry Pi / Node00 on **27 October 2026**, following the earlier scoped 1.0.0 acceptance on 14 October. It covers bounded observation, source retrieval, Python-module checking and structured-claim checks. The source-index refresh restored current source retrieval within the existing scope. This is a reconciliation of recorded evidence, not a new test run or general production-readiness claim.
 
-Repository-task support has progressed to task preparation and fixed runtime probes, but an actual generated repository change has not completed end-to-end candidate acceptance. This extension has a separate qualification and acceptance boundary.
+One **two-file lifecycle-report utility** has now completed task-specific qualification, acceptance and source adoption, and was installed on Pi on **25 October**. Its frozen campaign recorded **114 matching captures** (57 vectors in two orders); native Pi checks passed **7/7**. It validates and summarizes a fixed lifecycle JSON report format, without proving the truth of that report. [Acceptance and limits](https://github.com/tondad80-dev/processcore-current/blob/a7576e747aeeb542f0696e4e46a4c728e46d5184/factory/evidence/lifecycle-summary-v1/decision.md) · [Pi installation](https://github.com/tondad80-dev/processcore-current/blob/bf64251a63ba9e5f957bdc55baf459890349abaa/factory/evidence/lifecycle-summary-v1/pi-native-20261025/installation.json).
+
+General repository-task support remains experimental. The first measured-use pilot has **not started**: real use, total human effort, time savings and customer benefit have not yet been demonstrated. The terminal replay and module evidence below keep their **14 October** dates and original limitations.
 
 ### Preserved module evidence — 14 October 2026
 
@@ -70,7 +72,7 @@ A task specification, generated artifact, passing test, candidate acceptance and
 
 The current Factory runner separates test-runner and candidate execution environments. CLAIM-SUMMARY-002 provides a new 21-test result under this boundary. The recorded NORMALIZE control is a separate verification; neither rewrites the historical generation or acceptance of the original jobs.
 
-Advisory reuse may inform a new task under an explicit contract. It does not authorize execution or dispense with fresh tests and acceptance. End-to-end reuse with fresh acceptance and product integration remains to be demonstrated. General production readiness, universal portability, token savings and hallucination elimination are not established by the public evidence.
+Advisory reuse may inform a new task under an explicit contract. It does not authorize execution or dispense with fresh tests and acceptance. The lifecycle-report task has its own acceptance and Pi installation; that does not establish arbitrary repository support or a measured user benefit. General production readiness, universal portability, token savings and hallucination elimination are not established by the public evidence.
 
 The post-v0.4 control research also separates observed state, expected state, policy decision, authorization and effect. A no-effect invocation does not authorize continuing activation or remediation. Validation logic itself remains auditable; a validator result does not automatically redefine project authority.
 
@@ -78,7 +80,7 @@ The post-v0.4 control research also separates observed state, expected state, po
 
 **AgriCore:** active work was closed by the owner pending external assessment. External assessment and customer acceptance remain pending in its current project record. The **14 October review** of shadow candidate **0.1.38** records **579 passing regression tests**; those tests were not rerun for this update. Closing the active AgriCore work item does not establish production adoption or completion of a Factory job. A supplier-search match does not confirm price, stock, delivery or a purchasing outcome.
 
-**QCore:** a read-only Pi observation on **24 October 2026 at 00:06 CEST** found **36 currently reviewed internal trial profiles** and **zero commercially released profiles**. Primary-source review remains partial, two profiles retain flagged source anomalies, and independent confirmation remains open. These counts do not establish commercial readiness, customer delivery, aggregate processing throughput or the size of the separate Golden product. This replaces the main page's earlier dated 25-profile snapshot; historical review notes retain their original figures.
+**QCore:** the limited autonomy pilot completed on **27 October 2026** with **20 proposals: 5 accepted and 15 deferred** under its defined acceptance criteria. The recorded catalog total is **52 internal profiles** and **zero commercial releases**. Subsequent content review found that the five accepted claims describe organizational background, not concrete current products or activities. A follow-up correction to citation transfer passed offline checks but remains **PARTIAL / NOT_DEPLOYED**; it does not add accepted profiles or establish customer value. Independent error rate and customer benefit remain unmeasured. These counts are separate from the Golden release. Earlier public snapshots retain their original dates and figures.
 
 A result in ProcessCore, QCore or AgriCore does not automatically advance the authority or status of another project.
 
