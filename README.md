@@ -4,7 +4,20 @@
 
 ProcessCore is an independent engineering project developing checks for AI-generated Python modules on Raspberry Pi. It pairs explicit specifications with predefined tests and recorded results. Deployment remains a separate human decision.
 
-[Website](https://tondad80-dev.github.io/processcore-quantum-intelligence/) · [Earlier website review](public-status-2026-10-14.md) · [Latest claim check](media/processcore-claim-check-2026-10-14.json)
+[Portfolio](https://tondad80-dev.github.io/processcore-quantum-intelligence/) · [Česky](https://tondad80-dev.github.io/processcore-quantum-intelligence/cs.html) · [Engineering evidence](https://tondad80-dev.github.io/processcore-quantum-intelligence/engineering.html) · [Earlier website review](public-status-2026-10-14.md) · [Latest claim check](media/processcore-claim-check-2026-10-14.json)
+
+## Website structure — 30 October 2026
+
+The public entry page presents ProcessCore as the shared idea behind Antonín Dospiva’s work, with the author and seven distinct projects visible together. The technical ProcessCore project retains its own scope and dated evidence on `engineering.html`.
+
+- `index.html` / `cs.html`: English and Czech portfolio home pages.
+- `projects.html` / `projekty.html`: purpose, available material, limitations and source dates in a consistent project format.
+- `engineering.html`: the previous engineering page, including its recordings and interactive examples. Existing engineering fragment links on the home page forward to this page.
+- `portfolio.css`: shared responsive presentation. Home and project pages work without JavaScript; only compatibility with old engineering fragment links uses a small script.
+
+HoubarSky, Sirona and Golden retain their own public websites. Shared authorship and principles do not imply a shared deployed runtime, common acceptance or scientific validation. The portfolio does not publish private project sources.
+
+This presentation update does not rerun technical campaigns or advance project acceptance. The engineering records below keep their original dates.
 
 ## Current public status — 29 October 2026
 
@@ -105,3 +118,4 @@ For a possible collaboration, send a small Python task with sample input, the ex
 ProcessCore is licensed under the [Apache License 2.0](LICENSE).
 
 Copyright © 2026 Antonín Dospiva.
+
