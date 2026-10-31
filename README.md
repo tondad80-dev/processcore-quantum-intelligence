@@ -19,13 +19,13 @@ HoubarSky, Sirona and Golden retain their own public websites. Shared authorship
 
 This presentation update does not rerun technical campaigns or advance project acceptance. The engineering records below keep their original dates.
 
-## Current public status — 29 October 2026
+## Current public status — 1 November 2026
 
-A **scoped ProcessCore 1.0.3 assembly** was accepted on Raspberry Pi / Node00 on **29 October 2026**, after refreshing a changed source within the existing index. It covers bounded observation, source retrieval, Python-module checking and structured-claim checks. Earlier 1.0.2 and 1.0.0 acceptances retain their dates. This public update reconciles recorded evidence; it does not rerun the accepted campaigns or establish general production readiness.
+The **scoped ProcessCore 1.0.5 assembly** is accepted on Raspberry Pi / Node00. Factory **0.1.5** includes Gemini and a queue for explicitly approved tasks. One manifest-summary task completed generation, isolated checks, acceptance and packaging, then was used internally against real release manifests. A separate repository-editing candidate is qualified in Lab and is **not deployed**. General repository delivery and customer benefit remain unproven. Earlier acceptances retain their dates and scopes.
 
-One **two-file lifecycle-report utility** has now completed task-specific qualification, acceptance and source adoption, and was installed on Pi on **25 October**. Its frozen campaign recorded **114 matching captures** (57 vectors in two orders); native Pi checks passed **7/7**. It validates and summarizes a fixed lifecycle JSON report format, without proving the truth of that report. [Public acceptance summary and limits](media/processcore-lifecycle-summary-public-evidence-2026-10-29.html#qualification) · [Pi installation summary](media/processcore-lifecycle-summary-public-evidence-2026-10-29.html#pi-installation).
+The **two-file lifecycle-report utility** retains its separate acceptance, source adoption and Pi installation on **25 October**. Its frozen campaign recorded **114 matching captures** (57 vectors in two orders); native Pi checks passed **7/7**. It validates and summarizes a fixed lifecycle report format without proving the report's truth. [Public acceptance summary and limits](media/processcore-lifecycle-summary-public-evidence-2026-10-29.html#qualification) · [Pi installation summary](media/processcore-lifecycle-summary-public-evidence-2026-10-29.html#pi-installation).
 
-General repository-task support remains experimental. The first measured-use pilot has **not started**: real use, total human effort, time savings and customer benefit have not yet been demonstrated. The terminal replay and module evidence below keep their **14 October** dates and original limitations.
+Internal use is now demonstrated in its bounded case. The separate measured-use pilot has **not started**; total human-effort savings, comparative costs and customer benefit remain unmeasured. This website update reconciles current source records without rerunning technical campaigns. The replay and module evidence below retain their **14 October** dates and limitations.
 
 ### Preserved module evidence — 14 October 2026
 
@@ -93,7 +93,7 @@ The post-v0.4 control research also separates observed state, expected state, po
 
 **AgriCore:** active work was closed by the owner pending external assessment. External assessment and customer acceptance remain pending in its current project record. The **14 October review** of shadow candidate **0.1.38** records **579 passing regression tests**; those tests were not rerun for this update. Closing the active AgriCore work item does not establish production adoption or completion of a Factory job. A supplier-search match does not confirm price, stock, delivery or a purchasing outcome.
 
-**QCore — 29 October 2026:** The previous QCore 0.21.0 pilot completed on 27 October with 20 proposals: 5 accepted and 15 deferred, and 52 internal profiles at that checkpoint. Content review found that its five accepted claims describe organizational background rather than concrete current products or activities. A separate QCore 0.22.0 pilot was deployed on 29 October and remains IN_PROGRESS; its required minimum of 24 hours and three new internal profiles have not yet been met. There are no QCore commercial releases. Internal profile acceptance does not establish independent accuracy or customer value, and does not change the separate Golden release. Earlier public snapshots retain their original dates and figures.
+**QCore — reconciled 1 November 2026:** The separate 0.21 pilot keeps its historical result: 20 proposals, 5 accepted and 15 deferred. The subsequent 0.22 pilot finished on 30 October after 24 hours and 4 minutes, with 20 proposals, 2 accepted and 18 deferred. It missed the predefined minimum of three new internal profiles: acceptance **FAIL**. Its reporting correction does not change that result. No QCore commercial release is established; internal admission does not establish independent accuracy, customer benefit or a Golden release. Earlier public snapshots retain their original dates and figures.
 
 A result in ProcessCore, QCore or AgriCore does not automatically advance the authority or status of another project.
 
