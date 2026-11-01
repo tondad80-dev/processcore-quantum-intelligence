@@ -17,6 +17,8 @@ The public entry page introduces the development of ProcessCore’s governed AI 
 
 HoubarSky, Sirona and Golden retain their own public websites. Shared authorship and principles do not imply a shared deployed runtime, common acceptance or scientific validation. The portfolio does not publish private project sources.
 
+HoubarSky’s 1 November production check confirms public alpha 0.7.23 with the deployed Cloudflare Web Analytics update. Its Czech and English project notes describe aggregate visits and website performance without analytics cookies, exclude diary photographs, coordinates and notes from those measurements, and link to the corresponding public privacy explanation. This confirms the deployed measurement setup, not visitor counts or end-to-end delivery to the analytics dashboard.
+
 This presentation update does not rerun technical campaigns or advance project acceptance. The engineering records below keep their original dates.
 
 ## Current public status — 1 November 2026
