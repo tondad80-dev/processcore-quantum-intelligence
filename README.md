@@ -2,13 +2,13 @@
 
 **Evidence before interpretation.**
 
-ProcessCore is an independent engineering project developing checks for AI-generated Python modules on Raspberry Pi. It pairs explicit specifications with predefined tests and recorded results. Deployment remains a separate human decision.
+ProcessCore is an independent engineering project developing a governed AI software factory on Raspberry Pi. Bounded tasks combine explicit specifications, generated changes and recorded checks. Acceptance and deployment remain separate human decisions.
 
 [Portfolio](https://tondad80-dev.github.io/processcore-quantum-intelligence/) · [Česky](https://tondad80-dev.github.io/processcore-quantum-intelligence/cs.html) · [Engineering evidence](https://tondad80-dev.github.io/processcore-quantum-intelligence/engineering.html) · [Earlier website review](public-status-2026-10-14.md) · [Latest claim check](media/processcore-claim-check-2026-10-14.json)
 
-## Website structure — 30 October 2026
+## Website structure — 1 November 2026
 
-The public entry page presents ProcessCore as the shared idea behind Antonín Dospiva’s work, with the author and seven distinct projects visible together. The technical ProcessCore project retains its own scope and dated evidence on `engineering.html`.
+The public entry page introduces the development of ProcessCore’s governed AI software factory, using the original ProcessCore emblem and a direct link to engineering evidence. Antonín Dospiva’s seven-project portfolio remains available below. The technical ProcessCore project retains its own scope and dated evidence on `engineering.html`.
 
 - `index.html` / `cs.html`: English and Czech portfolio home pages.
 - `projects.html` / `projekty.html`: purpose, available material, limitations and source dates in a consistent project format.
@@ -21,7 +21,7 @@ This presentation update does not rerun technical campaigns or advance project a
 
 ## Current public status — 1 November 2026
 
-The **scoped ProcessCore 1.0.5 assembly** is accepted on Raspberry Pi / Node00. Factory **0.1.5** includes Gemini and a queue for explicitly approved tasks. One manifest-summary task completed generation, isolated checks, acceptance and packaging, then was used internally against real release manifests. A separate repository-editing candidate is qualified in Lab and is **not deployed**. General repository delivery and customer benefit remain unproven. Earlier acceptances retain their dates and scopes.
+The **scoped ProcessCore 1.0.6 assembly** and Factory **0.1.6-rc.1** are accepted and installed on Raspberry Pi / Node00, with Gemini, an approved-task queue and bounded repository-task support. An earlier manifest-summary task completed its own acceptance and was used internally on real release manifests. The first repository result passed **20 prescribed test methods**, but subsequent review found an edge-case parsing error: that result is **not accepted or packaged**. Runtime adoption is separate from accepting generated software. General repository delivery, adversarial independence of repository checks and customer benefit remain unproven. Earlier acceptances retain their dates and scopes.
 
 The **two-file lifecycle-report utility** retains its separate acceptance, source adoption and Pi installation on **25 October**. Its frozen campaign recorded **114 matching captures** (57 vectors in two orders); native Pi checks passed **7/7**. It validates and summarizes a fixed lifecycle report format without proving the report's truth. [Public acceptance summary and limits](media/processcore-lifecycle-summary-public-evidence-2026-10-29.html#qualification) · [Pi installation summary](media/processcore-lifecycle-summary-public-evidence-2026-10-29.html#pi-installation).
 
@@ -83,7 +83,7 @@ This recorded read-only check made no model calls, created no Factory jobs and p
 
 A task specification, generated artifact, passing test, candidate acceptance and permission to deploy are separate records and decisions.
 
-The current Factory runner separates test-runner and candidate execution environments. CLAIM-SUMMARY-002 provides a new 21-test result under this boundary. The recorded NORMALIZE control is a separate verification; neither rewrites the historical generation or acceptance of the original jobs.
+The historical module runner separates test-runner and candidate execution environments. CLAIM-SUMMARY-002 provides a recorded 21-test result under that boundary. The recorded NORMALIZE control is a separate verification; neither rewrites the historical generation or acceptance of the original jobs. The installed repository-task mode has a different verification boundary and requires separate review; these historical isolated checks do not establish adversarial independence for repository tasks.
 
 Advisory reuse may inform a new task under an explicit contract. It does not authorize execution or dispense with fresh tests and acceptance. The lifecycle-report task has its own acceptance and Pi installation; that does not establish arbitrary repository support or a measured user benefit. General production readiness, universal portability, token savings and hallucination elimination are not established by the public evidence.
 
