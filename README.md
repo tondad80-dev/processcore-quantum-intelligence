@@ -108,6 +108,10 @@ A result in ProcessCore, QCore or AgriCore does not automatically advance the au
 
 Earlier ecosystem-discovery and market-intelligence material is historical lineage. Its archived metrics and scientific claims are not presented as currently reproduced results. The historic JSON download is an excerpt; per-record validation evidence is not included.
 
+## Accepted open-source contribution — migsafe
+
+Antonín Dospiva (`tondad80-dev`) contributed a check to migsafe for PostgreSQL that detects prohibited `CREATE INDEX CONCURRENTLY` statements inside explicit SQL transactions. The maintainer accepted and merged [PR #3](https://github.com/mgkvibez/migsafe/pull/3) on **1 November 2026**, confirming 52 passing tests, green CI and detection of the original reproduced bug.
+
 ## Contact and contributions
 
 For a possible collaboration, send a small Python task with sample input, the expected output and what should count as failure. If it fits the prototype, we can discuss a bounded experiment, its tests and the evidence needed to judge the result.
