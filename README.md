@@ -6,9 +6,11 @@ ProcessCore is an independent engineering project developing a governed AI softw
 
 [Portfolio](https://tondad80-dev.github.io/processcore-quantum-intelligence/) · [Česky](https://tondad80-dev.github.io/processcore-quantum-intelligence/cs.html) · [Engineering evidence](https://tondad80-dev.github.io/processcore-quantum-intelligence/engineering.html) · [Earlier website review](public-status-2026-10-14.md) · [Latest claim check](media/processcore-claim-check-2026-10-14.json)
 
-## Website structure — 1 November 2026
+## Website structure — 4 November 2026
 
-The public entry page introduces the development of ProcessCore’s governed AI software factory, using the original ProcessCore emblem and a direct link to engineering evidence. Antonín Dospiva’s seven-project portfolio remains available below. The technical ProcessCore project retains its own scope and dated evidence on `engineering.html`.
+The public entry page introduces the development of ProcessCore’s governed AI software factory, using the original ProcessCore emblem and a direct link to engineering evidence. Antonín Dospiva’s portfolio remains available below. The technical ProcessCore project retains its own scope and dated evidence on `engineering.html`.
+
+The 4 November 2026 portfolio update adds two advisory pilots in both languages: Web Consulting for WordPress websites and Agricultural Investment Grant Advisory, using fictional cases.
 
 - `index.html` / `cs.html`: English and Czech portfolio home pages.
 - `projects.html` / `projekty.html`: purpose, available material, limitations and source dates in a consistent project format.
