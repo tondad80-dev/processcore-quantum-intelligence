@@ -6,7 +6,7 @@ ProcessCore is an independent engineering project developing a governed AI softw
 
 [Portfolio](https://tondad80-dev.github.io/processcore-quantum-intelligence/) · [Česky](https://tondad80-dev.github.io/processcore-quantum-intelligence/cs.html) · [Engineering evidence](https://tondad80-dev.github.io/processcore-quantum-intelligence/engineering.html) · [Earlier website review](public-status-2026-10-14.md) · [Latest claim check](media/processcore-claim-check-2026-10-14.json)
 
-## Website structure — 4 November 2026
+## Website structure — 7 November 2026
 
 The public entry page introduces the development of ProcessCore’s governed AI software factory, using the original ProcessCore emblem and a direct link to engineering evidence. Antonín Dospiva’s portfolio remains available below. The technical ProcessCore project retains its own scope and dated evidence on `engineering.html`.
 
@@ -19,17 +19,23 @@ The 4 November 2026 portfolio update adds two advisory pilots in both languages:
 
 HoubarSky, Sirona and Golden retain their own public websites. Shared authorship and principles do not imply a shared deployed runtime, common acceptance or scientific validation. The portfolio does not publish private project sources.
 
-HoubarSky’s 1 November production check confirms public alpha 0.7.23 with the deployed Cloudflare Web Analytics update. Its Czech and English project notes describe aggregate visits and website performance without analytics cookies, exclude diary photographs, coordinates and notes from those measurements, and link to the corresponding public privacy explanation. This confirms the deployed measurement setup, not visitor counts or end-to-end delivery to the analytics dashboard.
+The 7 November update reconciles the current Factory deliveries, links Golden’s prepared partner-selection demo, describes Sirona’s own-build and service paths, and gives both advisory pilots a direct enquiry link. HoubarSky public health returned alpha **0.7.24** on 7 November; its notes retain the local-diary, partial-translation and connectivity boundaries. Its privacy explanation distinguishes aggregate analytics from diary contents. This is not a new offline/browser acceptance or a claim about visitor counts.
 
 This presentation update does not rerun technical campaigns or advance project acceptance. The engineering records below keep their original dates.
 
-## Current public status — 1 November 2026
+## Current public status — 7 November 2026
 
-The **scoped ProcessCore 1.0.6 assembly** and Factory **0.1.6-rc.1** are accepted and installed on Raspberry Pi / Node00, with Gemini, an approved-task queue and bounded repository-task support. An earlier manifest-summary task completed its own acceptance and was used internally on real release manifests. The first repository result passed **20 prescribed test methods**, but subsequent review found an edge-case parsing error: that result is **not accepted or packaged**. Runtime adoption is separate from accepting generated software. General repository delivery, adversarial independence of repository checks and customer benefit remain unproven. Earlier acceptances retain their dates and scopes.
+The current project record identifies accepted **ProcessCore 1.0.8 / Factory 0.1.8-rc.1** on Raspberry Pi, with Gemini, an approved-task queue and bounded repository changes. Runtime adoption, candidate acceptance, internal use and product deployment remain separate decisions.
 
-The **two-file lifecycle-report utility** retains its separate acceptance, source adoption and Pi installation on **25 October**. Its frozen campaign recorded **114 matching captures** (57 vectors in two orders); native Pi checks passed **7/7**. It validates and summarizes a fixed lifecycle report format without proving the report's truth. [Public acceptance summary and limits](media/processcore-lifecycle-summary-public-evidence-2026-10-29.html#qualification) · [Pi installation summary](media/processcore-lifecycle-summary-public-evidence-2026-10-29.html#pi-installation).
+On **5 November**, a ZIP-inspection correction passed 23 prescribed tests, review, acceptance and packaging. The accepted correction inspected the actual delivery ZIP from that same pilot in a dedicated Lab copy. Its usage receipt confirms internal use and no product deployment.
 
-Internal use is now demonstrated in its bounded case. The separate measured-use pilot has **not started**; total human-effort savings, comparative costs and customer benefit remain unmeasured. This website update reconciles current source records without rerunning technical campaigns. The replay and module evidence below retain their **14 October** dates and limitations.
+A further **7 November** command-line candidate inspects one ZIP file. The inspected delivery records **29 completed tests**, no failures or errors, confirmed cleanup, acceptance and packaging. All manifest members matched their recorded size and SHA-256 in this website review. Candidate and repository tests share an interpreter; the suite does not establish adversarial independence. The result records no product adoption or production deployment. Private source, raw receipts and operational paths are not published.
+
+The original repository result’s review failure remains historical and unaccepted. The new deliveries do not rewrite it. Total human review/handover effort, comparative monetary cost, representative speed advantage and customer benefit remain unmeasured.
+
+The **two-file lifecycle-report utility** retains its separate acceptance and Pi installation of **25 October**: 114 recorded captures and 7/7 native checks. It summarizes a fixed report format without proving the report’s truth. [Public acceptance summary and limits](media/processcore-lifecycle-summary-public-evidence-2026-10-29.html#qualification) · [Pi installation summary](media/processcore-lifecycle-summary-public-evidence-2026-10-29.html#pi-installation).
+
+This website update did not rerun candidate tests or make model calls. Earlier recordings and module evidence retain their **14 October** dates and scope.
 
 ### Preserved module evidence — 14 October 2026
 
