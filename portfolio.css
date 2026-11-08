@@ -26,3 +26,13 @@
 .web-offer-contact .small{font-size:12px;max-width:640px}
 @media(max-width:760px){.web-offer{padding:24px}.web-offer-grid{grid-template-columns:1fr;gap:22px}.web-offer h3{font-size:29px}}
 @media(max-width:480px){.web-offer{padding:22px 18px}.web-offer h3{font-size:27px}}
+
+/* Own project examples in the website creation offer. */
+.web-offer-examples{margin-top:30px;padding-top:26px;border-top:1px solid var(--line)}
+.web-offer-examples>p{max-width:740px}
+.web-offer-examples .web-examples-grid{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:22px;margin-bottom:0}
+.web-example{min-width:0;padding:22px;background:#0e2228;border:1px solid var(--line);border-radius:4px}
+.web-example h5{font-size:23px;line-height:1.2;letter-spacing:-.025em;margin:0 0 10px}
+.web-example .web-example-status{font-size:12px;color:var(--cyan);margin-bottom:14px}
+.web-example-links{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:18px}
+@media(max-width:760px){.web-offer-examples .web-examples-grid{grid-template-columns:1fr}}
