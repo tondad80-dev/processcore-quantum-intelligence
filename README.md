@@ -6,7 +6,7 @@ ProcessCore is an independent engineering project developing a governed AI softw
 
 [Portfolio](https://tondad80-dev.github.io/processcore-quantum-intelligence/) · [Česky](https://tondad80-dev.github.io/processcore-quantum-intelligence/cs.html) · [Engineering evidence](https://tondad80-dev.github.io/processcore-quantum-intelligence/engineering.html) · [Earlier website review](public-status-2026-10-14.md) · [Latest claim check](media/processcore-claim-check-2026-10-14.json)
 
-## Website structure — 7 November 2026
+## Website structure — 8 November 2026
 
 The public entry page introduces the development of ProcessCore’s governed AI software factory, using the original ProcessCore emblem and a direct link to engineering evidence. Antonín Dospiva’s portfolio remains available below. The technical ProcessCore project retains its own scope and dated evidence on `engineering.html`.
 
@@ -19,17 +19,21 @@ The 4 November 2026 portfolio update adds two advisory pilots in both languages:
 
 HoubarSky, Sirona and Golden retain their own public websites. Shared authorship and principles do not imply a shared deployed runtime, common acceptance or scientific validation. The portfolio does not publish private project sources.
 
-The 7 November update reconciles the current Factory deliveries, links Golden’s prepared partner-selection demo, describes Sirona’s own-build and service paths, and gives both advisory pilots a direct enquiry link. HoubarSky public health returned alpha **0.7.24** on 7 November; its notes retain the local-diary, partial-translation and connectivity boundaries. Its privacy explanation distinguishes aggregate analytics from diary contents. This is not a new offline/browser acceptance or a claim about visitor counts.
+The 7 November update reconciles the current Factory deliveries, links Golden’s prepared partner-selection demo, describes Sirona’s own-build and service paths, and gives both advisory pilots a direct enquiry link. HoubarSky public health returned alpha **0.7.25** on 8 November; its notes retain the local-diary, partial-translation and connectivity boundaries. Its privacy explanation distinguishes aggregate analytics from diary contents. This is not a new offline/browser acceptance or a claim about visitor counts.
+
+The 8 November reconciliation adds the externally merged duplicate-title contribution, the ZIP utility’s recorded internal use/installation and the later Lab-only binding candidate. Sirona’s public 16-model equipment catalogue is distinguished from direct sales; HoubarSky’s public alpha is 0.7.25. The own-site examples added to the website offer remain labeled as the author’s own work.
 
 This presentation update does not rerun technical campaigns or advance project acceptance. The engineering records below keep their original dates.
 
-## Current public status — 7 November 2026
+## Current public status — 8 November 2026
 
 The current project record identifies accepted **ProcessCore 1.0.8 / Factory 0.1.8-rc.1** on Raspberry Pi, with Gemini, an approved-task queue and bounded repository changes. Runtime adoption, candidate acceptance, internal use and product deployment remain separate decisions.
 
 On **5 November**, a ZIP-inspection correction passed 23 prescribed tests, review, acceptance and packaging. The accepted correction inspected the actual delivery ZIP from that same pilot in a dedicated Lab copy. Its usage receipt confirms internal use and no product deployment.
 
-A further **7 November** command-line candidate inspects one ZIP file. The inspected delivery records **29 completed tests**, no failures or errors, confirmed cleanup, acceptance and packaging. All manifest members matched their recorded size and SHA-256 in this website review. Candidate and repository tests share an interpreter; the suite does not establish adversarial independence. The result records no product adoption or production deployment. Private source, raw receipts and operational paths are not published.
+A further **7 November** command-line candidate inspects one ZIP file. The inspected delivery records **29 completed tests**, no failures or errors, confirmed cleanup, acceptance and packaging. All manifest members matched their recorded size and SHA-256 in this website review. Candidate and repository tests share an interpreter; the suite does not establish adversarial independence. That candidate result records no product adoption or production deployment. Later receipts confirm actual Lab use and installation as a separate **delivery-check 0.1.0** companion command. The newer expected-job and whole-ZIP hash binding is accepted in the Lab and shadow-qualified; **0.1.1 remains pending adoption**, with 0.1.0 still installed. The main Factory runtime is unchanged. Private source, raw receipts and operational paths are not published.
+
+On **8 November**, [agentswarm-data-tasks PR #6](https://github.com/andrewsiah/agentswarm-data-tasks/pull/6) was merged. Its single changed file implements deterministic duplicate-title grouping, generated with Gemini through ProcessCore AI Factory and reviewed with ChatGPT. The accepted file’s SHA-256 matches the final task submission. The [acceptance comment](https://github.com/andrewsiah/agentswarm-data-tasks/pull/6#issuecomment-6727969549) reports a pinned offline benchmark with precision 1.000, recall 1.000 and 50 contract cases plus source review, and explicitly identifies itself as a **project AI agent**. No independent human code review is established. These are synthetic benchmark results for one task, without evidence of general reliability, paid use or customer value.
 
 The original repository result’s review failure remains historical and unaccepted. The new deliveries do not rewrite it. Total human review/handover effort, comparative monetary cost, representative speed advantage and customer benefit remain unmeasured.
 
