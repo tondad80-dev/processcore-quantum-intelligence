@@ -6,7 +6,7 @@ ProcessCore is an independent engineering project developing a governed AI softw
 
 [Portfolio](https://tondad80-dev.github.io/processcore-quantum-intelligence/) · [Česky](https://tondad80-dev.github.io/processcore-quantum-intelligence/cs.html) · [Engineering evidence](https://tondad80-dev.github.io/processcore-quantum-intelligence/engineering.html) · [Earlier website review](public-status-2026-10-14.md) · [Latest claim check](media/processcore-claim-check-2026-10-14.json)
 
-## Website structure — 12 November 2026
+## Website structure — reviewed 13 November 2026
 
 The public entry page introduces the development of ProcessCore’s governed AI software factory, using the original ProcessCore emblem and a direct link to engineering evidence. Antonín Dospiva’s portfolio remains available below. The technical ProcessCore project retains its own scope and dated evidence on `engineering.html`.
 
@@ -25,7 +25,7 @@ The 12 November reconciliation adds the merged trustgate MCP configuration corre
 
 This presentation update does not rerun technical campaigns or advance project acceptance. The engineering records below keep their original dates.
 
-## Current public status — 12 November 2026
+## Current public status — reviewed 13 November 2026
 
 The current project record identifies accepted **ProcessCore 1.0.8 / Factory 0.1.8-rc.1** on Raspberry Pi, with Gemini, an approved-task queue and bounded repository changes. Runtime adoption, candidate acceptance, internal use and product deployment remain separate decisions.
 
@@ -41,7 +41,13 @@ On **12 November at 16:57 CET**, the maintainer merged [trustgate PR #19](https:
 
 Two separate **0.1.0 companion commands** were adopted on 12 November: one evaluates stored external-delivery receipts against the expected commit and required CI checks; the other collects GitHub evidence and supports offline replay. Their installed files match the adoption records. An installation-time observation at 16:54 CET recorded PR #19 as open; its later merge supersedes only that historical PR-status field. The main Factory runtime and release version are unchanged. These tools do not grant execution authority or prove source authenticity.
 
-A task-specific SSD–QCore–Factory context was also used in one Gemini review in Lab, followed by host verification. The model supplied no supported finding. The storage-probe source was merged in the author’s repository; automatic awareness of the whole portfolio, production integration, migration, off-device restoration and human time savings remain unestablished.
+A task-specific SSD–QCore–Factory context was also used in one Gemini review in Lab on **12 November**, followed by host verification. The model supplied no supported finding. The storage-probe source was merged in the author’s repository; automatic awareness of the whole portfolio and production integration remain unestablished. This model review did not establish the later storage migration or recovery.
+
+On **12 November**, a separate Lab status integration linked a Factory task and its original result to a dated GitHub observation. It requested a refresh for an expired observation; a fresh capture matched the task and original result and recorded the upstream merge. Its **18 native checks** passed. The original candidate result is preserved. This status integration is **not deployed** into the main Factory runtime; refresh is explicit and does not continuously track the current commit. The two installed companion commands retain their separate adoption status.
+
+Later on **12 November**, QCore’s data directory was moved to SSD. A real Pi reboot verified the mount, automatic return of all three QCore services and a subsequent scheduled intake read. Snapshots of **two QCore databases** were then stored outside the Pi and actually restored on a separate computer, with matching file hashes, schemas, row counts and SQLite integrity checks. This is a one-off migration/restart check and restoration of those two snapshots, not a whole-Pi backup or a recurring backup schedule. The original SD copy was retained. Application speed, human time savings and economic benefit remain unmeasured. The closed QCore content pilot keeps its **FAIL** result.
+
+The **13 November** website review read the current project Resume and the existing Lab-status, migration, reboot and restoration receipts directly. Source outcomes retain their **12 November** dates. No candidate tests or model calls were repeated, and private data, raw receipts and operational paths are not published.
 
 The original repository result’s review failure remains historical and unaccepted. The new deliveries do not rewrite it. Total human review/handover effort, comparative monetary cost, representative speed advantage and customer benefit remain unmeasured.
 
