@@ -37,6 +37,12 @@ On **8 November**, [agentswarm-data-tasks PR #6](https://github.com/andrewsiah/a
 
 On **9 November**, [trustgate PR #18](https://github.com/kirtanbhatt10/trustgate/pull/18) was merged. It flags unpinned package versions in local MCP launchers. Its head matches the final recorded task submission. Gemini through ProcessCore AI Factory prepared the initial change; ChatGPT Codex review found version-range false negatives and the submitted revision includes that correction. The submission reports **73 project tests and two additional checks** on Linux/aarch64. The scanner inspects configuration text without executing its commands. The merge establishes upstream acceptance of this correction; independent human review, downstream deployment and customer value are unverified.
 
+On **12 November at 16:57 CET**, the maintainer merged [trustgate PR #19](https://github.com/kirtanbhatt10/trustgate/pull/19), extending home scans to Cursor and VS Code Insiders user profiles. ProcessCore AI Factory generated the initial implementation; CodeRabbit AI review identified a Windows path case issue, then ChatGPT Codex corrected it and added a regression test. All nine GitHub CI checks succeeded on the final submitted commit, including Linux, Windows and macOS jobs. The final contribution includes post-generation changes. Upstream acceptance is established; a separate independent human code review, downstream adoption and customer value are not.
+
+Two separate **0.1.0 companion commands** were adopted on 12 November: one evaluates stored external-delivery receipts against the expected commit and required CI checks; the other collects GitHub evidence and supports offline replay. Their installed files match the adoption records. An installation-time observation at 16:54 CET recorded PR #19 as open; its later merge supersedes only that historical PR-status field. The main Factory runtime and release version are unchanged. These tools do not grant execution authority or prove source authenticity.
+
+A task-specific SSD–QCore–Factory context was also used in one Gemini review in Lab, followed by host verification. The model supplied no supported finding. The storage-probe source was merged in the author’s repository; automatic awareness of the whole portfolio, production integration, migration, off-device restoration and human time savings remain unestablished.
+
 The original repository result’s review failure remains historical and unaccepted. The new deliveries do not rewrite it. Total human review/handover effort, comparative monetary cost, representative speed advantage and customer benefit remain unmeasured.
 
 The **two-file lifecycle-report utility** retains its separate acceptance and Pi installation of **25 October**: 114 recorded captures and 7/7 native checks. It summarizes a fixed report format without proving the report’s truth. [Public acceptance summary and limits](media/processcore-lifecycle-summary-public-evidence-2026-10-29.html#qualification) · [Pi installation summary](media/processcore-lifecycle-summary-public-evidence-2026-10-29.html#pi-installation).
@@ -138,4 +144,5 @@ For a possible collaboration, send a small Python task with sample input, the ex
 ProcessCore is licensed under the [Apache License 2.0](LICENSE).
 
 Copyright © 2026 Antonín Dospiva.
+
 
