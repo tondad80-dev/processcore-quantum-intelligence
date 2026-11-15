@@ -1,0 +1,58 @@
+<!doctype html>
+<!-- Copyright 2026 Antonín Dospiva. Apache-2.0; see LICENSE. -->
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A Windows path bug found during AI-assisted code review | ProcessCore</title><meta name="description" content="How a case-sensitive string comparison duplicated a Windows configuration path, and what the corrected trustgate contribution actually established."><meta name="author" content="Antonín Dospiva"><meta name="theme-color" content="#08151c">
+<link rel="canonical" href="https://tondad80-dev.github.io/processcore-quantum-intelligence/case-windows-paths.html"><link rel="icon" href="processcore-logo.png" type="image/png"><link rel="stylesheet" href="portfolio.css">
+<meta property="og:type" content="article"><meta property="og:title" content="A Windows path bug found during AI-assisted code review"><meta property="og:description" content="How a case-sensitive string comparison duplicated a Windows configuration path, and what the corrected trustgate contribution actually established."><meta property="og:url" content="https://tondad80-dev.github.io/processcore-quantum-intelligence/case-windows-paths.html"><meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "A Windows path bug found during AI-assisted code review", "description": "How a case-sensitive string comparison duplicated a Windows configuration path, and what the corrected trustgate contribution actually established.", "datePublished": "2026-11-15", "dateModified": "2026-11-15", "author": {"@type": "Person", "name": "Antonín Dospiva", "url": "https://tondad80-dev.github.io/processcore-quantum-intelligence/index.html#about"}, "mainEntityOfPage": "https://tondad80-dev.github.io/processcore-quantum-intelligence/case-windows-paths.html"}</script><style>
+.reading{max-width:880px;padding-top:64px;padding-bottom:80px}.reading h1{font-size:clamp(34px,4.4vw,57px);margin:20px 0 24px;max-width:830px}.reading .lede{font-size:21px;color:#d7e5e7;line-height:1.6}.byline{font-size:13px;margin:20px 0 30px}.reading h2{font-size:29px;margin:48px 0 18px}.reading h3{font-size:21px;margin:28px 0 12px}.reading p{margin:16px 0}.reading li{color:var(--muted);margin:9px 0}.reading a:not(.button){color:var(--cyan);text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}.reading code{font-family:var(--mono);font-size:.88em;color:#d6edf1;overflow-wrap:anywhere}.reading pre{padding:22px;background:#0e222c;border:1px solid var(--line);border-radius:5px;overflow:auto;line-height:1.7;font-size:14px}.reading pre code{white-space:pre;overflow-wrap:normal}.case-note{background:#102731;border-left:3px solid var(--cyan);padding:12px 22px;margin:26px 0}.case-note p{margin:8px 0}.table-scroll{overflow-x:auto;margin:28px 0}.reading table{width:100%;border-collapse:collapse;text-align:left;font-size:15px}.reading caption{text-align:left;font-weight:600;margin-bottom:12px}.reading th,.reading td{border-bottom:1px solid var(--line);padding:14px 10px;vertical-align:top;overflow-wrap:anywhere}.reading th{color:var(--text);font-weight:550}.reading td{color:var(--muted)}.reading th:first-child{width:32%}.reading video{width:100%;height:auto;border:1px solid var(--line);border-radius:5px}.reading figcaption{font-size:13px;color:var(--muted);margin-top:12px}.reading figure{margin:28px 0}.reading .sources{font-size:14px;border-top:1px solid var(--line);padding-top:24px;margin-top:44px}.reading .publication-note{font-size:13px;margin-top:28px}.reading .related{border-top:1px solid var(--line);margin-top:40px;padding-top:24px}.reading .eyebrow a{font-size:11px}.reading .sources li{overflow-wrap:anywhere}@media(max-width:600px){.reading{padding-top:38px}.reading .lede{font-size:19px}.reading h2{font-size:26px}.reading pre{padding:16px;font-size:12px}.reading th,.reading td{padding:12px 7px;font-size:14px}}
+</style></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap nav-wrap"><a class="brand" href="index.html" aria-label="ProcessCore — Home"><img class="brand-logo" src="processcore-logo.png" width="64" height="64" alt="" decoding="async"><span>ProcessCore<small>ENGINEERING CASE STUDIES</small></span></a><nav aria-label="Main navigation"><a href="engineering.html#case-studies">Case studies</a><a href="engineering.html">Engineering evidence</a><a href="engineering.html#contact">Discuss a task</a></nav><a class="language" lang="cs" hreflang="cs" href="cs.html">Český úvod</a></div></header>
+<main id="main" class="reading wrap"><article><header><p class="eyebrow">ENGINEERING NOTE / 12 NOVEMBER 2026</p><h1>A Windows path bug found during AI-assisted code review</h1><p class="lede">A configuration scanner could count the same Windows file twice. The interesting part is how the finding, correction, regression test and upstream acceptance can each be inspected.</p><p class="byline">Antonín Dospiva · Published 15 November 2026 · Case evidence: 12 November 2026</p></header>
+
+<div class="case-note"><p><strong>The outcome:</strong> a merged contribution to trustgate, with a correction made after AI review. The initial Factory output did not catch this Windows edge case.</p></div>
+<h2>One file, two path strings</h2>
+<p>The change added Cursor and VS Code Insiders user-profile configuration to trustgate’s home scan. On Windows, the scanner could discover a profile through its static <code>AppData/Roaming/…</code> list and again through the <code>APPDATA</code> environment variable.</p>
+<p>If those spellings differed only in letter case, a string-membership check treated them as different paths. On a case-insensitive Windows filesystem they could identify the same file. The scanner could therefore count that file twice and retain duplicate findings.</p>
+<p>CodeRabbit identified this issue in <a href="https://github.com/kirtanbhatt10/trustgate/pull/19#discussion_r4550495295">its review of PR #19</a>. This was a path-deduplication defect; the case does not establish a newly discovered security exploit.</p>
+<h2>A minimal comparison example</h2>
+<p>These illustrative paths show the comparison problem without reading a filesystem:</p>
+<pre><code>from pathlib import PureWindowsPath
+
+a = "AppData/Roaming/Cursor/User/settings.json"
+b = "appdata/roaming/Cursor/User/settings.json"
+
+assert a != b
+assert PureWindowsPath(a) == PureWindowsPath(b)</code></pre>
+<p><code>PureWindowsPath</code> supplies Windows path-comparison semantics even when the example runs on another operating system. This example is a reproduction of the equality distinction, not a rerun of the upstream scanner or a test of every Windows filesystem configuration.</p>
+<h2>The correction and its regression test</h2>
+<p>With ChatGPT Codex assistance, I changed the deduplication key to <code>PureWindowsPath</code> and kept the first path spelling in the output. The <a href="https://github.com/kirtanbhatt10/trustgate/commit/8023e9793f78a190560818e8679ca69e9d49356a">fixing commit</a> also updates the native-Windows integration case and adds <code>test_windows_appdata_case_variants_are_not_duplicates</code>.</p>
+<p>The new regression case supplies mixed-case <code>aPpDaTa/rOaMiNg</code> and checks that the six settings/tasks paths for Code, Code - Insiders and Cursor occur exactly once, using the expected original spellings. Its file-existence behavior is mocked; that test must be distinguished from the native Windows integration case.</p>
+<p>All nine jobs in the recorded final-head <a href="https://github.com/kirtanbhatt10/trustgate/actions/runs/43220897277">GitHub CI run</a> passed, including Linux, Windows and macOS tests. The maintainer merged the PR on 12 November 2026. These are the recorded results of that submission; this article did not rerun CI.</p>
+<div class="table-scroll"><table><caption>Who contributed which part</caption><thead><tr><th scope="col">Part</th><th scope="col">Recorded role</th></tr></thead><tbody>
+<tr><th scope="row">Initial implementation</th><td>Gemini through ProcessCore AI Factory.</td></tr>
+<tr><th scope="row">Windows finding</th><td>CodeRabbit AI review.</td></tr>
+<tr><th scope="row">Correction and regression coverage</th><td>Prepared with ChatGPT Codex; submitted by Antonín Dospiva.</td></tr>
+<tr><th scope="row">Upstream acceptance</th><td>The maintainer merged PR #19. A separate independent human code review is not established by the merge.</td></tr>
+</tbody></table></div>
+<h2>What a technical lead can take from it</h2>
+<p>For a cross-platform scanner, a useful acceptance condition is concrete: two spellings of the same logical input must not create two findings. That condition belongs in regression coverage alongside the normal configuration cases.</p>
+<p>The practical result here is narrower than a claim that AI-generated code is generally reliable. One contribution passed review, correction and CI and was accepted upstream. The failure found after generation is part of the evidence.</p>
+<div class="table-scroll"><table><caption>Business reading of this case</caption><tbody>
+<tr><th scope="row">Observed problem</th><td>A configuration file could be reported twice.</td></tr>
+<tr><th scope="row">Implemented response</th><td>Windows-semantic deduplication with regression coverage.</td></tr>
+<tr><th scope="row">Demonstrated result</th><td>The corrected contribution passed its recorded CI and was merged.</td></tr>
+<tr><th scope="row">Still unmeasured</th><td>Downstream adoption, support time saved, monetary savings and customer benefit.</td></tr>
+</tbody></table></div>
+<div class="sources"><h2 id="sources">Inspect the original evidence</h2><ol>
+<li><a href="https://github.com/kirtanbhatt10/trustgate/pull/19">PR #19: scope, discussion and merge</a>.</li>
+<li><a href="https://github.com/kirtanbhatt10/trustgate/pull/19#discussion_r4550495295">CodeRabbit’s original Windows-path finding</a>.</li>
+<li><a href="https://github.com/kirtanbhatt10/trustgate/commit/8023e9793f78a190560818e8679ca69e9d49356a">Correction and both test changes, pinned to commit 8023e979</a>.</li>
+<li><a href="https://github.com/kirtanbhatt10/trustgate/actions/runs/43220897277">Recorded final-head CI run</a>.</li>
+<li><a href="https://docs.python.org/3/library/pathlib.html#general-properties">Python pathlib comparison semantics</a>.</li>
+</ol></div>
+
+<p class="publication-note">This article was prepared with AI assistance from the linked project records, source code and review discussion. The examples and claims were checked against those sources. AI-assisted drafting is separate from independent technical review.</p>
+<div class="related"><p>Related: <a href="case-test-report.html">A forged report claimed 999 passes. The runner recorded none.</a></p><p><a href="engineering.html#case-studies">All case studies</a> · <a href="index.html">About the author and projects</a></p></div>
+</article></main><footer class="site-footer"><div class="wrap"><a class="footer-brand" href="index.html">ProcessCore</a><p>Independent engineering by Antonín Dospiva. Each result retains its own evidence and scope.</p><div class="footer-links"><a href="engineering.html">Engineering evidence</a><a href="https://github.com/tondad80-dev/processcore-quantum-intelligence">Source repository</a><a href="LICENSE">Apache-2.0</a></div></div></footer></body></html>

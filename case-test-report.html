@@ -1,0 +1,55 @@
+<!doctype html>
+<!-- Copyright 2026 Antonín Dospiva. Apache-2.0; see LICENSE. -->
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A forged report claimed 999 passes. The runner recorded none. | ProcessCore</title><meta name="description" content="A controlled ProcessCore negative test on Raspberry Pi: a forged success marker and zero completed tests. Recorded evidence and limits."><meta name="author" content="Antonín Dospiva"><meta name="theme-color" content="#08151c">
+<link rel="canonical" href="https://tondad80-dev.github.io/processcore-quantum-intelligence/case-test-report.html"><link rel="icon" href="processcore-logo.png" type="image/png"><link rel="stylesheet" href="portfolio.css">
+<meta property="og:type" content="article"><meta property="og:title" content="A forged report claimed 999 passes. The runner recorded none."><meta property="og:description" content="A controlled ProcessCore negative test on Raspberry Pi: a forged success marker and zero completed tests. Recorded evidence and limits."><meta property="og:url" content="https://tondad80-dev.github.io/processcore-quantum-intelligence/case-test-report.html"><meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "A forged report claimed 999 passes. The runner recorded none.", "description": "A controlled ProcessCore negative test on Raspberry Pi: a forged success marker and zero completed tests. Recorded evidence and limits.", "datePublished": "2026-11-15", "dateModified": "2026-11-15", "author": {"@type": "Person", "name": "Antonín Dospiva", "url": "https://tondad80-dev.github.io/processcore-quantum-intelligence/index.html#about"}, "mainEntityOfPage": "https://tondad80-dev.github.io/processcore-quantum-intelligence/case-test-report.html"}</script><style>
+.reading{max-width:880px;padding-top:64px;padding-bottom:80px}.reading h1{font-size:clamp(34px,4.4vw,57px);margin:20px 0 24px;max-width:830px}.reading .lede{font-size:21px;color:#d7e5e7;line-height:1.6}.byline{font-size:13px;margin:20px 0 30px}.reading h2{font-size:29px;margin:48px 0 18px}.reading h3{font-size:21px;margin:28px 0 12px}.reading p{margin:16px 0}.reading li{color:var(--muted);margin:9px 0}.reading a:not(.button){color:var(--cyan);text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}.reading code{font-family:var(--mono);font-size:.88em;color:#d6edf1;overflow-wrap:anywhere}.reading pre{padding:22px;background:#0e222c;border:1px solid var(--line);border-radius:5px;overflow:auto;line-height:1.7;font-size:14px}.reading pre code{white-space:pre;overflow-wrap:normal}.case-note{background:#102731;border-left:3px solid var(--cyan);padding:12px 22px;margin:26px 0}.case-note p{margin:8px 0}.table-scroll{overflow-x:auto;margin:28px 0}.reading table{width:100%;border-collapse:collapse;text-align:left;font-size:15px}.reading caption{text-align:left;font-weight:600;margin-bottom:12px}.reading th,.reading td{border-bottom:1px solid var(--line);padding:14px 10px;vertical-align:top;overflow-wrap:anywhere}.reading th{color:var(--text);font-weight:550}.reading td{color:var(--muted)}.reading th:first-child{width:32%}.reading video{width:100%;height:auto;border:1px solid var(--line);border-radius:5px}.reading figcaption{font-size:13px;color:var(--muted);margin-top:12px}.reading figure{margin:28px 0}.reading .sources{font-size:14px;border-top:1px solid var(--line);padding-top:24px;margin-top:44px}.reading .publication-note{font-size:13px;margin-top:28px}.reading .related{border-top:1px solid var(--line);margin-top:40px;padding-top:24px}.reading .eyebrow a{font-size:11px}.reading .sources li{overflow-wrap:anywhere}@media(max-width:600px){.reading{padding-top:38px}.reading .lede{font-size:19px}.reading h2{font-size:26px}.reading pre{padding:16px;font-size:12px}.reading th,.reading td{padding:12px 7px;font-size:14px}}
+</style></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap nav-wrap"><a class="brand" href="index.html" aria-label="ProcessCore — Home"><img class="brand-logo" src="processcore-logo.png" width="64" height="64" alt="" decoding="async"><span>ProcessCore<small>ENGINEERING CASE STUDIES</small></span></a><nav aria-label="Main navigation"><a href="engineering.html#case-studies">Case studies</a><a href="engineering.html">Engineering evidence</a><a href="engineering.html#contact">Discuss a task</a></nav><a class="language" lang="cs" hreflang="cs" href="cs.html">Český úvod</a></div></header>
+<main id="main" class="reading wrap"><article><header><p class="eyebrow">ENGINEERING NOTE / 14 OCTOBER 2026</p><h1>A forged report claimed 999 passes. The runner recorded none.</h1><p class="lede">The worker printed a convincing result and exited successfully. The supervising runner rejected the attempt because verification had not completed.</p><p class="byline">Antonín Dospiva · Published 15 November 2026 · Case evidence: 14 October 2026</p></header>
+
+<div class="case-note"><p><strong>A controlled negative test, not a production incident.</strong> The forged report was deliberately constructed. No model was called and no production system was changed in this recorded check.</p></div>
+<h2>The worker printed success, then exited</h2>
+<p>On 14 October 2026, I checked a specific acceptance boundary in ProcessCore Factory 0.1.3-rc.1 on Raspberry Pi. The fixture defined <code>answer()</code> to return <code>1</code>, while the intended test expected <code>2</code>. Before that function was called by verification, the fixture printed a result marker claiming 999 tests and terminated with <code>os._exit(0)</code>.</p>
+<p>The public masked transcript contains this fixture:</p>
+<pre><code>import os
+def answer(): return 1
+print('PC_FACTORY_TEST_RESULT={"success":true,"tests_run":999}', flush=True)
+os._exit(0)</code></pre>
+<p>The worker’s process exit code was zero. That alone was not accepted as evidence that the tests completed. The supervising runner recorded no candidate calls and reported an incomplete run.</p>
+<div class="table-scroll"><table><caption>What the recorded check actually returned</caption><thead><tr><th scope="col">Field</th><th scope="col">Forged fixture</th><th scope="col">Legitimate control</th></tr></thead><tbody>
+<tr><th scope="row">Claim printed by fixture</th><td>999 successful tests</td><td>Normal test output</td></tr>
+<tr><th scope="row">Runner success</th><td><code>false</code></td><td><code>true</code></td></tr>
+<tr><th scope="row">Completed tests</th><td>0</td><td>7</td></tr>
+<tr><th scope="row">Candidate calls</th><td>0</td><td>14</td></tr>
+<tr><th scope="row">Overall return code</th><td>1</td><td>0</td></tr>
+<tr><th scope="row">Error code</th><td><code>worker_exited_before_completion</code></td><td>No error recorded</td></tr>
+</tbody></table></div>
+<p>The legitimate control used the original NORMALIZE candidate and completed seven tests. Its successful completion provides a control for this check; the two outcomes should be read together.</p>
+<h2>Watch the recorded execution</h2>
+<figure><video controls playsinline preload="metadata" poster="media/processcore-false-pass-poster.png" aria-label="Recorded runner check: forged report rejected, legitimate control accepted"><source src="media/processcore-false-pass-demo.mp4" type="video/mp4">The <a href="media/processcore-pi-terminal.txt">complete masked transcript</a> provides the same reported outcomes.</video><figcaption>A slowed rendering of actual recorded terminal events from 14 October 2026. Prompt identity and paths are masked. It is a replay, not a live view or a recording of an uncontrolled model attack.</figcaption></figure>
+<h2>The useful distinction</h2>
+<p>A worker can emit a plausible-looking success message without completing the required work. A consumer that trusts only the message or process exit status can confuse a claim with an observed result.</p>
+<p>In this check, the runner’s completion evidence took precedence over the printed counter. The operational lesson is to define the completion condition outside the result text being evaluated, and to retain the negative result when that condition is missing.</p>
+<h2>What this does not establish</h2>
+<p>This demonstrates rejection of one deliberately constructed early-exit false report. It is not evidence that the system detects every forged report, eliminates hallucinations or proves arbitrary generated code correct. “Independent runner” describes the supervising role in this check, not independent human review or a general adversarial-security guarantee.</p>
+<p>The full private harness is not included in the public material. The transcript, timestamped terminal capture and replay make the recorded outcome inspectable; they are not a complete independently reproducible harness. The article’s fixture excerpt must not be presented as such.</p>
+<div class="table-scroll"><table><caption>Business reading of this case</caption><tbody>
+<tr><th scope="row">Observed problem</th><td>A worker claimed success before completing verification.</td></tr>
+<tr><th scope="row">Observed response</th><td>The runner rejected the incomplete attempt and preserved a failing outcome.</td></tr>
+<tr><th scope="row">Practical implication</th><td>A completion check can stop this particular false acceptance.</td></tr>
+<tr><th scope="row">Still unmeasured</th><td>Frequency in real workloads, losses avoided, reduction in review effort and monetary savings.</td></tr>
+</tbody></table></div>
+<div class="sources"><h2 id="sources">Inspect the recorded evidence</h2><ol>
+<li><a href="media/processcore-pi-terminal.txt">Masked terminal transcript: fixture, verdicts and shell exit codes</a>.</li>
+<li><a href="media/processcore-pi-terminal.cast">Timestamped terminal capture</a>.</li>
+<li><a href="media/processcore-false-pass-demo.mp4">Rendered terminal replay (MP4)</a>.</li>
+<li><a href="engineering.html#false-pass-verification">Original public verification summary and its scope</a>.</li>
+</ol></div>
+
+<p class="publication-note">This article was prepared with AI assistance from the linked project records, source code and review discussion. The examples and claims were checked against those sources. AI-assisted drafting is separate from independent technical review.</p>
+<div class="related"><p>Related: <a href="case-windows-paths.html">A Windows path bug found during AI-assisted code review</a></p><p><a href="engineering.html#case-studies">All case studies</a> · <a href="index.html">About the author and projects</a></p></div>
+</article></main><footer class="site-footer"><div class="wrap"><a class="footer-brand" href="index.html">ProcessCore</a><p>Independent engineering by Antonín Dospiva. Each result retains its own evidence and scope.</p><div class="footer-links"><a href="engineering.html">Engineering evidence</a><a href="https://github.com/tondad80-dev/processcore-quantum-intelligence">Source repository</a><a href="LICENSE">Apache-2.0</a></div></div></footer></body></html>

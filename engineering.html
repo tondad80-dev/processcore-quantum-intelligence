@@ -666,7 +666,7 @@ section, #contact, #top { scroll-margin-top: 110px; }
       </span>
     </a>
     <div class="links" aria-label="Page sections">
-      <a href="#false-pass-verification">Verification</a><a href="#claim-check">Claims</a><a href="#evidence">Evidence</a><a href="#state">Status</a><a href="#architecture">Architecture</a><a href="#contact">Contact</a>
+      <a href="#case-studies">Case studies</a><a href="#false-pass-verification">Verification</a><a href="#claim-check">Claims</a><a href="#evidence">Evidence</a><a href="#state">Status</a><a href="#architecture">Architecture</a><a href="#contact">Contact</a>
     </div>
   </div>
 </nav>
@@ -696,6 +696,14 @@ section, #contact, #top { scroll-margin-top: 110px; }
 </header>
 
 <main>
+<section id="case-studies">
+  <div class="container"><div class="label">Technical case studies · published 15 November 2026</div><h2>Two small results you can inspect.</h2><p class="section-lead">Read the technical mechanism, who did what and the limit of each result. These cases are evidence for specific outcomes; economic benefit remains unmeasured.</p>
+  <div class="table-wrap"><table><caption>Choose a case</caption><thead><tr><th scope="col">Case</th><th scope="col">Concrete question</th></tr></thead><tbody>
+  <tr><th scope="row"><a href="case-windows-paths.html">A Windows path bug found during AI-assisted code review</a></th><td>How did two spellings of one path produce duplicate findings, and what did the regression test check?</td></tr>
+  <tr><th scope="row"><a href="case-test-report.html">A forged report claimed 999 passes. The runner recorded none.</a></th><td>What completion evidence rejected a deliberately forged success message?</td></tr>
+  </tbody></table></div></div>
+</section>
+
 <section class="pc-proof" id="false-pass-verification" aria-labelledby="pc-proof-title">
   <div class="container">
     <div class="pc-proof-heading">
@@ -1118,13 +1126,21 @@ section, #contact, #top { scroll-margin-top: 110px; }
       </div>
     </div></div></details>
 </div></section>
+<section id="speaking"><div class="container"><div class="label">Proposed technical talk · not submitted</div><h2>When an AI job says “done”, what evidence should survive?</h2><p class="section-lead">A 25-minute case-based talk for software and AI practitioners, followed by questions.</p><details class="deeper"><summary>Read the proposed abstract</summary><div class="deeper-body"><p>A success message, a passing test suite and a merged contribution answer different questions. This talk examines two small cases from an AI-assisted software workflow: a deliberately forged report that claimed 999 passes before the worker completed verification, and a Windows path-deduplication bug found during review of a generated contribution.</p><p>Using the recorded terminal outcome, pinned correction and upstream discussion, we trace which component supplied each claim, what the checks observed, and what remained a separate acceptance decision. We also distinguish mocked path semantics from native-platform tests and an AI review from independent human review.</p><p>Attendees leave with a practical way to describe completion evidence and its limits in a small coding task. The examples are bounded engineering results, not a benchmark of general model reliability, a product pitch or a claim of measured cost savings.</p></div></details><p class="review-note">Speaker: Antonín Dospiva, independent systems architect and creator of ProcessCore. This is a prepared proposal, not a conference acceptance or a submitted application.</p></div></section>
+
 </main>
 
 <div class="container" id="contact">
   <div class="closing-cta">
     <div class="label">Technical portfolio · explore a collaboration</div>
-    <h2>Discuss a testable Python task.</h2>
-    <p>Send a small Python task with sample input, the expected output, and what should count as failure.</p><p>If it fits the current prototype, we can discuss a bounded experiment, its tests, and the evidence needed to judge the result.</p>
+    <h2>Start with one reviewable task.</h2>
+    <p>For a technical lead considering AI-assisted development: choose a small Python or configuration task, provide sample inputs, expected outputs and failure cases, and agree what the result may change.</p><p>If it fits the current prototype, we can scope a pilot around a candidate, recorded checks, a correction history and an explicit acceptance decision. Production deployment requires its own scope.</p>
+    <div class="table-wrap"><table><caption>What a pilot should measure</caption><thead><tr><th scope="col">Measure</th><th scope="col">Evidence to retain</th></tr></thead><tbody>
+    <tr><th scope="row">Human work</th><td>Active minutes for specification, review, correction and handover.</td></tr>
+    <tr><th scope="row">Actual usage and cost</th><td>Provider usage, billed charges and tooling costs for the same task.</td></tr>
+    <tr><th scope="row">Correctness within scope</th><td>Agreed cases, observed failures, corrections and acceptance evidence.</td></tr>
+    <tr><th scope="row">Comparison</th><td>A comparable baseline before claiming a saving. No percentage saving or return on investment is established today.</td></tr>
+    </tbody></table></div>
     <div class="actions"><a class="btn btn-primary" href="mailto:tondad80@gmail.com?subject=ProcessCore%20%E2%80%94%20a%20testable%20software%20task">Discuss a Python task</a><a class="btn" href="https://www.linkedin.com/in/tonda-dospiva-b160281a7/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a></div>
   </div>
 </div>

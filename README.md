@@ -15,6 +15,7 @@ The 4 November 2026 portfolio update adds two advisory pilots in both languages:
 - `index.html` / `cs.html`: English and Czech portfolio home pages.
 - `projects.html` / `projekty.html`: purpose, available material, limitations and source dates in a consistent project format.
 - `engineering.html`: the previous engineering page, including its recordings and interactive examples. Existing engineering fragment links on the home page forward to this page.
+- `case-windows-paths.html` / `case-test-report.html`: source-linked technical case studies published on 15 November 2026. The first preserves the Gemini/Factory → CodeRabbit → Codex → maintainer roles; the second explicitly describes a deliberately constructed negative fixture and its separate legitimate control. Both include a plain business interpretation without invented savings.
 - `portfolio.css`: shared responsive presentation. Home and project pages work without JavaScript; only compatibility with old engineering fragment links uses a small script.
 
 HoubarSky, Sirona and Golden retain their own public websites. Shared authorship and principles do not imply a shared deployed runtime, common acceptance or scientific validation. The portfolio does not publish private project sources.
@@ -24,6 +25,10 @@ The 7 November update reconciles the current Factory deliveries, links Golden’
 The 12 November reconciliation adds the merged trustgate MCP configuration correction and confirms adoption of the ZIP utility’s 0.1.1 binding checks. The earlier duplicate-title contribution retains its separate AI-agent acceptance. Sirona’s equipment catalogue was distinguished from direct sales; the HoubarSky check at that time identified public alpha 0.7.25. Own-site examples remain labeled as the author’s own work.
 
 This presentation update does not rerun technical campaigns or advance project acceptance. The engineering records below keep their original dates.
+
+## Technical publication and pilot presentation — 15 November 2026
+
+The Czech and English entry pages now lead with a reviewable software result and link to the two case studies. The engineering contact section scopes a small pilot and identifies the human effort, actual charges and acceptance evidence needed before claiming an economic benefit. The proposed 25-minute talk is published as preparation, explicitly not a submitted or accepted conference session. This change makes no runtime, model, social-account or LinkedIn change.
 
 ## Current public status — reviewed 15 November 2026
 
