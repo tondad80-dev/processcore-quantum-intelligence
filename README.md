@@ -6,7 +6,7 @@ ProcessCore is an independent engineering project developing a governed AI softw
 
 [Portfolio](https://tondad80-dev.github.io/processcore-quantum-intelligence/) · [Česky](https://tondad80-dev.github.io/processcore-quantum-intelligence/cs.html) · [Engineering evidence](https://tondad80-dev.github.io/processcore-quantum-intelligence/engineering.html) · [Earlier website review](public-status-2026-10-14.md) · [Latest claim check](media/processcore-claim-check-2026-10-14.json)
 
-## Website structure — reviewed 14 November 2026
+## Website structure — reviewed 15 November 2026
 
 The public entry page introduces the development of ProcessCore’s governed AI software factory, using the original ProcessCore emblem and a direct link to engineering evidence. Antonín Dospiva’s portfolio remains available below. The technical ProcessCore project retains its own scope and dated evidence on `engineering.html`.
 
@@ -21,13 +21,24 @@ HoubarSky, Sirona and Golden retain their own public websites. Shared authorship
 
 The 7 November update reconciles the current Factory deliveries, links Golden’s prepared partner-selection demo, describes Sirona’s own-build and service paths, and gives both advisory pilots a direct enquiry link. HoubarSky public health returned alpha **0.7.25** on 12 November; its notes retain the local-diary, partial-translation and connectivity boundaries. Its privacy explanation distinguishes aggregate analytics from diary contents. This is not a new offline/browser acceptance or a claim about visitor counts.
 
-The 12 November reconciliation adds the merged trustgate MCP configuration correction and confirms adoption of the ZIP utility’s 0.1.1 binding checks. The earlier duplicate-title contribution retains its separate AI-agent acceptance. Sirona’s equipment catalogue is distinguished from direct sales; HoubarSky’s public alpha remains 0.7.25. Own-site examples remain labeled as the author’s own work.
+The 12 November reconciliation adds the merged trustgate MCP configuration correction and confirms adoption of the ZIP utility’s 0.1.1 binding checks. The earlier duplicate-title contribution retains its separate AI-agent acceptance. Sirona’s equipment catalogue was distinguished from direct sales; the HoubarSky check at that time identified public alpha 0.7.25. Own-site examples remain labeled as the author’s own work.
 
 This presentation update does not rerun technical campaigns or advance project acceptance. The engineering records below keep their original dates.
 
-## Current public status — reviewed 14 November 2026
+## Current public status — reviewed 15 November 2026
 
-The current project record identifies accepted **ProcessCore 1.0.9** on Raspberry Pi, with Gemini, an approved-task queue, bounded repository changes and limited pytest support adopted into the main Factory runtime on **13 November**. Its post-adoption check verified installation and preservation of historical job files; adoption itself ran no new production pytest or model job. Candidate and tests still share an interpreter; independent review and a live production shadow before adoption were not established. Runtime adoption, candidate acceptance, internal use and product deployment remain separate decisions.
+The current project record and exact Pi adoption receipt identify accepted **ProcessCore 1.0.10** from **15 November**, adding an explicit response contract for bounded tasks. Its post-adoption check verified installed sources and preservation of historical job files; adoption itself ran no new model or production task. Gemini, an approved-task queue and bounded repository changes remain available; limited pytest support retains its **13 November** acceptance. Candidate and tests still share an interpreter; independent review and a live production shadow before adoption were not established. Runtime adoption, candidate acceptance, internal use and product deployment remain separate decisions.
+
+### Reconciliation delta — 15 November 2026
+
+- **HoubarSky:** live health identifies public alpha **0.7.28** and the exact source revision for public growth-report links and private search outcomes, including no finds. External reports are opened by the user and are not imported into recommendations. The source README still labels this revision a candidate; live health supplies the later deployment identity. This identity check does not repeat functional or field acceptance.
+- **Sirona:** public version **53** adds an encrypted local habitat backup including original photographs, with a separate recovery key. It excludes the private server diary and enquiries; restore requires an empty local destination. The local and signed-in server diaries remain distinct. Actual cross-device restoration and physical sensor operation remain unverified.
+- **QCore:** exact Pi readback establishes the **0.22.3** technical runtime switch on **15 November**, including selected PDF material and organization-name context. Existing profiles and historical evidence were preserved; no new model call, profile, pilot or Golden release followed. The **30 October 0.22 pilot remains FAIL**.
+- **Web Consulting:** standalone technical management is in the agreed service scope. Restoration of an owned temporary WordPress/MariaDB instance and a separate scheduled-monitoring sandbox have recorded acceptance. Client takeover, remediation, backup and operational alerting still need their own acceptance.
+- **Grant advisory:** document-photo intake and its preview correction are deployed. AI attachment assessment remains a prepared implementation with substitute-provider tests, awaiting live qualification; the known-case simulation does not establish independent detection or customer acceptance.
+- **ProcessCore Lab:** a subsequent delivery-status function passed 40 prescribed tests and one separate Lab use. Formal acceptance, packaging and production integration remain pending; prescribed tests were known to the model. Do not infer general reliability or economic benefit.
+
+Golden’s prepared demonstration, AgriCore’s pending external assessment, TDK’s lack of empirical confirmation and the three previously merged Factory-prepared upstream contributions retain their existing evidence boundaries. This website reconciliation changes no source-project runtime or LinkedIn content.
 
 On **5 November**, a ZIP-inspection correction passed 23 prescribed tests, review, acceptance and packaging. The accepted correction inspected the actual delivery ZIP from that same pilot in a dedicated Lab copy. Its usage receipt confirms internal use and no product deployment.
 
