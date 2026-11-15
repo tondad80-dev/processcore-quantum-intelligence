@@ -36,3 +36,10 @@
 .web-example .web-example-status{font-size:12px;color:var(--cyan);margin-bottom:14px}
 .web-example-links{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:18px}
 @media(max-width:760px){.web-offer-examples .web-examples-grid{grid-template-columns:1fr}}
+
+/* Working design previews remain distinct from the author's own applications. */
+.web-demo-examples .web-examples-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.web-demo-examples .web-example{display:flex;flex-direction:column}
+.web-demo-examples .web-example-links{margin-top:auto;padding-top:18px}
+.web-demo-examples .web-demo-note{font-size:13px;margin-top:12px;color:var(--cyan)}
+@media(max-width:960px){.web-demo-examples .web-examples-grid{grid-template-columns:1fr}}

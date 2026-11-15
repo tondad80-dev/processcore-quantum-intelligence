@@ -29,6 +29,12 @@ This presentation update does not rerun technical campaigns or advance project a
 
 The current project record and exact Pi adoption receipt identify accepted **ProcessCore 1.0.10** from **15 November**, adding an explicit response contract for bounded tasks. Its post-adoption check verified installed sources and preservation of historical job files; adoption itself ran no new model or production task. Gemini, an approved-task queue and bounded repository changes remain available; limited pytest support retains its **13 November** acceptance. Candidate and tests still share an interpreter; independent review and a live production shadow before adoption were not established. Runtime adoption, candidate acceptance, internal use and product deployment remain separate decisions.
 
+### Linked website-design previews — 15 November 2026
+
+The owner's continuation of the Sites-integration proposal adds a separate working-draft section to the Czech and English website-creation offer. Homepage links lead directly to that section. It links to the existing public design previews for Daniel Dohnal, AGRISPOL Mořice and AGRO JESENICKO, whose page contents and native public access were checked. The previews are labelled as proposals; operator acceptance and launch as official business websites remain unestablished. The English cards identify the previews as Czech-language content.
+
+These links reuse the existing Sites and their audiences. The portfolio copies no client contact records, photographs or private source data. HoubarSky and Sirona remain in the separate own-project examples. Private editorial preparation and claim reconciliation remain in the existing private workspaces; public navigation does not expose them or create automatic synchronization.
+
 ### Reconciliation delta — 15 November 2026
 
 - **HoubarSky:** live health identifies public alpha **0.7.28** and the exact source revision for public growth-report links and private search outcomes, including no finds. External reports are opened by the user and are not imported into recommendations. The source README still labels this revision a candidate; live health supplies the later deployment identity. This identity check does not repeat functional or field acceptance.
