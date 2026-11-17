@@ -6,7 +6,7 @@ ProcessCore is an independent engineering project developing a governed AI softw
 
 [Portfolio](https://tondad80-dev.github.io/processcore-quantum-intelligence/) · [Česky](https://tondad80-dev.github.io/processcore-quantum-intelligence/cs.html) · [Engineering evidence](https://tondad80-dev.github.io/processcore-quantum-intelligence/engineering.html) · [Earlier website review](public-status-2026-10-14.md) · [Latest claim check](media/processcore-claim-check-2026-10-14.json)
 
-## Website structure — reviewed 15 November 2026
+## Website structure — reviewed 17 November 2026
 
 The public entry page introduces the development of ProcessCore’s governed AI software factory, using the original ProcessCore emblem and a direct link to engineering evidence. Antonín Dospiva’s portfolio remains available below. The technical ProcessCore project retains its own scope and dated evidence on `engineering.html`.
 
@@ -30,9 +30,9 @@ This presentation update does not rerun technical campaigns or advance project a
 
 The Czech and English entry pages now lead with a reviewable software result and link to the two case studies. The engineering contact section scopes a small pilot and identifies the human effort, actual charges and acceptance evidence needed before claiming an economic benefit. The proposed 25-minute talk is published as preparation, explicitly not a submitted or accepted conference session. This change makes no runtime, model, social-account or LinkedIn change.
 
-## Current public status — reviewed 15 November 2026
+## Current public status — reviewed 17 November 2026
 
-The current project record and exact Pi adoption receipt identify accepted **ProcessCore 1.0.10** from **15 November**, adding an explicit response contract for bounded tasks. Its post-adoption check verified installed sources and preservation of historical job files; adoption itself ran no new model or production task. Gemini, an approved-task queue and bounded repository changes remain available; limited pytest support retains its **13 November** acceptance. Candidate and tests still share an interpreter; independent review and a live production shadow before adoption were not established. Runtime adoption, candidate acceptance, internal use and product deployment remain separate decisions.
+The current project record, installed assembly description and exact Pi adoption receipts identify accepted **ProcessCore 1.0.12** from **16 November**. It includes the separately adopted **15 November delivery status (1.0.11)** and **16 November selected-receipt usage summary (1.0.12)**. The **1.0.10 response contract** and **13 November limited pytest interface** retain their original acceptance dates. Delivery matching does not establish archive semantics, authenticity or customer acceptance; selected receipts do not establish whole-account usage, billing, monetary cost or savings. Candidate and repository tests still share an interpreter. Runtime adoption, candidate acceptance, internal use and product deployment remain separate decisions.
 
 ### Linked website-design previews — 15 November 2026
 
@@ -40,14 +40,22 @@ The owner's continuation of the Sites-integration proposal adds a separate worki
 
 These links reuse the existing Sites and their audiences. The portfolio copies no client contact records, photographs or private source data. HoubarSky and Sirona remain in the separate own-project examples. Private editorial preparation and claim reconciliation remain in the existing private workspaces; public navigation does not expose them or create automatic synchronization.
 
-### Reconciliation delta — 15 November 2026
+### Reconciliation delta — 17 November 2026
+
+- **ProcessCore:** reconcile the engineering page and both project pages with adopted 1.0.12; replace the obsolete pending-delivery status with the recorded 1.0.11 adoption and add the selected-receipt usage summary. Retain the separate 0.1.2 GitHub Evidence history and describe its adopted 0.1.3 optional checkout extension without implying fresh CI or authenticated logs.
+- **HoubarSky:** public health identifies alpha **0.7.32**, commit `c5db53cf83bc4cd331593f78094349063416a136`. Its exact source adds Forest School and an interactive diagram/text/question lesson with optional local Czech speech. Prepared offline images/text and device-dependent speech remain distinct; independent expert review and family testing are unestablished. The source README's candidate label does not supersede the live deployment identity. This media update does not repeat application acceptance.
+- **Sirona:** public **version 63** adds explicit user-triggered sharing of an encrypted local backup through a supported system application, without attaching its recovery key. Download remains available. Scenario cinema and control-comparison links refer to simulations. Physical Android sharing, cross-device restoration, sensor operation and biological acceptance retain their limits. Newer saved versions remain undeployed and are not presented as public features. The dated v53 backup result below is preserved.
+
+The changes are public presentation only. They do not change a source-project runtime, customer acceptance, LinkedIn content or automation. Existing project boundaries, historical case studies and proposal labels remain intact.
+
+### Historical reconciliation delta — 15 November 2026
 
 - **HoubarSky:** live health identifies public alpha **0.7.28** and the exact source revision for public growth-report links and private search outcomes, including no finds. External reports are opened by the user and are not imported into recommendations. The source README still labels this revision a candidate; live health supplies the later deployment identity. This identity check does not repeat functional or field acceptance.
 - **Sirona:** public version **53** adds an encrypted local habitat backup including original photographs, with a separate recovery key. It excludes the private server diary and enquiries; restore requires an empty local destination. The local and signed-in server diaries remain distinct. Actual cross-device restoration and physical sensor operation remain unverified.
 - **QCore:** exact Pi readback establishes the **0.22.3** technical runtime switch on **15 November**, including selected PDF material and organization-name context. Existing profiles and historical evidence were preserved; no new model call, profile, pilot or Golden release followed. The **30 October 0.22 pilot remains FAIL**.
 - **Web Consulting:** standalone technical management is in the agreed service scope. Restoration of an owned temporary WordPress/MariaDB instance and a separate scheduled-monitoring sandbox have recorded acceptance. Client takeover, remediation, backup and operational alerting still need their own acceptance.
 - **Grant advisory:** document-photo intake and its preview correction are deployed. AI attachment assessment remains a prepared implementation with substitute-provider tests, awaiting live qualification; the known-case simulation does not establish independent detection or customer acceptance.
-- **ProcessCore Lab:** a subsequent delivery-status function passed 40 prescribed tests and one separate Lab use. Formal acceptance, packaging and production integration remain pending; prescribed tests were known to the model. Do not infer general reliability or economic benefit.
+- **ProcessCore Lab, at that inspection:** a subsequent delivery-status function had passed 40 prescribed tests and one separate Lab use, before formal acceptance, packaging and production integration. This historical adoption status is superseded by the later 15–16 November records above; the prescribed tests were known to the model. General reliability and economic benefit remain unestablished.
 
 Golden’s prepared demonstration, AgriCore’s pending external assessment, TDK’s lack of empirical confirmation and the three previously merged Factory-prepared upstream contributions retain their existing evidence boundaries. This website reconciliation changes no source-project runtime or LinkedIn content.
 
