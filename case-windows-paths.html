@@ -15,7 +15,7 @@
 <h2>One file, two path strings</h2>
 <p>The change added Cursor and VS Code Insiders user-profile configuration to trustgate’s home scan. On Windows, the scanner could discover a profile through its static <code>AppData/Roaming/…</code> list and again through the <code>APPDATA</code> environment variable.</p>
 <p>If those spellings differed only in letter case, a string-membership check treated them as different paths. On a case-insensitive Windows filesystem they could identify the same file. The scanner could therefore count that file twice and retain duplicate findings.</p>
-<p>CodeRabbit identified this issue in <a href="https://github.com/kirtanbhatt10/trustgate/pull/19#discussion_r4550495295">its review of PR #19</a>. This was a path-deduplication defect; the case does not establish a newly discovered security exploit.</p>
+<p>CodeRabbit identified this issue in <a href="https://github.com/kirtanbhatt10/trustgate/pull/19#discussion_r4550495295" target="_blank" rel="noopener noreferrer">its review of PR #19<span class="sr-only"> (opens in a new window)</span></a>. This was a path-deduplication defect; the case does not establish a newly discovered security exploit.</p>
 <h2>A minimal comparison example</h2>
 <p>These illustrative paths show the comparison problem without reading a filesystem:</p>
 <pre><code>from pathlib import PureWindowsPath
@@ -27,9 +27,9 @@ assert a != b
 assert PureWindowsPath(a) == PureWindowsPath(b)</code></pre>
 <p><code>PureWindowsPath</code> supplies Windows path-comparison semantics even when the example runs on another operating system. This example is a reproduction of the equality distinction, not a rerun of the upstream scanner or a test of every Windows filesystem configuration.</p>
 <h2>The correction and its regression test</h2>
-<p>With ChatGPT Codex assistance, I changed the deduplication key to <code>PureWindowsPath</code> and kept the first path spelling in the output. The <a href="https://github.com/kirtanbhatt10/trustgate/commit/8023e9793f78a190560818e8679ca69e9d49356a">fixing commit</a> also updates the native-Windows integration case and adds <code>test_windows_appdata_case_variants_are_not_duplicates</code>.</p>
+<p>With ChatGPT Codex assistance, I changed the deduplication key to <code>PureWindowsPath</code> and kept the first path spelling in the output. The <a href="https://github.com/kirtanbhatt10/trustgate/commit/8023e9793f78a190560818e8679ca69e9d49356a" target="_blank" rel="noopener noreferrer">fixing commit<span class="sr-only"> (opens in a new window)</span></a> also updates the native-Windows integration case and adds <code>test_windows_appdata_case_variants_are_not_duplicates</code>.</p>
 <p>The new regression case supplies mixed-case <code>aPpDaTa/rOaMiNg</code> and checks that the six settings/tasks paths for Code, Code - Insiders and Cursor occur exactly once, using the expected original spellings. Its file-existence behavior is mocked; that test must be distinguished from the native Windows integration case.</p>
-<p>All nine jobs in the recorded final-head <a href="https://github.com/kirtanbhatt10/trustgate/actions/runs/43220897277">GitHub CI run</a> passed, including Linux, Windows and macOS tests. The maintainer merged the PR on 12 November 2026. These are the recorded results of that submission; this article did not rerun CI.</p>
+<p>All nine jobs in the recorded final-head <a href="https://github.com/kirtanbhatt10/trustgate/actions/runs/43220897277" target="_blank" rel="noopener noreferrer">GitHub CI run<span class="sr-only"> (opens in a new window)</span></a> passed, including Linux, Windows and macOS tests. The maintainer merged the PR on 12 November 2026. These are the recorded results of that submission; this article did not rerun CI.</p>
 <div class="table-scroll"><table><caption>Who contributed which part</caption><thead><tr><th scope="col">Part</th><th scope="col">Recorded role</th></tr></thead><tbody>
 <tr><th scope="row">Initial implementation</th><td>Gemini through ProcessCore AI Factory.</td></tr>
 <tr><th scope="row">Windows finding</th><td>CodeRabbit AI review.</td></tr>
@@ -46,13 +46,13 @@ assert PureWindowsPath(a) == PureWindowsPath(b)</code></pre>
 <tr><th scope="row">Still unmeasured</th><td>Downstream adoption, support time saved, monetary savings and customer benefit.</td></tr>
 </tbody></table></div>
 <div class="sources"><h2 id="sources">Inspect the original evidence</h2><ol>
-<li><a href="https://github.com/kirtanbhatt10/trustgate/pull/19">PR #19: scope, discussion and merge</a>.</li>
-<li><a href="https://github.com/kirtanbhatt10/trustgate/pull/19#discussion_r4550495295">CodeRabbit’s original Windows-path finding</a>.</li>
-<li><a href="https://github.com/kirtanbhatt10/trustgate/commit/8023e9793f78a190560818e8679ca69e9d49356a">Correction and both test changes, pinned to commit 8023e979</a>.</li>
-<li><a href="https://github.com/kirtanbhatt10/trustgate/actions/runs/43220897277">Recorded final-head CI run</a>.</li>
-<li><a href="https://docs.python.org/3/library/pathlib.html#general-properties">Python pathlib comparison semantics</a>.</li>
+<li><a href="https://github.com/kirtanbhatt10/trustgate/pull/19" target="_blank" rel="noopener noreferrer">PR #19: scope, discussion and merge<span class="sr-only"> (opens in a new window)</span></a>.</li>
+<li><a href="https://github.com/kirtanbhatt10/trustgate/pull/19#discussion_r4550495295" target="_blank" rel="noopener noreferrer">CodeRabbit’s original Windows-path finding<span class="sr-only"> (opens in a new window)</span></a>.</li>
+<li><a href="https://github.com/kirtanbhatt10/trustgate/commit/8023e9793f78a190560818e8679ca69e9d49356a" target="_blank" rel="noopener noreferrer">Correction and both test changes, pinned to commit 8023e979<span class="sr-only"> (opens in a new window)</span></a>.</li>
+<li><a href="https://github.com/kirtanbhatt10/trustgate/actions/runs/43220897277" target="_blank" rel="noopener noreferrer">Recorded final-head CI run<span class="sr-only"> (opens in a new window)</span></a>.</li>
+<li><a href="https://docs.python.org/3/library/pathlib.html#general-properties" target="_blank" rel="noopener noreferrer">Python pathlib comparison semantics<span class="sr-only"> (opens in a new window)</span></a>.</li>
 </ol></div>
 
 <p class="publication-note">This article was prepared with AI assistance from the linked project records, source code and review discussion. The examples and claims were checked against those sources. AI-assisted drafting is separate from independent technical review.</p>
 <div class="related"><p>Related: <a href="case-test-report.html">A forged report claimed 999 passes. The runner recorded none.</a></p><p><a href="engineering.html#case-studies">All case studies</a> · <a href="index.html">About the author and projects</a></p></div>
-</article></main><footer class="site-footer"><div class="wrap"><a class="footer-brand" href="index.html">ProcessCore</a><p>Independent engineering by Antonín Dospiva. Each result retains its own evidence and scope.</p><div class="footer-links"><a href="engineering.html">Engineering evidence</a><a href="https://github.com/tondad80-dev/processcore-quantum-intelligence">Source repository</a><a href="LICENSE">Apache-2.0</a></div></div></footer></body></html>
+</article></main><footer class="site-footer"><div class="wrap"><a class="footer-brand" href="index.html">ProcessCore</a><p>Independent engineering by Antonín Dospiva. Each result retains its own evidence and scope.</p><div class="footer-links"><a href="engineering.html">Engineering evidence</a><a href="https://github.com/tondad80-dev/processcore-quantum-intelligence" target="_blank" rel="noopener noreferrer">Source repository<span class="sr-only"> (opens in a new window)</span></a><a href="LICENSE">Apache-2.0</a></div></div></footer></body></html>
