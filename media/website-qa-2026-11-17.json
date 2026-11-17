@@ -188,6 +188,90 @@
         "No target-site security, permissions, client records or forms were changed.",
         "Local QA is separate from the subsequent GitHub Pages publication."
       ]
+    },
+    {
+      "id": "portfolio-external-windows",
+      "checkedAt": "2026-11-17T13:39:31.057965+00:00",
+      "baseCommit": "7493d4fcf500f9631c76037ba6738b45dba7e3aa",
+      "scope": "Seven current portfolio pages; outgoing HTTP(S) anchors only. Historical August page and historical lifecycle media page retained byte-for-byte.",
+      "change": {
+        "externalAnchors": 90,
+        "newTargetAttributes": 74,
+        "newScreenReaderHints": 86,
+        "newPrimaryHomeButtons": 6,
+        "policy": "target=_blank, rel includes noopener noreferrer; all destinations unchanged"
+      },
+      "countsByPage": {
+        "index.html": 14,
+        "cs.html": 14,
+        "projects.html": 20,
+        "projekty.html": 20,
+        "engineering.html": 12,
+        "case-windows-paths.html": 9,
+        "case-test-report.html": 1
+      },
+      "preservation": "Compared with baseCommit: all IDs, ordered href destinations and inline script bodies are identical on all seven pages; both historical HTML pages are byte-identical. Internal navigation, e-mail and telephone links are unchanged.",
+      "static": {
+        "status": "PASS",
+        "htmlFiles": 9,
+        "localReferences": 248,
+        "findings": [],
+        "externalOrEmbeddedReferencesSkipped": 135
+      },
+      "browser": {
+        "environment": "Chrome managed preview; actual pointer activation in a 390 CSS px iframe, with a new top-level tab observed for each representative destination. The source portfolio frame remained available.",
+        "openedDestinations": [
+          {
+            "url": "https://www.houbarsky.eu/",
+            "title": "HoubarSky — soukromý houbařský deník a plánovač výprav",
+            "heading": "Tady někde to bylo."
+          },
+          {
+            "url": "https://sirona-living-systems.tondad80.chatgpt.site/",
+            "title": "SIRONA — Návrh a péče o živé světy",
+            "heading": "Nejdřív obyvatel. Potom jeho svět."
+          },
+          {
+            "url": "https://tondad80-dev.github.io/commercial-golden-api-deploy/demo/#case=photon&view=all&lang=cs",
+            "title": "Golden | Vyzkoušet výběr partnera",
+            "heading": "Koho oslovit. A proč."
+          }
+        ],
+        "layout": [
+          {
+            "frameWidth": 390,
+            "page": "cs.html",
+            "clientWidth": 375,
+            "scrollWidth": 375
+          },
+          {
+            "frameWidth": 768,
+            "page": "projects.html",
+            "clientWidth": 753,
+            "scrollWidth": 753
+          },
+          {
+            "frameWidth": 1440,
+            "page": "index.html",
+            "clientWidth": 1425,
+            "scrollWidth": 1425
+          }
+        ],
+        "mobilePrimaryButtonHeight": 47.5,
+        "screenshot": "portfolio-external-links-2026-11-17.jpg"
+      },
+      "methodUses": [
+        {
+          "id": "staticky-web-predani",
+          "adaptation": "Extend the already reproduced embedded-navigation correction. Check all anchor contracts offline and repeat real pointer activation for three representative public destinations; keep source preservation and publication separate."
+        }
+      ],
+      "limits": [
+        "Physical Android/iOS app navigation is NOT_VERIFIED.",
+        "The 90-anchor contract check does not establish the network availability or full functionality of all external destinations.",
+        "No external target website, form, account, project runtime or acceptance status was changed.",
+        "This preview receipt does not itself prove GitHub Pages publication."
+      ]
     }
   ]
 }
