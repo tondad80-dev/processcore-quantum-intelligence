@@ -26,6 +26,14 @@ The 12 November reconciliation adds the merged trustgate MCP configuration corre
 
 This presentation update does not rerun technical campaigns or advance project acceptance. The engineering records below keep their original dates.
 
+## Website usability review — 17 November 2026
+
+This presentation-only follow-up replaces 84 missing-font arrow glyphs with decorative inline SVGs on both home and project pages, gives the shared header links a 44 px minimum target height, and makes each shared page's skip link focus its existing main landmark. Inline source links in project descriptions are now underlined. The shared stylesheet URL is versioned so the changed markup loads its matching styles.
+
+The offline check covered nine HTML files and 248 local references without findings. Targeted browser checks covered English/Czech navigation, both technical case-study paths, mobile contact and project links, keyboard focus, and 390/768/1440 px frames without observed horizontal overflow. All existing IDs, anchor attributes and inline scripts on the six changed pages were compared with source commit `7235ebe75f5c31554d8723d4c793f232adc4cf94` and preserved. [Scoped QA receipt](media/website-qa-2026-11-17.json) · [Preview screenshot](media/website-qa-2026-11-17.jpg).
+
+This is not a full accessibility audit, physical-device acceptance, a new check of every external destination, or a repeat of source-project technical acceptance. It changes no source-project runtime, project facts, dated outcome or hosting provider. The local QA receipt is separate from the subsequent GitHub Pages deployment result.
+
 ## Technical publication and pilot presentation — 15 November 2026
 
 The Czech and English entry pages now lead with a reviewable software result and link to the two case studies. The engineering contact section scopes a small pilot and identifies the human effort, actual charges and acceptance evidence needed before claiming an economic benefit. The proposed 25-minute talk is published as preparation, explicitly not a submitted or accepted conference session. This change makes no runtime, model, social-account or LinkedIn change.

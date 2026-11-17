@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-17T12:17:39.438Z",
+  "baseCommit": "7235ebe75f5c31554d8723d4c793f232adc4cf94",
+  "scope": "Public website presentation and targeted UI checks; no source-project runtime or acceptance change.",
+  "methodUses": [
+    {
+      "id": "staticky-web-predani",
+      "sourceVersion": "sha256:78d6479d79faa880838c0af0ffb02201c1dcb9c01965f7d2976ca8d4211112c7",
+      "asOf": "2026-11-17",
+      "indexFreshness": "MATCH",
+      "adaptation": "Existing GitHub Pages repository; preserve the same hosting, anchors, project boundaries and dated evidence. No new Site."
+    }
+  ],
+  "changes": [
+    "Replace 84 northeast arrow characters with decorative inline SVGs on the English/Czech home and project pages. The reviewed browser displayed missing-glyph boxes before the change.",
+    "Increase shared header navigation and language link target height to at least 44 CSS px, with wrapping and an adjusted anchor offset on narrow screens.",
+    "Make the existing main skip target focusable without adding a sequential tab stop on all six pages using portfolio.css.",
+    "Underline and colour inline links in project descriptions; version the changed shared stylesheet URL."
+  ],
+  "checks": {
+    "static": {
+      "status": "PASS",
+      "htmlFiles": 9,
+      "localReferences": 248,
+      "findings": [],
+      "externalOrEmbeddedReferencesSkipped": 131,
+      "publicationStatus": "NOT_VERIFIED_BY_OFFLINE_CHECK"
+    },
+    "preservation": "Compared all six changed HTML pages with baseCommit: all IDs, anchor attributes and inline script bodies are unchanged.",
+    "gitDiffCheck": "PASS",
+    "browser": {
+      "environment": "Chrome; managed preview of the selected GitHub source. Frame widths are CSS layout checks, not physical-device acceptance.",
+      "layout": [
+        {
+          "frameWidth": 390,
+          "language": "cs",
+          "clientWidth": 375,
+          "scrollWidth": 375,
+          "headerHeightBefore": 105,
+          "headerHeightAfter": 175,
+          "navLinkHeightBefore": 19.796875,
+          "navLinkHeightAfter": 44,
+          "views": [
+            "home",
+            "contact",
+            "project notes"
+          ]
+        },
+        {
+          "frameWidth": 768,
+          "language": "en",
+          "clientWidth": 753,
+          "scrollWidth": 753,
+          "headerHeightBefore": 106.796875,
+          "headerHeightAfter": 131,
+          "navLinkHeightBefore": 19.796875,
+          "navLinkHeightAfter": 44,
+          "views": [
+            "home"
+          ]
+        },
+        {
+          "frameWidth": 1440,
+          "language": "cs",
+          "clientWidth": 1425,
+          "scrollWidth": 1425,
+          "headerHeightBefore": 91,
+          "headerHeightAfter": 91,
+          "navLinkHeightBefore": 21.4375,
+          "navLinkHeightAfter": 44,
+          "views": [
+            "home"
+          ]
+        }
+      ],
+      "skipLink": {
+        "before": "main was not focused",
+        "after": "main receives focus; the next Tab reaches Read the case studies"
+      },
+      "paths": [
+        "English home → Engineering case-studies section → Windows-path case study",
+        "Case-studies section → forged-report case study, verified by keyboard activation",
+        "Czech mobile navigation → Contact, heading visible below the sticky header",
+        "Czech mobile project notes → HoubarSky section on projekty.html",
+        "Case-study header → English home → Czech home"
+      ],
+      "icons": "19 SVG arrows visible on each home page; after screenshot confirms the arrow shape.",
+      "screenshot": "website-qa-2026-11-17.jpg"
+    }
+  },
+  "limits": [
+    "Targeted UI review, not a complete accessibility audit or a physical Android/iOS test.",
+    "External destinations were not all rechecked, and no e-mail was sent.",
+    "No model calls, technical candidate campaigns, source-project runtime changes or new project-acceptance claims.",
+    "The local QA receipt does not prove deployment; use the existing GitHub Pages deployment run for that result."
+  ]
+}
