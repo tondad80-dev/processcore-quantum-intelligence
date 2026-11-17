@@ -94,5 +94,62 @@
     "External destinations were not all rechecked, and no e-mail was sent.",
     "No model calls, technical candidate campaigns, source-project runtime changes or new project-acceptance claims.",
     "The local QA receipt does not prove deployment; use the existing GitHub Pages deployment run for that result."
+  ],
+  "followUps": [
+    {
+      "id": "public-advisory-website-link",
+      "checkedAt": "2026-11-17T12:53:01.424895+00:00",
+      "baseCommit": "39ccbe59bf91f025c42285bb575f2441f6efa090",
+      "destination": "https://www.kosirska-ah.cz/",
+      "destinationTitle": "Zemědělské dotační poradenství | Kosířská A + H s.r.o.",
+      "canonicalMatches": true,
+      "files": [
+        "index.html",
+        "cs.html",
+        "projects.html",
+        "projekty.html"
+      ],
+      "change": "One public advisory-website link added per page. Existing enquiry e-mail remains available. English links label Czech-language content.",
+      "static": {
+        "status": "PASS",
+        "htmlFiles": 9,
+        "localReferences": 248,
+        "findings": [],
+        "externalOrEmbeddedReferencesSkipped": 135
+      },
+      "preservation": "Compared each changed page to the base: existing link destinations, IDs and inline scripts preserved.",
+      "browser": {
+        "previewWidths": [
+          {
+            "frame": 390,
+            "client": 375,
+            "scroll": 375
+          },
+          {
+            "frame": 768,
+            "client": 753,
+            "scroll": 753
+          },
+          {
+            "frame": 1440,
+            "client": 1425,
+            "scroll": 1425
+          }
+        ],
+        "actualNavigation": "Standalone Czech project-page link opened the public introduction at the exact destination URL and expected title.",
+        "screenshot": "advisory-link-2026-11-17.jpg"
+      },
+      "methodUses": [
+        {
+          "id": "staticky-web-predani",
+          "sourceVersion": "sha256:feabb10a27c87d7c523704e6b534b21ffbabe8ec1944ad6c83a0198b67ef5d35",
+          "adaptation": "Public outbound navigation only; no form submission or source-project acceptance campaign."
+        }
+      ],
+      "limits": [
+        "No form submitted, call made or signed-in client/advisor area opened.",
+        "Preview receipt does not itself prove GitHub Pages publication."
+      ]
+    }
   ]
 }
