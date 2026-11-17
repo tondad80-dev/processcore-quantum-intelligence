@@ -43,3 +43,16 @@
 .web-demo-examples .web-example-links{margin-top:auto;padding-top:18px}
 .web-demo-examples .web-demo-note{font-size:13px;margin-top:12px;color:var(--cyan)}
 @media(max-width:960px){.web-demo-examples .web-examples-grid{grid-template-columns:1fr}}
+
+/* Keep link indicators independent of the device's symbol fonts. */
+.inline-arrow{display:inline-block;width:1em;height:1em;vertical-align:-.12em;flex-shrink:0}
+.map-row .inline-arrow{width:17px;height:17px}
+.project-detail dd a{color:var(--cyan);text-decoration:underline;text-underline-offset:.2em}
+
+/* Give header links a useful touch area, including wrapped mobile rows. */
+.site-header nav a,.language{display:inline-flex;align-items:center;min-height:44px;column-gap:.25em}
+@media(max-width:960px){
+  html{scroll-padding-top:194px}
+  .site-header nav{gap:4px 12px}
+  .site-header nav a{padding:8px;font-size:13px;line-height:1.5}
+}
