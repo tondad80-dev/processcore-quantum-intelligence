@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "kind": "fictional_training_case",
+  "rules": "SIMULACE-v1",
+  "caseDate": "2026-11-13",
+  "publishedAt": "2026-11-17",
+  "scope": "Fiktivní spis; nejde o účinná dotační pravidla, stanovisko SZIF ani klientská data.",
+  "documents": [
+    {
+      "id": "D-01",
+      "type": "zadani",
+      "model": "PX80",
+      "quantity": 1,
+      "priceCzkIncludingVat": 480000,
+      "requirements": [
+        "shoda modelu se zadáním a převzetím",
+        "samostatný doklad tvrzené úhrady",
+        "dohledatelné datum nabídky"
+      ],
+      "deadline": null
+    },
+    {
+      "id": "D-02",
+      "type": "faktura",
+      "number": "F-TEST-001",
+      "issuedAt": "2026-10-30",
+      "model": "PX90",
+      "serial": "TEST-0001",
+      "priceCzkIncludingVat": 480000,
+      "textPaymentMethod": "bankovní převod",
+      "paymentConfirmed": false
+    },
+    {
+      "id": "D-03",
+      "type": "prevzeti",
+      "number": "P-TEST-001",
+      "acceptedAt": "2026-10-31",
+      "model": "PX80",
+      "serial": "TEST-0001",
+      "invoiceReference": "F-TEST-001"
+    },
+    {
+      "id": "D-04",
+      "type": "nabidka",
+      "number": "N-TEST-001",
+      "model": "PX80",
+      "priceCzkIncludingVat": 480000,
+      "issuedAt": null,
+      "accompanyingDateEvidence": null
+    },
+    {
+      "id": "D-05",
+      "type": "tvrzeni_a_prilohy",
+      "claim": "Fakturu F-TEST-001 jsem uhradil bankovním převodem.",
+      "paymentEvidenceAttached": false
+    }
+  ],
+  "expectedFindingsKnownInAdvance": true,
+  "findings": [
+    {
+      "id": "Z-01",
+      "documents": [
+        "D-01",
+        "D-02",
+        "D-03"
+      ],
+      "priority": "P1",
+      "finding": "Nesoulad PX90 proti PX80",
+      "deadline": null
+    },
+    {
+      "id": "Z-02",
+      "documents": [
+        "D-02",
+        "D-05"
+      ],
+      "priority": "P1",
+      "finding": "Tvrzená, ale nedoložená úhrada; nejde o zjištění nezaplacení",
+      "deadline": null
+    },
+    {
+      "id": "Z-03",
+      "documents": [
+        "D-04"
+      ],
+      "priority": "P2",
+      "finding": "Nedoložené datum nabídky",
+      "deadline": null
+    }
+  ],
+  "historicalResult": {
+    "date": "2026-11-13",
+    "knownExpectedFindings": 3,
+    "capturedInKnownSet": 3,
+    "missedInKnownSet": 0,
+    "addedInKnownSet": 0,
+    "independentAccuracyEstablished": false,
+    "elapsedSecondsThroughVerifiedHandover": 285.034038,
+    "included": [
+      "načtení",
+      "úsudek",
+      "opravy chyb",
+      "verzování",
+      "zpětné ověření"
+    ],
+    "excluded": [
+      "předchozí příprava spisu",
+      "následná aktualizace evidence",
+      "závěrečná zpráva"
+    ],
+    "activeHumanSeconds": null,
+    "fullServiceEffortSeconds": null,
+    "savingsEstablished": false
+  },
+  "limits": [
+    "Ostatní přílohy byly pouze předpokladem simulace, nikoli dalším nezávisle ověřeným výsledkem.",
+    "Neznámé lhůty se neodvozují.",
+    "Tento soubor je veřejné redakční shrnutí, nikoli nové spuštění původní zkoušky."
+  ]
+}

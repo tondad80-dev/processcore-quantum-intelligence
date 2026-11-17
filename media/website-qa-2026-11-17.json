@@ -272,6 +272,100 @@
         "No external target website, form, account, project runtime or acceptance status was changed.",
         "This preview receipt does not itself prove GitHub Pages publication."
       ]
+    },
+    {
+      "id": "czech-cases-interface-captures-advisory-example",
+      "checkedAt": "2026-11-17T14:16:00.297627+00:00",
+      "baseCommit": "9e4c6133fbd8579cf4c75df44964a1ec5fac6f41",
+      "scope": "Owner-approved presentation follow-up: two Czech technical summaries, actual public interface captures and the existing fictional advisory case. No source-project runtime or historical campaign repeated.",
+      "changes": [
+        "pripadove-studie.html summarizes the two existing English studies, retaining the 12 November and 14 October event dates, roles and limits. Contextual Czech links added to the home, project notes and English-study headers.",
+        "Two browser-captured interface images displayed on both home pages with dated captions and links to full-size images; the aquarium image inside Sirona remains labeled as an AI illustration.",
+        "modelova-predkontrola.html and its public JSON summarize the existing fixed fictional case of 13 November. Three previously known findings and the 285.034038-second assisted-handover interval are preserved; active human time and whole-service effort remain unknown."
+      ],
+      "preservation": "All existing IDs and inline script bodies preserved on the six edited HTML pages. engineering.html and both historical HTML pages are byte-identical to the base. Original English case-study body and dated project facts retained.",
+      "static": {
+        "status": "PASS",
+        "htmlFiles": 11,
+        "localReferences": 312,
+        "findings": [],
+        "externalOrEmbeddedReferencesSkipped": 138
+      },
+      "browser": {
+        "environment": "Chrome; managed local preview. CSS frame tests are not physical-device acceptance.",
+        "layout": [
+          {
+            "page": "pripadove-studie.html",
+            "frameWidth": 390,
+            "clientWidth": 375,
+            "scrollWidth": 375
+          },
+          {
+            "page": "modelova-predkontrola.html",
+            "frameWidth": 768,
+            "clientWidth": 753,
+            "scrollWidth": 753
+          },
+          {
+            "page": "cs.html#screenshots",
+            "frameWidth": 1440,
+            "clientWidth": 1425,
+            "scrollWidth": 1425
+          },
+          {
+            "page": "cs.html#screenshots",
+            "frameWidth": 390,
+            "clientWidth": 375,
+            "scrollWidth": 375
+          },
+          {
+            "page": "modelova-predkontrola.html#zjisteni",
+            "frameWidth": 390,
+            "clientWidth": 375,
+            "scrollWidth": 375
+          }
+        ],
+        "paths": [
+          "Czech home primary button → Czech summaries → full English Windows case → contextual Czech summary.",
+          "Czech-summary anchor → false-report section.",
+          "Model case → expand five fictional input documents.",
+          "Gallery pointer click → full-size HoubarSky image in a separate tab; browser decoded 620 × 900 pixels.",
+          "Model-case pointer click → JSON opens in a separate tab with SIMULACE-v1 and fictional documents."
+        ],
+        "interfaceCaptures": [
+          {
+            "file": "houbarsky-interface-2026-11-17.jpg",
+            "url": "https://www.houbarsky.eu/",
+            "route": "Akademie → Lesní škola",
+            "capture": "Clipped browser screenshot of the public learning interface; no diary or location records.",
+            "width": 620,
+            "height": 900
+          },
+          {
+            "file": "sirona-interface-2026-11-17.jpg",
+            "url": "https://sirona-living-systems.tondad80.chatgpt.site/design/?mode=aqua&species=neolamprologus-multifasciatus",
+            "capture": "Public species-selection interface; no sign-in, private record or design submission.",
+            "width": 1348,
+            "height": 926
+          }
+        ],
+        "imageLoading": "Both gallery images decoded at their recorded natural sizes.",
+        "downloadFollowUp": "Browser download-event verification timed out; final UI offers a directly opened JSON document, verified by actual activation, rather than a download claim.",
+        "screenshot": "portfolio-examples-2026-11-17.jpg"
+      },
+      "methodUses": [
+        {
+          "id": "staticky-web-predani",
+          "sourceVersion": "sha256:feabb10a27c87d7c523704e6b534b21ffbabe8ec1944ad6c83a0198b67ef5d35",
+          "adaptation": "Apply static routing checks, scoped browser interaction and dated public captures; preserve historical campaign scope and separate assisted elapsed time from human effort."
+        }
+      ],
+      "limits": [
+        "Physical Android/iOS app navigation remains unverified.",
+        "Targeted layout and path checks are not a complete accessibility or performance audit.",
+        "The fictional-case publication does not establish independent detection, active human effort, customer acceptance, current grant rules or economic benefit.",
+        "Local preview QA is separate from the subsequent GitHub Pages publication."
+      ]
     }
   ]
 }
