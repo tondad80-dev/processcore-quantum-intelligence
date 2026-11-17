@@ -150,6 +150,44 @@
         "No form submitted, call made or signed-in client/advisor area opened.",
         "Preview receipt does not itself prove GitHub Pages publication."
       ]
+    },
+    {
+      "id": "advisory-embedded-navigation",
+      "checkedAt": "2026-11-17T13:19:00.935667+00:00",
+      "baseCommit": "bb0940c3ccfe0802f4dc2c19bd644b145efc2fc6",
+      "trigger": "Owner reported that the new advisory link did not navigate in a mobile app; earlier standalone-browser success did not verify that environment.",
+      "before": {
+        "environment": "Chrome, ordinary iframe 390 CSS px wide; not the physical Android app",
+        "activation": "Focused link activated with Enter",
+        "result": "The frame reached chrome-error://chromewebdata/ and displayed www.kosirska-ah.cz refused to connect."
+      },
+      "change": "All four advisory links use a primary button, target=_blank, rel=noopener noreferrer and a screen-reader new-window hint. Destination unchanged.",
+      "after": {
+        "activation": "Actual pointer click on the Czech home-card link in the same 390 px iframe",
+        "result": "A new tab loaded https://www.kosirska-ah.cz/ with the expected service heading and title; the original portfolio frame remained available.",
+        "buttonHeight": 47.5,
+        "clientWidth": 375,
+        "scrollWidth": 375,
+        "screenshot": "advisory-window-2026-11-17.jpg"
+      },
+      "static": {
+        "status": "PASS",
+        "htmlFiles": 9,
+        "localReferences": 248,
+        "findings": []
+      },
+      "preserved": "All existing IDs and href destinations on the four changed pages.",
+      "methodUses": [
+        {
+          "id": "staticky-web-predani",
+          "adaptation": "Reproduce failed embedded activation and repeat the route after the navigation change. Earlier standalone success remains scoped to standalone browsing."
+        }
+      ],
+      "limits": [
+        "Physical Android app navigation is NOT_VERIFIED. The ordinary iframe is an additional reproduction, not proof of the screenshot environment or its exact cause.",
+        "No target-site security, permissions, client records or forms were changed.",
+        "Local QA is separate from the subsequent GitHub Pages publication."
+      ]
     }
   ]
 }
