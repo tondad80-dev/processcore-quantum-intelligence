@@ -46,7 +46,15 @@ This is not a full accessibility audit, physical-device acceptance, a new check 
 
 The Czech and English entry pages now lead with a reviewable software result and link to the two case studies. The engineering contact section scopes a small pilot and identifies the human effort, actual charges and acceptance evidence needed before claiming an economic benefit. The proposed 25-minute talk is published as preparation, explicitly not a submitted or accepted conference session. This change makes no runtime, model, social-account or LinkedIn change.
 
-## Current public status — reviewed 17 November 2026
+## Portfolio evidence reviewed on 18 November 2026
+
+- **ProcessCore.** An isolated Lab accepted and used a SQLite reversal writer. It reversed one synthetic entry, preserved the original and added no row on repetition. The acceptance covers the test database. [Engineering record](engineering.html#factory-internal-lab)
+- **QCore.** Source rules went into production on 17 November. On 18 November a case was deferred when a PDF was selected to establish website identity, which requires HTML. The run added no profile or Golden release. The October content pilot remains closed with a FAIL result. [Deployment and content check](engineering.html#qcore-source-rules)
+- **HoubarSky and Sirona.** HoubarSky’s public health endpoint reported alpha 0.7.40. Forest School covers six languages and the bird quiz includes eight field recordings. Sirona’s public version 80 exposes three species templates. Its private equipment-failure scenarios are software simulations. [HoubarSky health](https://www.houbarsky.eu/health) · [Sirona](https://sirona-living-systems.tondad80.chatgpt.site/)
+- **TDK.** A retrospective clock-data comparison yielded intervals consistent with zero effect. A separate plane-wave volume calculation awaits independent replication. The predictive branch remains frozen. [Research notes](research/tdk/README.md)
+- **Advisory services.** The provider lists the Czech Single Application, direct payments and LPIS alongside investment grants. Its deployed tool can check a PDF’s text layer page by page. The website-services offer is directly accessible and the three website designs retain their draft status. [Agricultural advisory](https://www.kosirska-ah.cz/) · [Website services](https://www.kosirska-ah.cz/weby/)
+
+## Engineering assembly recorded on 17 November 2026
 
 The current project record, installed assembly description and exact Pi adoption receipts identify accepted **ProcessCore 1.0.12** from **16 November**. It includes the separately adopted **15 November delivery status (1.0.11)** and **16 November selected-receipt usage summary (1.0.12)**. The **1.0.10 response contract** and **13 November limited pytest interface** retain their original acceptance dates. Delivery matching does not establish archive semantics, authenticity or customer acceptance; selected receipts do not establish whole-account usage, billing, monetary cost or savings. Candidate and repository tests still share an interpreter. Runtime adoption, candidate acceptance, internal use and product deployment remain separate decisions.
 
@@ -76,7 +84,7 @@ The owner's follow-up extends the correction across all nine publicly listed pro
 - **TDK:** reflect the latest recorded scientific entry, 15 October, verified against the actual Test Ledger. External testbeds and conditional constraints are not a TDK-specific physical prediction; the predictive branch remains frozen, with no positive empirical evidence. Do not expose the private research workspace.
 - **Web Consulting:** add partial repeated own-site service-check evidence from 17 November, retaining observed gaps and the open seven-day/delivery/human-response acceptance. This does not take over the client website.
 - **Grant advisory:** describe the already deployed provider identity consistently with the owning issue, without claiming a verified signed-in Justice call, live AI assessment or client acceptance.
-- **HoubarSky and Sirona:** the preceding published 0.7.32 and public-v63 descriptions remain current within the read source scope. Newer saved Sirona work remains separate from public production.
+- **HoubarSky and Sirona:** the 17 November check identified 0.7.32 and public v63. That check covered the versions published at the time.
 
 The six HTML/README changes preserve existing dates, anchors, scripts, private-source boundaries and closed outcomes. No source-project runtime, model, message, social account or automation is changed by this media follow-through.
 

@@ -8,6 +8,12 @@
 
 > TDK zkoumá, co lze o fyzikálním systému odvodit z jeho změn, vztahů a procesní historie — a jaký další fyzikální obsah je potřeba, aby z takového popisu vznikla měřitelná předpověď.
 
+### Výpočetní práce k 18. listopadu 2026
+
+Ve zpětném testu jsme porovnali dva zveřejněné poměry frekvencí optických hodin s modelovaným slapovým působením. Oba 95% intervaly pro odhad účinku zahrnovaly nulu. [Veřejná měření optických hodin](https://doi.org/10.5281/zenodo.16539534)
+
+V samostatném matematickém modelu jsme různými postupy vypočetli čtyřrozměrný objem oblasti mezi dvěma událostmi v rovinné vlně. Výpočet čeká na nezávislé zopakování. Předpovědní větev TDK zůstává pozastavená.
+
 ## 1. Základní otázka
 
 Lze vesmír popsat jako jeden provázaný proces, v němž známé objekty představují relativně stabilní struktury a lokální mechanismy?
