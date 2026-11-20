@@ -228,3 +228,7 @@ Copyright © 2026 Antonín Dospiva.
 - HoubarSky public health reported 0.7.43 at commit `b86487b964a932ed872bceefba622e8b1c48998a`. The matching public README and merged PRs #46–48 describe latest-outing navigation, rescue of surviving diary data and the Grygov family card. Stored train times are entered by the user; family field acceptance is still pending.
 - ProcessCore: a host-verified v5 Lab test across three synthetic months preserved journal/book bytes while invalidating and re-confirming balance transfers after a one-cent correction and backup restore. This is a separate Lab artifact, not Factory runtime deployment, real-book acceptance or measured savings.
 - Other project boundaries and dated results remain preserved; no private operational, client or husbandry records are published.
+
+## Public Sirona participation call · 20 November 2026
+
+The Czech and English project notes now link to Sirona’s public Tanganyika keeper group, introduced on 19 November. The free Aqua lab is open to everyone; the call offers three places with personal help on an initial model calculation. Participation must be confirmed with the author. A published invitation does not establish enrollment, completed pilots, sales, real sensor operation or husbandry safety. Public Site metadata reports version 82; the actual community page was read without submitting the application.
