@@ -232,3 +232,7 @@ Copyright © 2026 Antonín Dospiva.
 ## Public Sirona participation call · 20 November 2026
 
 The Czech and English project notes now link to Sirona’s public Tanganyika keeper group, introduced on 19 November. The free Aqua lab is open to everyone; the call offers three places with personal help on an initial model calculation. Participation must be confirmed with the author. A published invitation does not establish enrollment, completed pilots, sales, real sensor operation or husbandry safety. Public Site metadata reports version 82; the actual community page was read without submitting the application.
+
+## Android package check in a separate Lab · 26 November 2026
+
+The Czech and English ProcessCore cards now describe two Lab batches in a manually started Android session. The phone calculated SHA-256 for two previously accepted delivery ZIPs and a deliberately modified copy; the Pi verified all three returned values and detected the changed copy. The two original result records were read on Pi and matched the hashes pinned in the current project Resume. The experiment was not rerun for this website update. [Scope and limits](https://tondad80-dev.github.io/processcore-quantum-intelligence/engineering.html#android-package-check): byte identity is distinct from code correctness, authenticity and independent review. Automatic startup, production adoption, long-duration reliability and speed or cost gains are not established. No private network details or raw receipts are published.
