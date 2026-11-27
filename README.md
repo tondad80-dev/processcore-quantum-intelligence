@@ -236,3 +236,7 @@ The Czech and English project notes now link to Sirona’s public Tanganyika kee
 ## Android package check in a separate Lab · 26 November 2026
 
 The Czech and English ProcessCore cards now describe two Lab batches in a manually started Android session. The phone calculated SHA-256 for two previously accepted delivery ZIPs and a deliberately modified copy; the Pi verified all three returned values and detected the changed copy. The two original result records were read on Pi and matched the hashes pinned in the current project Resume. The experiment was not rerun for this website update. [Scope and limits](https://tondad80-dev.github.io/processcore-quantum-intelligence/engineering.html#android-package-check): byte identity is distinct from code correctness, authenticity and independent review. Automatic startup, production adoption, long-duration reliability and speed or cost gains are not established. No private network details or raw receipts are published.
+
+## HoubarSky release observed · 27 November 2026
+
+Public health reports 0.7.44 at `58a09b68e9f835654ba777c13900cdf9b128c9c6`. Both language cards describe the revised Forest School questions and optional bird observation in the local diary from that exact source. The source product plan still describes an earlier staged state; the live health supersedes that deployment field only. Acceptance of the new public workflow, family testing and user benefit remain open. Manual portfolio changes in PRs #22–24 are preserved.
