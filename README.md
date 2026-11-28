@@ -240,3 +240,7 @@ The Czech and English ProcessCore cards now describe two Lab batches in a manual
 ## HoubarSky release observed · 27 November 2026
 
 Public health reports 0.7.44 at `58a09b68e9f835654ba777c13900cdf9b128c9c6`. Both language cards describe the revised Forest School questions and optional bird observation in the local diary from that exact source. The source product plan still describes an earlier staged state; the live health supersedes that deployment field only. Acceptance of the new public workflow, family testing and user benefit remain open. Manual portfolio changes in PRs #22–24 are preserved.
+
+## Bounded evidence update · 28 November 2026
+
+Both language cards now distinguish the completed 27 November public HoubarSky test from pending family testing; describe the selected-package USB checks in a separate Factory Lab; and replace the older draft-only attachment-assessment status with the deployed Docker pilot and its two fictional-document live-model checks. Hosted AI activation, full advisor effort, customer acceptance and whole-Pi restart recovery remain separate open steps. No new technical tests or model jobs were run for this portfolio update.
